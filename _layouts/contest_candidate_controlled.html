@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+{% if page.historic %}
+    {% assign url = '/committees/historic' %}
+{% else %}
+    {% assign url = '/committees/current' %}
+{% endif %}
+
+<h1>{{page.title}}</h1>
+<h2>{{page.subtitle}}</h2>
+
+<table class="table caption-top dtify">
+    <thead>
+      <tr>
+        <th scope="col">Candidates</th>
+        <th scope="col">Funds</th>
+        <th scope="col">Expenses</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for candidate in page.candidates %}
+            <tr>
+                <td>
+                    <a href="{{url}}/{{candidate.filer_nid}}.html">   
+                        {{ candidate.candidate_name }}
+                    </a>
+                </td> 
+                <td>{{ candidate.funds }}</td>
+                <td>{{ candidate.expenses }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<script>
+    new DataTable('table.dtify', {lengthMenu: [
+            [-1, 10, 25, 50],
+            ["All", 10, 25, 50]
+        ]
+    });
+</script>

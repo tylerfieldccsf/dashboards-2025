@@ -1,0 +1,106 @@
+---
+layout: default
+---
+
+<div class="home">
+  
+    <h1 class="page-heading">{{ page.filer_name }}</h1>
+    <div>Id number: {{page.filer_id}}</div>
+  
+  <div>
+    
+      This is a {{page.committee_type}} Committee 
+    {%- if page.pri_form -%}
+      &nbsp;{{page.supopp.position}} {{page.supopp.candidate}}
+    {%- endif -%}
+  </div>
+  <h4>Data dates:</h4>
+<dl>
+  <dt>Start Date</dt>
+  <dd>{{page.dates[0]}}</dd>
+  <dt>End Date</dt>
+  <dd>{{page.dates[1]}}</dd>
+</dl>
+
+
+
+<dl>
+  <dt>Total Contributions</dt>
+  <dd>{{page.totals[0]}}</dd>
+  <dt>Total Expenditures</dt>
+  <dd>{{page.totals[1]}}</dd>
+</dl>
+
+
+<!-- <h4>Top Contributors</h4>
+<ul>
+  {% for contributor in page.contributors limit: 3 %}
+    <li> {{ contributor[0] }} {{ contributor[1] }} {{ contributor[2] }}</li>
+  {% endfor %}
+</ul> -->
+
+<h4>Contributors</h4>
+<table class="table caption-top" id="contributors_table">
+  <thead>
+    <tr>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Total Contributions</th>
+    </tr>
+  </thead>
+  <tbody>
+      {% for contributor in page.contributors %}
+     
+          <tr>
+              <td>{{ contributor[0] }}</td>
+              <td>{{ contributor[1] }}</td>
+              <td>{{ contributor[2] }}</td>
+          </tr>
+      {% endfor %}
+  </tbody>
+</table>
+
+
+<hr>
+
+ <h4>Filings</h4>
+ <table class="table caption-top dtify">
+   <thead>
+     <tr>
+       <th scope="col">filing_datetime</th>
+       <th scope="col">form_name</th>
+       <th scope="col">filing_startdate</th>
+       <th scope="col">filing_enddate</th>
+       <th scope="col">filing_link</th>
+     </tr>
+   </thead>
+   <tbody>
+       {% for filing in page.filings %}
+      
+           <tr>
+               <td>{{ filing.filing_datetime }}</td>
+               <td>{{ filing.form_name }}</td>
+               <td>{{ filing.filing_startdate }}</td>
+               <td>{{ filing.filing_enddate }}</td>
+               <td><a href="{{ filing.filing_link }}">pdf</a></td>
+           </tr>
+       {% endfor %}
+   </tbody>
+ </table>
+{{ content }}
+  
+</div>
+
+<script>
+  new DataTable('#contributors_table', {lengthMenu: [
+          [5, 10, 25, 50, -1],
+          [5, 10, 25, 50, "All"]
+      ],
+      order: [[2, 'desc']]
+  });
+  new DataTable('table.dtify', {lengthMenu: [
+            [10, 25, 50, -1],
+            [10, 25, 50, "All"]
+        ]
+    });
+</script>

@@ -1,0 +1,94 @@
+---
+layout: default
+---
+{% if page.historic %}
+    {% assign url = '/historic/contests' %}
+{% else %}
+    {% assign url = '/current/contests' %}
+{% endif %}
+
+
+<h1>{{page.title}}</h1>
+
+<h2>Candidate Controlled Committees</h2>
+<table class="table caption-top dtify">
+    <thead>
+      <tr>
+        <th scope="col">Contest</th>
+        <th scope="col">Contributions</th>
+        <th scope="col">Expenditures</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for contest in page.candidate_pf %}
+            <tr>
+                <td><a href="{{url}}/{{contest.contest_link}}.html">
+                    {{ contest.contest_name }}
+                </a></td>
+                <td>{{ contest.contributions }}</td>
+                <td>{{ contest.expenditures }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<hr>
+
+<h2>Third Party Candidate Committees</h2>
+<table class="table caption-top dtify">
+    <thead>
+      <tr>
+        <th scope="col">Contest</th>
+        <th scope="col">Contributions</th>
+        <th scope="col">Expenditures</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for contest in page.candidate_ie %}
+            <tr>
+                <td><a href="{{url}}/{{contest.contest_link}}.html">
+                    {{ contest.contest_name }}
+                </a></td>
+                <td>{{ contest.contributions }}</td>
+                <td>{{ contest.expenditures }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<hr>
+
+<h2>Ballot Measures Committees</h2>
+<table class="table caption-top dtify">
+    <thead>
+      <tr>
+        <th scope="col">Contest</th>
+        <th scope="col">Contributions</th>
+        <th scope="col">Expenditures</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for contest in page.measures %}
+            <tr>
+                <td><a href="{{url}}/{{contest.contest_link}}.html">
+                    {{ contest.contest_name }}
+                </a></td>
+                <td>{{ contest.contributions }}</td>
+                <td>{{ contest.expenditures }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+{{content}}
+
+<script>
+    new DataTable('table.dtify',{
+        columns: [ null, {type: 'num-fmt'}, {type: 'num-fmt'}],
+        lengthMenu: [
+            [-1, 10, 25, 50],
+            ["All", 10, 25, 50]
+        ]
+    });
+</script>

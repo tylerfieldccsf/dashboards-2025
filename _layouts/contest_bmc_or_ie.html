@@ -1,0 +1,89 @@
+---
+layout: default
+---
+
+{% if page.historic %}
+    {% assign url = '/committees/historic' %}
+{% else %}
+    {% assign url = '/committees/current' %}
+{% endif %}
+
+<h1>{{page.title}}</h1>
+<h2>Third Party Committees</h2>
+
+
+{% for candidate in page.candidates %}
+<h3>{{candidate.candidate_name}}</h3>
+<table class="table caption-top dtify">
+    <thead>
+      <tr>
+        <th scope="col">Committee</th>
+        <th scope="col">Position</th>
+        <th scope="col">Funds</th>
+        <th scope="col">Expenses</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for committee in candidate.committees %}
+       
+            <tr>
+                <td>
+                    <a href="{{url}}/{{committee.filer_nid}}">
+                        {{ committee.filer_name }}
+                    </a>
+                </td> 
+                <td>{{ committee.position }}</td>
+                <td>{{ committee.funds }}</td>
+                <td>{{ committee.expenses }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<hr>
+{% endfor %}
+
+<script>
+
+    var groupColumn = 1;
+    var table = $('table.dtify').DataTable({
+        columnDefs: [{ visible: false, targets: groupColumn }],
+        order: [[groupColumn, 'asc']],
+        displayLength: -1,
+        bPaginate: false,
+        bFilter: false,
+        lengthChange: false,
+        drawCallback: function (settings) {
+            var api = this.api();
+            var rows = api.rows({ page: 'current' }).nodes();
+            var last = null;
+    
+            api.column(groupColumn, { page: 'current' })
+                .data()
+                .each(function (group, i) {
+                    if (last !== group) {
+                        $(rows)
+                            .eq(i)
+                            .before(
+                                '<tr class="group"><td colspan="4">' +
+                                    group +
+                                    '</td></tr>'
+                            );
+    
+                        last = group;
+                    }
+                });
+        }
+    });
+    
+    // Order by the grouping
+    $('table.dtify tbody').on('click', 'tr.group', function () {
+        var currentOrder = table.order()[0];
+        if (currentOrder[0] === groupColumn && currentOrder[1] === 'asc') {
+            table.order([groupColumn, 'desc']).draw();
+        }
+        else {
+            table.order([groupColumn, 'asc']).draw();
+        }
+    });
+    
+</script>
