@@ -4,23 +4,37 @@ layout: default
 
 <div class="home">
   
+  <div data="general information">
     <h1 class="page-heading">{{ page.filer_name }}</h1>
     <div>Id number: {{page.filer_id}}</div>
-  
-  <div>
-    
+      
       This is a {{page.committee_type}} Committee 
     {%- if page.pri_form -%}
       &nbsp;{{page.supopp.position}} {{page.supopp.candidate}}
     {%- endif -%}
+    
+    
+    {%- if page.jurisdiction == 'sf' -%}
+      <div>
+        This is a San Francisco Filer
+      </div>
+    {%- else if page.jurisdiction == 'ca' -%}
+      <div>
+        This committee files with the California Secretary of State. Data on this page is derived from electronic filings with the San Francisco Ethics Commission and a nightly download of data from the Secretary of State's office.
+      </div>
+    {%- endif -%}
   </div>
-  <h4>Data dates:</h4>
-<dl>
-  <dt>Start Date</dt>
-  <dd>{{page.dates[0]}}</dd>
-  <dt>End Date</dt>
-  <dd>{{page.dates[1]}}</dd>
-</dl>
+
+  <div data="Dates of filings covered">
+    <h4>Data dates:</h4>
+    <dl>
+      <dt>Start Date</dt>
+      <dd>{{page.dates[0]}}</dd>
+      <dt>End Date</dt>
+      <dd>{{page.dates[1]}}</dd>
+    </dl>
+  </div>
+  
 
 
 
