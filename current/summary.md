@@ -123,7 +123,7 @@ measures:
 candidate_ie:
 - contest_nid: 206636711
   contest_name: Mayor
-  contest_link: mayor_ie
+  contest_link: mayor
   contributions: "$123.45"
   expenditures: "$543.21"
 - contest_nid: 208114612

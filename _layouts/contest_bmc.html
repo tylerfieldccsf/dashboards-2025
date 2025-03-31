@@ -18,11 +18,11 @@ layout: default
 
 
 <h1>{{page.title}}</h1>
-<h2>Third Party Committees</h2>
+<h2>Ballot Measures</h2>
 
 
-{% for candidate in page.candidates %}
-<h3>{{candidate.candidate_name}}</h3>
+{% for measure in page.measures %}
+<h3>{{measure.measure_name}}</h3>
 <table class="table caption-top dtify">
     <thead>
       <tr>
@@ -33,7 +33,7 @@ layout: default
       </tr>
     </thead>
     <tbody>
-        {% for committee in candidate.committees %}
+        {% for committee in measure.committees %}
        
             <tr>
                 <td>
