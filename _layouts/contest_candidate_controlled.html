@@ -2,11 +2,20 @@
 layout: default
 ---
 
-{% if page.historic %}
-    {% assign url = '/committees/historic' %}
+{% if jekyll.environment == 'production' %}
+    {% if page.historic %}
+        {% assign url = '/historic/contests' | prepend: site.baseurl %}
+    {% else %}
+        {% assign url =  '/current/contests' | prepend: site.baseurl %}
+    {% endif %}
 {% else %}
-    {% assign url = '/committees/current' %}
+    {% if page.historic %}
+        {% assign url = '/historic/contests' %}
+    {% else %}
+        {% assign url =  '/current/contests' %}
+    {% endif %}
 {% endif %}
+
 
 <h1>{{page.title}}</h1>
 <h2>{{page.subtitle}}</h2>
