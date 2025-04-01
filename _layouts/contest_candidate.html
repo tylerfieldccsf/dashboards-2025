@@ -40,6 +40,13 @@ layout: default
             </tr>
         {% endfor %}
     </tbody>
+    <tfoot>
+        <tr>
+            <th style="text-align:right">Total:</th>
+            <th class="mononumber"></th>
+            <th class="mononumber"></th>
+        </tr>
+    </tfoot>
 </table>
 
 <hr>
@@ -72,19 +79,60 @@ layout: default
             </tr>
         {% endfor %}
     </tbody>
+    <tfoot>
+        <tr>
+            <th style="text-align:right" colspan="3">Total:</th>
+            <th class="mononumber"></th>
+        </tr>
+    </tfoot>
 </table>
 <hr>
 {% endfor %}
 {% endif %}
 <script>
-    new DataTable('#candidate_controlled', {
-        lengthChange: false,
-        displayLength: -1,
-        layout: {
+    let currencyOptions = {
+        style: 'currency', 
+        currency: 'USD', 
+        maximumFractionDigits: 0
+    }
+    let layoutOptions = {
             topStart: null,
             topEnd: null,
             bottomStart: null,
             bottomEnd: null,
+        }
+    new DataTable('#candidate_controlled', {
+        lengthChange: false,
+        displayLength: -1,
+        layout: layoutOptions,
+        columns: [ null, {type: 'num-fmt'}, {type: 'num-fmt'}],
+        footerCallback: function (row, data, start, end, display) {
+            let api = this.api();
+
+            // Remove the formatting to get integer data for summation
+            let intVal = function (i) {
+                return typeof i === 'string'
+                    ? i.replace(/[\$,]/g, '') * 1
+                    : typeof i === 'number'
+                    ? i
+                    : 0;
+            };
+
+            // Total over all pages
+            totalExp = api
+                .column(2)
+                .data()
+                .reduce((a, b) => intVal(a) + intVal(b), 0);
+            totalCon = api
+                .column(1)
+                .data()
+                .reduce((a, b) => intVal(a) + intVal(b), 0);
+            
+            // Update footer
+            api.column(2).footer().innerHTML =
+                totalExp.toLocaleString('en-us', currencyOptions);
+            api.column(1).footer().innerHTML =
+                totalCon.toLocaleString('en-us', currencyOptions);
         },
     });
 
@@ -94,12 +142,7 @@ layout: default
         columnDefs: [{ visible: false, targets: groupColumn }],
         order: [[groupColumn, 'asc']],
         displayLength: -1,
-        layout: {
-            topStart: null,
-            topEnd: null,
-            bottomStart: null,
-            bottomEnd: null,
-        },
+        layout: layoutOptions,
         lengthChange: false,
         drawCallback: function (settings) {
             var api = this.api();
@@ -121,7 +164,29 @@ layout: default
                         last = group;
                     }
                 });
-        }
+        },
+        footerCallback: function (row, data, start, end, display) {
+            let api = this.api();
+    
+            // Remove the formatting to get integer data for summation
+            let intVal = function (i) {
+                return typeof i === 'string'
+                    ? i.replace(/[\$,]/g, '') * 1
+                    : typeof i === 'number'
+                    ? i
+                    : 0;
+            };
+    
+            // Total over all pages
+            totalExp = api
+                .column(3)
+                .data()
+                .reduce((a, b) => intVal(a) + intVal(b), 0);
+            
+            // Update footer
+            api.column(3).footer().innerHTML =
+                totalExp.toLocaleString('en-us', currencyOptions);
+        },
     });
     
     // Order by the grouping

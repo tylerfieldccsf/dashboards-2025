@@ -1,0 +1,87 @@
+---
+layout: default
+---
+
+
+<h1>{{page.title}}</h1>
+
+<h2>Contributors</h2>
+<table class="table caption-top dtify">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Total Contributons</th>
+        <th scope="col">Contribution Breakdown</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for contributor in page.contributors %}
+            <tr>
+                <td ></td>
+                <td>{{ contributor.firstname }}</td>
+                <td>{{ contributor.lastname }}</td>
+                <td class="mononumber">{{ contributor.total }}</td>
+                <td>
+                    <ul>
+                        {% for cmte in contributor.breakdown %}
+                        <li><a href="{{cmte.nid}}">{{cmte.committee_name}}</a> {{cmte.amount}}</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{{content}}
+
+<script>
+    let currencyOptions = {
+        style: 'currency', 
+        currency: 'USD', 
+        maximumFractionDigits: 0
+    }
+    let layoutOptions = {
+            topStart: null,
+            // topEnd: null,
+            bottomStart: null,
+            bottomEnd: null,
+        }
+    function format(d) {
+        return d[4]; // this is the contents of row[4]
+    }
+
+    let table = new DataTable('table.dtify', {
+        // columns: [ null, {type: 'num-fmt'}, {type: 'num-fmt'}],
+        displayLength: -1,
+        layout: layoutOptions,
+        order: [[2, 'asc'],[1, 'asc']],
+        columnDefs: [
+            {
+                class: 'dt-control',
+                orderable: false,
+                targets: [0]
+            },
+            { visible: false, targets: [4] }
+        ]
+    });
+
+    // Add event listener for opening and closing details
+    table.on('click', 'td.dt-control', function (e) {
+        let tr = e.target.closest('tr');
+        let row = table.row(tr);
+    
+        if (row.child.isShown()) {
+            // This row is already open - close it
+            row.child.hide();
+        }
+        else {
+            // Open this row
+            row.child(format(row.data())).show();
+        }
+    });
+
+ 
+</script>

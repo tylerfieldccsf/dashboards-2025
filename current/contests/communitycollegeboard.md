@@ -1,6 +1,6 @@
 ---
 layout: contest_candidate
-election: 2025-11-05
+election: 2024-11-05
 historic: false
 candidate: true
 title: Community College Board

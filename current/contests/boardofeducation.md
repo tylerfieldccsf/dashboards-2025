@@ -1,9 +1,9 @@
 ---
 layout: contest_candidate
-election: 2025-11-05
+election: 2024-11-05
 historic: false
 candidate: true
-title: Board Of Education
+title: Board of Education
 candidates:
 - filer_nid: '211451883'
   committee_name: John Jersin for Board of Education 2024

@@ -1,8 +1,8 @@
 ---
 layout: election
-title: November 5, 2025 Election
+title: November 5, 2024 Election
 permalink: /current/
-election: 2025-11-05
+election: 2024-11-05
 historic: false
 candidate_pf:
 - contest_nid: '206636711'
