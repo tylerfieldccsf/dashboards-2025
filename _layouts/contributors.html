@@ -5,7 +5,7 @@ layout: default
 
 <h1>{{page.title}}</h1>
 
-<h2>Contributors</h2>
+<h2>Contributors in aggregate of more than $1,000</h2>
 <table class="table caption-top dtify">
     <thead>
       <tr>
@@ -20,13 +20,13 @@ layout: default
         {% for contributor in page.contributors %}
             <tr>
                 <td ></td>
-                <td>{{ contributor.firstname }}</td>
-                <td>{{ contributor.lastname }}</td>
-                <td class="mononumber">{{ contributor.total }}</td>
+                <td>{{ contributor.tx_firstname }}</td>
+                <td>{{ contributor.tx_lastname }}</td>
+                <td class="mononumber">{{ contributor.tx_amount }}</td>
                 <td>
                     <ul>
-                        {% for cmte in contributor.breakdown %}
-                        <li><a href="{{cmte.nid}}">{{cmte.committee_name}}</a> {{cmte.amount}}</li>
+                        {% for cmte in contributor.transactions %}
+                        <li><a href="/committees/current/{{cmte.cmte_nid}}.html">{{cmte.filer_naml}}</a> {{cmte.tx_amount}}</li>
                         {% endfor %}
                     </ul>
                 </td>
@@ -55,8 +55,11 @@ layout: default
 
     let table = new DataTable('table.dtify', {
         // columns: [ null, {type: 'num-fmt'}, {type: 'num-fmt'}],
-        displayLength: -1,
-        layout: layoutOptions,
+        lengthMenu: [
+            [10, 25, 50, 100, -1],
+            [10, 25, 50, 100, "All"]
+        ],
+        // layout: layoutOptions,
         order: [[2, 'asc'],[1, 'asc']],
         columnDefs: [
             {
@@ -64,7 +67,8 @@ layout: default
                 orderable: false,
                 targets: [0]
             },
-            { visible: false, targets: [4] }
+            { visible: false, targets: [4] },
+            {type: 'num-fmt', targets: [3]},
         ]
     });
 
