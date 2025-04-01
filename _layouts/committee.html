@@ -13,7 +13,6 @@ layout: default
       &nbsp;{{page.supopp.position}} {{page.supopp.candidate}}
     {%- endif -%}
     
-    
     {%- if page.jurisdiction == 'sf' -%}
       <div>
         This is a San Francisco Filer
@@ -34,9 +33,6 @@ layout: default
       <dd>{{page.dates[1]}}</dd>
     </dl>
   </div>
-  
-
-
 
 <dl>
   <dt>Total Contributions</dt>
@@ -45,13 +41,6 @@ layout: default
   <dd>{{page.totals[1]}}</dd>
 </dl>
 
-
-<!-- <h4>Top Contributors</h4>
-<ul>
-  {% for contributor in page.contributors limit: 3 %}
-    <li> {{ contributor[0] }} {{ contributor[1] }} {{ contributor[2] }}</li>
-  {% endfor %}
-</ul> -->
 
 <h4>Contributors</h4>
 <table class="table caption-top" id="contributors_table">

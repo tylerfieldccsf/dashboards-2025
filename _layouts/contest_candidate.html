@@ -17,8 +17,8 @@ layout: default
 {% endif %}
 
 <h1>{{page.title}}</h1>
-<h2>{{page.subtitle}}</h2>
 
+<h2>Candidate Controlled Committees</h2>
 <table class="table caption-top" id="candidate_controlled">
     <thead>
       <tr>
@@ -63,7 +63,7 @@ layout: default
             <tr>
                 <td>
                     <a href="{{url}}/{{committee.filer_nid}}">
-                        {{ committee.filer_name }}
+                        {{ committee.committee_name }}
                     </a>
                 </td> 
                 <td>{{ committee.position }}</td>
