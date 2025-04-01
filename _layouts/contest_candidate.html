@@ -35,8 +35,8 @@ layout: default
                         {{ candidate.candidate_name }}
                     </a>
                 </td> 
-                <td>{{ candidate.funds }}</td>
-                <td>{{ candidate.expenses }}</td>
+                <td class="mononumber">{{ candidate.funds }}</td>
+                <td class="mononumber">{{ candidate.expenses }}</td>
             </tr>
         {% endfor %}
     </tbody>
@@ -67,8 +67,8 @@ layout: default
                     </a>
                 </td> 
                 <td>{{ committee.position }}</td>
-                <td>{{ committee.funds }}</td>
-                <td>{{ committee.expenses }}</td>
+                <td class="mononumber">{{ committee.funds }}</td>
+                <td class="mononumber">{{ committee.expenses }}</td>
             </tr>
         {% endfor %}
     </tbody>
@@ -77,10 +77,15 @@ layout: default
 {% endfor %}
 {% endif %}
 <script>
-    new DataTable('#candidate_controlled', {lengthMenu: [
-            [-1, 10, 25, 50],
-            ["All", 10, 25, 50]
-        ]
+    new DataTable('#candidate_controlled', {
+        lengthChange: false,
+        displayLength: -1,
+        layout: {
+            topStart: null,
+            topEnd: null,
+            bottomStart: null,
+            bottomEnd: null,
+        },
     });
 
 
@@ -89,8 +94,12 @@ layout: default
         columnDefs: [{ visible: false, targets: groupColumn }],
         order: [[groupColumn, 'asc']],
         displayLength: -1,
-        bPaginate: false,
-        bFilter: false,
+        layout: {
+            topStart: null,
+            topEnd: null,
+            bottomStart: null,
+            bottomEnd: null,
+        },
         lengthChange: false,
         drawCallback: function (settings) {
             var api = this.api();

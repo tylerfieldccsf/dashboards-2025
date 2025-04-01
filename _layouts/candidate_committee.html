@@ -5,14 +5,17 @@ layout: default
 <div class="home">
   
   <div data="general information">
-    <h1 class="page-heading">{{ page.filer_name }}</h1>
+    {% for crumb in page.breadcrumbs %}
+      <strong>{{crumb}}</strong> >
+    {% endfor %}
+    <h1 class="page-heading">{{ page.supopp.candidate }}</h1>
     <div>Id number: {{page.filer_id}}</div>
       
       This is a {{page.committee_type}} Committee 
     {%- if page.pri_form -%}
       &nbsp;{{page.supopp.position}} {{page.supopp.candidate}}
     {%- endif -%}
-    
+
     {%- if page.jurisdiction == 'sf' -%}
       <div>
         This is a San Francisco Filer
@@ -34,6 +37,7 @@ layout: default
     </dl>
   </div>
 
+<h3>{{page.filer_name}}</h3>
 <dl>
   <dt>Total Contributions</dt>
   <dd class="mononumber">{{page.totals[0]}}</dd>

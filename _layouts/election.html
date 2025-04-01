@@ -34,8 +34,8 @@ layout: default
                 <td><a href="{{url}}/{{contest.contest_link}}.html">
                     {{ contest.contest_name }}
                 </a></td>
-                <td>{{ contest.contributions }}</td>
-                <td>{{ contest.expenditures }}</td>
+                <td class="mononumber">{{ contest.contributions }}</td>
+                <td class="mononumber">{{ contest.expenditures }}</td>
             </tr>
         {% endfor %}
     </tbody>
@@ -58,8 +58,8 @@ layout: default
                 <td><a href="{{url}}/{{contest.contest_link}}.html">
                     {{ contest.contest_name }}
                 </a></td>
-                <td>{{ contest.contributions }}</td>
-                <td>{{ contest.expenditures }}</td>
+                <td class="mononumber">{{ contest.contributions }}</td>
+                <td class="mononumber">{{ contest.expenditures }}</td>
             </tr>
         {% endfor %}
     </tbody>
@@ -82,8 +82,8 @@ layout: default
                 <td><a href="{{url}}/{{contest.contest_link}}.html">
                     {{ contest.contest_name }}
                 </a></td>
-                <td>{{ contest.contributions }}</td>
-                <td>{{ contest.expenditures }}</td>
+                <td class="mononumber">{{ contest.contributions }}</td>
+                <td class="mononumber">{{ contest.expenditures }}</td>
             </tr>
         {% endfor %}
     </tbody>
@@ -95,9 +95,13 @@ layout: default
 <script>
     new DataTable('table.dtify',{
         columns: [ null, {type: 'num-fmt'}, {type: 'num-fmt'}],
-        lengthMenu: [
-            [-1, 10, 25, 50],
-            ["All", 10, 25, 50]
-        ]
+        displayLength: -1,
+
+        layout: {
+            topStart: null,
+            topEnd: null,
+            bottomStart: null,
+            bottomEnd: null,
+        },
     });
 </script>

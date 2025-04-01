@@ -57,9 +57,14 @@ layout: default
     var table = $('table.dtify').DataTable({
         columnDefs: [{ visible: false, targets: groupColumn }],
         order: [[groupColumn, 'asc']],
+        lengthChange: false,
         displayLength: -1,
-        bPaginate: false,
-        bFilter: false,
+        layout: {
+            topStart: null,
+            topEnd: null,
+            bottomStart: null,
+            bottomEnd: null,
+        },
         lengthChange: false,
         drawCallback: function (settings) {
             var api = this.api();

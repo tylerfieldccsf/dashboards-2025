@@ -8,13 +8,13 @@ candidates:
 - filer_nid: '208440318'
   committee_name: Miyamoto for Sheriff 2024
   candidate_name: Paul Miyamoto
-  funds: $105,318.21
-  expenses: $86,935.70
+  funds: $105,318
+  expenses: $86,936
 - filer_nid: '211629442'
   committee_name: Michael Juan for Sheriff 2024
   candidate_name: Michael Juan
-  funds: $13,645.00
-  expenses: $13,645.00
+  funds: $13,645
+  expenses: $13,645
 ie_candidates:
 - candidate_name: PAUL MIYAMOTO
   committees:
@@ -22,6 +22,6 @@ ie_candidates:
     filer_nid: '201619433'
     committee_name: Coalition to Grow San Francisco - Grow SF PAC
     funds: n/a
-    expenses: $14,939.79
+    expenses: $14,940
 
 ---
