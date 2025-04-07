@@ -2,14 +2,28 @@
 layout: default
 ---
 
+{% if jekyll.environment == 'production' %}
+    {% if page.historic %}
+        {% assign url = '/committees/historic' | prepend: site.baseurl %}
+    {% else %}
+        {% assign url =  '/committees/current' | prepend: site.baseurl %}
+    {% endif %}
+{% else %}
+    {% if page.historic %}
+        {% assign url = '/committees/historic' %}
+    {% else %}
+        {% assign url =  '/committees/current' %}
+    {% endif %}
+{% endif %}
+
 
 <h1>{{page.title}}</h1>
 
-<h2>Contributors in aggregate of more than $1,000</h2>
-<table class="table caption-top dtify">
+<h2>Contributors in aggregate of more than $5,000</h2>
+<table class="table caption-top dtify table-striped">
     <thead>
       <tr>
-        <th scope="col"></th>
+        <th scope="col">...</th>
         <th scope="col">First Name</th>
         <th scope="col">Last Name</th>
         <th scope="col">Total Contributons</th>
@@ -19,16 +33,21 @@ layout: default
     <tbody>
         {% for contributor in page.contributors %}
             <tr>
-                <td ></td>
+                <td></td>
                 <td>{{ contributor.tx_firstname }}</td>
                 <td>{{ contributor.tx_lastname }}</td>
                 <td class="mononumber">{{ contributor.tx_amount }}</td>
-                <td>
-                    <ul>
-                        {% for cmte in contributor.transactions %}
-                        <li><a href="/committees/current/{{cmte.cmte_nid}}.html">{{cmte.filer_naml}}</a> {{cmte.tx_amount}}</li>
-                        {% endfor %}
-                    </ul>
+                <td class="">
+                    <table class="table table-sm">
+                        <tbody>
+                            {% for cmte in contributor.transactions %}
+                            <tr>
+                                <td><a href="{{url}}/{{cmte.cmte_nid}}.html">{{cmte.filer_naml}}</a></td>
+                                <td class="mononumber table-text-right">{{cmte.tx_amount}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
                 </td>
             </tr>
         {% endfor %}
@@ -60,7 +79,7 @@ layout: default
             [10, 25, 50, 100, "All"]
         ],
         // layout: layoutOptions,
-        order: [[2, 'asc'],[1, 'asc']],
+        order: [[3, 'desc'], [2, 'asc'],[1, 'asc']],
         columnDefs: [
             {
                 class: 'dt-control',

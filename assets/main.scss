@@ -6,7 +6,9 @@
 .mononumber {
     font-family: monospace;
 }
-
+.table-text-right {
+    text-align: right;
+}
 /* load _sass/minima.scss */
 @import "minima";
 
