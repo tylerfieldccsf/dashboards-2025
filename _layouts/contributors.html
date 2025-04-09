@@ -2,20 +2,11 @@
 layout: default
 ---
 
-{% if jekyll.environment == 'production' %}
-    {% if page.historic %}
-        {% assign url = '/committees/historic' | prepend: site.baseurl %}
-    {% else %}
-        {% assign url =  '/committees/current' | prepend: site.baseurl %}
-    {% endif %}
+{% if page.historic %}
+    {% assign url = '/committees/historic' | prepend: site.baseurl %}
 {% else %}
-    {% if page.historic %}
-        {% assign url = '/committees/historic' %}
-    {% else %}
-        {% assign url =  '/committees/current' %}
-    {% endif %}
+    {% assign url =  '/committees/current' | prepend: site.baseurl %}
 {% endif %}
-
 
 <h1>{{page.title}}</h1>
 
@@ -24,8 +15,8 @@ layout: default
     <thead>
       <tr>
         <th scope="col">...</th>
-        <th scope="col">First Name</th>
-        <th scope="col">Last Name</th>
+        <th scope="col">Name</th>
+        <th scope="col">Code</th>
         <th scope="col">Total Contributons</th>
         <th scope="col">Contribution Breakdown</th>
       </tr>
@@ -34,15 +25,19 @@ layout: default
         {% for contributor in page.contributors %}
             <tr>
                 <td></td>
-                <td>{{ contributor.tx_firstname }}</td>
-                <td>{{ contributor.tx_lastname }}</td>
+                <td>{{ contributor.tx_firstname }} {{ contributor.tx_lastname }}</td>
+                <td>
+                    {%- if contributor.tx_cmteid != '' -%}<a href="{{url}}/CA{{contributor.tx_cmteid}}.html">{%- endif -%}
+                        {{ contributor.tx_entitycode }}
+                    {%- if contributor.tx_cmteid != '' -%}</a>{%- endif -%}
+                    </td>
                 <td class="mononumber">{{ contributor.tx_amount }}</td>
                 <td class="">
                     <table class="table table-sm">
                         <tbody>
                             {% for cmte in contributor.transactions %}
                             <tr>
-                                <td><a href="{{url}}/{{cmte.cmte_nid}}.html">{{cmte.filer_naml}}</a></td>
+                                <td><a href="{{url}}/CA{{cmte.tx_cmteid}}.html">{{cmte.filer_naml}}</a></td>
                                 <td class="mononumber table-text-right">{{cmte.tx_amount}}</td>
                             </tr>
                             {% endfor %}

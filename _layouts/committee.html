@@ -36,11 +36,11 @@ layout: default
     &nbsp;{{page.supopp.position}} {{page.supopp.candidate}}
   {%- endif -%}
 
-  {%- if page.jurisdiction == 'sf' -%}
+  {%- if page.jurisdiction == "sf" -%}
     <div>
       This is a San Francisco Filer
     </div>
-  {%- else if page.jurisdiction == 'ca' -%}
+  {%- else if page.jurisdiction == "ca" -%}
     <div class="alert alert-info" role="alert">
       This committee files with the California Secretary of State. Data on this page is derived from electronic filings with the San Francisco Ethics Commission and a nightly download of data from the Secretary of State's office.
     </div>
@@ -79,11 +79,11 @@ layout: default
               <tr>
                   <td>{{ contributor[0] }}</td>
                   <td>
-                    {%- if contributor[3] -%}<a href="/committees/current/{{contributor[3]}}.html">{%- endif -%}
+                    {%- if contributor[2] != "" -%}<a href="{{site.basurl}}/committees/current/CA{{contributor[2]}}.html">{%- endif -%}
                     {{ contributor[1] }}
-                    {%- if contributor[3] -%}</a>{%- endif -%}
+                    {%- if contributor[2] != "" -%}</a>{%- endif -%}
                   </td>
-                  <td class="mononumber">{{ contributor[2] }}</td>
+                  <td class="mononumber">{{ contributor[3] }}</td>
               </tr>
           {% endfor %}
       </tbody>
@@ -108,11 +108,11 @@ layout: default
               <tr>
                   <td>{{ exp[0] }}</td>
                   <td>
-                    {%- if exp[3] -%}<a href="/committees/current/{{exp[3]}}.html">{%- endif -%}
+                    {%- if exp[2] != "" -%}<a href="{{site.basurl}}/committees/current/CA{{exp[2]}}.html">{%- endif -%}
                       {{ exp[1] }}
-                    {%- if exp[3] -%}</a>{%- endif -%}
+                    {%- if exp[2] != "" -%}</a>{%- endif -%}
                   </td>
-                  <td class="mononumber">{{ exp[2] }}</td>
+                  <td class="mononumber">{{ exp[3] }}</td>
               </tr>
           {% endfor %}
       </tbody>

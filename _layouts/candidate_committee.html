@@ -4,7 +4,7 @@ layout: default
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     {% for crumb in page.breadcrumbs %}
-    <li class="breadcrumb-item"><a href="{{crumb[0]}}">{{crumb[1]}}</a></li>
+    <li class="breadcrumb-item"><a href="{{site.baseurl}}/{{crumb[0]}}">{{crumb[1]}}</a></li>
     {% endfor %}
     <li class="breadcrumb-item active" aria-current="page">{{ page.supopp.candidate }}</li>
   </ol>
@@ -48,11 +48,11 @@ layout: default
       {%- if page.pri_form -%}
         &nbsp;{{page.supopp.position}} {{page.supopp.candidate}}
       {%- endif -%}
-      {%- if page.jurisdiction == 'sf' -%}
+      {%- if page.jurisdiction == "sf" -%}
         <div>
           This is a San Francisco Filer
         </div>
-      {%- else if page.jurisdiction == 'ca' -%}
+      {%- else if page.jurisdiction == "ca" -%}
         <div class="alert alert-info" role="alert">
           This committee files with the California Secretary of State. Data on this page is derived from electronic filings with the San Francisco Ethics Commission and a nightly download of data from the Secretary of State's office.
         </div>
@@ -97,19 +97,86 @@ layout: default
               <tr>
                   <td>{{ contributor[0] }}</td>
                   <td>
-                    {%- if contributor[3] -%}<a href="/committees/current/{{contributor[3]}}.html">{%- endif -%}
+                    {%- if contributor[2] != "" -%}<a href="{{site.baseurl}}/committees/current/CA{{contributor[2]}}.html">{%- endif -%}
                     {{ contributor[1] }}
-                    {%- if contributor[3] -%}</a>{%- endif -%}
+                    {%- if contributor[2] != "" -%}</a>{%- endif -%}
                   </td>
 
-                  <td class="mononumber">{{ contributor[2] }}</td>
+                  <td class="mononumber">{{ contributor[3] }}</td>
               </tr>
           {% endfor %}
       </tbody>
     </table>
   </div>
 
+  <div class="row">
+    <h4>Contributor Type</h4>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Contributor Type</th>
+          <th scope="col">Amount</th>
+          <th scope="col">%</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for c in page.contribution_breakdown.contributor %}
+        <tr>
+          <td>{{c.tx_entitycode}}</td>
+          <td>{{c.tx_amount}}</td>
+          <td>{{c.pct}}%</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
 
+
+  <div class="row">
+    <h4>In City Type</h4>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">In San Francisco</th>
+          <th scope="col">Amount</th>
+          <th scope="col">%</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for c in page.contribution_breakdown.city %}
+        <tr>
+          <td>{{c.in_city}}</td>
+          <td>{{c.tx_amount}}</td>
+          <td>{{c.pct}}%</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="row">
+    <h4>In State Type</h4>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">State</th>
+          <th scope="col">Amount</th>
+          <th scope="col">%</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for c in page.contribution_breakdown.state %}
+        <tr>
+          <td>{{c.in_ca}}</td>
+          <td>{{c.tx_amount}}</td>
+          <td>{{c.pct}}%</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
 
   <div class="row">
     <h4>Expenditures</h4>
@@ -127,11 +194,11 @@ layout: default
               <tr>
                   <td>{{ exp[0] }}</td>
                   <td>
-                    {%- if exp[3] -%}<a href="/committees/current/{{exp[3]}}.html">{%- endif -%}
+                    {%- if exp[2] != "" -%}<a href="{{site.baseurl}}/committees/current/CA{{exp[2]}}.html">{%- endif -%}
                       {{ exp[1] }}
-                    {%- if exp[3] -%}</a>{%- endif -%}
+                    {%- if exp[2] != "" -%}</a>{%- endif -%}
                   </td>
-                  <td class="mononumber">{{ exp[2] }}</td>
+                  <td class="mononumber">{{ exp[3] }}</td>
               </tr>
           {% endfor %}
       </tbody>

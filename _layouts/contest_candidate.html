@@ -2,18 +2,10 @@
 layout: default
 ---
 
-{% if jekyll.environment == 'production' %}
-    {% if page.historic %}
-        {% assign url = '/committees/historic' | prepend: site.baseurl %}
-    {% else %}
-        {% assign url =  '/committees/current' | prepend: site.baseurl %}
-    {% endif %}
+{% if page.historic %}
+    {% assign url = '/committees/historic' | prepend: site.baseurl %}
 {% else %}
-    {% if page.historic %}
-        {% assign url = '/committees/historic' %}
-    {% else %}
-        {% assign url =  '/committees/current' %}
-    {% endif %}
+    {% assign url =  '/committees/current' | prepend: site.baseurl %}
 {% endif %}
 
 <h1>{{page.title}}</h1>
@@ -31,7 +23,7 @@ layout: default
         {% for candidate in page.candidates %}
             <tr>
                 <td>
-                    <a href="{{url}}/{{candidate.filer_nid}}.html">   
+                    <a href="{{url}}/CA{{candidate.filer_id}}.html">   
                         {{ candidate.candidate_name }}
                     </a>
                 </td> 
@@ -69,7 +61,7 @@ layout: default
        
             <tr>
                 <td>
-                    <a href="{{url}}/{{committee.filer_nid}}">
+                    <a href="{{url}}/CA{{committee.filer_id}}">
                         {{ committee.committee_name }}
                     </a>
                 </td> 

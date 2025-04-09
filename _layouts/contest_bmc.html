@@ -2,27 +2,15 @@
 layout: default
 ---
 
-{% if jekyll.environment == 'production' %}
-    {% if page.historic %}
-        {% assign url = '/committees/historic' | prepend: site.baseurl %}
-    {% else %}
-        {% assign url =  '/committees/current' | prepend: site.baseurl %}
-    {% endif %}
+{% if page.historic %}
+    {% assign url = '/committees/historic' | prepend: site.baseurl %}
 {% else %}
-    {% if page.historic %}
-        {% assign url = '/committees/historic' %}
-    {% else %}
-        {% assign url =  '/committees/current' %}
-    {% endif %}
+    {% assign url =  '/committees/current' | prepend: site.baseurl %}
 {% endif %}
 
-
 <h1>{{page.title}}</h1>
-<h2>Ballot Measures</h2>
 
 
-{% for measure in page.measures %}
-<h3>{{measure.measure_name}}</h3>
 <table class="table caption-top dtify">
     <thead>
       <tr>
@@ -33,26 +21,34 @@ layout: default
       </tr>
     </thead>
     <tbody>
-        {% for committee in measure.committees %}
-       
+        {% for committee in page.committees %}
             <tr>
                 <td>
-                    <a href="{{url}}/{{committee.filer_nid}}">
-                        {{ committee.filer_name }}
+                    <a href="{{url}}/CA{{committee.filer_id}}">
+                        {{ committee.committee_name }}
                     </a>
                 </td> 
                 <td>{{ committee.position }}</td>
-                <td>{{ committee.funds }}</td>
-                <td>{{ committee.expenses }}</td>
+                <td class="mononumber">{{ committee.funds }}</td>
+                <td class="mononumber">{{ committee.expenses }}</td>
             </tr>
         {% endfor %}
     </tbody>
+    <tfoot>
+        <tr>
+            <th style="text-align:right" colspan="3">Total:</th>
+            <th class="mononumber"></th>
+        </tr>
+    </tfoot>
 </table>
 <hr>
-{% endfor %}
 
 <script>
-
+    let currencyOptions = {
+        style: 'currency', 
+        currency: 'USD', 
+        maximumFractionDigits: 0
+    }
     var groupColumn = 1;
     var table = $('table.dtify').DataTable({
         columnDefs: [{ visible: false, targets: groupColumn }],
@@ -65,7 +61,6 @@ layout: default
             bottomStart: null,
             bottomEnd: null,
         },
-        lengthChange: false,
         drawCallback: function (settings) {
             var api = this.api();
             var rows = api.rows({ page: 'current' }).nodes();
@@ -86,7 +81,29 @@ layout: default
                         last = group;
                     }
                 });
-        }
+        },
+        footerCallback: function (row, data, start, end, display) {
+            let api = this.api();
+    
+            // Remove the formatting to get integer data for summation
+            let intVal = function (i) {
+                return typeof i === 'string'
+                    ? i.replace(/[\$,]/g, '') * 1
+                    : typeof i === 'number'
+                    ? i
+                    : 0;
+            };
+    
+            // Total over all pages
+            totalExp = api
+                .column(3)
+                .data()
+                .reduce((a, b) => intVal(a) + intVal(b), 0);
+            
+            // Update footer
+            api.column(3).footer().innerHTML =
+                totalExp.toLocaleString('en-us', currencyOptions);
+        },
     });
     
     // Order by the grouping

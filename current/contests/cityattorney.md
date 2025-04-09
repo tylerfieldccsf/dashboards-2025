@@ -6,6 +6,7 @@ candidate: true
 title: City Attorney
 candidates:
 - filer_nid: '209647307'
+  filer_id: '1466331'
   committee_name: David Chiu for City Attorney 2024
   candidate_name: David Chiu
   funds: $219,113
@@ -14,7 +15,7 @@ ie_candidates:
 - candidate_name: DAVID CHIU
   committees:
   - position: SUPPORT
-    filer_nid: '201619433'
+    filer_id: '1433436'
     committee_name: Coalition to Grow San Francisco - Grow SF PAC
     funds: n/a
     expenses: $14,940

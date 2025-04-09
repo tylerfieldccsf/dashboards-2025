@@ -2,19 +2,10 @@
 layout: default
 ---
 
-
-{% if jekyll.environment == 'production' %}
-    {% if page.historic %}
-        {% assign url = '/historic/contests' | prepend: site.baseurl %}
-    {% else %}
-        {% assign url =  '/current/contests' | prepend: site.baseurl %}
-    {% endif %}
+{% if page.historic %}
+    {% assign url = '/historic' | prepend: site.baseurl %}
 {% else %}
-    {% if page.historic %}
-        {% assign url = '/historic/contests' %}
-    {% else %}
-        {% assign url =  '/current/contests' %}
-    {% endif %}
+    {% assign url =  '/current' | prepend: site.baseurl %}
 {% endif %}
 
 <h1>{{page.title}}</h1>
@@ -31,7 +22,7 @@ layout: default
     <tbody>
         {% for contest in page.candidate_pf %}
             <tr>
-                <td><a href="{{url}}/{{contest.contest_link}}.html">
+                <td><a href="{{url}}/contests/{{contest.contest_link}}.html">
                     {{ contest.contest_name }}
                 </a></td>
                 <td class="mononumber">{{ contest.contributions }}</td>
@@ -62,7 +53,7 @@ layout: default
     <tbody>
         {% for contest in page.candidate_ie %}
             <tr>
-                <td><a href="{{url}}/{{contest.contest_link}}.html">
+                <td><a href="{{url}}/contests/{{contest.contest_link}}.html">
                     {{ contest.contest_name }}
                 </a></td>
                 <td class="mononumber">{{ contest.contributions }}</td>
@@ -92,7 +83,7 @@ layout: default
     <tbody>
         {% for contest in page.measures %}
             <tr>
-                <td><a href="{{url}}/{{contest.contest_link}}.html">
+                <td><a href="{{url}}/measures/{{contest.contest_link}}.html">
                     {{ contest.contest_name }}
                 </a></td>
                 <td class="mononumber">{{ contest.contributions }}</td>
