@@ -1,112 +1,122 @@
 ---
 layout: default
 ---
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    {% for crumb in page.breadcrumbs %}
-    <li class="breadcrumb-item"><a href="{{site.baseurl}}/{{crumb[0]}}">{{crumb[1]}}</a></li>
-    {% endfor %}
-    <li class="breadcrumb-item active" aria-current="page">{{ page.supopp.candidate }}</li>
-  </ol>
-</nav>
-
-<div class="container">
-  
-  <div class="row" data="general information">
-    <h1 class="page-heading">{{ page.supopp.candidate }}</h1>
-    <p>This page gathers financial disclosures about the candidate, concentrating on the candidate's own committee. Spending and fundraising by other committees is included.</p>
-  </div>
-
-  <div class="row" data="Dates of filings covered">
-    <h4>Data dates:</h4>
-
-    <div class="card-group">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Start Date</h5>
-            <p class="card-text"><span>{{page.dates[0]}}</span></p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">End Date</h5>
-            <p class="card-text"><span class="mononumber">{{page.dates[1]}}</span></p>
-          </div>
-        </div>
-    </div>
-
-  </div>
-
-  <div class="row" data="Committee information">
-    <h3>{{page.filer_name}}</h3>
-    <dl>
-      <dt>Id number:</dt>
-      <dd>{{page.filer_id}}</dd>
-    </dl>
-    <div>
-      This is a {{page.committee_type}} Committee 
-      {%- if page.pri_form -%}
-        &nbsp;{{page.supopp.position}} {{page.supopp.candidate}}
-      {%- endif -%}
-      {%- if page.jurisdiction == "sf" -%}
-        <div>
-          This is a San Francisco Filer
-        </div>
-      {%- else if page.jurisdiction == "ca" -%}
-        <div class="alert alert-info" role="alert">
-          This committee files with the California Secretary of State. Data on this page is derived from electronic filings with the San Francisco Ethics Commission and a nightly download of data from the Secretary of State's office.
-        </div>
-      {%- endif -%}
-    </div>
-
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Total Contributions</h5>
-            <p class="card-text"><span class="mononumber">{{page.totals[0]}}</span></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Total Expenditures</h5>
-            <p class="card-text"><span class="mononumber">{{page.totals[1]}}</span></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-
-
+<div class="bg-primary">
+  <div class="container text-light py-3">
   <div class="row">
-    <h4>Contributors</h4>
-    <table class="table caption-top" id="contributors_table">
-      <thead>
-        <tr>
-          <th scope="col">First Name</th>
-          <th scope="col">Last Name</th>
-          <th scope="col">Total Contributions</th>
-        </tr>
-      </thead>
-      <tbody>
-          {% for contributor in page.contributors %}
-        
-              <tr>
-                  <td>{{ contributor[0] }}</td>
-                  <td>
-                    {%- if contributor[2] != "" -%}<a href="{{site.baseurl}}/committees/current/CA{{contributor[2]}}.html">{%- endif -%}
-                    {{ contributor[1] }}
-                    {%- if contributor[2] != "" -%}</a>{%- endif -%}
-                  </td>
+    <div class="col-md-4">
+      <div class="info-name mx-5 my-3 d-flex flex-column align-items-center" data="general information">
+        <img class="profile" src="{{ '/assets/images/indy_sf.png' | relative_url}}" alt="candidate profile picture" class="img-fluid">
+        <h1 class="page-heading text-center">{{ page.supopp.candidate }}</h1>
+      </div>      
+    </div>
+    <div class="col-md-8">
+      <div class="info-summary">
+        <h1>Fundraising & Spending Summary</h1>
+        <p><span>Fundraising Committee Name: {{page.filer_name}}</span><br>
+        <span>FPPC ID: {{page.filer_id}}</span><br>
+        <span>Publicly Financed: [yes/no]</span></p>
+        <div class="d-flex column-gap-3">
+          <div class="">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Total Contributions</h5>
+                <p class="card-text"><span class="mononumber">{{page.totals[0]}}</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Total Expenditures</h5>
+                <p class="card-text"><span class="mononumber">{{page.totals[1]}}</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p data="Dates of filings covered"><em>Date for this committee covers between {{page.dates[0]}} to {{page.dates[1]}}.</em></p>
+        <div data="Committee information">
+          <div>
+            This is a {{page.committee_type}} Committee 
+            {%- if page.pri_form -%}
+              &nbsp;{{page.supopp.position}} {{page.supopp.candidate}}
+            {%- endif -%}
+            {%- if page.jurisdiction == "sf" -%}
+              <div>
+                This is a San Francisco Filer
+              </div>
+            {%- else if page.jurisdiction == "ca" -%}
+              <div class="alert alert-info" role="alert">
+                This committee files with the California Secretary of State. Data on this page is derived from electronic filings with the San Francisco Ethics Commission and a nightly download of data from the Secretary of State's office.
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-                  <td class="mononumber">{{ contributor[3] }}</td>
-              </tr>
-          {% endfor %}
-      </tbody>
-    </table>
+  </div> <!-- end of top container div -->
+</div> <!-- end of bg-primary div -->
+  <div class="container mt-3">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="bg-white border border-light-subtle rounded p-3 cm-contributor">
+        <h4>Contributors</h4>
+        <table class="table caption-top" id="contributors_table">
+          <thead>
+            <tr>
+              <th scope="col">First Name</th>
+              <th scope="col">Last Name</th>
+              <th scope="col">Total Contributions</th>
+            </tr>
+          </thead>
+          <tbody>
+              {% for contributor in page.contributors %}
+            
+                  <tr>
+                      <td>{{ contributor[0] }}</td>
+                      <td>
+                        {%- if contributor[2] != "" -%}<a href="{{site.baseurl}}/committees/current/CA{{contributor[2]}}.html">{%- endif -%}
+                        {{ contributor[1] }}
+                        {%- if contributor[2] != "" -%}</a>{%- endif -%}
+                      </td>
+    
+                      <td class="mononumber">{{ contributor[3] }}</td>
+                  </tr>
+              {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="bg-white border border-light-subtle rounded p-3 cm-expenditures">
+        <h4>Expenditures</h4>
+        <table class="table caption-top" id="expenditures_table">
+          <thead>
+            <tr>
+              <th scope="col">First Name</th>
+              <th scope="col">Last Name</th>
+              <th scope="col">Total Expenditures</th>
+            </tr>
+          </thead>
+          <tbody>
+              {% for exp in page.expenditures %}
+            
+                  <tr>
+                      <td>{{ exp[0] }}</td>
+                      <td>
+                        {%- if exp[2] != "" -%}<a href="{{site.baseurl}}/committees/current/CA{{exp[2]}}.html">{%- endif -%}
+                          {{ exp[1] }}
+                        {%- if exp[2] != "" -%}</a>{%- endif -%}
+                      </td>
+                      <td class="mononumber">{{ exp[3] }}</td>
+                  </tr>
+              {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 
   <div class="row">
@@ -179,30 +189,6 @@ layout: default
   </div>
 
   <div class="row">
-    <h4>Expenditures</h4>
-    <table class="table caption-top" id="expenditures_table">
-      <thead>
-        <tr>
-          <th scope="col">First Name</th>
-          <th scope="col">Last Name</th>
-          <th scope="col">Total Expenditures</th>
-        </tr>
-      </thead>
-      <tbody>
-          {% for exp in page.expenditures %}
-        
-              <tr>
-                  <td>{{ exp[0] }}</td>
-                  <td>
-                    {%- if exp[2] != "" -%}<a href="{{site.baseurl}}/committees/current/CA{{exp[2]}}.html">{%- endif -%}
-                      {{ exp[1] }}
-                    {%- if exp[2] != "" -%}</a>{%- endif -%}
-                  </td>
-                  <td class="mononumber">{{ exp[3] }}</td>
-              </tr>
-          {% endfor %}
-      </tbody>
-    </table>
   </div>
 
 

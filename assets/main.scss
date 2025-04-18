@@ -10,6 +10,55 @@
     text-align: right;
 }
 /* load _sass/minima.scss */
-@import "minima";
+// @import "minima";
+// @import "bootstrap-5.3.3-dist/css/bootstrap.min.css";
 
 /* Put any custom CSS here */
+$primary: #004A80;
+$secondary: #005A56;
+$dark: #212529;
+$red: #771a1a;
+body {
+    background-color: mix(white, $primary, 90%);
+}
+.bg-primary {
+    background-color: $primary !important;
+}
+.bg-secondary {
+    background-color: $secondary !important;
+}
+.bg-red {
+    background-color: $red !important;
+}
+.offcanvas.offcanvas-start {
+    width: 600px;
+}
+.site-title {
+    color: $dark;
+}
+.navbar a {
+    text-decoration: none;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+    color: white;
+}
+.breadcrumb-item a {
+    color: white;
+}
+.breadcrumb-item.active {
+    color: white;
+    font-weight: bold;
+}
+img.profile {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 16rem;
+}
+table {
+    max-width: 95vw;
+    overflow-x: scroll;
+    th {
+        background-color: var(--bs-dark-bg-subtle) !important;
+        white-space: nowrap;
+    }
+}

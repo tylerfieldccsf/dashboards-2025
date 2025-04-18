@@ -3,19 +3,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {%- seo -%}
-  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
-    {%- include google-analytics.html -%}
+  {%- include google-analytics.html -%}
   {%- endif -%}
-
+  
   <script src="{{ site.baseurl }}{% link assets/jquery/jquery-3.7.1.min.js %}"></script>
-
+  
   <script src="{{ site.baseurl }}{% link assets/bootstrap-5.3.3-dist/js/bootstrap.min.js %}"></script>
   <link rel="stylesheet" href="{{ "/assets/bootstrap-5.3.3-dist/css/bootstrap.min.css" | relative_url }}">
-
+  
   <script src="{{ site.baseurl }}{% link assets/DataTables/datatables.min.js %}"></script>
   <link rel="stylesheet" href="{{ "/assets/DataTables/datatables.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
 
 
 </head>
