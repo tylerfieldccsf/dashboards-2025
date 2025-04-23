@@ -9,23 +9,16 @@
 .table-text-right {
     text-align: right;
 }
-/* load _sass/minima.scss */
-// @import "minima";
-// @import "bootstrap-5.3.3-dist/css/bootstrap.min.css";
-
-/* Put any custom CSS here */
 $primary: #004A80;
 $secondary: #005A56;
 $dark: #212529;
 $red: #771a1a;
+/* load _sass/bootstrap.scss */
+@import "bootstrap";
+
+/* Put any custom CSS here */
 body {
     background-color: mix(white, $primary, 90%);
-}
-.bg-primary {
-    background-color: $primary !important;
-}
-.bg-secondary {
-    background-color: $secondary !important;
 }
 .bg-red {
     background-color: $red !important;
@@ -55,10 +48,45 @@ img.profile {
     max-width: 16rem;
 }
 table {
-    max-width: 95vw;
-    overflow-x: scroll;
     th {
         background-color: var(--bs-dark-bg-subtle) !important;
         white-space: nowrap;
     }
+}
+.dt-layout-full {
+    overflow-x: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+.table-row {
+    row-gap: 1rem;
+}
+
+// use these inside col-md-# containers
+.col-table-6, .col-table-8, .col-table-4, .col-table-12 {
+    @extend .bg-white;
+    @extend .border;
+    @extend .border-light-subtle;
+    @extend .rounded;
+    @extend .p-3;
+    height: 100%;
+}
+
+// use these together with card
+.money-card {
+    text-align: center;
+    .card-text {
+        font-size: 1.5rem;
+    }
+    .card-title {
+        font-size: 1rem;
+    }
+}
+.money-card-green {
+    background-color: $secondary;
+    color: white;
+}
+.money-card-red {
+    background-color: $red;
+    color: white;
 }

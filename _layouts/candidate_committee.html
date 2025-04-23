@@ -18,7 +18,7 @@ layout: default
         <span>Publicly Financed: [yes/no]</span></p>
         <div class="d-flex column-gap-3">
           <div class="">
-            <div class="card">
+            <div class="card money-card money-card-green">
               <div class="card-body">
                 <h5 class="card-title">Total Contributions</h5>
                 <p class="card-text"><span class="mononumber">{{page.totals[0]}}</span></p>
@@ -26,7 +26,7 @@ layout: default
             </div>
           </div>
           <div class="">
-            <div class="card">
+            <div class="card money-card money-card-red">
               <div class="card-body">
                 <h5 class="card-title">Total Expenditures</h5>
                 <p class="card-text"><span class="mononumber">{{page.totals[1]}}</span></p>
@@ -59,9 +59,9 @@ layout: default
   </div> <!-- end of top container div -->
 </div> <!-- end of bg-primary div -->
   <div class="container mt-3">
-  <div class="row">
+  <div class="row table-row">
     <div class="col-md-6">
-      <div class="bg-white border border-light-subtle rounded p-3 cm-contributor">
+      <div class="cm-contributors col-table-6">
         <h4>Contributors</h4>
         <table class="table caption-top" id="contributors_table">
           <thead>
@@ -90,7 +90,7 @@ layout: default
       </div>
     </div>
     <div class="col-md-6">
-      <div class="bg-white border border-light-subtle rounded p-3 cm-expenditures">
+      <div class="cm-expenditures col-table-6">
         <h4>Expenditures</h4>
         <table class="table caption-top" id="expenditures_table">
           <thead>
@@ -226,17 +226,11 @@ layout: default
 </div>
 
 <script>
-  new DataTable('#contributors_table', {lengthMenu: [
-          [5, 10, 25, 50, -1],
-          [5, 10, 25, 50, "All"]
-      ],
-      order: [[2, 'desc']]
+  new DataTable('#contributors_table', {pageLength:10, lengthChange: false,
+      order: [[2, 'desc']], columnDefs: [{ width: '35%', targets: [0,1] }], pagingType: 'simple_numbers'
   });
-  new DataTable('#expenditures_table', {lengthMenu: [
-          [5, 10, 25, 50, -1],
-          [5, 10, 25, 50, "All"]
-      ],
-      order: [[2, 'desc']]
+  new DataTable('#expenditures_table', {pageLength:10, lengthChange: false,
+      order: [[2, 'desc']], columnDefs: [{ width: '35%', targets: [0,1] }], pagingType: 'simple_numbers'
   });
   new DataTable('table.dtify', {lengthMenu: [
             [5, 10, 25, 50, -1],
