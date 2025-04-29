@@ -4,6 +4,11 @@ election: 2024-11-05
 historic: false
 candidate: false
 title: "Measure B: Community Health and Medical Facilities, Street Safety, Public Spaces, and Shelter to Reduce Homelessness Bond"
+breadcrumbs:
+- - elections/2024-11-05/
+  - Nov 5, 2024
+- - elections/2024-11-05/measures/measureb
+  - Measure B
 committees:
 - position: SUPPORT
   filer_nid: '208836021'

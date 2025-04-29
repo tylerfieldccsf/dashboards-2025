@@ -4,6 +4,11 @@ election: 2024-11-05
 historic: false
 candidate: true
 title: City Attorney
+breadcrumbs:
+- - elections/2024-11-05/
+  - Nov 5, 2024
+- - elections/2024-11-05/contests/cityattorney
+  - City Attorney
 candidates:
 - filer_nid: '209647307'
   filer_id: '1466331'

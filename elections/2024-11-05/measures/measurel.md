@@ -4,6 +4,11 @@ election: 2024-11-05
 historic: false
 candidate: false
 title: "Measure L: Additional Business Tax on Transportation Network Companies and Autonomous Vehicle Businesses to Fund Public Transportation"
+breadcrumbs:
+- - elections/2024-11-05/
+  - Nov 5, 2024
+- - elections/2024-11-05/measures/measurel
+  - Measure L
 committees:
 - position: SUPPORT
   filer_nid: '211486142'

@@ -4,24 +4,21 @@ filer_nid: '212473549'
 filer_id: .nan
 filer_name: Dennis Wong
 jurisdiction: sf
-pri_form: true
 candidate_controlled: false
 committee_type: Independent Expenditure
 dates:
 - '2022-01-01'
 - '2024-12-31'
 breadcrumbs:
-- - current/
+- - elections/2024-11-05/
   - Nov 5, 2024
+- - ''
+  - Dennis Wong
 totals:
 - $0
 - $30,000
 contributors: []
-expenditures:
-- - ''
-  - BELIEVE IN SF LURIE FOR MAYOR 2024
-  - '1463554'
-  - $30,000
+expenditures: []
 filings:
 - filing_datetime: '2024-11-01 12:54:39-07:00'
   form_name: FPPC497

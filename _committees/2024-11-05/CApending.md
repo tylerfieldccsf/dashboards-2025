@@ -4,28 +4,22 @@ filer_nid: '212391140'
 filer_id: pending
 filer_name: Our Future, Our SF Opposing Lurie & Farrell for Mayor 2024
 jurisdiction: sf
-pri_form: true
 candidate_controlled: false
 committee_type: Independent Expenditure
 dates:
 - '2022-01-01'
 - '2024-12-31'
 breadcrumbs:
-- - current/
+- - elections/2024-11-05/
   - Nov 5, 2024
+- - ''
+  - Our Future, Our SF Opposing Lurie & Farrell for Mayor 2024
 totals:
 - $0
 - $239,999
 contributors: []
 expenditures:
-- - ''
-  - Independent Expenditure by Our Future, Our SF Opposing Lurie & Farrell for Mayor
-    2024
-  - ''
-  - $239,999
-- - ''
-  - 50+1 Strategies, LLC
-  - ''
+- - campaign literature and mailing
   - $0
 filings:
 - filing_datetime: '2025-01-31 12:01:42-08:00'

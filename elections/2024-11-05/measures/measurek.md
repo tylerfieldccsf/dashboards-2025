@@ -4,6 +4,11 @@ election: 2024-11-05
 historic: false
 candidate: false
 title: "Measure K: Permanently Closing the Upper Great Highway to Private Vehicles to Establish a Public Open Recreation Space"
+breadcrumbs:
+- - elections/2024-11-05/
+  - Nov 5, 2024
+- - elections/2024-11-05/measures/measurek
+  - Measure K
 committees:
 - position: SUPPORT
   filer_nid: '211776936'

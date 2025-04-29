@@ -4,6 +4,11 @@ election: 2024-11-05
 historic: false
 candidate: true
 title: District Attorney
+breadcrumbs:
+- - elections/2024-11-05/
+  - Nov 5, 2024
+- - elections/2024-11-05/contests/districtattorney
+  - District Attorney
 candidates:
 - filer_nid: '205693494'
   filer_id: '1456920'
