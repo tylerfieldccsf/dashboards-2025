@@ -14519,7 +14519,7 @@ contributors:
   transactions:
   - tx_amount: $9,515,000
     filer_naml: Daniel Lurie for Mayor 2024
-    tx_cmteid: ''
+    tx_cmteid: '1463099'
 - tx_firstname: DANIEL
   tx_lastname: ROBINSON
   tx_entitycode: IND

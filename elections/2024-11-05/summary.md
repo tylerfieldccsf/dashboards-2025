@@ -1,7 +1,7 @@
 ---
 layout: election
 title: November 5, 2024 Election
-permalink: /current/
+permalink: /elections/2024-11-05/
 election: 2024-11-05
 historic: false
 candidate_pf:

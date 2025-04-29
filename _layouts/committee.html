@@ -79,7 +79,7 @@ layout: default
               <tr>
                   <td>{{ contributor[0] }}</td>
                   <td>
-                    {%- if contributor[2] != "" -%}<a href="{{site.basurl}}/committees/current/CA{{contributor[2]}}.html">{%- endif -%}
+                    {%- if contributor[2] != "" -%}<a href="{{site.basurl}}/committees/{{page.election}}/CA{{contributor[2]}}.html">{%- endif -%}
                     {{ contributor[1] }}
                     {%- if contributor[2] != "" -%}</a>{%- endif -%}
                   </td>
@@ -108,7 +108,7 @@ layout: default
               <tr>
                   <td>{{ exp[0] }}</td>
                   <td>
-                    {%- if exp[2] != "" -%}<a href="{{site.basurl}}/committees/current/CA{{exp[2]}}.html">{%- endif -%}
+                    {%- if exp[2] != "" -%}<a href="{{site.basurl}}/committees/{{page.election}}/CA{{exp[2]}}.html">{%- endif -%}
                       {{ exp[1] }}
                     {%- if exp[2] != "" -%}</a>{%- endif -%}
                   </td>
