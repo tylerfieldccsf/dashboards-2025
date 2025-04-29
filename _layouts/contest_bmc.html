@@ -2,12 +2,7 @@
 layout: default
 ---
 
-{% if page.historic %}
-    {% assign url = '/committees/historic' | prepend: site.baseurl %}
-{% else %}
-    {% assign url =  '/committees/current' | prepend: site.baseurl %}
-{% endif %}
-
+<div class="container">
 <h1>{{page.title}}</h1>
 
 
@@ -24,7 +19,7 @@ layout: default
         {% for committee in page.committees %}
             <tr>
                 <td>
-                    <a href="{{url}}/CA{{committee.filer_id}}">
+                    <a href="{{site.baseurl}}/committees/{{page.election}}/CA{{committee.filer_id}}">
                         {{ committee.committee_name }}
                     </a>
                 </td> 
@@ -42,7 +37,7 @@ layout: default
     </tfoot>
 </table>
 <hr>
-
+</div>
 <script>
     let currencyOptions = {
         style: 'currency', 

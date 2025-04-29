@@ -1,13 +1,7 @@
 ---
 layout: default
 ---
-
-{% if page.historic %}
-    {% assign url = '/committees/historic' | prepend: site.baseurl %}
-{% else %}
-    {% assign url =  '/committees/current' | prepend: site.baseurl %}
-{% endif %}
-
+<div class="container">
 <h1>{{page.title}}</h1>
 
 <h2>Candidate Controlled Committees</h2>
@@ -23,7 +17,7 @@ layout: default
         {% for candidate in page.candidates %}
             <tr>
                 <td>
-                    <a href="{{url}}/CA{{candidate.filer_id}}.html">   
+                    <a href="{{site.baseurl}}/committees/{{page.election}}/CA{{candidate.filer_id}}.html">   
                         {{ candidate.candidate_name }}
                     </a>
                 </td> 
@@ -61,7 +55,7 @@ layout: default
        
             <tr>
                 <td>
-                    <a href="{{url}}/CA{{committee.filer_id}}">
+                    <a href="{{site.baseurl}}/committees/{{page.election}}/CA{{committee.filer_id}}">
                         {{ committee.committee_name }}
                     </a>
                 </td> 
@@ -81,6 +75,7 @@ layout: default
 <hr>
 {% endfor %}
 {% endif %}
+</div>
 <script>
     let currencyOptions = {
         style: 'currency', 
