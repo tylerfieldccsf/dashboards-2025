@@ -9,7 +9,84 @@
 .table-text-right {
     text-align: right;
 }
-/* load _sass/minima.scss */
-@import "minima";
+$primary: #004A80;
+$secondary: #005A56;
+$dark: #212529;
+$red: #771a1a;
+/* load _sass/bootstrap.scss */
+@import "bootstrap";
 
 /* Put any custom CSS here */
+body {
+    background-color: mix(white, $primary, 90%);
+}
+.bg-red {
+    background-color: $red !important;
+}
+.offcanvas.offcanvas-start {
+    width: 600px;
+}
+.site-title {
+    color: $dark;
+}
+.navbar a {
+    text-decoration: none;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+    color: white;
+}
+.breadcrumb-item a {
+    color: white;
+}
+.breadcrumb-item.active {
+    color: white;
+    font-weight: bold;
+}
+img.profile {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 16rem;
+}
+table {
+    th {
+        background-color: var(--bs-dark-bg-subtle) !important;
+        white-space: nowrap;
+    }
+}
+.dt-layout-full {
+    overflow-x: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+.table-row {
+    row-gap: 1rem;
+}
+
+// use these inside col-md-# containers
+.col-table-6, .col-table-8, .col-table-4, .col-table-12 {
+    @extend .bg-white;
+    @extend .border;
+    @extend .border-light-subtle;
+    @extend .rounded;
+    @extend .p-3;
+    height: 100%;
+}
+
+// use these together with card
+.money-card {
+    text-align: center;
+    .card-text {
+        font-size: 1.5rem;
+    }
+    .card-title {
+        font-size: 1rem;
+    }
+}
+.money-card-green {
+    background-color: $secondary;
+    color: white;
+}
+.money-card-red {
+    background-color: $red;
+    color: white;
+}
