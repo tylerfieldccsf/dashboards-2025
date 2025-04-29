@@ -79,7 +79,7 @@ layout: default
               <tr>
                   <td>{{ contributor[0] }}</td>
                   <td>
-                    {%- if contributor[2] != "" -%}<a href="{{site.basurl}}/committees/current/CA{{contributor[2]}}.html">{%- endif -%}
+                    {%- if contributor[2] != "" -%}<a href="{{site.basurl}}/committees/{{page.election}}/CA{{contributor[2]}}.html">{%- endif -%}
                     {{ contributor[1] }}
                     {%- if contributor[2] != "" -%}</a>{%- endif -%}
                   </td>
@@ -97,22 +97,15 @@ layout: default
     <table class="table caption-top" id="expenditures_table">
       <thead>
         <tr>
-          <th scope="col">First Name</th>
-          <th scope="col">Last Name</th>
+          <th scope="col">Expense Category</th>
           <th scope="col">Total Expenditures</th>
         </tr>
       </thead>
       <tbody>
           {% for exp in page.expenditures %}
-        
               <tr>
                   <td>{{ exp[0] }}</td>
-                  <td>
-                    {%- if exp[2] != "" -%}<a href="{{site.basurl}}/committees/current/CA{{exp[2]}}.html">{%- endif -%}
-                      {{ exp[1] }}
-                    {%- if exp[2] != "" -%}</a>{%- endif -%}
-                  </td>
-                  <td class="mononumber">{{ exp[3] }}</td>
+                  <td class="mononumber">{{ exp[1] }}</td>
               </tr>
           {% endfor %}
       </tbody>

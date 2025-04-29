@@ -2,48 +2,41 @@
 layout: default
 ---
 
-{% if page.historic %}
-    {% assign url = '/committees/historic' | prepend: site.baseurl %}
-{% else %}
-    {% assign url =  '/committees/current' | prepend: site.baseurl %}
-{% endif %}
-
-
 <div class="container">
     <h1>{{page.title}}</h1>
     <div class="row table-row">
         <div class="col-md-12">
             <div class="cc_cm col-table-12">
                 <table class="table caption-top dtify">
-                    <thead>
+                  <thead>
+                    <tr>
+                      <th scope="col">Committee</th>
+                      <th scope="col">Position</th>
+                      <th scope="col">Funds</th>
+                      <th scope="col">Expenses</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                      {% for committee in page.committees %}
+                          <tr>
+                              <td>
+                                  <a href="{{site.baseurl}}/committees/{{page.election}}/CA{{committee.filer_id}}">
+                                      {{ committee.committee_name }}
+                                  </a>
+                              </td> 
+                              <td>{{ committee.position }}</td>
+                              <td class="mononumber">{{ committee.funds }}</td>
+                              <td class="mononumber">{{ committee.expenses }}</td>
+                          </tr>
+                      {% endfor %}
+                  </tbody>
+                  <tfoot>
                       <tr>
-                        <th scope="col">Committee</th>
-                        <th scope="col">Position</th>
-                        <th scope="col">Funds</th>
-                        <th scope="col">Expenses</th>
+                          <th style="text-align:right" colspan="3">Total:</th>
+                          <th class="mononumber"></th>
                       </tr>
-                    </thead>
-                    <tbody>
-                        {% for committee in page.committees %}
-                            <tr>
-                                <td>
-                                    <a href="{{url}}/CA{{committee.filer_id}}">
-                                        {{ committee.committee_name }}
-                                    </a>
-                                </td> 
-                                <td>{{ committee.position }}</td>
-                                <td class="mononumber">{{ committee.funds }}</td>
-                                <td class="mononumber">{{ committee.expenses }}</td>
-                            </tr>
-                        {% endfor %}
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th style="text-align:right" colspan="3">Total:</th>
-                            <th class="mononumber"></th>
-                        </tr>
-                    </tfoot>
-                </table>
+                  </tfoot>
+              </table>
             </div>
         </div>
     </div>

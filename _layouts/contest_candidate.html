@@ -2,12 +2,6 @@
 layout: default
 ---
 
-{% if page.historic %}
-    {% assign url = '/committees/historic' | prepend: site.baseurl %}
-{% else %}
-    {% assign url =  '/committees/current' | prepend: site.baseurl %}
-{% endif %}
-
 <div class="container">
     <h1>{{page.title}}</h1>
     <div class="row table-row">
@@ -15,34 +9,34 @@ layout: default
             <div class="cc_cm col-table-12">
                 <h2>Candidate Controlled Committees</h2>
                 <table class="table caption-top" id="candidate_controlled">
-                    <thead>
+                  <thead>
+                    <tr>
+                      <th scope="col">Candidates</th>
+                      <th scope="col">Funds</th>
+                      <th scope="col">Expenses</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                      {% for candidate in page.candidates %}
+                          <tr>
+                              <td>
+                                  <a href="{{site.baseurl}}/committees/{{page.election}}/CA{{candidate.filer_id}}.html">   
+                                      {{ candidate.candidate_name }}
+                                  </a>
+                              </td> 
+                              <td class="mononumber">{{ candidate.funds }}</td>
+                              <td class="mononumber">{{ candidate.expenses }}</td>
+                          </tr>
+                      {% endfor %}
+                  </tbody>
+                  <tfoot>
                       <tr>
-                        <th scope="col">Candidates</th>
-                        <th scope="col">Funds</th>
-                        <th scope="col">Expenses</th>
+                          <th style="text-align:right">Total:</th>
+                          <th class="mononumber"></th>
+                          <th class="mononumber"></th>
                       </tr>
-                    </thead>
-                    <tbody>
-                        {% for candidate in page.candidates %}
-                            <tr>
-                                <td>
-                                    <a href="{{url}}/CA{{candidate.filer_id}}.html">   
-                                        {{ candidate.candidate_name }}
-                                    </a>
-                                </td> 
-                                <td class="mononumber">{{ candidate.funds }}</td>
-                                <td class="mononumber">{{ candidate.expenses }}</td>
-                            </tr>
-                        {% endfor %}
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th style="text-align:right">Total:</th>
-                            <th class="mononumber"></th>
-                            <th class="mononumber"></th>
-                        </tr>
-                    </tfoot>
-                </table>
+                  </tfoot>
+              </table>
             </div>
         </div>
     </div>
@@ -58,43 +52,45 @@ layout: default
             <div class="3p_cm col-table-12">
                 <h3>{{candidate.candidate_name}}</h3>
                 <table class="table caption-top ie_committee">
-                    <thead>
+                  <thead>
+                    <tr>
+                      <th scope="col">Committee</th>
+                      <th scope="col">Position</th>
+                      <th scope="col">Funds</th>
+                      <th scope="col">Expenses</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                      {% for committee in candidate.committees %}
+
+                          <tr>
+                              <td>
+                                  <a href="{{site.baseurl}}/committees/{{page.election}}/CA{{committee.filer_id}}">
+                                      {{ committee.committee_name }}
+                                  </a>
+                              </td> 
+                              <td>{{ committee.position }}</td>
+                              <td class="mononumber">{{ committee.funds }}</td>
+                              <td class="mononumber">{{ committee.expenses }}</td>
+                          </tr>
+                      {% endfor %}
+                  </tbody>
+                  <tfoot>
                       <tr>
-                        <th scope="col">Committee</th>
-                        <th scope="col">Position</th>
-                        <th scope="col">Funds</th>
-                        <th scope="col">Expenses</th>
+                          <th style="text-align:right" colspan="3">Total:</th>
+                          <th class="mononumber"></th>
                       </tr>
-                    </thead>
-                    <tbody>
-                        {% for committee in candidate.committees %}
-                       
-                            <tr>
-                                <td>
-                                    <a href="{{url}}/CA{{committee.filer_id}}">
-                                        {{ committee.committee_name }}
-                                    </a>
-                                </td> 
-                                <td>{{ committee.position }}</td>
-                                <td class="mononumber">{{ committee.funds }}</td>
-                                <td class="mononumber">{{ committee.expenses }}</td>
-                            </tr>
-                        {% endfor %}
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th style="text-align:right" colspan="3">Total:</th>
-                            <th class="mononumber"></th>
-                        </tr>
-                    </tfoot>
-                </table>
+                  </tfoot>
+              </table>
             </div>
         </div>
     </div>
     
     {% endfor %}
 </div>
+
 {% endif %}
+</div>
 <script>
     let currencyOptions = {
         style: 'currency', 
