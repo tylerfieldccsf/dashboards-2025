@@ -4,6 +4,11 @@ election: 2024-11-05
 historic: false
 candidate: true
 title: Mayor
+breadcrumbs:
+- - elections/2024-11-05/
+  - Nov 5, 2024
+- - elections/2024-11-05/contests/mayor
+  - Mayor
 candidates:
 - filer_nid: '201219888'
   filer_id: '1441599'

@@ -4,6 +4,11 @@ election: 2024-11-05
 historic: false
 candidate: false
 title: "Measure I: Retirement Benefits for Nurses and 911 Operators"
+breadcrumbs:
+- - elections/2024-11-05/
+  - Nov 5, 2024
+- - elections/2024-11-05/measures/measurei
+  - Measure I
 committees:
 - position: SUPPORT
   filer_nid: '211945557'

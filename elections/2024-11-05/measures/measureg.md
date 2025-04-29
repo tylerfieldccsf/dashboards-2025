@@ -4,6 +4,11 @@ election: 2024-11-05
 historic: false
 candidate: false
 title: "Measure G: Funding Rental Subsidies for Affordable Housing Developments Serving Low Income Seniors, Families, and Persons with Disabilities"
+breadcrumbs:
+- - elections/2024-11-05/
+  - Nov 5, 2024
+- - elections/2024-11-05/measures/measureg
+  - Measure G
 committees:
 - position: SUPPORT
   filer_nid: '211945518'

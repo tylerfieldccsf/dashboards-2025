@@ -4,6 +4,11 @@ election: 2024-11-05
 historic: false
 candidate: false
 title: "Measure A: Schools Improvement and Safety Bond"
+breadcrumbs:
+- - elections/2024-11-05/
+  - Nov 5, 2024
+- - elections/2024-11-05/measures/measurea
+  - Measure A
 committees:
 - position: SUPPORT
   filer_nid: '211459513'

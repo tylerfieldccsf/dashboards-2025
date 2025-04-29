@@ -4,6 +4,11 @@ election: 2024-11-05
 historic: false
 candidate: true
 title: Treasurer
+breadcrumbs:
+- - elections/2024-11-05/
+  - Nov 5, 2024
+- - elections/2024-11-05/contests/treasurer
+  - Treasurer
 candidates:
 - filer_nid: '208825439'
   filer_id: '1464921'

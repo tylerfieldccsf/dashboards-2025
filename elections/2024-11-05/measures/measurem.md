@@ -4,6 +4,11 @@ election: 2024-11-05
 historic: false
 candidate: false
 title: "Measure M: Changes to Business Taxes"
+breadcrumbs:
+- - elections/2024-11-05/
+  - Nov 5, 2024
+- - elections/2024-11-05/measures/measurem
+  - Measure M
 committees:
 - position: SUPPORT
   filer_nid: '211514770'

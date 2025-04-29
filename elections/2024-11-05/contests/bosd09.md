@@ -4,6 +4,11 @@ election: 2024-11-05
 historic: false
 candidate: true
 title: BOS D09
+breadcrumbs:
+- - elections/2024-11-05/
+  - Nov 5, 2024
+- - elections/2024-11-05/contests/bosd09
+  - BOS D09
 candidates:
 - filer_nid: '207586433'
   filer_id: '1459563'

@@ -4,6 +4,11 @@ election: 2024-11-05
 historic: false
 candidate: true
 title: Sheriff
+breadcrumbs:
+- - elections/2024-11-05/
+  - Nov 5, 2024
+- - elections/2024-11-05/contests/sheriff
+  - Sheriff
 candidates:
 - filer_nid: '208440318'
   filer_id: '1462151'

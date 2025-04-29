@@ -4,6 +4,11 @@ election: 2024-11-05
 historic: false
 candidate: true
 title: Community College Board
+breadcrumbs:
+- - elections/2024-11-05/
+  - Nov 5, 2024
+- - elections/2024-11-05/contests/communitycollegeboard
+  - Community College Board
 candidates:
 - filer_nid: '208761647'
   filer_id: '1464456'

@@ -4,6 +4,11 @@ election: 2024-11-05
 historic: false
 candidate: false
 title: "Measure O: Supporting Reproductive Rights"
+breadcrumbs:
+- - elections/2024-11-05/
+  - Nov 5, 2024
+- - elections/2024-11-05/measures/measureo
+  - Measure O
 committees:
 - position: SUPPORT
   filer_nid: '211703442'

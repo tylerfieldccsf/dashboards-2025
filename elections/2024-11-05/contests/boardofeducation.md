@@ -4,6 +4,11 @@ election: 2024-11-05
 historic: false
 candidate: true
 title: Board of Education
+breadcrumbs:
+- - elections/2024-11-05/
+  - Nov 5, 2024
+- - elections/2024-11-05/contests/boardofeducation
+  - Board of Education
 candidates:
 - filer_nid: '211451883'
   filer_id: '1468546'

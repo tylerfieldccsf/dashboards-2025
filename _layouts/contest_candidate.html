@@ -1,5 +1,6 @@
 ---
 layout: default
+pagenav: true
 ---
 
 <div class="container">
@@ -44,8 +45,50 @@ layout: default
 
 <hr>
 {% if page.ie_candidates %}
+<h2>Third Party Committees</h2>
+<h2>Rows/Columns Style</h2>
+
+{% for candidate in page.ie_candidates %}
+<h3>{{candidate.candidate_name}}</h3>
+<div class="container">
+    <div class="row border-bottom">
+        <div class="col-8">
+            <div class="row">                
+                <div class="col-12 col-lg-10"><h4>Committee</h4></div>
+                <div class="col-12 col-lg-2"><h4>Position</h4></div>
+            </div>
+        </div>
+        
+        <div class="col-2 text-end"><h4>Funds</h4></div>
+        <div class="col-2 text-end"><h4>Expenses</h4></div>
+    </div>
+    {% for committee in candidate.committees %}
+    <div class="row border-bottom align-items-center">
+        <div class="col-8">
+            <div class="row align-items-center">                
+                <div class="col-12 col-lg-10">
+                    <a href="{{site.baseurl}}/committees/{{page.election}}/CA{{committee.filer_id}}">
+                        {{ committee.committee_name }}
+                    </a>
+                </div>
+                <div class="col-12 col-lg-2">{{ committee.position }}</div>
+            </div>
+            
+        </div>
+        <div class="col-2 mononumber text-end">{{ committee.funds }}</div>
+        <div class="col-2 mononumber text-end">{{ committee.expenses }}</div>
+    </div>
+    {% endfor %}
+</div>
+<hr>
+{% endfor %}
+<hr>
+<hr>
+<hr>
+
 <div class="container">
     <h2>Third Party Committees</h2>
+    <h2>DataTables Style</h2>
     {% for candidate in page.ie_candidates %}
     <div class="row table-row">
         <div class="col-md-12">
