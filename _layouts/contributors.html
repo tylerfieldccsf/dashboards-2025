@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-
+<div class="container">
 <h1>{{page.title}}</h1>
 
 <h2>Contributors in aggregate of more than $5,000</h2>
@@ -31,7 +31,7 @@ layout: default
                         <tbody>
                             {% for cmte in contributor.transactions %}
                             <tr>
-                                <td><a href="{{site.baseurl}}/committees/{{page.election}}/CA{{cmte.tx_cmteid}}.html">{{cmte.filer_naml}}</a></td>
+                                <td><a href="{{site.baseurl}}/committees/{{page.election}}/CA{{cmte.filer_id}}.html">{{cmte.filer_naml}}</a></td>
                                 <td class="mononumber table-text-right">{{cmte.tx_amount}}</td>
                             </tr>
                             {% endfor %}
@@ -42,7 +42,7 @@ layout: default
         {% endfor %}
     </tbody>
 </table>
-
+</div>
 {{content}}
 
 <script>

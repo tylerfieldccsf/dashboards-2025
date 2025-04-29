@@ -4,7 +4,6 @@ filer_nid: '212327513'
 filer_id: unknown
 filer_name: Residents Opposing Aaron Peskin for Mayor 2024
 jurisdiction: sf
-pri_form: true
 candidate_controlled: false
 incumbent: true
 pf_participation: true
@@ -16,9 +15,9 @@ dates:
 - '2022-01-01'
 - '2024-12-31'
 breadcrumbs:
-- - current/
+- - elections/2024-11-05/
   - Nov 5, 2024
-- - current/contests/mayor.html
+- - elections/2024-11-05/contests/mayor.html
   - Mayor
 totals:
 - $151,000
@@ -37,26 +36,10 @@ contributors:
   - ''
   - $1,000
 expenditures:
-- - ''
-  - STROTHER NUCKELS STRATEGIES
-  - ''
-  - $81,500
-- - ''
-  - CONVERGENCE TARGETED COMMUNICATIONS
-  - ''
-  - $34,799
-- - ''
-  - BEAVER LEGAL CORPORATION
-  - ''
+- - independent expenditure supporting/opposing others
+  - $116,299
+- - professional services (legal, accounting)
   - $5,000
-- - ''
-  - UNITEMIZED SCHEDULE E
-  - ''
-  - $0
-- - ''
-  - UNITEMIZED SCHEDULE F
-  - ''
-  - $0
 filings:
 - filing_datetime: '2025-01-30 21:48:33-08:00'
   form_name: FPPC460
