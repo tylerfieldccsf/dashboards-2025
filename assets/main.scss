@@ -60,6 +60,7 @@ table {
 }
 .table-row {
     row-gap: 1rem;
+    @extend .mb-3;
 }
 
 // use these inside col-md-# containers
@@ -82,11 +83,11 @@ table {
         font-size: 1rem;
     }
 }
-.money-card-green {
+.money-card-1 {
     background-color: $secondary;
     color: white;
 }
-.money-card-red {
+.money-card-2 {
     background-color: $red;
     color: white;
 }
