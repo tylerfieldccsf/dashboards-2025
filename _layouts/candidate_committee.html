@@ -19,7 +19,7 @@ pagenav: true
         <span>Publicly Financed: [yes/no]</span></p>
         <div class="d-flex column-gap-3">
           <div class="">
-            <div class="card money-card money-card-1">
+            <div class="card money-card">
               <div class="card-body">
                 <h5 class="card-title">Total Contributions</h5>
                 <p class="card-text"><span class="mononumber">{{page.totals[0]}}</span></p>
@@ -27,7 +27,7 @@ pagenav: true
             </div>
           </div>
           <div class="">
-            <div class="card money-card money-card-2">
+            <div class="card money-card">
               <div class="card-body">
                 <h5 class="card-title">Total Expenditures</h5>
                 <p class="card-text"><span class="mononumber">{{page.totals[1]}}</span></p>
@@ -63,7 +63,7 @@ pagenav: true
   <div class="row table-row">
     <div class="col-md-6">
       <div class="cm-contributors col-table-6">
-        <h4>Contributors</h4>
+        <h4>Contributors <i data-bs-toggle="offcanvas" data-bs-target="#contributorsTT" class="fs-5 fa-regular fa-circle-info"></i></h4>
         <table class="table caption-top" id="contributors_table">
           <thead>
             <tr>
@@ -92,7 +92,7 @@ pagenav: true
     </div>
     <div class="col-md-6">
       <div class="cm-expenditures col-table-6">
-        <h4>Expenditures</h4>
+        <h4>Expenditures <i data-bs-toggle="offcanvas" data-bs-target="#expendituresTT" class="fs-5 fa-regular fa-circle-info"></i></h4>
         <table class="table caption-top" id="expenditures_table">
           <thead>
             <tr>
