@@ -4,13 +4,6 @@ title: About
 permalink: /about/
 ---
 
-todo
-
-change the candidate controlled committee view into a candidate view; complete with third party support/opposition table
-
-card view of contests
-
-breadcrumbs to title
 
 contributors to bmc, ies, general purpose, state, etc committees. 
     limit to multiple committee contributors?

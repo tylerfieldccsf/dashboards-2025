@@ -1,21 +1,27 @@
 ---
 layout: contest_bmc
-election: 2024-11-05
+election: '2024-11-05'
 historic: false
 candidate: false
-title: "Measure F: Police Staffing and Deferred Retirement"
+title: 'F: Police Staffing and Deferred Retirement'
 breadcrumbs:
-- - elections/2024-11-05/
-  - Nov 5, 2024
-- - elections/2024-11-05/measures/measuref
-  - Measure F
+- - November 05, 2024
+  - elections/2024-11-05
+- - 'F: Police Staffing and Deferred Retirement'
+  - elections/2024-11-05/measures/measuref
 committees:
+- position: SUPPORT
+  filer_nid: '201619433'
+  filer_id: '1433436'
+  committee_name: Coalition to Grow San Francisco - Grow SF PAC
+  funds: ''
+  expenses: 14939.79
 - position: SUPPORT
   filer_nid: '211940502'
   filer_id: '1472954'
-  committee_name: Yes on F, San Franciscans for a Full Police Staffing
-  contest: Measure F
-  funds: $378,080
-  expenses: $364,744
+  committee_name: YES ON F, SAN FRANCISCANS FOR A FULL POLICE STAFFING
+  funds: 378080.48
+  expenses: 377818.68
 
 ---
+

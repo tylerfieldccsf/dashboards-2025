@@ -26,14 +26,14 @@ pagenav: true
                         {{ contributor.tx_entitycode }}
                     {%- if contributor.tx_cmteid != '' -%}</a>{%- endif -%}
                     </td>
-                <td class="mononumber">{{ contributor.tx_amount }}</td>
+                <td class="mononumber">{{ contributor.total }}</td>
                 <td class="">
                     <table class="table table-sm">
                         <tbody>
                             {% for cmte in contributor.transactions %}
                             <tr>
-                                <td><a href="{{site.baseurl}}/committees/{{page.election}}/CA{{cmte.filer_id}}.html">{{cmte.filer_naml}}</a></td>
-                                <td class="mononumber table-text-right">{{cmte.tx_amount}}</td>
+                                <td><a href="{{site.baseurl}}/committees/{{page.election}}/CA{{cmte.cmte_fppcid}}.html">{{cmte.cmte_name}}</a></td>
+                                <td class="mononumber table-text-right">{{cmte.total}}</td>
                             </tr>
                             {% endfor %}
                         </tbody>

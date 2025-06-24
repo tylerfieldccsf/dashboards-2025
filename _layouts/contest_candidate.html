@@ -97,10 +97,10 @@ pagenav: true
                 <table class="table caption-top ie_committee">
                   <thead>
                     <tr>
-                      <th scope="col">Committee</th>
-                      <th scope="col">Position</th>
+                      <th scope="col" data-priority="1">Committee</th>
+                      <th scope="col" data-priority="10101">Position</th>
                       <th scope="col">Funds</th>
-                      <th scope="col">Expenses</th>
+                      <th scope="col" data-priority="2">Expenses</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -184,32 +184,14 @@ pagenav: true
 
     var groupColumn = 1;
     var table = $('table.ie_committee').DataTable({
-        columnDefs: [{ visible: false, targets: groupColumn }],
-        order: [[groupColumn, 'asc']],
+        columnDefs: [
+            // { visible: false, targets: groupColumn },
+        ],
+        // order: [[groupColumn, 'asc']],
         displayLength: -1,
+        responsive: true,
         layout: layoutOptions,
         lengthChange: false,
-        drawCallback: function (settings) {
-            var api = this.api();
-            var rows = api.rows({ page: 'current' }).nodes();
-            var last = null;
-    
-            api.column(groupColumn, { page: 'current' })
-                .data()
-                .each(function (group, i) {
-                    if (last !== group) {
-                        $(rows)
-                            .eq(i)
-                            .before(
-                                '<tr class="group"><td colspan="4">' +
-                                    group +
-                                    '</td></tr>'
-                            );
-    
-                        last = group;
-                    }
-                });
-        },
         footerCallback: function (row, data, start, end, display) {
             let api = this.api();
     
@@ -230,8 +212,57 @@ pagenav: true
             
             // Update footer
             api.column(3).footer().innerHTML =
-                totalExp.toLocaleString('en-us', currencyOptions);
+                totalExp
+                // totalExp.toLocaleString('en-us', currencyOptions);
         },
+        // columnDefs: [{ visible: false, targets: groupColumn }],
+        // order: [[groupColumn, 'asc']],
+        // displayLength: -1,
+        // layout: layoutOptions,
+        // lengthChange: false,
+        // drawCallback: function (settings) {
+        //     var api = this.api();
+        //     var rows = api.rows({ page: 'current' }).nodes();
+        //     var last = null;
+    
+        //     api.column(groupColumn, { page: 'current' })
+        //         .data()
+        //         .each(function (group, i) {
+        //             if (last !== group) {
+        //                 $(rows)
+        //                     .eq(i)
+        //                     .before(
+        //                         '<tr class="group"><td colspan="4">' +
+        //                             group +
+        //                             '</td></tr>'
+        //                     );
+    
+        //                 last = group;
+        //             }
+        //         });
+        // },
+        // footerCallback: function (row, data, start, end, display) {
+        //     let api = this.api();
+    
+        //     // Remove the formatting to get integer data for summation
+        //     let intVal = function (i) {
+        //         return typeof i === 'string'
+        //             ? i.replace(/[\$,]/g, '') * 1
+        //             : typeof i === 'number'
+        //             ? i
+        //             : 0;
+        //     };
+    
+        //     // Total over all pages
+        //     totalExp = api
+        //         .column(3)
+        //         .data()
+        //         .reduce((a, b) => intVal(a) + intVal(b), 0);
+            
+        //     // Update footer
+        //     api.column(3).footer().innerHTML =
+        //         totalExp.toLocaleString('en-us', currencyOptions);
+        // },
     });
     
     // Order by the grouping
