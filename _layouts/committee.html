@@ -43,14 +43,14 @@ pagenav: true
     </div>
   {%- else if page.jurisdiction == "ca" -%}
     <div class="alert alert-info" role="alert">
-      This committee files with the California Secretary of State. Data on this page is derived from electronic filings with the San Francisco Ethics Commission and a nightly download of data from the Secretary of State's office.
+      This committee files with the <a href="https://cal-access.sos.ca.gov/Campaign/Committees/Detail.aspx?id={{page.filer_id}}">California Secretary of State</a>. Data on this page is derived from electronic filings with the San Francisco Ethics Commission and a nightly download of data from the Secretary of State's office.
     </div>
   {%- endif -%}
   <div class="row">
     <div class="col-sm-6">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Total Contributions</h5>
+          <h5 class="card-title">Total Funds</h5>
           <p class="card-text"><span class="mononumber">{{page.totals[0]}}</span></p>
         </div>
       </div>
