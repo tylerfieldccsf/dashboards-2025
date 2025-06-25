@@ -1,0 +1,17 @@
+<div class="card {{include.css}}">
+  <div class="card-body">
+    <h5 class="card-title">{{include.title}}</h5>
+    {%- if include.info -%}
+    <h6 class="card-subtitle mb-2 text-muted">{{include.info}}</h6>
+    {%- endif -%}    
+    <div class="card-text">
+        <p class="{{include.data_css}}">{{include.data}}</p>
+    </div>
+    {%- if include.link -%}
+    <a href="{{include.link}}" class="btn btn-primary">More Info</a>
+    {%- endif -%}
+  </div>
+  <div class="card-footer text-muted">
+    <p>{{include.about}}</p>
+  </div>
+</div>
