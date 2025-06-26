@@ -4,163 +4,179 @@ pagenav: true
 ---
 
 <div class="container">
-  
-  <div class="row" data="general information">
-    <h1 class="page-heading">{{ page.filer_name }}</h1>
+
+    <div class="row bg-primary text-light py-3" data="general information">
+        <div class="col-md-6">
+            <div class="info-name mx-5 my-3 d-flex flex-column align-items-center" data="general information">
+                <h1 class="page-heading text-center">{{ page.filer_name }}</h1>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="info-summary">
+                <h2>Fundraising & Spending Summary</h2>
+                <dl class="row">
+                    <dt class="col-sm-4">Committee Name</dt>
+                    <dd class="col-sm-8">{{page.filer_name}}</dd>
+                    <dt class="col-sm-4">FPPC ID</dt>
+                    <dd class="col-sm-8">{{page.filer_id}}</dd>
+                </dl>
+                <div class="d-flex column-gap-3">
+                    <div class="">
+                        <div class="card money-card money-card-1">
+                            <div class="card-body">
+                                <h5 class="card-title">Total Contributions</h5>
+                                <p class="card-text"><span class="mononumber currency">{{page.totals[0]}}</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="card money-card money-card-2">
+                            <div class="card-body">
+                                <h5 class="card-title">Total Expenses</h5>
+                                <p class="card-text"><span class="mononumber currency">{{page.totals[1]}}</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data="Committee information">
+                    <div>
+                        {%- if page.jurisdiction == "sf" -%}
+                        <p>
+                            This is a San Francisco Filer
+                        </p>
+                        {%- elsif page.jurisdiction == "ca" -%}
+                        <div class="alert alert-info" role="alert">
+                            This committee files with the <a
+                href="https://cal-access.sos.ca.gov/Campaign/Committees/Detail.aspx?id={{page.filer_id}}">California
+                Secretary
+                of State</a>. Data on this page is derived
+                            from
+                            electronic filings with the San Francisco Ethics Commission and a nightly download of data
+                            from the
+                            Secretary of State's office.
+                        </div>
+                        {%- endif -%}
+                        <p data="Dates of filings covered"><em>Data for this committee covers between {{page.dates[0]}}
+                                to
+                                {{page.dates[1]}}.</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     
-  </div>
-
-  <div class="row" data="Dates of filings covered">
-    <h4>Data dates:</h4>
-
-    <div class="card-group">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Start Date</h5>
-            <p class="card-text"><span>{{page.dates[0]}}</span></p>
-          </div>
+    <!-- Contributors and Expenses -->
+    <div class="row bg-light text-dark py-3">
+        <div class="col-md-6">
+            <div class="cm-contributors col-table-6">
+                <h4>Contributors</h4>
+                <table class="table caption-top" id="contributors_table">
+                    <thead>
+                        <tr>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Last Name</th>
+                            <th scope="col">Total Contributions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for contributor in page.contributors %}
+                        <tr>
+                            <td>{{ contributor[0] }}</td>
+                            <td>
+                                {%- if contributor[2] != "" -%}<a
+                                    href="{{site.baseurl}}/committees/{{page.election}}/CA{{contributor[2]}}.html">{%-
+                                    endif -%}
+                                    {{ contributor[1] }}
+                                    {%- if contributor[2] != "" -%}</a>{%- endif -%}
+                            </td>
+                            <td class="mononumber currency">{{ contributor[3] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">End Date</h5>
-            <p class="card-text"><span class="mononumber">{{page.dates[1]}}</span></p>
-          </div>
+        <div class="col-md-6">
+            <div class="cm-expenditures col-table-6">
+                <h4>Expenditures</h4>
+                <table class="table caption-top" id="expenditures_table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Category</th>
+                            <th scope="col">Total Expenditures</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for exp in page.expenditures %}
+                        <tr>
+                            <td>{{ exp[0] }}</td>
+                            <td class="mononumber currency">{{ exp[1] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
-  </div>
+    </div> <!-- end of bg-light row -->
 
-<div class="row">
-  <div>Id number: {{page.filer_id}}</div>
-      
-  This is a {{page.committee_type}} Committee 
-  {%- if page.pri_form -%}
-    &nbsp;{{page.supopp.position}} {{page.supopp.candidate}}
-  {%- endif -%}
+    <!-- Disclosure Statements -->
+    <div class="row bg-light text-dark py-3">
+        <h4>Disclosure Statements</h4>
+        <table id="filings_table" class="table caption-top dtify">
+            <thead>
+                <tr>
+                    <th scope="col">Filing Date</th>
+                    <th scope="col">Form</th>
+                    <th scope="col">Filing Period</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for filing in page.filings %}
+                <tr>
+                    <td>{{ filing.filing_datetime }}</td>
+                    <td>
+                        <a href="https://netfile.com/Connect2/api/public/image/{{ filing.filing_id }}">
+                            {%- if filing.form_name=='FPPC497' -%}
+                            FPPC Form 497 - 24-hour Contribution Report
+                            {%- elsif filing.form_name=='FPPC460' -%}
+                            FPPC Form 460 - Committee Campaign Statement
+                            {%- elsif filing.form_name=='FPPC406' -%}
+                            FPPC Form 496 - 24-hour Independent Expenditure Report
+                            {%- else -%}
+                            {{filing.form_name}}
+                            {%- endif -%}
+                        </a>
+                    </td>
+                    <td>{{ filing.filing_startdate }} - {{ filing.filing_enddate }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div><!-- end Disclosure Statements -->
 
-  {%- if page.jurisdiction == "sf" -%}
-    <div>
-      This is a San Francisco Filer
-    </div>
-  {%- else if page.jurisdiction == "ca" -%}
-    <div class="alert alert-info" role="alert">
-      This committee files with the <a href="https://cal-access.sos.ca.gov/Campaign/Committees/Detail.aspx?id={{page.filer_id}}">California Secretary of State</a>. Data on this page is derived from electronic filings with the San Francisco Ethics Commission and a nightly download of data from the Secretary of State's office.
-    </div>
-  {%- endif -%}
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Total Funds</h5>
-          <p class="card-text"><span class="mononumber">{{page.totals[0]}}</span></p>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Total Expenditures</h5>
-          <p class="card-text"><span class="mononumber">{{page.totals[1]}}</span></p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <h4>Contributors</h4>
-    <table class="table caption-top" id="contributors_table">
-      <thead>
-        <tr>
-          <th scope="col">First Name</th>
-          <th scope="col">Last Name</th>
-          <th scope="col">Total Contributions</th>
-        </tr>
-      </thead>
-      <tbody>
-          {% for contributor in page.contributors %}
-        
-              <tr>
-                  <td>{{ contributor[0] }}</td>
-                  <td>
-                    {%- if contributor[2] != "" -%}<a href="{{site.basurl}}/committees/{{page.election}}/CA{{contributor[2]}}.html">{%- endif -%}
-                    {{ contributor[1] }}
-                    {%- if contributor[2] != "" -%}</a>{%- endif -%}
-                  </td>
-                  <td class="mononumber">{{ contributor[3] }}</td>
-              </tr>
-          {% endfor %}
-      </tbody>
-    </table>
-  </div>
-
-
-
-  <div class="row">
-    <h4>Expenditures</h4>
-    <table class="table caption-top" id="expenditures_table">
-      <thead>
-        <tr>
-          <th scope="col">Expense Category</th>
-          <th scope="col">Total Expenditures</th>
-        </tr>
-      </thead>
-      <tbody>
-          {% for exp in page.expenditures %}
-              <tr>
-                  <td>{{ exp[0] }}</td>
-                  <td class="mononumber">{{ exp[1] }}</td>
-              </tr>
-          {% endfor %}
-      </tbody>
-    </table>
-  </div>
-
-
-
-  <div class="row">    
-    <h4>Filings</h4> 
-    <table class="table caption-top dtify">
-      <thead>
-        <tr>
-          <th scope="col">filing date</th>
-          <th scope="col">form name</th>
-          <th scope="col">filing startdate</th>
-          <th scope="col">filing enddate</th>
-          <th scope="col">filing link</th>
-        </tr>
-      </thead>
-      <tbody>
-          {% for filing in page.filings %}
-        
-              <tr>
-                  <td>{{ filing.filing_datetime }}</td>
-                  <td>{{ filing.form_name }}</td>
-                  <td>{{ filing.filing_startdate }}</td>
-                  <td>{{ filing.filing_enddate }}</td>
-                  <td><a href="{{ filing.filing_link }}">pdf</a></td>
-              </tr>
-          {% endfor %}
-      </tbody>
-    </table>
-  </div>
-  
-  
-  {{ content }}
-  
 </div>
-
 <script>
-  new DataTable('#contributors_table', {lengthMenu: [
-          [5, 10, 25, 50, -1],
-          [5, 10, 25, 50, "All"]
-      ],
-      order: [[2, 'desc']]
-  });
-  new DataTable('#expenditures_table', {lengthMenu: [
-          [5, 10, 25, 50, -1],
-          [5, 10, 25, 50, "All"]
-      ],
-      order: [[2, 'desc']]
-  });
-  new DataTable('table.dtify', {lengthMenu: [
+    new DataTable('#contributors_table', {
+        lengthMenu: [
+            [5, 10, 25, 50, -1],
+            [5, 10, 25, 50, "All"]
+        ],
+        order: [[2, 'desc']]
+    }).on('draw', () => {
+        formatAllCurrencyElements('contributors_table');
+    });
+    new DataTable('#expenditures_table', {
+        lengthMenu: [
+            [5, 10, 25, 50, -1],
+            [5, 10, 25, 50, "All"]
+        ],
+        order: [[2, 'desc']]
+    }).on('draw', () => {
+        formatAllCurrencyElements('expenditures_table');
+    });
+    new DataTable('table.dtify', {
+        lengthMenu: [
             [5, 10, 25, 50, -1],
             [5, 10, 25, 50, "All"]
         ]
