@@ -35,7 +35,11 @@ function formatAllCurrencyElements(containerId) {
   container.querySelectorAll('.currency').forEach(el => {
     const original = el.textContent;
     const formatted = formatSmartNumber(original);
-    el.textContent = '$' + formatted;
+    if(formatted=='') {
+      el.textContent = formatted;
+    } else {
+      el.textContent = '$' + formatted;
+    }
   });
 }
 
