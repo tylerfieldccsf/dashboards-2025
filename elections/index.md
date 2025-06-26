@@ -3,5 +3,5 @@ layout: default
 title: Elections
 permalink: /elections/
 ---
-# Elections:
+# Elections
 - [November 5, 2024](2024-11-05/)

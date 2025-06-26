@@ -3,6 +3,11 @@ layout: contributors
 election: '2024-11-05'
 historic: false
 title: Contributors of more than $5,000.00 across committees
+breadcrumbs:
+- - November 05, 2024
+  - /elections/2024-11-05/
+- - Contributors
+  - ''
 contributors:
 - tx_firstname: ''
   tx_lastname: A BETTER BAY AREA
