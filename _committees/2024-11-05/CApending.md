@@ -2,7 +2,7 @@
 layout: committee
 filer_nid: ''
 filer_id: PENDING
-filer_name: SONOMA CITIZENS FOR MEASURE T
+filer_name: Sonoma Citizens for Measure T
 jurisdiction: ''
 committee_type: inferred
 election: '2024-11-05'

@@ -2,7 +2,7 @@
 layout: candidate_committee
 filer_nid: '211917278'
 filer_id: ''
-filer_name: WOON, RICHARD
+filer_name: Woon, Richard
 jurisdiction: sf
 committee_type: candidate
 election: '2024-11-05'
@@ -14,7 +14,7 @@ breadcrumbs:
   - elections/2024-11-05/
 - - City Attorney
   - elections/2024-11-05/contests/cat
-- - RICHARD WOON
+- - Richard Woon
   - ''
 totals:
 - ''
@@ -36,7 +36,7 @@ factoids:
   data: ''
   about: Total of contributions received from individuals, not entities
 position: SUPPORT
-candidate_name: RICHARD WOON
+candidate_name: Richard Woon
 pubfi:
   participant: ''
   total: 0

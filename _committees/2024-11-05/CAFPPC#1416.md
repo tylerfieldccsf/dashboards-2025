@@ -2,7 +2,7 @@
 layout: committee
 filer_nid: ''
 filer_id: FPPC#1416
-filer_name: GFC COURAGE COMMITTEE
+filer_name: Gfc Courage Committee
 jurisdiction: ''
 committee_type: inferred
 election: '2024-11-05'
