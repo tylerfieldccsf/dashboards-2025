@@ -3,97 +3,127 @@ layout: default
 pagenav: true
 ---
 <div class="container">
-<h1>{{page.title}}</h1>
+     <div class="row bg-primary text-light py-3">
+        <div class="col-md-6">
+            <h1>{{page.title}}</h1>
+        </div>
+    </div>
+</div>
 
-<h2>Candidate Controlled Committees</h2>
-<table class="table caption-top dtify_both">
-    <thead>
-      <tr>
-        <th scope="col">Contest</th>
-        <th scope="col">Funds</th>
-        <th scope="col">Expenses</th>
-      </tr>
-    </thead>
-    <tbody>
-        {% for contest in page.candidate_pf %}
+{%- if page.candidate_pf -%}
+<div class="row bg-light text-dark py-3">
+    <div class="col-md-12">
+        <h2>Candidate Controlled Committees</h2>
+        <table class="table caption-top dtify_both" id="table_candidate">
+            <thead>
             <tr>
-                <td><a href="{{site.baseurl}}/elections/{{page.election}}/contests/{{contest.contest_link}}.html">
-                    {{ contest.contest_name }}
-                </a></td>
-                <td class="mononumber">{{ contest.funds }}</td>
-                <td class="mononumber">{{ contest.expenses }}</td>
+                <th scope="col">Contest</th>
+                <th scope="col">Funds</th>
+                <th scope="col">Expenses</th>
             </tr>
-        {% endfor %}
-    </tbody>
-    <tfoot>
-        <tr>
-            <th style="text-align:right">Total:</th>
-            <th class="mononumber"></th>
-            <th class="mononumber"></th>
-        </tr>
-    </tfoot>
-</table>
+            </thead>
+            <tbody>
+                {%- for contest in page.candidate_pf -%}
+                    <tr>
+                        <td><a href="{{site.baseurl}}/elections/{{page.election}}/contests/{{contest.contest_link}}.html">
+                            {{ contest.contest_name }}
+                        </a></td>
+                        <td class="mononumber currency">{{ contest.funds }}</td>
+                        <td class="mononumber currency">{{ contest.expenses }}</td>
+                    </tr>
+                {%- endfor -%}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th style="text-align:right">Total:</th>
+                    <th class="mononumber currency"></th>
+                    <th class="mononumber currency"></th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+{%- endif -%}
 
-<hr>
-
-<h2>Third Party Candidate Committees</h2>
-<table class="table caption-top dtify_exp">
-    <thead>
-      <tr>
-        <th scope="col">Contest</th>
-        <th scope="col">Funds</th>
-        <th scope="col">Expenses</th>
-      </tr>
-    </thead>
-    <tbody>
-        {% for contest in page.candidate_ie %}
+<div class="row bg-light text-dark py-3">
+    <div class="col-md-12">
+        <h2>Third Party Candidate Committees</h2>
+        <table class="table caption-top dtify_exp" id="table_candidate_thirdparty">
+            <thead>
             <tr>
-                <td><a href="{{site.baseurl}}/elections/{{page.election}}/contests/{{contest.contest_link}}.html">
-                    {{ contest.contest_name }}
-                </a></td>
-                <td class="mononumber">{{ contest.funds }}</td>
-                <td class="mononumber">{{ contest.expenses }}</td>
+                <th scope="col">Contest</th>
+                <th scope="col">Funds</th>
+                <th scope="col">Expenses</th>
             </tr>
-        {% endfor %}
-    </tbody>
-    <tfoot>
-        <tr>
-            <th colspan="2" style="text-align:right">Total:</th>
-            <th class="mononumber"></th>
-        </tr>
-    </tfoot>
-</table>
+            </thead>
+            <tbody>
+                {%- for contest in page.candidate_ie -%}
+                    <tr>
+                        <td><a href="{{site.baseurl}}/elections/{{page.election}}/contests/{{contest.contest_link}}.html">
+                            {{ contest.contest_name }}
+                        </a></td>
+                        <td class="mononumber currency">{{ contest.funds }}</td>
+                        <td class="mononumber currency">{{ contest.expenses }}</td>
+                    </tr>
+                {%- endfor -%}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="2" style="text-align:right">Total:</th>
+                    <th class="mononumber currency"></th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
 
-<hr>
-
-<h2>Ballot Measures Committees</h2>
-<table class="table caption-top dtify_exp">
-    <thead>
-      <tr>
-        <th scope="col">Contest</th>
-        <th scope="col">Funds</th>
-        <th scope="col">Expenses</th>
-      </tr>
-    </thead>
-    <tbody>
-        {% for contest in page.measures %}
+<div class="row bg-light text-dark py-3">
+    <div class="col-md-12">
+        <h2>Ballot Measures</h2>
+        <table class="table caption-top dtify_exp" id="table_ballotmeasure">
+            <thead>
             <tr>
-                <td><a href="{{site.baseurl}}/elections/{{page.election}}/measures/{{contest.contest_link}}.html">
-                    {{ contest.contest_name }}
-                </a></td>
-                <td class="mononumber">{{ contest.funds }}</td>
-                <td class="mononumber">{{ contest.expenses }}</td>
+                <th scope="col">Contest</th>
+                <th scope="col">Funds</th>
+                <th scope="col">Expenses</th>
             </tr>
-        {% endfor %}
-    </tbody>
-    <tfoot>
-        <tr>
-            <th colspan="2" style="text-align:right">Total:</th>
-            <th class="mononumber"></th>
-        </tr>
-    </tfoot>
-</table>
+            </thead>
+            <tbody>
+                {%- for contest in page.measures -%}
+                    <tr>
+                        <td><a href="{{site.baseurl}}/elections/{{page.election}}/measures/{{contest.contest_link}}.html">
+                            {{ contest.contest_name }}
+                        </a></td>
+                        <td class="mononumber currency">{{ contest.funds }}</td>
+                        <td class="mononumber currency">{{ contest.expenses }}</td>
+                    </tr>
+                {%- endfor -%}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="2" style="text-align:right">Total:</th>
+                    <th class="mononumber  currency"></th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
 
+<div class="row bg-light text-dark py-3">
+    <div class="col-md-12">
+        <h2>Top Contributors</h2>
+        <div class="container">
+            {%- for contributor in page.contributors -%}
+            <div class="row">
+                <div class="col-md-8"><p>{{contributor[0]}}</p></div>
+                <div class="col-md-4"><p class="currency">{{contributor[1]}}</p></div>
+            </div>
+            {%- endfor -%}
+        </div>
+        <a href="{{site.baseurl}}/elections/{{page.election}}/contributors"><button class="btn btn-primary" type="button">View More</button></a>
+        
+    </div>
+</div>
 
 {{content}}
 </div>

@@ -4,6 +4,11 @@ title: November 05, 2024 Election
 permalink: /elections/2024-11-05/
 election: '2024-11-05'
 historic: false
+breadcrumbs:
+- - Elections
+  - elections/
+- - November 05, 2024
+  - elections/2024-11-05/
 candidate_pf:
 - committee_type: candidate
   contest_nid: '206636711'
@@ -235,6 +240,15 @@ measures:
   contest_link: measurec_d_e
   funds: 116881.86
   expenses: 83199.72
-
+contributors:
+- - DANIEL LURIE	
+  - 9515000.0
+- - MICHAEL MORITZ	
+  - 3186322.64
+- - SAN FRANCISCO FIRE FIGHTERS LOCAL 798	
+  - 1527350.0
+- - MICHAEL BLOOMBERG	
+  - 1450500.0
+- - CHRIS LARSEN	
+  - 1277500.0
 ---
-
