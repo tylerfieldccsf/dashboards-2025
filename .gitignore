@@ -8,3 +8,4 @@ vendor/
 !_sass/bootstrap/vendor
 .DS_Store
 Gemfile.lock
+.vscode
