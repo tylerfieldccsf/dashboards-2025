@@ -1,7 +1,6 @@
 ---
 layout: contest_bmc
 election: '2024-11-05'
-historic: false
 candidate: false
 title: 'G: Funding Rental Subsidies for Affordable Housing Developments Serving Low
   Income Seniors, Families, and Persons with Disabilities'
@@ -31,6 +30,27 @@ committees:
   committee_name: YES ON G, THE AFFORDABLE HOUSING OPPORTUNITY FUND
   funds: 256728.93
   expenses: 239116.78
+contributors:
+- - Chinatown Community Development Center
+  - 56592.93
+- - San Francisco Communities Against Displacement
+  - 53936.0
+- - the San Francisco Foundation
+  - 30000.0
+- - San Francisco Housing Accelerator Fund
+  - 25000.0
+- - Enrique Landa
+  - 15000.0
+- - Mercy Housing Management Group Inc.
+  - 10000.0
+- - Mission Housing Development Corporation
+  - 10000.0
+- - Tenderloin Neighborhood Development Corporation
+  - 10000.0
+- - Mission Economic Development Agency
+  - 9900.0
+- - Todco(john Elberling)
+  - 9000.0
 
 ---
 

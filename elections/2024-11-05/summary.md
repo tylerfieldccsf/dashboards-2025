@@ -3,7 +3,6 @@ layout: election
 title: November 05, 2024 Election
 permalink: /elections/2024-11-05/
 election: '2024-11-05'
-historic: false
 breadcrumbs:
 - - Elections
   - elections/

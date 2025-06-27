@@ -1,7 +1,6 @@
 ---
 layout: contest_candidate
 election: '2024-11-05'
-historic: false
 candidate: true
 title: Board of Supervisors D07
 breadcrumbs:
@@ -28,7 +27,54 @@ candidates:
   candidate_name: MATTHEW BOSCHETTO
   funds: 416413.0
   expenses: 385160.83
-ie_candidates: []
+ie_candidates:
+- candidate_name: MYRNA MELGAR
+  committees:
+  - position: SUPPORT
+    filer_id: '842018'
+    committee_name: Alice B. Toklas Lesbian and Gay Democratic Club PAC
+    funds: ''
+    expenses: 2005.71
+  - position: SUPPORT
+    filer_id: '991525'
+    committee_name: San Francisco Labor Council Labor & Neighbor Independent Expenditure
+      Political Action Committee
+    funds: ''
+    expenses: 1809.93
+- candidate_name: MATTHEW BOSCHETTO
+  committees:
+  - position: SUPPORT
+    filer_id: '1433436'
+    committee_name: Coalition to Grow San Francisco - Grow SF PAC
+    funds: ''
+    expenses: 55031.3
+  - position: OPPOSE
+    filer_id: '991525'
+    committee_name: San Francisco Labor Council Labor & Neighbor Independent Expenditure
+      Political Action Committee
+    funds: ''
+    expenses: 55164.58
+contributors:
+- - Gayle Conway
+  - 1000.0
+- - Mia Conway
+  - 1000.0
+- - Ronald Conway
+  - 1000.0
+- - Elena Duggan
+  - 1000.0
+- - Julie Duggan
+  - 1000.0
+- - John Jweinat
+  - 1000.0
+- - Marisa Lavallee
+  - 1000.0
+- - San Francisco Police Officers Association PAC
+  - 1000.0
+- - Mitchell Smith
+  - 1000.0
+- - Todd Davis
+  - 750.0
 
 ---
 

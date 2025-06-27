@@ -1,13 +1,13 @@
 ---
 layout: contest_bmc
-election: '2024-11-05'
+election: '2025-09-16'
 candidate: false
 title: 'MULTIPLE MEASURES: Multiple Ballot Measure Activity'
 breadcrumbs:
-- - November 05, 2024
-  - elections/2024-11-05
+- - September 16, 2025
+  - elections/2025-09-16
 - - 'MULTIPLE MEASURES: Multiple Ballot Measure Activity'
-  - elections/2024-11-05/measures/measuremultiplemeasures
+  - elections/2025-09-16/measures/measuremultiplemeasures
 committees: []
 contributors: []
 

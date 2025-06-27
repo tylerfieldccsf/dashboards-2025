@@ -1,7 +1,6 @@
 ---
 layout: contest_bmc
 election: '2024-11-05'
-historic: false
 candidate: false
 title: 'D,E: Measures D and E'
 breadcrumbs:
@@ -10,6 +9,7 @@ breadcrumbs:
 - - 'D,E: Measures D and E'
   - elections/2024-11-05/measures/measurede
 committees: []
+contributors: []
 
 ---
 

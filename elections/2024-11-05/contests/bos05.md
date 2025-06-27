@@ -1,7 +1,6 @@
 ---
 layout: contest_candidate
 election: '2024-11-05'
-historic: false
 candidate: true
 title: Board of Supervisors D05
 breadcrumbs:
@@ -43,6 +42,29 @@ ie_candidates:
       FOR SUPERVISOR 2024
     funds: 297346.91
     expenses: 307508.81
+  - position: SUPPORT
+    filer_id: '1471862'
+    committee_name: Building a Working SF Sponsored by Labor Organizations
+    funds: ''
+    expenses: 10306.2
+- candidate_name: BILAL MAHMOOD
+  committees:
+  - position: OPPOSE
+    filer_id: '1469854'
+    committee_name: Fix our City SF, Sponsored by Labor Organizations
+    funds: ''
+    expenses: 134178.1
+  - position: OPPOSE
+    filer_id: '991525'
+    committee_name: San Francisco Labor Council Labor & Neighbor Independent Expenditure
+      Political Action Committee
+    funds: ''
+    expenses: 65878.55
+  - position: SUPPORT
+    filer_id: '1433436'
+    committee_name: Coalition to Grow San Francisco - Grow SF PAC
+    funds: ''
+    expenses: 14939.79
 - candidate_name: SCOTT JACOBS
   committees:
   - position: SUPPORT
@@ -50,6 +72,27 @@ ie_candidates:
     committee_name: FRIENDS OF SCOTTY JACOBS FOR SUPERVISOR 2024
     funds: 7150.0
     expenses: 7150.0
+contributors:
+- - Chris Larsen
+  - 50500.0
+- - Jessica Livingston
+  - 50000.0
+- - Emmett Shear
+  - 50000.0
+- - Garry Tan
+  - 50000.0
+- - Building Owners and Managers Association of San Francisco (Boma PAC)
+  - 20000.0
+- - Karl Gustaf Jonas Alstromer
+  - 15300.0
+- - Hilary Shirazi
+  - 10505.0
+- - Jan Ning Chong
+  - 10100.0
+- - Bilal Mahmood
+  - 5000.0
+- - Jonathan Claybaugh
+  - 2750.0
 
 ---
 

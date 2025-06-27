@@ -1,7 +1,6 @@
 ---
 layout: contest_candidate
 election: '2024-11-05'
-historic: false
 candidate: true
 title: Board of Education
 breadcrumbs:
@@ -76,7 +75,93 @@ candidates:
   candidate_name: MIN CHANG
   funds: 101505.5
   expenses: 72005.0
-ie_candidates: []
+ie_candidates:
+- candidate_name: MATT ALEXANDER
+  committees:
+  - position: SUPPORT
+    filer_id: '1311218'
+    committee_name: United Educators of San Francisco Candidate PAC
+    funds: ''
+    expenses: 15618.45
+- candidate_name: PARAG GUPTA
+  committees:
+  - position: SUPPORT
+    filer_id: '1311218'
+    committee_name: United Educators of San Francisco Candidate PAC
+    funds: ''
+    expenses: 10285.12
+  - position: SUPPORT
+    filer_id: '1433436'
+    committee_name: Coalition to Grow San Francisco - Grow SF PAC
+    funds: ''
+    expenses: 14939.82
+  - position: SUPPORT
+    filer_id: '1442994'
+    committee_name: SAN FRANCISCO PARENT ACTION PAC
+    funds: ''
+    expenses: 3269.62
+- candidate_name: JOHN JERSIN
+  committees:
+  - position: SUPPORT
+    filer_id: '1311218'
+    committee_name: United Educators of San Francisco Candidate PAC
+    funds: ''
+    expenses: 10285.16
+  - position: SUPPORT
+    filer_id: '1433436'
+    committee_name: Coalition to Grow San Francisco - Grow SF PAC
+    funds: ''
+    expenses: 14939.81
+- candidate_name: JAIME HULING
+  committees:
+  - position: SUPPORT
+    filer_id: '1311218'
+    committee_name: United Educators of San Francisco Candidate PAC
+    funds: ''
+    expenses: 10285.11
+  - position: SUPPORT
+    filer_id: '1433436'
+    committee_name: Coalition to Grow San Francisco - Grow SF PAC
+    funds: ''
+    expenses: 14939.81
+  - position: SUPPORT
+    filer_id: '1442994'
+    committee_name: SAN FRANCISCO PARENT ACTION PAC
+    funds: ''
+    expenses: 3269.62
+- candidate_name: SUPRYIA RAY
+  committees:
+  - position: SUPPORT
+    filer_id: '1433436'
+    committee_name: Coalition to Grow San Francisco - Grow SF PAC
+    funds: ''
+    expenses: 14939.81
+  - position: SUPPORT
+    filer_id: '1442994'
+    committee_name: SAN FRANCISCO PARENT ACTION PAC
+    funds: ''
+    expenses: 34117.79
+contributors:
+- - Min Chang
+  - 63906.5
+- - Virginia Cheung
+  - 2582.79
+- - Bette Wadsworth
+  - 2500.0
+- - Sachin Agarwal
+  - 2000.0
+- - Paul Buchheit
+  - 2000.0
+- - C Preston Butcher
+  - 2000.0
+- - Timothy Draper
+  - 2000.0
+- - Michael Eisler
+  - 2000.0
+- - Jason Fish
+  - 2000.0
+- - Gfc Courage Committee - Future Generations Chapter
+  - 2000.0
 
 ---
 

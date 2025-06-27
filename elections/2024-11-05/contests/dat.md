@@ -1,7 +1,6 @@
 ---
 layout: contest_candidate
 election: '2024-11-05'
-historic: false
 candidate: true
 title: District Attorney
 breadcrumbs:
@@ -23,6 +22,13 @@ candidates:
   funds: 689449.23
   expenses: 492400.71
 ie_candidates:
+- candidate_name: BROOKE JENKINS
+  committees:
+  - position: SUPPORT
+    filer_id: '1433436'
+    committee_name: Coalition to Grow San Francisco - Grow SF PAC
+    funds: ''
+    expenses: 14939.79
 - candidate_name: CHYANNE CHEN
   committees:
   - position: SUPPORT
@@ -31,6 +37,27 @@ ie_candidates:
       2024
     funds: 120000.0
     expenses: 120000.0
+contributors:
+- - Ronald Conway
+  - 100500.0
+- - Hamid Moghadam
+  - 10500.0
+- - Kilroy Realty
+  - 10000.0
+- - Richard Barker
+  - 1000.0
+- - Bartholomew Murphy
+  - 1000.0
+- - Scott Kepner
+  - 750.0
+- - Damon Knox
+  - 750.0
+- - Pius Lee
+  - 750.0
+- - Stephanie Lehman
+  - 750.0
+- - John Lee
+  - 650.0
 
 ---
 

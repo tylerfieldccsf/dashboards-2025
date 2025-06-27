@@ -1,7 +1,6 @@
 ---
 layout: contest_bmc
 election: '2024-11-05'
-historic: false
 candidate: false
 title: 'A: Schools Improvement and Safety Bond'
 breadcrumbs:
@@ -22,6 +21,27 @@ committees:
   committee_name: GREAT SCHOOLS FOR ALL SF KIDS - YES ON PROP A
   funds: 400000.0
   expenses: 396500.0
+contributors:
+- - Philip Halperin
+  - 100000.0
+- - San Francisco Building & Construction Trades PAC
+  - 40000.0
+- - Service Employees International Union Local 1021 Issues PAC
+  - 20000.0
+- - Sara Williams
+  - 20000.0
+- - Aecom Technology Corp.
+  - 15000.0
+- - Kathryn Hall
+  - 15000.0
+- - Kitchell Corporation
+  - 15000.0
+- - Ua Local 38 Cope Fund
+  - 15000.0
+- - Bhm Construction Llc(sermins Dosher)
+  - 10000.0
+- - Flint Design Build, Llc, Dba Flint(ryan Tognetti)
+  - 10000.0
 
 ---
 

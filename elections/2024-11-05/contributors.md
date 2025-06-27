@@ -1,13 +1,7 @@
 ---
 layout: contributors
 election: '2024-11-05'
-historic: false
 title: Contributors of more than $5,000.00 across committees
-breadcrumbs:
-- - November 05, 2024
-  - /elections/2024-11-05/
-- - Contributors
-  - ''
 contributors:
 - tx_firstname: ''
   tx_lastname: A BETTER BAY AREA
@@ -485,11 +479,11 @@ contributors:
   - cmte_fppcid: '1468472'
     cmte_name: MICHAEL LAI FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1468481'
-    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
-    total: 500.0
   - cmte_fppcid: '1468546'
     cmte_name: JOHN JERSIN FOR BOARD OF EDUCATION 2024
+    total: 500.0
+  - cmte_fppcid: '1468481'
+    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
     total: 500.0
   - cmte_fppcid: '1469320'
     cmte_name: PARAG GUPTA FOR SCHOOL BOARD 2024
@@ -521,11 +515,11 @@ contributors:
   - cmte_fppcid: '1468472'
     cmte_name: MICHAEL LAI FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1468481'
-    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
-    total: 500.0
   - cmte_fppcid: '1468546'
     cmte_name: JOHN JERSIN FOR BOARD OF EDUCATION 2024
+    total: 500.0
+  - cmte_fppcid: '1468481'
+    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
     total: 500.0
   - cmte_fppcid: '1469320'
     cmte_name: PARAG GUPTA FOR SCHOOL BOARD 2024
@@ -554,11 +548,11 @@ contributors:
   - cmte_fppcid: '1468472'
     cmte_name: MICHAEL LAI FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1468481'
-    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
-    total: 500.0
   - cmte_fppcid: '1468546'
     cmte_name: JOHN JERSIN FOR BOARD OF EDUCATION 2024
+    total: 500.0
+  - cmte_fppcid: '1468481'
+    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
     total: 500.0
   - cmte_fppcid: '1469269'
     cmte_name: RAY FOR SCHOOL BOARD 2024
@@ -593,11 +587,11 @@ contributors:
   - cmte_fppcid: '1468472'
     cmte_name: MICHAEL LAI FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1468481'
-    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
-    total: 500.0
   - cmte_fppcid: '1468546'
     cmte_name: JOHN JERSIN FOR BOARD OF EDUCATION 2024
+    total: 500.0
+  - cmte_fppcid: '1468481'
+    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
     total: 500.0
   - cmte_fppcid: '1469269'
     cmte_name: RAY FOR SCHOOL BOARD 2024
@@ -666,11 +660,11 @@ contributors:
   - cmte_fppcid: '1468472'
     cmte_name: MICHAEL LAI FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1468481'
-    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
-    total: 500.0
   - cmte_fppcid: '1468546'
     cmte_name: JOHN JERSIN FOR BOARD OF EDUCATION 2024
+    total: 500.0
+  - cmte_fppcid: '1468481'
+    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
     total: 500.0
   - cmte_fppcid: '1469269'
     cmte_name: RAY FOR SCHOOL BOARD 2024
@@ -705,11 +699,11 @@ contributors:
   - cmte_fppcid: '1468472'
     cmte_name: MICHAEL LAI FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1468481'
-    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
-    total: 500.0
   - cmte_fppcid: '1468546'
     cmte_name: JOHN JERSIN FOR BOARD OF EDUCATION 2024
+    total: 500.0
+  - cmte_fppcid: '1468481'
+    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
     total: 500.0
   - cmte_fppcid: '1469269'
     cmte_name: RAY FOR SCHOOL BOARD 2024
@@ -744,11 +738,11 @@ contributors:
   - cmte_fppcid: '1468472'
     cmte_name: MICHAEL LAI FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1468481'
-    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
-    total: 500.0
   - cmte_fppcid: '1468546'
     cmte_name: JOHN JERSIN FOR BOARD OF EDUCATION 2024
+    total: 500.0
+  - cmte_fppcid: '1468481'
+    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
     total: 500.0
   - cmte_fppcid: '1469320'
     cmte_name: PARAG GUPTA FOR SCHOOL BOARD 2024
@@ -826,20 +820,20 @@ contributors:
     cmte_name: COMMITTEE TO FIX SAN FRANCISCO GOVERNMENT, YES ON D, NO ON E, A COALITION
       OF SAN FRANCISCO CIVIC ORGANIZATIONS DEDICATED TO IMPROVING THE CITY'S FUTURE
     total: 10000.0
-  - cmte_fppcid: '1466322'
-    cmte_name: BILAL MAHMOOD FOR SUPERVISOR 2024
-    total: 500.0
   - cmte_fppcid: '1466331'
     cmte_name: DAVID CHIU FOR CITY ATTORNEY 2024
+    total: 500.0
+  - cmte_fppcid: '1466322'
+    cmte_name: BILAL MAHMOOD FOR SUPERVISOR 2024
     total: 500.0
   - cmte_fppcid: '1468472'
     cmte_name: MICHAEL LAI FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1468481'
-    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
-    total: 500.0
   - cmte_fppcid: '1468546'
     cmte_name: JOHN JERSIN FOR BOARD OF EDUCATION 2024
+    total: 500.0
+  - cmte_fppcid: '1468481'
+    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
     total: 500.0
   - cmte_fppcid: '1469320'
     cmte_name: PARAG GUPTA FOR SCHOOL BOARD 2024
@@ -1197,14 +1191,14 @@ contributors:
   - cmte_fppcid: '1466322'
     cmte_name: BILAL MAHMOOD FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1468481'
-    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
-    total: 500.0
   - cmte_fppcid: '1468546'
     cmte_name: JOHN JERSIN FOR BOARD OF EDUCATION 2024
     total: 500.0
   - cmte_fppcid: '1468588'
     cmte_name: ALIYA CHISTI FOR CITY COLLEGE BOARD 2024
+    total: 500.0
+  - cmte_fppcid: '1468481'
+    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
     total: 500.0
   - cmte_fppcid: '1469320'
     cmte_name: PARAG GUPTA FOR SCHOOL BOARD 2024
@@ -1274,12 +1268,12 @@ contributors:
   tx_cmteid: C00213512
   total: 59200.0
   transactions:
-  - cmte_fppcid: '1462942'
-    cmte_name: YES ON H FOR FIREFIGHTERS HEALTH & SAFETY, SF FIRE FIGHTERS LOCAL 798
-    total: 49200.0
   - cmte_fppcid: '1471151'
     cmte_name: HEALTHY, VIBRANT SF, YES ON B
     total: 10000.0
+  - cmte_fppcid: '1462942'
+    cmte_name: YES ON H FOR FIREFIGHTERS HEALTH & SAFETY, SF FIRE FIGHTERS LOCAL 798
+    total: 49200.0
 - tx_firstname: ''
   tx_lastname: NATIONAL UNION OF HEALTHCARE WORKERS CANDIDATE COMMITTEE
   tx_entitycode: COM
@@ -1318,20 +1312,20 @@ contributors:
   - cmte_fppcid: '1463378'
     cmte_name: ROBERTO HERNANDEZ FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1463986'
-    cmte_name: STEPHEN TORRES FOR SUPERVISOR 2024
-    total: 500.0
   - cmte_fppcid: '1464456'
     cmte_name: ALAN WONG FOR COLLEGE BOARD 2024
+    total: 500.0
+  - cmte_fppcid: '1463986'
+    cmte_name: STEPHEN TORRES FOR SUPERVISOR 2024
     total: 500.0
   - cmte_fppcid: '1464921'
     cmte_name: CISNEROS FOR TREASURER 2024
     total: 500.0
-  - cmte_fppcid: '1466322'
-    cmte_name: BILAL MAHMOOD FOR SUPERVISOR 2024
-    total: 500.0
   - cmte_fppcid: '1466416'
     cmte_name: RYAN KHOJASTEH FOR SF DISTRICT ATTORNEY 2024
+    total: 500.0
+  - cmte_fppcid: '1466322'
+    cmte_name: BILAL MAHMOOD FOR SUPERVISOR 2024
     total: 500.0
   - cmte_fppcid: '1468468'
     cmte_name: AARON PESKIN FOR MAYOR 2024
@@ -1529,20 +1523,17 @@ contributors:
   - cmte_fppcid: '1466322'
     cmte_name: BILAL MAHMOOD FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1468029'
-    cmte_name: LUIS ZAMORA FOR COLLEGE BOARD 2024
-    total: 500.0
   - cmte_fppcid: '1468472'
     cmte_name: MICHAEL LAI FOR SUPERVISOR 2024
-    total: 500.0
-  - cmte_fppcid: '1468481'
-    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
     total: 500.0
   - cmte_fppcid: '1468546'
     cmte_name: JOHN JERSIN FOR BOARD OF EDUCATION 2024
     total: 500.0
-  - cmte_fppcid: '1469127'
-    cmte_name: HEATHER MCCARTY FOR CITY COLLEGE BOARD 2024
+  - cmte_fppcid: '1468029'
+    cmte_name: LUIS ZAMORA FOR COLLEGE BOARD 2024
+    total: 500.0
+  - cmte_fppcid: '1468481'
+    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
     total: 500.0
   - cmte_fppcid: '1469269'
     cmte_name: RAY FOR SCHOOL BOARD 2024
@@ -1552,6 +1543,9 @@ contributors:
     total: 500.0
   - cmte_fppcid: '1469328'
     cmte_name: RUTH FERGUSON FOR CITY COLLEGE BOARD 2024
+    total: 500.0
+  - cmte_fppcid: '1469127'
+    cmte_name: HEATHER MCCARTY FOR CITY COLLEGE BOARD 2024
     total: 500.0
   - cmte_fppcid: '1471154'
     cmte_name: YES ON K, OCEAN BEACH PARK FOR ALL SPONSORED BY COMMUNITY NONPROFITS
@@ -1793,9 +1787,6 @@ contributors:
   - cmte_fppcid: '1461776'
     cmte_name: MATT BOSCHETTO FOR D7 SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1462942'
-    cmte_name: YES ON H FOR FIREFIGHTERS HEALTH & SAFETY, SF FIRE FIGHTERS LOCAL 798
-    total: 550000.0
   - cmte_fppcid: '1463378'
     cmte_name: ROBERTO HERNANDEZ FOR SUPERVISOR 2024
     total: 500.0
@@ -1805,6 +1796,9 @@ contributors:
   - cmte_fppcid: '1466331'
     cmte_name: DAVID CHIU FOR CITY ATTORNEY 2024
     total: 500.0
+  - cmte_fppcid: '1462942'
+    cmte_name: YES ON H FOR FIREFIGHTERS HEALTH & SAFETY, SF FIRE FIGHTERS LOCAL 798
+    total: 550000.0
 - tx_firstname: ''
   tx_lastname: SAN FRANCISCO FORWARD SPONSORED BY SAN FRANCISCO CHAMBER OF COMMERCE
   tx_entitycode: COM
@@ -1916,15 +1910,15 @@ contributors:
     cmte_name: FORWARD ACTION SF, SUPPORTING LONDON BREED FOR MAYOR 2024, SPONSORED
       BY ABUNDANCE NETWORK
     total: 12500.0
-  - cmte_fppcid: '1468029'
-    cmte_name: LUIS ZAMORA FOR COLLEGE BOARD 2024
-    total: 500.0
   - cmte_fppcid: '1468472'
     cmte_name: MICHAEL LAI FOR SUPERVISOR 2024
     total: 500.0
   - cmte_fppcid: '1468626'
     cmte_name: GREAT SCHOOLS FOR ALL SF KIDS - YES ON PROP A
     total: 10000.0
+  - cmte_fppcid: '1468029'
+    cmte_name: LUIS ZAMORA FOR COLLEGE BOARD 2024
+    total: 500.0
   - cmte_fppcid: '1472007'
     cmte_name: REAL REFORM, YES ON C, NO ON D, YES ON E, A COALITION OF SMALL BUSINESSES,
       NEIGHBORS AND AARON PESKIN
@@ -1962,11 +1956,11 @@ contributors:
   - cmte_fppcid: '1461157'
     cmte_name: STEPHEN MARTIN-PINTO FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1461776'
-    cmte_name: MATT BOSCHETTO FOR D7 SUPERVISOR 2024
-    total: 500.0
   - cmte_fppcid: '1462151'
     cmte_name: MIYAMOTO FOR SHERIFF 2024
+    total: 500.0
+  - cmte_fppcid: '1461776'
+    cmte_name: MATT BOSCHETTO FOR D7 SUPERVISOR 2024
     total: 500.0
   - cmte_fppcid: '1462803'
     cmte_name: MOE JAMIL FOR SUPERVISOR 2024
@@ -2191,13 +2185,13 @@ contributors:
   - cmte_fppcid: '1468029'
     cmte_name: LUIS ZAMORA FOR COLLEGE BOARD 2024
     total: 500.0
-  - cmte_fppcid: '1471151'
-    cmte_name: HEALTHY, VIBRANT SF, YES ON B
-    total: 2500.0
   - cmte_fppcid: '1472007'
     cmte_name: REAL REFORM, YES ON C, NO ON D, YES ON E, A COALITION OF SMALL BUSINESSES,
       NEIGHBORS AND AARON PESKIN
     total: 3000.0
+  - cmte_fppcid: '1471151'
+    cmte_name: HEALTHY, VIBRANT SF, YES ON B
+    total: 2500.0
 - tx_firstname: ''
   tx_lastname: TEAMSTERS LOCAL UNION NO. 665
   tx_entitycode: COM
@@ -2371,17 +2365,17 @@ contributors:
   - cmte_fppcid: '1461776'
     cmte_name: MATT BOSCHETTO FOR D7 SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1466322'
-    cmte_name: BILAL MAHMOOD FOR SUPERVISOR 2024
-    total: 500.0
   - cmte_fppcid: '1466331'
     cmte_name: DAVID CHIU FOR CITY ATTORNEY 2024
     total: 500.0
-  - cmte_fppcid: '1468029'
-    cmte_name: LUIS ZAMORA FOR COLLEGE BOARD 2024
+  - cmte_fppcid: '1466322'
+    cmte_name: BILAL MAHMOOD FOR SUPERVISOR 2024
     total: 500.0
   - cmte_fppcid: '1468588'
     cmte_name: ALIYA CHISTI FOR CITY COLLEGE BOARD 2024
+    total: 500.0
+  - cmte_fppcid: '1468029'
+    cmte_name: LUIS ZAMORA FOR COLLEGE BOARD 2024
     total: 500.0
   - cmte_fppcid: '1474672'
     cmte_name: WORKING FAMILIES OPPOSING LONDON BREED FOR MAYOR 2024 SPONSORED BY
@@ -2529,48 +2523,45 @@ contributors:
   - cmte_fppcid: '1460998'
     cmte_name: BROOKE JENKINS FOR DISTRICT ATTORNEY 2024
     total: 7996.99
-  - cmte_fppcid: '1461157'
-    cmte_name: STEPHEN MARTIN-PINTO FOR SUPERVISOR 2024
-    total: 4799.42
   - cmte_fppcid: '1461513'
     cmte_name: RE-ELECT MYRNA MELGAR FOR SUPERVISOR 2024
     total: 6132.0
-  - cmte_fppcid: '1461776'
-    cmte_name: MATT BOSCHETTO FOR D7 SUPERVISOR 2024
-    total: 3143.0
+  - cmte_fppcid: '1462017'
+    cmte_name: JULIAN BERMUDEZ FOR DISTRICT 9 SUPERVISOR 2024
+    total: 160.0
   - cmte_fppcid: '1461866'
     cmte_name: JEN NOSSOKOFF FOR DISTRICT 1 SUPERVISOR 2024
     total: 4886.0
   - cmte_fppcid: '1461970'
     cmte_name: ROGER MARENCO FOR DISTRICT 11 SUPERVISOR 2024
     total: 0.0
-  - cmte_fppcid: '1462017'
-    cmte_name: JULIAN BERMUDEZ FOR DISTRICT 9 SUPERVISOR 2024
-    total: 160.0
+  - cmte_fppcid: '1461157'
+    cmte_name: STEPHEN MARTIN-PINTO FOR SUPERVISOR 2024
+    total: 4799.42
   - cmte_fppcid: '1462151'
     cmte_name: MIYAMOTO FOR SHERIFF 2024
     total: 5982.99
+  - cmte_fppcid: '1461776'
+    cmte_name: MATT BOSCHETTO FOR D7 SUPERVISOR 2024
+    total: 3143.0
   - cmte_fppcid: '1462498'
     cmte_name: DEAN PRESTON FOR SUPERVISOR 2024
     total: 29861.850000000002
   - cmte_fppcid: '1462803'
     cmte_name: MOE JAMIL FOR SUPERVISOR 2024
     total: 3966.36
-  - cmte_fppcid: '1462942'
-    cmte_name: YES ON H FOR FIREFIGHTERS HEALTH & SAFETY, SF FIRE FIGHTERS LOCAL 798
-    total: 58224.09
-  - cmte_fppcid: '1463099'
-    cmte_name: DANIEL LURIE FOR MAYOR 2024
-    total: 24181.68
   - cmte_fppcid: '1463350'
     cmte_name: SHARON LAI FOR SUPERVISOR 2024
     total: 10054.94
+  - cmte_fppcid: '1463099'
+    cmte_name: DANIEL LURIE FOR MAYOR 2024
+    total: 24181.68
   - cmte_fppcid: '1463378'
     cmte_name: ROBERTO HERNANDEZ FOR SUPERVISOR 2024
     total: 10081.0
-  - cmte_fppcid: '1463554'
-    cmte_name: BELIEVE IN SF, LURIE FOR MAYOR 2024
-    total: 0.01
+  - cmte_fppcid: '1465078'
+    cmte_name: JAIME GUTIERREZ FOR SUPERVISOR 2024
+    total: 1820.0
   - cmte_fppcid: '1463715'
     cmte_name: FORWARD ACTION SF, SUPPORTING LONDON BREED FOR MAYOR 2024, SPONSORED
       BY ABUNDANCE NETWORK
@@ -2581,15 +2572,21 @@ contributors:
   - cmte_fppcid: '1463752'
     cmte_name: VOTE MARJAN PHILHOUR FOR SUPERVISOR 2024
     total: 4324.5
-  - cmte_fppcid: '1463986'
-    cmte_name: STEPHEN TORRES FOR SUPERVISOR 2024
-    total: 5848.0
   - cmte_fppcid: '1464249'
     cmte_name: YES ON PROP E FOR A SAFER SF - MAYOR BREED'S BALLOT MEASURE COMMITTEE
     total: 5.0
   - cmte_fppcid: '1464456'
     cmte_name: ALAN WONG FOR COLLEGE BOARD 2024
     total: 8430.22
+  - cmte_fppcid: '1463986'
+    cmte_name: STEPHEN TORRES FOR SUPERVISOR 2024
+    total: 5848.0
+  - cmte_fppcid: '1463554'
+    cmte_name: BELIEVE IN SF, LURIE FOR MAYOR 2024
+    total: 0.01
+  - cmte_fppcid: '1464921'
+    cmte_name: CISNEROS FOR TREASURER 2024
+    total: 568.0
   - cmte_fppcid: '1464767'
     cmte_name: COMMITTEE TO FIX SAN FRANCISCO GOVERNMENT, YES ON D, NO ON E, A COALITION
       OF SAN FRANCISCO CIVIC ORGANIZATIONS DEDICATED TO IMPROVING THE CITY'S FUTURE
@@ -2598,24 +2595,18 @@ contributors:
     cmte_name: YES ON B, COMMITTEE TO RESTORE POLICE MINIMUM STAFFING AND PUBLIC SAFETY,
       SPONSORED BY LABOR ORGANIZATIONS
     total: 0.0
-  - cmte_fppcid: '1464921'
-    cmte_name: CISNEROS FOR TREASURER 2024
-    total: 568.0
-  - cmte_fppcid: '1465078'
-    cmte_name: JAIME GUTIERREZ FOR SUPERVISOR 2024
-    total: 1820.0
-  - cmte_fppcid: '1466041'
-    cmte_name: SUSK FOR SUPERVISOR 2024
-    total: 1515.0
+  - cmte_fppcid: '1468193'
+    cmte_name: BOEHNER FOR D1 SUPERVISOR 2024
+    total: 1011.0
   - cmte_fppcid: '1466075'
     cmte_name: ELLEN LEE ZHOU FOR MAYOR 2024
     total: 3820.52
   - cmte_fppcid: '1466243'
     cmte_name: DAVID CLEMENTS FOR MAYOR 2024
     total: 0.0
-  - cmte_fppcid: '1466322'
-    cmte_name: BILAL MAHMOOD FOR SUPERVISOR 2024
-    total: 8967.0
+  - cmte_fppcid: '1466041'
+    cmte_name: SUSK FOR SUPERVISOR 2024
+    total: 1515.0
   - cmte_fppcid: '1466331'
     cmte_name: DAVID CHIU FOR CITY ATTORNEY 2024
     total: 4971.34
@@ -2625,6 +2616,9 @@ contributors:
   - cmte_fppcid: '1466510'
     cmte_name: ADLAH CHISTI FOR SUPERVISOR 2024
     total: 5640.0
+  - cmte_fppcid: '1466322'
+    cmte_name: BILAL MAHMOOD FOR SUPERVISOR 2024
+    total: 8967.0
   - cmte_fppcid: '1466523'
     cmte_name: THRIVING COMMUNITIES FOR ALL SAN FRANCISCO SUPPORTING PROP E, SPONSORED
       BY CENTER FOR EMPOWERED POLITICS
@@ -2632,9 +2626,6 @@ contributors:
   - cmte_fppcid: '1466726'
     cmte_name: MARK FARRELL FOR MAYOR 2024
     total: 11562.09
-  - cmte_fppcid: '1466924'
-    cmte_name: CHYANNE CHEN FOR SUPERVISOR 2024
-    total: 12348.0
   - cmte_fppcid: '1467170'
     cmte_name: ELECT HONEST CHARLEY BODKIN FOR MAYOR 2024
     total: 87.0
@@ -2644,122 +2635,122 @@ contributors:
   - cmte_fppcid: '1467649'
     cmte_name: EDUARD NAVARRO FOR SUPERVISOR 2024
     total: 4829.0
-  - cmte_fppcid: '1467847'
-    cmte_name: MAYOR MARK FARRELL FOR YES ON PROP D
-    total: 1.0
+  - cmte_fppcid: '1466924'
+    cmte_name: CHYANNE CHEN FOR SUPERVISOR 2024
+    total: 12348.0
   - cmte_fppcid: '1467898'
     cmte_name: LOOIJEN FOR D5 SUPERVISOR 2024
     total: 3928.0
-  - cmte_fppcid: '1468029'
-    cmte_name: LUIS ZAMORA FOR COLLEGE BOARD 2024
-    total: 3700.17
-  - cmte_fppcid: '1468193'
-    cmte_name: BOEHNER FOR D1 SUPERVISOR 2024
-    total: 1011.0
+  - cmte_fppcid: '1467847'
+    cmte_name: MAYOR MARK FARRELL FOR YES ON PROP D
+    total: 1.0
   - cmte_fppcid: '1468468'
     cmte_name: AARON PESKIN FOR MAYOR 2024
     total: 46415.25
   - cmte_fppcid: '1468472'
     cmte_name: MICHAEL LAI FOR SUPERVISOR 2024
     total: 5519.0
-  - cmte_fppcid: '1468481'
-    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
-    total: 2139.5
-  - cmte_fppcid: '1468497'
-    cmte_name: KEITH FREEDMAN FOR MAYOR 2024
-    total: 336.5
   - cmte_fppcid: '1468546'
     cmte_name: JOHN JERSIN FOR BOARD OF EDUCATION 2024
     total: 1051.5
   - cmte_fppcid: '1468565'
     cmte_name: MATT ALEXANDER FOR SCHOOL BOARD 2024
     total: 5340.0
-  - cmte_fppcid: '1468588'
-    cmte_name: ALIYA CHISTI FOR CITY COLLEGE BOARD 2024
-    total: 3537.0
   - cmte_fppcid: '1468626'
     cmte_name: GREAT SCHOOLS FOR ALL SF KIDS - YES ON PROP A
     total: 0.0
   - cmte_fppcid: '1468797'
     cmte_name: YES ON L, FUND THE BUS
     total: 6536.94
-  - cmte_fppcid: '1468978'
-    cmte_name: LAURANCE LEE FOR BOARD OF EDUCATION 2024
-    total: 1310.0
-  - cmte_fppcid: '1469127'
-    cmte_name: HEATHER MCCARTY FOR CITY COLLEGE BOARD 2024
-    total: 1728.0
-  - cmte_fppcid: '1469143'
-    cmte_name: REVITALIZE SAN FRANCISCO, YES ON M
-    total: 0.0
-  - cmte_fppcid: '1469206'
-    cmte_name: OSCAR FLORES FOR SUPERVISOR 2024
-    total: 220.0
+  - cmte_fppcid: '1468588'
+    cmte_name: ALIYA CHISTI FOR CITY COLLEGE BOARD 2024
+    total: 3537.0
+  - cmte_fppcid: '1468497'
+    cmte_name: KEITH FREEDMAN FOR MAYOR 2024
+    total: 336.5
+  - cmte_fppcid: '1468029'
+    cmte_name: LUIS ZAMORA FOR COLLEGE BOARD 2024
+    total: 3700.17
+  - cmte_fppcid: '1468481'
+    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
+    total: 2139.5
   - cmte_fppcid: '1469269'
     cmte_name: RAY FOR SCHOOL BOARD 2024
     total: 5608.5
+  - cmte_fppcid: '1468978'
+    cmte_name: LAURANCE LEE FOR BOARD OF EDUCATION 2024
+    total: 1310.0
   - cmte_fppcid: '1469320'
     cmte_name: PARAG GUPTA FOR SCHOOL BOARD 2024
     total: 758.5
-  - cmte_fppcid: '1469328'
-    cmte_name: RUTH FERGUSON FOR CITY COLLEGE BOARD 2024
-    total: 4621.9
+  - cmte_fppcid: '1469143'
+    cmte_name: REVITALIZE SAN FRANCISCO, YES ON M
+    total: 0.0
   - cmte_fppcid: '1469449'
     cmte_name: LOUIE FOR CCSF BOARD 2024
     total: 6871.35
   - cmte_fppcid: '1469611'
     cmte_name: ELEFTHERIOU FOR SCHOOL BOARD 2024
     total: 630.0
+  - cmte_fppcid: '1469206'
+    cmte_name: OSCAR FLORES FOR SUPERVISOR 2024
+    total: 220.0
+  - cmte_fppcid: '1472252'
+    cmte_name: MORALES FOR SUPERVISOR 2024
+    total: 160.0
   - cmte_fppcid: '1469692'
     cmte_name: SCOTTY JACOBS FOR SUPERVISOR 2024
     total: 12517.0
-  - cmte_fppcid: '1469771'
-    cmte_name: DELDELP MEDINA FOR SAN FRANCISCO SCHOOL BOARD 2024
-    total: 365.0
   - cmte_fppcid: '1469825'
     cmte_name: FAMILIES FOR A VIBRANT SAN FRANCISCO SUPPORTING TREVOR CHANDLER FOR
       SUPERVISOR, SPONSORED BY EFFECTIVE GOVERNMENT
     total: 100.0
-  - cmte_fppcid: '1469839'
-    cmte_name: VIRGINIA CHEUNG FOR SAN FRANCISCO BOARD OF EDUCATION 2024
-    total: 3492.24
+  - cmte_fppcid: '1469771'
+    cmte_name: DELDELP MEDINA FOR SAN FRANCISCO SCHOOL BOARD 2024
+    total: 365.0
   - cmte_fppcid: '1470059'
     cmte_name: MICHAEL JUAN FOR SHERIFF 2024
     total: 745.0
+  - cmte_fppcid: '1469328'
+    cmte_name: RUTH FERGUSON FOR CITY COLLEGE BOARD 2024
+    total: 4621.9
+  - cmte_fppcid: '1469127'
+    cmte_name: HEATHER MCCARTY FOR CITY COLLEGE BOARD 2024
+    total: 1728.0
+  - cmte_fppcid: '1469839'
+    cmte_name: VIRGINIA CHEUNG FOR SAN FRANCISCO BOARD OF EDUCATION 2024
+    total: 3492.24
   - cmte_fppcid: '1470166'
     cmte_name: WENDY CHAU FOR DISTRICT SUPERVISOR 2024
     total: 1101.5
-  - cmte_fppcid: '1470219'
-    cmte_name: CITIZENS OPPOSING RE-ELECTION OF MAYOR LONDON BREED 2024
-    total: 0.0
-  - cmte_fppcid: '1470791'
-    cmte_name: MIN CHANG FOR SAN FRANCISCO BOARD OF EDUCATION 2024
-    total: 545.0
-  - cmte_fppcid: '1470841'
-    cmte_name: BEN KAPLAN FOR COMMUNITY COLLEGE BOARD 2024
-    total: 336.84000000000003
   - cmte_fppcid: '1471023'
     cmte_name: MAYOR BREED'S COMMITTEE FOR REPRODUCTIVE FREEDOM, YES ON O
     total: 210.0
-  - cmte_fppcid: '1471151'
-    cmte_name: HEALTHY, VIBRANT SF, YES ON B
-    total: 194.0
-  - cmte_fppcid: '1471154'
-    cmte_name: YES ON K, OCEAN BEACH PARK FOR ALL SPONSORED BY COMMUNITY NONPROFITS
-    total: 6491.0
-  - cmte_fppcid: '1471628'
-    cmte_name: SAFER SAN FRANCISCO FOR MARK FARRELL FOR MAYOR 2024
-    total: 0.0
+  - cmte_fppcid: '1470791'
+    cmte_name: MIN CHANG FOR SAN FRANCISCO BOARD OF EDUCATION 2024
+    total: 545.0
   - cmte_fppcid: '1471701'
     cmte_name: ANN HSU FOR BOARD OF EDUCATION 2024
     total: 715.0
+  - cmte_fppcid: '1471628'
+    cmte_name: SAFER SAN FRANCISCO FOR MARK FARRELL FOR MAYOR 2024
+    total: 0.0
+  - cmte_fppcid: '1471154'
+    cmte_name: YES ON K, OCEAN BEACH PARK FOR ALL SPONSORED BY COMMUNITY NONPROFITS
+    total: 6491.0
   - cmte_fppcid: '1472007'
     cmte_name: REAL REFORM, YES ON C, NO ON D, YES ON E, A COALITION OF SMALL BUSINESSES,
       NEIGHBORS AND AARON PESKIN
     total: 50.0
-  - cmte_fppcid: '1472252'
-    cmte_name: MORALES FOR SUPERVISOR 2024
-    total: 160.0
+  - cmte_fppcid: '1473044'
+    cmte_name: NELSON MEI FOR MAYOR 2024
+    total: 0.0
+  - cmte_fppcid: '1471151'
+    cmte_name: HEALTHY, VIBRANT SF, YES ON B
+    total: 194.0
+  - cmte_fppcid: '1470841'
+    cmte_name: BEN KAPLAN FOR COMMUNITY COLLEGE BOARD 2024
+    total: 336.84000000000003
   - cmte_fppcid: '1472442'
     cmte_name: GREAT HIGHWAY FOR ALL - NO ON K, A MATT BOSCHETTO COMMITTEE
     total: 3201.0
@@ -2769,17 +2760,14 @@ contributors:
   - cmte_fppcid: '1472954'
     cmte_name: YES ON F, SAN FRANCISCANS FOR A FULL POLICE STAFFING
     total: 0.0
-  - cmte_fppcid: '1473044'
-    cmte_name: NELSON MEI FOR MAYOR 2024
-    total: 0.0
   - cmte_fppcid: '1473061'
     cmte_name: SF FOR MUNI ACCOUNTABILITY AND RELIABLE SERVICE - NO ON PROP L
     total: 0.0
-  - cmte_fppcid: '1473454'
-    cmte_name: YES ON G, THE AFFORDABLE HOUSING OPPORTUNITY FUND
-    total: 0.0
   - cmte_fppcid: '1473456'
     cmte_name: SUPPORT OUR FIRST RESPONDERS NOW! YES ON N
+    total: 0.0
+  - cmte_fppcid: '1473454'
+    cmte_name: YES ON G, THE AFFORDABLE HOUSING OPPORTUNITY FUND
     total: 0.0
   - cmte_fppcid: '1473458'
     cmte_name: IMPROVE EMERGENCY RESPONSES TIMES - YES ON I
@@ -2787,31 +2775,37 @@ contributors:
   - cmte_fppcid: '1473487'
     cmte_name: STOP MAGA MARK 2024, OPPOSING FARRELL FOR MAYOR
     total: 0.0
-  - cmte_fppcid: '1474672'
-    cmte_name: WORKING FAMILIES OPPOSING LONDON BREED FOR MAYOR 2024 SPONSORED BY
-      SAN FRANCISCO BUILDING AND CONSTRUCTION TRADES COUNCIL
+  - cmte_fppcid: '1475914'
+    cmte_name: YES ON PROPOSITION J
     total: 0.0
+  - cmte_fppcid: '1462942'
+    cmte_name: YES ON H FOR FIREFIGHTERS HEALTH & SAFETY, SF FIRE FIGHTERS LOCAL 798
+    total: 58224.09
   - cmte_fppcid: '1474947'
     cmte_name: SAN FRANCISCO WORKING FAMILIES VOTER GUIDE SUPPORTING AARON PESKIN
       FOR MAYOR, SPONSORED BY HEALTHCARE, HOSPITALITY, AND SERVICE WORKERS UNIONS
     total: 0.0
-  - cmte_fppcid: '1475194'
-    cmte_name: SAVE OUR CITY SF, OPPOSING MARK FARRELL FOR MAYOR 2024 - SPONSORED
-      BY LABOR ORGANIZATIONS
+  - cmte_fppcid: '1474672'
+    cmte_name: WORKING FAMILIES OPPOSING LONDON BREED FOR MAYOR 2024 SPONSORED BY
+      SAN FRANCISCO BUILDING AND CONSTRUCTION TRADES COUNCIL
+    total: 0.0
+  - cmte_fppcid: '1475268'
+    cmte_name: JULIO RAMOS FOR COLLEGE BOARD 2024
     total: 0.0
   - cmte_fppcid: '1475206'
     cmte_name: SAN FRANCISCANS FOR RESPONSIBLE HOUSING, NO ON PROPOSITION B, SPONSORED
       BY RENTAL HOUSING PROVIDERS
     total: 318.0
-  - cmte_fppcid: '1475268'
-    cmte_name: JULIO RAMOS FOR COLLEGE BOARD 2024
+  - cmte_fppcid: '1475194'
+    cmte_name: SAVE OUR CITY SF, OPPOSING MARK FARRELL FOR MAYOR 2024 - SPONSORED
+      BY LABOR ORGANIZATIONS
+    total: 0.0
+  - cmte_fppcid: '1470219'
+    cmte_name: CITIZENS OPPOSING RE-ELECTION OF MAYOR LONDON BREED 2024
     total: 0.0
   - cmte_fppcid: '1475317'
     cmte_name: SAN FRANCISCANS IN SUPPORT OF BROOKE JENKINS FOR DISTRICT ATTORNEY
       2024
-    total: 0.0
-  - cmte_fppcid: '1475914'
-    cmte_name: YES ON PROPOSITION J
     total: 0.0
   - cmte_fppcid: '1476495'
     cmte_name: RESIDENTS OPPOSING AARON PESKIN FOR MAYOR 2024
@@ -3138,12 +3132,12 @@ contributors:
   - cmte_fppcid: '1463099'
     cmte_name: DANIEL LURIE FOR MAYOR 2024
     total: 500.0
-  - cmte_fppcid: '1463554'
-    cmte_name: BELIEVE IN SF, LURIE FOR MAYOR 2024
-    total: 25000.0
   - cmte_fppcid: '1464249'
     cmte_name: YES ON PROP E FOR A SAFER SF - MAYOR BREED'S BALLOT MEASURE COMMITTEE
     total: 200.0
+  - cmte_fppcid: '1463554'
+    cmte_name: BELIEVE IN SF, LURIE FOR MAYOR 2024
+    total: 25000.0
 - tx_firstname: ALEXANDRIA
   tx_lastname: MARCHETTI
   tx_entitycode: IND
@@ -3439,11 +3433,11 @@ contributors:
   - cmte_fppcid: '1467847'
     cmte_name: MAYOR MARK FARRELL FOR YES ON PROP D
     total: 100000.0
-  - cmte_fppcid: '1468481'
-    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
-    total: 500.0
   - cmte_fppcid: '1468546'
     cmte_name: JOHN JERSIN FOR BOARD OF EDUCATION 2024
+    total: 500.0
+  - cmte_fppcid: '1468481'
+    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
     total: 500.0
   - cmte_fppcid: '1469320'
     cmte_name: PARAG GUPTA FOR SCHOOL BOARD 2024
@@ -3599,12 +3593,12 @@ contributors:
   - cmte_fppcid: '1466726'
     cmte_name: MARK FARRELL FOR MAYOR 2024
     total: 500.0
-  - cmte_fppcid: '1468481'
-    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
-    total: 500.0
   - cmte_fppcid: '1468546'
     cmte_name: JOHN JERSIN FOR BOARD OF EDUCATION 2024
     total: 1000.0
+  - cmte_fppcid: '1468481'
+    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
+    total: 500.0
   - cmte_fppcid: '1469320'
     cmte_name: PARAG GUPTA FOR SCHOOL BOARD 2024
     total: 1000.0
@@ -3659,11 +3653,11 @@ contributors:
   - cmte_fppcid: '1468468'
     cmte_name: AARON PESKIN FOR MAYOR 2024
     total: 500.0
-  - cmte_fppcid: '1468481'
-    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
-    total: 500.0
   - cmte_fppcid: '1468546'
     cmte_name: JOHN JERSIN FOR BOARD OF EDUCATION 2024
+    total: 500.0
+  - cmte_fppcid: '1468481'
+    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
     total: 500.0
   - cmte_fppcid: '1469320'
     cmte_name: PARAG GUPTA FOR SCHOOL BOARD 2024
@@ -3689,11 +3683,11 @@ contributors:
   - cmte_fppcid: '1462498'
     cmte_name: DEAN PRESTON FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1463099'
-    cmte_name: DANIEL LURIE FOR MAYOR 2024
-    total: 250.0
   - cmte_fppcid: '1463350'
     cmte_name: SHARON LAI FOR SUPERVISOR 2024
+    total: 250.0
+  - cmte_fppcid: '1463099'
+    cmte_name: DANIEL LURIE FOR MAYOR 2024
     total: 250.0
   - cmte_fppcid: '1463378'
     cmte_name: ROBERTO HERNANDEZ FOR SUPERVISOR 2024
@@ -3704,14 +3698,14 @@ contributors:
   - cmte_fppcid: '1464921'
     cmte_name: CISNEROS FOR TREASURER 2024
     total: 500.0
-  - cmte_fppcid: '1468029'
-    cmte_name: LUIS ZAMORA FOR COLLEGE BOARD 2024
-    total: 500.0
   - cmte_fppcid: '1468468'
     cmte_name: AARON PESKIN FOR MAYOR 2024
     total: 500.0
   - cmte_fppcid: '1468588'
     cmte_name: ALIYA CHISTI FOR CITY COLLEGE BOARD 2024
+    total: 500.0
+  - cmte_fppcid: '1468029'
+    cmte_name: LUIS ZAMORA FOR COLLEGE BOARD 2024
     total: 500.0
   - cmte_fppcid: '1469269'
     cmte_name: RAY FOR SCHOOL BOARD 2024
@@ -3746,11 +3740,11 @@ contributors:
   - cmte_fppcid: '1468472'
     cmte_name: MICHAEL LAI FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1468481'
-    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
-    total: 500.0
   - cmte_fppcid: '1468546'
     cmte_name: JOHN JERSIN FOR BOARD OF EDUCATION 2024
+    total: 500.0
+  - cmte_fppcid: '1468481'
+    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
     total: 500.0
   - cmte_fppcid: '1469320'
     cmte_name: PARAG GUPTA FOR SCHOOL BOARD 2024
@@ -3864,11 +3858,11 @@ contributors:
   - cmte_fppcid: '1467847'
     cmte_name: MAYOR MARK FARRELL FOR YES ON PROP D
     total: 5000.0
-  - cmte_fppcid: '1468481'
-    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
-    total: 500.0
   - cmte_fppcid: '1468546'
     cmte_name: JOHN JERSIN FOR BOARD OF EDUCATION 2024
+    total: 500.0
+  - cmte_fppcid: '1468481'
+    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
     total: 500.0
   - cmte_fppcid: '1469320'
     cmte_name: PARAG GUPTA FOR SCHOOL BOARD 2024
@@ -3999,11 +3993,11 @@ contributors:
   - cmte_fppcid: '1467847'
     cmte_name: MAYOR MARK FARRELL FOR YES ON PROP D
     total: 10000.0
-  - cmte_fppcid: '1468481'
-    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
-    total: 500.0
   - cmte_fppcid: '1468546'
     cmte_name: JOHN JERSIN FOR BOARD OF EDUCATION 2024
+    total: 500.0
+  - cmte_fppcid: '1468481'
+    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
     total: 500.0
   - cmte_fppcid: '1469320'
     cmte_name: PARAG GUPTA FOR SCHOOL BOARD 2024
@@ -4032,14 +4026,8 @@ contributors:
   - cmte_fppcid: '1466322'
     cmte_name: BILAL MAHMOOD FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1468029'
-    cmte_name: LUIS ZAMORA FOR COLLEGE BOARD 2024
-    total: 500.0
   - cmte_fppcid: '1468472'
     cmte_name: MICHAEL LAI FOR SUPERVISOR 2024
-    total: 500.0
-  - cmte_fppcid: '1468481'
-    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
     total: 500.0
   - cmte_fppcid: '1468546'
     cmte_name: JOHN JERSIN FOR BOARD OF EDUCATION 2024
@@ -4047,11 +4035,17 @@ contributors:
   - cmte_fppcid: '1468588'
     cmte_name: ALIYA CHISTI FOR CITY COLLEGE BOARD 2024
     total: 500.0
-  - cmte_fppcid: '1469127'
-    cmte_name: HEATHER MCCARTY FOR CITY COLLEGE BOARD 2024
+  - cmte_fppcid: '1468029'
+    cmte_name: LUIS ZAMORA FOR COLLEGE BOARD 2024
+    total: 500.0
+  - cmte_fppcid: '1468481'
+    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
     total: 500.0
   - cmte_fppcid: '1469328'
     cmte_name: RUTH FERGUSON FOR CITY COLLEGE BOARD 2024
+    total: 500.0
+  - cmte_fppcid: '1469127'
+    cmte_name: HEATHER MCCARTY FOR CITY COLLEGE BOARD 2024
     total: 500.0
 - tx_firstname: CATHERINE
   tx_lastname: DEAN
@@ -4147,26 +4141,26 @@ contributors:
   - cmte_fppcid: '1464456'
     cmte_name: ALAN WONG FOR COLLEGE BOARD 2024
     total: 200.0
-  - cmte_fppcid: '1466322'
-    cmte_name: BILAL MAHMOOD FOR SUPERVISOR 2024
-    total: 500.0
   - cmte_fppcid: '1466331'
     cmte_name: DAVID CHIU FOR CITY ATTORNEY 2024
     total: 500.0
-  - cmte_fppcid: '1468029'
-    cmte_name: LUIS ZAMORA FOR COLLEGE BOARD 2024
+  - cmte_fppcid: '1466322'
+    cmte_name: BILAL MAHMOOD FOR SUPERVISOR 2024
     total: 500.0
   - cmte_fppcid: '1468472'
     cmte_name: MICHAEL LAI FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1469127'
-    cmte_name: HEATHER MCCARTY FOR CITY COLLEGE BOARD 2024
-    total: 250.0
+  - cmte_fppcid: '1468029'
+    cmte_name: LUIS ZAMORA FOR COLLEGE BOARD 2024
+    total: 500.0
   - cmte_fppcid: '1469269'
     cmte_name: RAY FOR SCHOOL BOARD 2024
     total: 500.0
   - cmte_fppcid: '1469328'
     cmte_name: RUTH FERGUSON FOR CITY COLLEGE BOARD 2024
+    total: 250.0
+  - cmte_fppcid: '1469127'
+    cmte_name: HEATHER MCCARTY FOR CITY COLLEGE BOARD 2024
     total: 250.0
 - tx_firstname: CHRIS
   tx_lastname: DRESSEL
@@ -4184,13 +4178,13 @@ contributors:
   tx_cmteid: ''
   total: 8500.0
   transactions:
-  - cmte_fppcid: '1471151'
-    cmte_name: HEALTHY, VIBRANT SF, YES ON B
-    total: 5000.0
   - cmte_fppcid: '1472007'
     cmte_name: REAL REFORM, YES ON C, NO ON D, YES ON E, A COALITION OF SMALL BUSINESSES,
       NEIGHBORS AND AARON PESKIN
     total: 500.0
+  - cmte_fppcid: '1471151'
+    cmte_name: HEALTHY, VIBRANT SF, YES ON B
+    total: 5000.0
   - cmte_fppcid: '1472954'
     cmte_name: YES ON F, SAN FRANCISCANS FOR A FULL POLICE STAFFING
     total: 3000.0
@@ -4596,12 +4590,12 @@ contributors:
   - cmte_fppcid: '1463099'
     cmte_name: DANIEL LURIE FOR MAYOR 2024
     total: 500.0
-  - cmte_fppcid: '1463554'
-    cmte_name: BELIEVE IN SF, LURIE FOR MAYOR 2024
-    total: 12500.0
   - cmte_fppcid: '1463752'
     cmte_name: VOTE MARJAN PHILHOUR FOR SUPERVISOR 2024
     total: 500.0
+  - cmte_fppcid: '1463554'
+    cmte_name: BELIEVE IN SF, LURIE FOR MAYOR 2024
+    total: 12500.0
   - cmte_fppcid: '1466041'
     cmte_name: SUSK FOR SUPERVISOR 2024
     total: 100.0
@@ -4611,11 +4605,11 @@ contributors:
   - cmte_fppcid: '1468472'
     cmte_name: MICHAEL LAI FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1468481'
-    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
-    total: 500.0
   - cmte_fppcid: '1468546'
     cmte_name: JOHN JERSIN FOR BOARD OF EDUCATION 2024
+    total: 500.0
+  - cmte_fppcid: '1468481'
+    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
     total: 500.0
   - cmte_fppcid: '1469320'
     cmte_name: PARAG GUPTA FOR SCHOOL BOARD 2024
@@ -5651,11 +5645,11 @@ contributors:
   - cmte_fppcid: '1468472'
     cmte_name: MICHAEL LAI FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1468481'
-    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
-    total: 500.0
   - cmte_fppcid: '1468546'
     cmte_name: JOHN JERSIN FOR BOARD OF EDUCATION 2024
+    total: 500.0
+  - cmte_fppcid: '1468481'
+    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
     total: 500.0
   - cmte_fppcid: '1469269'
     cmte_name: RAY FOR SCHOOL BOARD 2024
@@ -5772,11 +5766,11 @@ contributors:
   - cmte_fppcid: '1464249'
     cmte_name: YES ON PROP E FOR A SAFER SF - MAYOR BREED'S BALLOT MEASURE COMMITTEE
     total: 50000.0
-  - cmte_fppcid: '1466322'
-    cmte_name: BILAL MAHMOOD FOR SUPERVISOR 2024
-    total: 500.0
   - cmte_fppcid: '1466331'
     cmte_name: DAVID CHIU FOR CITY ATTORNEY 2024
+    total: 500.0
+  - cmte_fppcid: '1466322'
+    cmte_name: BILAL MAHMOOD FOR SUPERVISOR 2024
     total: 500.0
   - cmte_fppcid: '1466726'
     cmte_name: MARK FARRELL FOR MAYOR 2024
@@ -5784,11 +5778,11 @@ contributors:
   - cmte_fppcid: '1468472'
     cmte_name: MICHAEL LAI FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1468481'
-    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
-    total: 500.0
   - cmte_fppcid: '1468546'
     cmte_name: JOHN JERSIN FOR BOARD OF EDUCATION 2024
+    total: 500.0
+  - cmte_fppcid: '1468481'
+    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
     total: 500.0
   - cmte_fppcid: '1469320'
     cmte_name: PARAG GUPTA FOR SCHOOL BOARD 2024
@@ -5913,12 +5907,12 @@ contributors:
   - cmte_fppcid: '1463099'
     cmte_name: DANIEL LURIE FOR MAYOR 2024
     total: 1000.0
-  - cmte_fppcid: '1463554'
-    cmte_name: BELIEVE IN SF, LURIE FOR MAYOR 2024
-    total: 5000.0
   - cmte_fppcid: '1463752'
     cmte_name: VOTE MARJAN PHILHOUR FOR SUPERVISOR 2024
     total: 500.0
+  - cmte_fppcid: '1463554'
+    cmte_name: BELIEVE IN SF, LURIE FOR MAYOR 2024
+    total: 5000.0
   - cmte_fppcid: '1464767'
     cmte_name: COMMITTEE TO FIX SAN FRANCISCO GOVERNMENT, YES ON D, NO ON E, A COALITION
       OF SAN FRANCISCO CIVIC ORGANIZATIONS DEDICATED TO IMPROVING THE CITY'S FUTURE
@@ -5977,11 +5971,11 @@ contributors:
   - cmte_fppcid: '1463752'
     cmte_name: VOTE MARJAN PHILHOUR FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1466322'
-    cmte_name: BILAL MAHMOOD FOR SUPERVISOR 2024
-    total: 500.0
   - cmte_fppcid: '1466331'
     cmte_name: DAVID CHIU FOR CITY ATTORNEY 2024
+    total: 500.0
+  - cmte_fppcid: '1466322'
+    cmte_name: BILAL MAHMOOD FOR SUPERVISOR 2024
     total: 500.0
   - cmte_fppcid: '1466726'
     cmte_name: MARK FARRELL FOR MAYOR 2024
@@ -5992,14 +5986,14 @@ contributors:
   - cmte_fppcid: '1468481'
     cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
     total: 500.0
-  - cmte_fppcid: '1469127'
-    cmte_name: HEATHER MCCARTY FOR CITY COLLEGE BOARD 2024
-    total: 500.0
   - cmte_fppcid: '1469320'
     cmte_name: PARAG GUPTA FOR SCHOOL BOARD 2024
     total: 500.0
   - cmte_fppcid: '1469328'
     cmte_name: RUTH FERGUSON FOR CITY COLLEGE BOARD 2024
+    total: 500.0
+  - cmte_fppcid: '1469127'
+    cmte_name: HEATHER MCCARTY FOR CITY COLLEGE BOARD 2024
     total: 500.0
 - tx_firstname: JOHN
   tx_lastname: KIRTLEY
@@ -6186,12 +6180,12 @@ contributors:
   - cmte_fppcid: '1463099'
     cmte_name: DANIEL LURIE FOR MAYOR 2024
     total: 500.0
-  - cmte_fppcid: '1463554'
-    cmte_name: BELIEVE IN SF, LURIE FOR MAYOR 2024
-    total: 2618.42
   - cmte_fppcid: '1463752'
     cmte_name: VOTE MARJAN PHILHOUR FOR SUPERVISOR 2024
     total: 500.0
+  - cmte_fppcid: '1463554'
+    cmte_name: BELIEVE IN SF, LURIE FOR MAYOR 2024
+    total: 2618.42
   - cmte_fppcid: '1466041'
     cmte_name: SUSK FOR SUPERVISOR 2024
     total: 500.0
@@ -6399,11 +6393,11 @@ contributors:
   - cmte_fppcid: '1468472'
     cmte_name: MICHAEL LAI FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1468481'
-    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
-    total: 500.0
   - cmte_fppcid: '1468546'
     cmte_name: JOHN JERSIN FOR BOARD OF EDUCATION 2024
+    total: 500.0
+  - cmte_fppcid: '1468481'
+    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
     total: 500.0
   - cmte_fppcid: '1469320'
     cmte_name: PARAG GUPTA FOR SCHOOL BOARD 2024
@@ -6540,12 +6534,12 @@ contributors:
   - cmte_fppcid: '1463099'
     cmte_name: DANIEL LURIE FOR MAYOR 2024
     total: 500.0
-  - cmte_fppcid: '1463554'
-    cmte_name: BELIEVE IN SF, LURIE FOR MAYOR 2024
-    total: 15000.0
   - cmte_fppcid: '1463752'
     cmte_name: VOTE MARJAN PHILHOUR FOR SUPERVISOR 2024
     total: 500.0
+  - cmte_fppcid: '1463554'
+    cmte_name: BELIEVE IN SF, LURIE FOR MAYOR 2024
+    total: 15000.0
   - cmte_fppcid: '1466726'
     cmte_name: MARK FARRELL FOR MAYOR 2024
     total: 500.0
@@ -6625,12 +6619,12 @@ contributors:
   - cmte_fppcid: '1463099'
     cmte_name: DANIEL LURIE FOR MAYOR 2024
     total: 500.0
-  - cmte_fppcid: '1463554'
-    cmte_name: BELIEVE IN SF, LURIE FOR MAYOR 2024
-    total: 25000.0
   - cmte_fppcid: '1463752'
     cmte_name: VOTE MARJAN PHILHOUR FOR SUPERVISOR 2024
     total: 500.0
+  - cmte_fppcid: '1463554'
+    cmte_name: BELIEVE IN SF, LURIE FOR MAYOR 2024
+    total: 25000.0
   - cmte_fppcid: '1466041'
     cmte_name: SUSK FOR SUPERVISOR 2024
     total: 500.0
@@ -6730,12 +6724,12 @@ contributors:
   - cmte_fppcid: '1463099'
     cmte_name: DANIEL LURIE FOR MAYOR 2024
     total: 500.0
-  - cmte_fppcid: '1463554'
-    cmte_name: BELIEVE IN SF, LURIE FOR MAYOR 2024
-    total: 12500.0
   - cmte_fppcid: '1463752'
     cmte_name: VOTE MARJAN PHILHOUR FOR SUPERVISOR 2024
     total: 500.0
+  - cmte_fppcid: '1463554'
+    cmte_name: BELIEVE IN SF, LURIE FOR MAYOR 2024
+    total: 12500.0
 - tx_firstname: LES
   tx_lastname: NATALI
   tx_entitycode: IND
@@ -6791,12 +6785,12 @@ contributors:
   - cmte_fppcid: '1463099'
     cmte_name: DANIEL LURIE FOR MAYOR 2024
     total: 500.0
-  - cmte_fppcid: '1463554'
-    cmte_name: BELIEVE IN SF, LURIE FOR MAYOR 2024
-    total: 25000.0
   - cmte_fppcid: '1464249'
     cmte_name: YES ON PROP E FOR A SAFER SF - MAYOR BREED'S BALLOT MEASURE COMMITTEE
     total: 10000.0
+  - cmte_fppcid: '1463554'
+    cmte_name: BELIEVE IN SF, LURIE FOR MAYOR 2024
+    total: 25000.0
   - cmte_fppcid: '1464767'
     cmte_name: COMMITTEE TO FIX SAN FRANCISCO GOVERNMENT, YES ON D, NO ON E, A COALITION
       OF SAN FRANCISCO CIVIC ORGANIZATIONS DEDICATED TO IMPROVING THE CITY'S FUTURE
@@ -6861,11 +6855,11 @@ contributors:
   - cmte_fppcid: '1468472'
     cmte_name: MICHAEL LAI FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1468481'
-    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
-    total: 500.0
   - cmte_fppcid: '1468546'
     cmte_name: JOHN JERSIN FOR BOARD OF EDUCATION 2024
+    total: 500.0
+  - cmte_fppcid: '1468481'
+    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
     total: 500.0
   - cmte_fppcid: '1469320'
     cmte_name: PARAG GUPTA FOR SCHOOL BOARD 2024
@@ -7109,15 +7103,15 @@ contributors:
   - cmte_fppcid: '1460998'
     cmte_name: BROOKE JENKINS FOR DISTRICT ATTORNEY 2024
     total: 500.0
-  - cmte_fppcid: '1463554'
-    cmte_name: BELIEVE IN SF, LURIE FOR MAYOR 2024
-    total: 75000.0
   - cmte_fppcid: '1463752'
     cmte_name: VOTE MARJAN PHILHOUR FOR SUPERVISOR 2024
     total: 500.0
   - cmte_fppcid: '1464249'
     cmte_name: YES ON PROP E FOR A SAFER SF - MAYOR BREED'S BALLOT MEASURE COMMITTEE
     total: 25000.0
+  - cmte_fppcid: '1463554'
+    cmte_name: BELIEVE IN SF, LURIE FOR MAYOR 2024
+    total: 75000.0
   - cmte_fppcid: '1466322'
     cmte_name: BILAL MAHMOOD FOR SUPERVISOR 2024
     total: 500.0
@@ -7160,12 +7154,12 @@ contributors:
   - cmte_fppcid: '1463099'
     cmte_name: DANIEL LURIE FOR MAYOR 2024
     total: 500.0
-  - cmte_fppcid: '1463554'
-    cmte_name: BELIEVE IN SF, LURIE FOR MAYOR 2024
-    total: 9000.0
   - cmte_fppcid: '1463752'
     cmte_name: VOTE MARJAN PHILHOUR FOR SUPERVISOR 2024
     total: 250.0
+  - cmte_fppcid: '1463554'
+    cmte_name: BELIEVE IN SF, LURIE FOR MAYOR 2024
+    total: 9000.0
 - tx_firstname: MASSIMILIANA
   tx_lastname: GLYNN
   tx_entitycode: IND
@@ -7344,12 +7338,12 @@ contributors:
   - cmte_fppcid: '1468472'
     cmte_name: MICHAEL LAI FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1468481'
-    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
-    total: 500.0
   - cmte_fppcid: '1468546'
     cmte_name: JOHN JERSIN FOR BOARD OF EDUCATION 2024
     total: 1000.0
+  - cmte_fppcid: '1468481'
+    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
+    total: 500.0
   - cmte_fppcid: '1469320'
     cmte_name: PARAG GUPTA FOR SCHOOL BOARD 2024
     total: 500.0
@@ -7399,23 +7393,23 @@ contributors:
   - cmte_fppcid: '1463099'
     cmte_name: DANIEL LURIE FOR MAYOR 2024
     total: 500.0
-  - cmte_fppcid: '1463554'
-    cmte_name: BELIEVE IN SF, LURIE FOR MAYOR 2024
-    total: 7500.0
   - cmte_fppcid: '1463752'
     cmte_name: VOTE MARJAN PHILHOUR FOR SUPERVISOR 2024
     total: 500.0
+  - cmte_fppcid: '1463554'
+    cmte_name: BELIEVE IN SF, LURIE FOR MAYOR 2024
+    total: 7500.0
   - cmte_fppcid: '1466726'
     cmte_name: MARK FARRELL FOR MAYOR 2024
     total: 500.0
   - cmte_fppcid: '1467847'
     cmte_name: MAYOR MARK FARRELL FOR YES ON PROP D
     total: 5000.0
-  - cmte_fppcid: '1468481'
-    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
-    total: 500.0
   - cmte_fppcid: '1468546'
     cmte_name: JOHN JERSIN FOR BOARD OF EDUCATION 2024
+    total: 500.0
+  - cmte_fppcid: '1468481'
+    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
     total: 500.0
   - cmte_fppcid: '1469269'
     cmte_name: RAY FOR SCHOOL BOARD 2024
@@ -7435,12 +7429,12 @@ contributors:
   - cmte_fppcid: '1463099'
     cmte_name: DANIEL LURIE FOR MAYOR 2024
     total: 500.0
-  - cmte_fppcid: '1463554'
-    cmte_name: BELIEVE IN SF, LURIE FOR MAYOR 2024
-    total: 75000.0
   - cmte_fppcid: '1463746'
     cmte_name: DANNY SAUTER FOR SUPERVISOR 2024
     total: 500.0
+  - cmte_fppcid: '1463554'
+    cmte_name: BELIEVE IN SF, LURIE FOR MAYOR 2024
+    total: 75000.0
   - cmte_fppcid: '1466041'
     cmte_name: SUSK FOR SUPERVISOR 2024
     total: 500.0
@@ -7777,11 +7771,11 @@ contributors:
   - cmte_fppcid: '1466322'
     cmte_name: BILAL MAHMOOD FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1468029'
-    cmte_name: LUIS ZAMORA FOR COLLEGE BOARD 2024
-    total: 500.0
   - cmte_fppcid: '1468472'
     cmte_name: MICHAEL LAI FOR SUPERVISOR 2024
+    total: 500.0
+  - cmte_fppcid: '1468029'
+    cmte_name: LUIS ZAMORA FOR COLLEGE BOARD 2024
     total: 500.0
   - cmte_fppcid: '1469328'
     cmte_name: RUTH FERGUSON FOR CITY COLLEGE BOARD 2024
@@ -7798,12 +7792,12 @@ contributors:
   - cmte_fppcid: '1463099'
     cmte_name: DANIEL LURIE FOR MAYOR 2024
     total: 500.0
-  - cmte_fppcid: '1463554'
-    cmte_name: BELIEVE IN SF, LURIE FOR MAYOR 2024
-    total: 5000.0
   - cmte_fppcid: '1463752'
     cmte_name: VOTE MARJAN PHILHOUR FOR SUPERVISOR 2024
     total: 500.0
+  - cmte_fppcid: '1463554'
+    cmte_name: BELIEVE IN SF, LURIE FOR MAYOR 2024
+    total: 5000.0
   - cmte_fppcid: '1466041'
     cmte_name: SUSK FOR SUPERVISOR 2024
     total: 500.0
@@ -7870,11 +7864,11 @@ contributors:
   - cmte_fppcid: '1467847'
     cmte_name: MAYOR MARK FARRELL FOR YES ON PROP D
     total: 5000.0
-  - cmte_fppcid: '1468481'
-    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
-    total: 500.0
   - cmte_fppcid: '1468546'
     cmte_name: JOHN JERSIN FOR BOARD OF EDUCATION 2024
+    total: 500.0
+  - cmte_fppcid: '1468481'
+    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
     total: 500.0
   - cmte_fppcid: '1469320'
     cmte_name: PARAG GUPTA FOR SCHOOL BOARD 2024
@@ -7985,11 +7979,11 @@ contributors:
   - cmte_fppcid: '1468472'
     cmte_name: MICHAEL LAI FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1468481'
-    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
-    total: 500.0
   - cmte_fppcid: '1468546'
     cmte_name: JOHN JERSIN FOR BOARD OF EDUCATION 2024
+    total: 500.0
+  - cmte_fppcid: '1468481'
+    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
     total: 500.0
   - cmte_fppcid: '1469269'
     cmte_name: RAY FOR SCHOOL BOARD 2024
@@ -8359,26 +8353,26 @@ contributors:
   - cmte_fppcid: '1463752'
     cmte_name: VOTE MARJAN PHILHOUR FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1466322'
-    cmte_name: BILAL MAHMOOD FOR SUPERVISOR 2024
-    total: 500.0
   - cmte_fppcid: '1466331'
     cmte_name: DAVID CHIU FOR CITY ATTORNEY 2024
     total: 500.0
-  - cmte_fppcid: '1468029'
-    cmte_name: LUIS ZAMORA FOR COLLEGE BOARD 2024
-    total: 150.0
+  - cmte_fppcid: '1466322'
+    cmte_name: BILAL MAHMOOD FOR SUPERVISOR 2024
+    total: 500.0
   - cmte_fppcid: '1468472'
     cmte_name: MICHAEL LAI FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1468481'
-    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
-    total: 250.0
   - cmte_fppcid: '1468546'
     cmte_name: JOHN JERSIN FOR BOARD OF EDUCATION 2024
     total: 500.0
   - cmte_fppcid: '1468797'
     cmte_name: YES ON L, FUND THE BUS
+    total: 250.0
+  - cmte_fppcid: '1468029'
+    cmte_name: LUIS ZAMORA FOR COLLEGE BOARD 2024
+    total: 150.0
+  - cmte_fppcid: '1468481'
+    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
     total: 250.0
   - cmte_fppcid: '1469269'
     cmte_name: RAY FOR SCHOOL BOARD 2024
@@ -8560,11 +8554,11 @@ contributors:
   - cmte_fppcid: '1468472'
     cmte_name: MICHAEL LAI FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1468481'
-    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
-    total: 500.0
   - cmte_fppcid: '1468546'
     cmte_name: JOHN JERSIN FOR BOARD OF EDUCATION 2024
+    total: 500.0
+  - cmte_fppcid: '1468481'
+    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
     total: 500.0
   - cmte_fppcid: '1469269'
     cmte_name: RAY FOR SCHOOL BOARD 2024
@@ -8859,17 +8853,17 @@ contributors:
   - cmte_fppcid: '1466041'
     cmte_name: SUSK FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1466322'
-    cmte_name: BILAL MAHMOOD FOR SUPERVISOR 2024
-    total: 500.0
   - cmte_fppcid: '1466331'
     cmte_name: DAVID CHIU FOR CITY ATTORNEY 2024
     total: 500.0
-  - cmte_fppcid: '1468029'
-    cmte_name: LUIS ZAMORA FOR COLLEGE BOARD 2024
+  - cmte_fppcid: '1466322'
+    cmte_name: BILAL MAHMOOD FOR SUPERVISOR 2024
     total: 500.0
   - cmte_fppcid: '1468472'
     cmte_name: MICHAEL LAI FOR SUPERVISOR 2024
+    total: 500.0
+  - cmte_fppcid: '1468029'
+    cmte_name: LUIS ZAMORA FOR COLLEGE BOARD 2024
     total: 500.0
   - cmte_fppcid: '1469269'
     cmte_name: RAY FOR SCHOOL BOARD 2024
@@ -8916,11 +8910,11 @@ contributors:
   - cmte_fppcid: '1468472'
     cmte_name: MICHAEL LAI FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1468481'
-    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
-    total: 500.0
   - cmte_fppcid: '1468546'
     cmte_name: JOHN JERSIN FOR BOARD OF EDUCATION 2024
+    total: 500.0
+  - cmte_fppcid: '1468481'
+    cmte_name: JAIME HULING FOR SAN FRANCISCO BOARD OF EDUCATION 2024
     total: 500.0
   - cmte_fppcid: '1469320'
     cmte_name: PARAG GUPTA FOR SCHOOL BOARD 2024
@@ -9034,12 +9028,12 @@ contributors:
   - cmte_fppcid: '1463099'
     cmte_name: DANIEL LURIE FOR MAYOR 2024
     total: 500.0
-  - cmte_fppcid: '1463554'
-    cmte_name: BELIEVE IN SF, LURIE FOR MAYOR 2024
-    total: 10000.0
   - cmte_fppcid: '1463752'
     cmte_name: VOTE MARJAN PHILHOUR FOR SUPERVISOR 2024
     total: 500.0
+  - cmte_fppcid: '1463554'
+    cmte_name: BELIEVE IN SF, LURIE FOR MAYOR 2024
+    total: 10000.0
   - cmte_fppcid: '1466322'
     cmte_name: BILAL MAHMOOD FOR SUPERVISOR 2024
     total: 500.0
@@ -9158,24 +9152,24 @@ contributors:
   - cmte_fppcid: '1463746'
     cmte_name: DANNY SAUTER FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1466322'
-    cmte_name: BILAL MAHMOOD FOR SUPERVISOR 2024
-    total: 100.0
   - cmte_fppcid: '1466331'
     cmte_name: DAVID CHIU FOR CITY ATTORNEY 2024
     total: 500.0
+  - cmte_fppcid: '1466322'
+    cmte_name: BILAL MAHMOOD FOR SUPERVISOR 2024
+    total: 100.0
   - cmte_fppcid: '1466726'
     cmte_name: MARK FARRELL FOR MAYOR 2024
     total: 500.0
   - cmte_fppcid: '1468472'
     cmte_name: MICHAEL LAI FOR SUPERVISOR 2024
     total: 500.0
-  - cmte_fppcid: '1468978'
-    cmte_name: LAURANCE LEE FOR BOARD OF EDUCATION 2024
-    total: 250.0
   - cmte_fppcid: '1469269'
     cmte_name: RAY FOR SCHOOL BOARD 2024
     total: 500.0
+  - cmte_fppcid: '1468978'
+    cmte_name: LAURANCE LEE FOR BOARD OF EDUCATION 2024
+    total: 250.0
   - cmte_fppcid: '1469449'
     cmte_name: LOUIE FOR CCSF BOARD 2024
     total: 260.59

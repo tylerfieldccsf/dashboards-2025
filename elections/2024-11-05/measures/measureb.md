@@ -1,7 +1,6 @@
 ---
 layout: contest_bmc
 election: '2024-11-05'
-historic: false
 candidate: false
 title: 'B: Community Health and Medical Facilities, Street Safety, Public Spaces,
   and Shelter to Reduce Homelessness Bond'
@@ -38,6 +37,29 @@ committees:
   committee_name: HEALTHY, VIBRANT SF, YES ON B
   funds: 1068631.65
   expenses: 1049893.7
+contributors:
+- - Service Employees International Union Local 1021
+  - 400000.0
+- - International Federation of Professional and Technical Engineers 21 Issues PAC
+  - 200000.0
+- - Sutter Health
+  - 125000.0
+- - Fix Our City SF Sponsored by Labor Organizations ( International Federation of
+    Professional and Technical Engineers 21)
+  - 100000.0
+- - San Francisco General Hospital Foundation
+  - 100000.0
+- - San Francisco Parks Alliance
+  - 76337.65
+- - Kaiser Foundation Health Plan, Inc and Hospitals
+  - 75000.0
+- - San Francisco Apartment Association Issues PAC
+  - 70000.0
+- - San Francisco Apartment Association Political Action Committee
+  - 62778.2
+- - Committee to Restore Police Minimum Staffing and Public Safety, Sponsored by Labor
+    Organizations
+  - 50000.0
 
 ---
 
