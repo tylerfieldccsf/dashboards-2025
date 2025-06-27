@@ -3,25 +3,23 @@
 
   {%- include head.html -%}
 
-  <body>
+  <body style="padding-top:2rem;">
 
     {%- include header.html -%}
     
     <main class="page-content" aria-label="Content">
       <div class="container">
-        <div class="alert alert-danger">This site is under development - accurate figures are not represented.</div>
         {%- if layout.pagenav -%}
         <div class="page-nav-wrapper">{%- include page-nav.html -%}</div>
         {%- endif -%}
         <div class="content-wrapper">
           {{ content }}
         </div>
-        <div class="alert alert-danger">This site is under development - accurate figures are not represented.</div>
       </div>
     </main>
 
     {%- include footer.html -%}
 
   </body>
-
+  
 </html>
