@@ -1,7 +1,6 @@
 ---
 layout: contest_bmc
 election: '2024-11-05'
-historic: false
 candidate: false
 title: 'E: Creating a Task Force to Recommend Changing, Eliminating, or Combining
   City Commissions'
@@ -44,6 +43,27 @@ committees:
     BY CENTER FOR EMPOWERED POLITICS
   funds: 100935.15
   expenses: 49156.91
+contributors:
+- - Chris Larsen
+  - 250000.0
+- - Ronald Conway
+  - 100000.0
+- - Neighbors for a Better San Francisco Advocacy
+  - 75000.0
+- - San Francisco Foundation
+  - 55150.0
+- - William Oberndorf
+  - 50300.0
+- - Jeremy Liew
+  - 50000.0
+- - Llx Media(li Li)
+  - 50000.0
+- - San Francisco Police Officers Association PAC
+  - 50000.0
+- - Emmet Shear
+  - 49000.0
+- - Erica Lawson
+  - 25000.0
 
 ---
 

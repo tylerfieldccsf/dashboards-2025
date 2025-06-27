@@ -1,7 +1,6 @@
 ---
 layout: contest_bmc
 election: '2024-11-05'
-historic: false
 candidate: false
 title: 'F: Police Staffing and Deferred Retirement'
 breadcrumbs:
@@ -22,6 +21,27 @@ committees:
   committee_name: YES ON F, SAN FRANCISCANS FOR A FULL POLICE STAFFING
   funds: 378080.48
   expenses: 377818.68
+contributors:
+- - San Francisco Police Officers Association Issues PAC
+  - 100000.0
+- - No on B, Stop the Cop Tax
+  - 56368.68
+- - Christian Larsen
+  - 50000.0
+- - Salesforce.com, Inc
+  - 50000.0
+- - Ronald Conway
+  - 25000.0
+- - Fred Ehrsam
+  - 25000.0
+- - San Francisco Forward Sponsored by San Francisco Chamber of Commerce
+  - 10000.0
+- - Garry Tan
+  - 10000.0
+- - Tmg Partners
+  - 10000.0
+- - Golden State Warriors
+  - 7500.0
 
 ---
 

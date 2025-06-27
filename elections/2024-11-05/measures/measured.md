@@ -1,7 +1,6 @@
 ---
 layout: contest_bmc
 election: '2024-11-05'
-historic: false
 candidate: false
 title: 'D: City Commissions and Mayoral Authority'
 breadcrumbs:
@@ -22,6 +21,27 @@ committees:
   committee_name: MAYOR MARK FARRELL FOR YES ON PROP D
   funds: 2547251.67
   expenses: 2554110.26
+contributors:
+- - Michael Moritz
+  - 600000.0
+- - Linda Coates
+  - 250000.0
+- - Thomas Coates
+  - 250000.0
+- - John Pritzker
+  - 200000.0
+- - William Oberndorf
+  - 195000.0
+- - Louise Mucifeld
+  - 101187.93
+- - Arthur Patterson
+  - 100000.0
+- - Sameer Gandhi
+  - 96012.03
+- - Blake Byers
+  - 50000.0
+- - Fred Ehrsam
+  - 50000.0
 
 ---
 

@@ -1,7 +1,6 @@
 ---
 layout: contest_bmc
 election: '2024-11-05'
-historic: false
 candidate: false
 title: 'C: Inspector General'
 breadcrumbs:
@@ -36,6 +35,7 @@ committees:
     Yerba Buena Neighborhood Consortium LLC
   funds: ''
   expenses: 17000.0
+contributors: []
 
 ---
 

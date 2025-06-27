@@ -1,7 +1,6 @@
 ---
 layout: contest_bmc
 election: '2024-11-05'
-historic: false
 candidate: false
 title: 'C,D,E: Measures C, D, and E'
 breadcrumbs:
@@ -17,6 +16,28 @@ committees:
     NEIGHBORS AND AARON PESKIN
   funds: 116881.86
   expenses: 83199.72
+contributors:
+- - Service Employees International Union Local 1021 Candidate PAC
+  - 25000.0
+- - Committee to Restore Police Minimum Staffing and Public Safety Sponsored by Labor
+    Organizations
+  - 15000.0
+- - Aaron Peskin
+  - 11250.0
+- - Greenberg Traurig, Llp
+  - 7500.0
+- - Scott Michael Feeney
+  - 6000.0
+- - Joseph H Carouba
+  - 5000.0
+- - Park Sfo, Llc(robert Simms)
+  - 5000.0
+- - Steven L Swig
+  - 5000.0
+- - Richard L. Swig Jr.
+  - 5000.0
+- - Coalition on Homelessness
+  - 4800.0
 
 ---
 

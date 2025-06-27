@@ -1,7 +1,6 @@
 ---
 layout: contest_candidate
 election: '2024-11-05'
-historic: false
 candidate: true
 title: Board of Supervisors D03
 breadcrumbs:
@@ -46,7 +45,71 @@ candidates:
   candidate_name: EDUARD NAVARRO
   funds: 96679.0
   expenses: 96399.12
-ie_candidates: []
+ie_candidates:
+- candidate_name: DANNY SAUTER
+  committees:
+  - position: OPPOSE
+    filer_id: '991525'
+    committee_name: San Francisco Labor Council Labor & Neighbor Independent Expenditure
+      Political Action Committee
+    funds: ''
+    expenses: 55745.83
+  - position: SUPPORT
+    filer_id: '1433436'
+    committee_name: Coalition to Grow San Francisco - Grow SF PAC
+    funds: ''
+    expenses: 70910.2
+  - position: SUPPORT
+    filer_id: '1460412'
+    committee_name: Families for a Vibrant SF Sponsored by Abundance Network
+    funds: ''
+    expenses: 161877.27
+- candidate_name: SHARON LAI
+  committees:
+  - position: SUPPORT
+    filer_id: '1448304'
+    committee_name: Tenants and Families United PAC sponsored by Center for Empowered
+      Politics
+    funds: ''
+    expenses: 4047.79
+  - position: SUPPORT
+    filer_id: '1438874'
+    committee_name: California Working Families Party
+    funds: ''
+    expenses: 4812.22
+  - position: SUPPORT
+    filer_id: '1469330'
+    committee_name: Asian Americans for Representation
+    funds: ''
+    expenses: 25000.0
+- candidate_name: MOE JAMIL
+  committees:
+  - position: OPPOSE
+    filer_id: '1460412'
+    committee_name: Families for a Vibrant SF Sponsored by Abundance Network
+    funds: ''
+    expenses: 35000.0
+contributors:
+- - Wendy Chau
+  - 32325.0
+- - Matthew Susk
+  - 5100.0
+- - Sharon Lai
+  - 5000.0
+- - Daniel Sauter
+  - 5000.0
+- - Glenn Gilmore
+  - 1500.0
+- - Tyler Foster
+  - 1250.0
+- - Susan Gage
+  - 1250.0
+- - Moe Jamil
+  - 1150.0
+- - Thomas Gage
+  - 1100.0
+- - Eva Lee
+  - 1100.0
 
 ---
 
