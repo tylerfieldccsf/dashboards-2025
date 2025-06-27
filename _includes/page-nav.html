@@ -3,9 +3,9 @@
         <ol class="breadcrumb m-0">
             {% for crumb in page.breadcrumbs %}
                 {% if forloop.last %}
-                    <li class="breadcrumb-item active" aria-current="page">{{ crumb[1] }}</li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ crumb[0] }}</li>
                 {% else %}
-                    <li class="breadcrumb-item"><a href="{{site.baseurl}}/{{crumb[0]}}">{{crumb[1]}}</a></li>
+                    <li class="breadcrumb-item"><a href="{{site.baseurl}}/{{crumb[1]}}/">{{crumb[0]}}</a></li>
                 {% endif %}
             {% endfor %}
         </ol>

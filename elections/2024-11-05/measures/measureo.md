@@ -1,21 +1,27 @@
 ---
 layout: contest_bmc
-election: 2024-11-05
+election: '2024-11-05'
 historic: false
 candidate: false
-title: "Measure O: Supporting Reproductive Rights"
+title: 'O: Supporting Reproductive Rights'
 breadcrumbs:
-- - elections/2024-11-05/
-  - Nov 5, 2024
-- - elections/2024-11-05/measures/measureo
-  - Measure O
+- - November 05, 2024
+  - elections/2024-11-05
+- - 'O: Supporting Reproductive Rights'
+  - elections/2024-11-05/measures/measureo
 committees:
+- position: SUPPORT
+  filer_nid: '201619433'
+  filer_id: '1433436'
+  committee_name: Coalition to Grow San Francisco - Grow SF PAC
+  funds: ''
+  expenses: 14939.78
 - position: SUPPORT
   filer_nid: '211703442'
   filer_id: '1471023'
-  committee_name: Mayor Breed's Committee for Reproductive Freedom, Yes on O
-  contest: Measure O
-  funds: $355,432
-  expenses: $355,432
+  committee_name: MAYOR BREED'S COMMITTEE FOR REPRODUCTIVE FREEDOM, YES ON O
+  funds: 355432.11
+  expenses: 355432.11
 
 ---
+

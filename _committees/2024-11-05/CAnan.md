@@ -1,29 +1,52 @@
 ---
-layout: committee
-filer_nid: '212473549'
-filer_id: .nan
-filer_name: Dennis Wong
+layout: candidate_committee
+filer_nid: '211917278'
+filer_id: ''
+filer_name: Woon, Richard
 jurisdiction: sf
-candidate_controlled: false
-committee_type: Independent Expenditure
+committee_type: candidate
+election: '2024-11-05'
 dates:
-- '2022-01-01'
-- '2024-12-31'
+- ''
+- ''
 breadcrumbs:
-- - elections/2024-11-05/
-  - Nov 5, 2024
-- - ''
-  - Dennis Wong
+- - November 05, 2024
+  - elections/2024-11-05/
+- - City Attorney
+  - elections/2024-11-05/contests/cat
+- - Richard Woon
+  - ''
 totals:
-- $0
-- $30,000
-contributors: []
-expenditures: []
-filings:
-- filing_datetime: '2024-11-01 12:54:39-07:00'
-  form_name: FPPC497
-  filing_link: https://netfile.com/Connect2/api/public/image/212474712
-  filing_startdate: .nan
-  filing_enddate: .nan
+- ''
+- ''
+contributors: ''
+expenditures: ''
+filings: ''
+factoids:
+- title: Total Unitemized Contributions
+  data: ''
+  about: Contributions less than $100 cannot be attributed to a specific individual
+- title: Contributions within San Francisco
+  data: ''
+  about: Total of contributions with a San Francisco zip code
+- title: Contributions within California
+  data: ''
+  about: Total of contributions from parties within California
+- title: Contributions from Individuals
+  data: ''
+  about: Total of contributions received from individuals, not entities
+position: SUPPORT
+candidate_name: Richard Woon
+pubfi:
+  participant: ''
+  total: 0
+third_party:
+- - ''
+  - ''
+- - ''
+  - ''
+- - data_dates TBD
+- []
 
 ---
+

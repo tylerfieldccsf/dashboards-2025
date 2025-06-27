@@ -1,21 +1,27 @@
 ---
 layout: contest_bmc
-election: 2024-11-05
+election: '2024-11-05'
 historic: false
 candidate: false
-title: "Measure D: City Commissions and Mayoral Authority"
+title: 'D: City Commissions and Mayoral Authority'
 breadcrumbs:
-- - elections/2024-11-05/
-  - Nov 5, 2024
-- - elections/2024-11-05/measures/measured
-  - Measure D
+- - November 05, 2024
+  - elections/2024-11-05
+- - 'D: City Commissions and Mayoral Authority'
+  - elections/2024-11-05/measures/measured
 committees:
+- position: SUPPORT
+  filer_nid: '201619433'
+  filer_id: '1433436'
+  committee_name: Coalition to Grow San Francisco - Grow SF PAC
+  funds: ''
+  expenses: 19939.79
 - position: SUPPORT
   filer_nid: '211027210'
   filer_id: '1467847'
-  committee_name: Mayor Mark Farrell for Yes on Prop D
-  contest: Measure D
-  funds: $2,547,252
-  expenses: $2,555,010
+  committee_name: MAYOR MARK FARRELL FOR YES ON PROP D
+  funds: 2547251.67
+  expenses: 2554110.26
 
 ---
+

@@ -1,22 +1,28 @@
 ---
 layout: contest_bmc
-election: 2024-11-05
+election: '2024-11-05'
 historic: false
 candidate: false
-title: "Measure H: Retirement Benefits for Firefighters"
+title: 'H: Retirement Benefits for Firefighters'
 breadcrumbs:
-- - elections/2024-11-05/
-  - Nov 5, 2024
-- - elections/2024-11-05/measures/measureh
-  - Measure H
+- - November 05, 2024
+  - elections/2024-11-05
+- - 'H: Retirement Benefits for Firefighters'
+  - elections/2024-11-05/measures/measureh
 committees:
+- position: SUPPORT
+  filer_nid: '201619433'
+  filer_id: '1433436'
+  committee_name: Coalition to Grow San Francisco - Grow SF PAC
+  funds: ''
+  expenses: 14939.79
 - position: SUPPORT
   filer_nid: '211998686'
   filer_id: '1462942'
-  committee_name: Yes on H for Firefighters Health & Safety, SF Fire Fighters Local
+  committee_name: YES ON H FOR FIREFIGHTERS HEALTH & SAFETY, SF FIRE FIGHTERS LOCAL
     798
-  contest: Measure H
-  funds: $2,383,530
-  expenses: $2,338,888
+  funds: 2383530.46
+  expenses: 2510846.52
 
 ---
+
