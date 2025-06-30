@@ -6,14 +6,14 @@ pagenav: true
 <div class="container">
     <div class="row bg-primary text-light py-3">
         <div class="col-md-6">
-            <div class="info-name mx-5 my-3 d-flex flex-column align-items-center" data="general information">
-                <h1 class="page-heading text-center">{{ page.candidate_name }}</h1>
-                <h2>Candidate for {{page.breadcrumbs[1][0]}}</h2>
+            <div class="info-name mx-3 my-3 d-flex flex-column" data="general information">
+                <h1 class="page-heading">{{ page.candidate_name }}</h1>
+                <p>Candidate for {{page.breadcrumbs[1][0]}}</p>
                 {%- include candidate-about.html -%}
             </div>
         </div>
         <div class="col-md-6">
-            <div class="info-summary">
+            <div class="info-summary mx-3">
                 <h2>Fundraising & Spending Summary</h2>
                 <dl class="row">
                     <dt class="col-sm-4">Committee Name</dt>
@@ -34,7 +34,7 @@ pagenav: true
                     <div class="">
                         <div class="card money-card money-card-1">
                             <div class="card-body">
-                                <h5 class="card-title">Total Contributions</h5>
+                                <h3 class="card-title">Total Contributions</h3>
                                 <p class="card-text"><span class="mononumber currency">{{page.totals[0]}}</span></p>
                             </div>
                         </div>
@@ -42,7 +42,7 @@ pagenav: true
                     <div class="">
                         <div class="card money-card money-card-2">
                             <div class="card-body">
-                                <h5 class="card-title">Total Expenses</h5>
+                                <h3 class="card-title">Total Expenses</h3>
                                 <p class="card-text"><span class="mononumber currency">{{page.totals[1]}}</span></p>
                             </div>
                         </div>
@@ -75,7 +75,7 @@ pagenav: true
     <div class="row bg-light text-dark py-3">
         <div class="col-md-6">
             <div class="cm-contributors col-table-6">
-                <h4>Contributors <i data-bs-toggle="offcanvas" data-bs-target="#contributorsTT" class="fs-5 fa-regular fa-circle-info"></i></h4>
+                <h2>Contributors <i data-bs-toggle="offcanvas" data-bs-target="#contributorsTT" class="fs-5 fa-regular fa-circle-info"></i></h2>
                 <table class="table caption-top" id="contributors_table">
                     <thead>
                         <tr>
@@ -104,7 +104,7 @@ pagenav: true
         </div>
         <div class="col-md-6">
             <div class="cm-expenditures col-table-6">
-                <h4>Expenditures <i data-bs-toggle="offcanvas" data-bs-target="#expendituresTT" class="fs-5 fa-regular fa-circle-info"></i></h4>
+                <h2>Expenditures <i data-bs-toggle="offcanvas" data-bs-target="#expendituresTT" class="fs-5 fa-regular fa-circle-info"></i></h2>
                 <table class="table caption-top" id="expenditures_table">
                     <thead>
                         <tr>
