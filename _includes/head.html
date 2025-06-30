@@ -14,7 +14,9 @@
   <script src="https://kit.fontawesome.com/189e9f87d6.js" crossorigin="anonymous"></script>
 
   <script src="{{ site.baseurl }}{% link assets/js/eth_custom.js %}"></script>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Slab&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ "/assets/DataTables/datatables.css" | relative_url }}">
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   {%- if page.filer_name != nil -%}
@@ -22,5 +24,5 @@
   {%- else -%}
   {%- assign title = page.title -%}
   {%- endif-%}
-  <title>{{site.title}} | {{title}}</title>
+  <title>{{title}} | {{site.title}}</title>
 </head>
