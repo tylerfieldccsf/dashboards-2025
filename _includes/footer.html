@@ -1,33 +1,25 @@
-<footer class="site-footer h-card container">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">
-            {%- if site.author -%}
-              {{ site.author | escape }}
-            {%- endif -%}
-            </li>
-            {%- if site.email -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {%- endif -%}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
-      </div>
-    </div>
-
-  </div>
-
+<footer class="bg-dark text-white py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- <img class="img-fluid rounded me-3" style="height:6rem;"
+                        src="{{ '/assets/images/sf_cseal_2022.svg' | relative_url}}" alt="City of San Francisco"> -->
+                    <div class="">
+                        <p>This service is provided by:</p>
+                        <p class="h4">City & County of San Francisco</p>
+                        <p class="h1">Ethics Commission</p>
+                        <a href="https://sfethics.org">sfethics.org</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    Policy
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Web Accessibility Statement</a></li>
+                        <li><a href="#">Records Requests</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
 </footer>
