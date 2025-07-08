@@ -29,7 +29,7 @@ pagenav: true
                         <div class="card money-card money-card-1">
                             <div class="card-body">
                                 <h3 class="card-title">Total Contributions</h3>
-                                <p class="card-text"><span class="mononumber currency">{{page.totals[0]}}</span></p>
+                                <p class="card-text"><span class="currency">{{page.totals[0]}}</span></p>
                             </div>
                         </div>
                     </div>
@@ -37,7 +37,7 @@ pagenav: true
                         <div class="card money-card money-card-2">
                             <div class="card-body">
                                 <h3 class="card-title">Total Expenses</h3>
-                                <p class="card-text"><span class="mononumber currency">{{page.totals[1]}}</span></p>
+                                <p class="card-text"><span class="currency">{{page.totals[1]}}</span></p>
                             </div>
                         </div>
                     </div>
@@ -94,7 +94,7 @@ pagenav: true
                                     {{ contributor[1] }}
                                     {%- if contributor[2] != "" -%}</a>{%- endif -%}
                             </td>
-                            <td class="mononumber currency">{{ contributor[3] }}</td>
+                            <td class="currency">{{ contributor[3] }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>
@@ -115,7 +115,7 @@ pagenav: true
                         {% for exp in page.expenditures %}
                         <tr>
                             <td>{{ exp[0] }}</td>
-                            <td class="mononumber currency">{{ exp[1] }}</td>
+                            <td class="currency">{{ exp[1] }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>
