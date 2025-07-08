@@ -29,16 +29,16 @@ pagenav: true
                                     {{ candidate.candidate_name }}
                                 </a>
                             </td>
-                            <td class="mononumber currency">{{ candidate.funds }}</td>
-                            <td class="mononumber currency">{{ candidate.expenses }}</td>
+                            <td class="currency">{{ candidate.funds }}</td>
+                            <td class="currency">{{ candidate.expenses }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>
                     <tfoot>
                         <tr>
                             <th style="text-align:right">Total:</th>
-                            <th class="mononumber currency"></th>
-                            <th class="mononumber currency"></th>
+                            <th class="currency"></th>
+                            <th class="currency"></th>
                         </tr>
                     </tfoot>
                 </table>
@@ -86,8 +86,8 @@ pagenav: true
                 </div>
 
             </div>
-            <div class="col-2 mononumber currency text-end">{{ committee.funds }}</div>
-            <div class="col-2 mononumber currency text-end">{{ committee.expenses }}</div>
+            <div class="col-2 currency text-end">{{ committee.funds }}</div>
+            <div class="col-2 currency text-end">{{ committee.expenses }}</div>
         </div>
         {% endfor %}
     </div>
@@ -121,15 +121,15 @@ pagenav: true
                                     </a>
                                 </td>
                                 <td>{{ committee.position }}</td>
-                                <td class="mononumber currency">{{ committee.funds }}</td>
-                                <td class="mononumber currency">{{ committee.expenses }}</td>
+                                <td class="currency">{{ committee.funds }}</td>
+                                <td class="currency">{{ committee.expenses }}</td>
                             </tr>
                             {% endfor %}
                         </tbody>
                         <tfoot>
                             <tr>
                                 <th style="text-align:right" colspan="3">Total:</th>
-                                <th class="mononumber currency"></th>
+                                <th class="currency"></th>
                             </tr>
                         </tfoot>
                     </table>

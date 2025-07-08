@@ -29,15 +29,15 @@ pagenav: true
                                         </a>
                                     </td> 
                                     <td>{{ committee.position }}</td>
-                                    <td class="mononumber currency">{{ committee.funds }}</td>
-                                    <td class="mononumber currency">{{ committee.expenses }}</td>
+                                    <td class="currency">{{ committee.funds }}</td>
+                                    <td class="currency">{{ committee.expenses }}</td>
                                 </tr>
                             {%- endfor -%}
                         </tbody>
                         <tfoot>
                             <tr>
                                 <th style="text-align:right" colspan="3">Total:</th>
-                                <th class="mononumber currency"></th>
+                                <th class="currency"></th>
                             </tr>
                         </tfoot>
                     </table>
