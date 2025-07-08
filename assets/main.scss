@@ -92,3 +92,8 @@ table {
     background-color: $red;
     color: white;
 }
+
+.hover-link:hover .icon,
+.hover-link:focus-within .icon {
+    display: inline-block !important;
+}

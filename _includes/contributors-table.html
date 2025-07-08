@@ -1,8 +1,12 @@
 <div class="{{include.div_class}}">
     {%- if include.title -%}
-        <h3>{{include.title}}</h3>
+        <h3 id="top-contributors" class="hover-link">{{include.title}}
+            <a class="icon d-none" href="#top-contributors"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
+        </h3>
     {%- else -%}
-        <h3>Top Contributors</h3>
+        <h3 id="top-contributors" class="hover-link">Top Contributors
+            <a class="icon d-none" href="#top-contributors"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
+        </h3>
     {%- endif -%}
     {%- if include.subtitle -%}
         <h4>{{include.subtitle}}</h4>
