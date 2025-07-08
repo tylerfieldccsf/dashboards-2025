@@ -162,27 +162,21 @@ pagenav: true
 </div>
 <script>
     new DataTable('#contributors_table', {
-        lengthMenu: [
-            [5, 10, 25, 50, -1],
-            [5, 10, 25, 50, "All"]
-        ],
+        pageLength: 10,
+        lengthChange: false,
         order: [[2, 'desc']]
     }).on('draw', () => {
         formatAllCurrencyElements('contributors_table');
     });
     new DataTable('#expenditures_table', {
-        lengthMenu: [
-            [5, 10, 25, 50, -1],
-            [5, 10, 25, 50, "All"]
-        ],
+        pageLength: 10,
+        lengthChange: false,
         order: [[2, 'desc']]
     }).on('draw', () => {
         formatAllCurrencyElements('expenditures_table');
     });
     new DataTable('table.dtify', {
-        lengthMenu: [
-            [5, 10, 25, 50, -1],
-            [5, 10, 25, 50, "All"]
-        ]
+        pageLength: 10,
+        lengthChange: false,
     });
 </script>
