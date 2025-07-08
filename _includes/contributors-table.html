@@ -1,0 +1,26 @@
+<div class="{{include.div_class}}">
+    {%- if include.title -%}
+        <h3>{{include.title}}</h3>
+    {%- else -%}
+        <h3>Top Contributors</h3>
+    {%- endif -%}
+    {%- if include.subtitle -%}
+        <h4>{{include.subtitle}}</h4>
+    {%- endif -%}
+
+    <table class="table {{- include.table_class -}}">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Amount</th></tr>
+        </thead>
+        <tbody>
+            {%- for contributor in include.contributors -%}
+            <tr>
+                <td>{{contributor[0]}}</td>
+                <td class="currency">{{ contributor[1] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

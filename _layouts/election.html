@@ -112,16 +112,8 @@ pagenav: true
     <div class="row bg-light text-dark py-3">
         <div class="col-md-12">
             <h2>Top Contributors</h2>
-            <div class="container">
-                {%- for contributor in page.contributors -%}
-                <div class="row">
-                    <div class="col-md-8"><p>{{contributor[0]}}</p></div>
-                    <div class="col-md-4"><p class="currency">{{contributor[1]}}</p></div>
-                </div>
-                {%- endfor -%}
-            </div>
+            {% include contributors-table.html title='Across Candidate Contests and Ballot Measures' subtitle='To All Primarily Formed Committees' contributors=page.contributors  %}
             <a href="{{site.baseurl}}/elections/{{page.election}}/contributors"><button class="btn btn-primary" type="button">View More</button></a>
-            
         </div>
     </div>
 

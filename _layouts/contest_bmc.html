@@ -8,9 +8,9 @@ pagenav: true
         <h1>{{page.title}}</h1>
         <p>{{page.about}}</p>
         
-        <div class="row table-row">
+        <div class="row">
             <div class="col-md-12">
-                <div class="cc_cm col-table-12">
+                <div class="col-table-12">
                     <table class="table caption-top dtify">
                         <thead>
                             <tr>
@@ -42,6 +42,11 @@ pagenav: true
                         </tfoot>
                     </table>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-dark">
+                {% include contributors-table.html title='Top Contributors to This Measure' contributors=page.contributors div_class='col-table-12' %}
             </div>
         </div>
     </div>

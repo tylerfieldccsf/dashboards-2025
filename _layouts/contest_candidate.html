@@ -11,7 +11,7 @@ pagenav: true
         <p>learn more about candidate controlled committees blah blah blah lorem ipsum</p>
 
         <div class="col-md-12">
-            <div class="cc_cm col-table-12">
+            <div class="col-table-12">
                 <h2 class="text-dark">Candidate Controlled Committees</h2>
                 <table class="table caption-top" id="candidate_controlled">
                     <thead>
@@ -43,6 +43,10 @@ pagenav: true
                     </tfoot>
                 </table>
             </div>
+        </div>
+
+        <div class="col-md-12 text-dark">
+            {% include contributors-table.html title='Top Contributors within this Contest' subtitle='Across all Candidates and Including Primarily Formed 3rd-Party Committees' contributors=page.contributors div_class='col-table-12' %}
         </div>
     </div>
 
