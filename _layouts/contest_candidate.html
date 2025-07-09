@@ -3,19 +3,31 @@ layout: default
 pagenav: true
 ---
 
-<div class="container">
-
-    <div class="row bg-primary text-light py-3">
-        <h1>{{page.title}}</h1>
-        <p>Candidate controlled commitees are shown first</p>
-        <p>learn more about candidate controlled committees blah blah blah lorem ipsum</p>
-
-        <div class="col-md-12">
-            <div class="col-table-12">
-                <h2 class="text-dark hover-link" id="candidate-controlled">Candidate Controlled Committees
-                    <a class="icon d-none" href="#candidate-controlled"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
+<div class="container bg-primary">
+    <div class="row text-light py-3">
+        <div class="col-12">
+            <h1>{{page.title}}</h1>
+        </div>
+        <div class="col-12">
+            <p>Candidate controlled commitees are shown first</p>
+            <p>learn more about candidate controlled committees blah blah blah lorem ipsum</p>
+            
+            <div class="h2">Table of Contents</div>
+            <ul>
+                <li><a href="#candidate-committees" class="link-light">Candidate Controlled Committees</a></li>
+                {%- if page.ie_candidates %}<li><a href="#candidate-ie-committees" class="link-light">Third Party Committees</a></li>{% endif -%}
+                <li><a href="#top-contributors" class="link-light">Top 10 Contributors</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row row-cols-2">
+        <div class="col-12 col-lg-6 py-2">
+            <div class="col-table-6">
+                <h2 class="text-dark hover-link" id="candidate-committees">Candidate Controlled Committees
+                    <i data-bs-toggle="offcanvas" data-bs-target="#candidate-committeesTT" class="fs-5 fa-regular fa-circle-info"></i>
+                    <a class="icon d-none" href="#candidate-committees"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
                 </h2>
-                <table class="table caption-top" id="candidate_controlled">
+                <table class="table caption-top candidate_controlled">
                     <thead>
                         <tr>
                             <th scope="col">Candidates</th>
@@ -47,23 +59,25 @@ pagenav: true
             </div>
         </div>
 
-        <div class="col-md-12 text-dark">
-            {% include contributors-table.html title='Top Contributors within this Contest' subtitle='Across all Candidates and Including Primarily Formed 3rd-Party Committees' contributors=page.contributors div_class='col-table-12' %}
+        <div class="col-12 col-lg-6 py-2">
+            {% include contributors-table.html title='Top 10 Contributors within this Contest' subtitle='Across all Candidates and Including Primarily Formed 3rd-Party Committees' contributors=page.contributors div_class='col-table-6' %}
         </div>
     </div>
 
 
     {% if page.ie_candidates %}
     <div class="row bg-light text-dark py-3">
-        <h2 id="third-party" class="hover-link">Third Party Committees
-            <a class="icon d-none" href="#third-party"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
-        </h2>
+        <div class="col-12">
+            <h2 id="candidate-ie-committees" class="hover-link">Third Party Committees
+                <i data-bs-toggle="offcanvas" data-bs-target="#candidate-ie-committeesTT" class="fs-5 fa-regular fa-circle-info"></i>
+                <a class="icon d-none" href="#candidate-ie-committees"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
+            </h2>
+        </div>
         {% for candidate in page.ie_candidates %}
-        <div class="row table-row">
-            <div class="col-md-12">
-                <div class="3p_cm col-table-12">
+            <div class="col-12 col-lg-6 py-2">
+                <div class="col-table-12">
                     <h3>{{candidate.candidate_name}}</h3>
-                    <table class="table caption-top ie_committee">
+                    <table class="table ie_committee caption-top">
                         <thead>
                             <tr>
                                 <th scope="col" data-priority="1">Committee</th>
@@ -96,14 +110,11 @@ pagenav: true
                     </table>
                 </div>
             </div>
-        </div>
-
         {% endfor %}
     </div>
     {% endif %}
 </div>
 
-</div>
 <script>
     let currencyOptions = {
         style: 'currency',
@@ -116,7 +127,7 @@ pagenav: true
         bottomStart: null,
         bottomEnd: null,
     }
-    new DataTable('#candidate_controlled', {
+    new DataTable('table.candidate_controlled', {
         lengthChange: false,
         displayLength: -1,
         layout: layoutOptions,
