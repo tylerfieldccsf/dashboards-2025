@@ -4,121 +4,137 @@ pagenav: true
 ---
 <div class="container bg-primary">
      <div class="row text-light py-3">
-        <div class="col-md-6">
+        <div class="col-12">
             <h1>{{page.title}}</h1>
         </div>
-    </div>
-
-
-    {%- if page.candidate_pf -%}
-    <div class="row bg-light text-dark py-3">
-        <div class="col-md-12 hover-link" id="candidate-committees">
-            <h2>Candidate Controlled Committees
-                <a class="icon d-none" href="#candidate-committees"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
-            </h2>
-            <table class="table caption-top dtify_both" id="table_candidate">
-                <thead>
-                <tr>
-                    <th scope="col">Contest</th>
-                    <th scope="col">Funds</th>
-                    <th scope="col">Expenses</th>
-                </tr>
-                </thead>
-                <tbody>
-                    {%- for contest in page.candidate_pf -%}
-                        <tr>
-                            <td><a href="{{site.baseurl}}/elections/{{page.election}}/contests/{{contest.contest_link}}.html">
-                                {{ contest.contest_name }}
-                            </a></td>
-                            <td class="currency">{{ contest.funds }}</td>
-                            <td class="currency">{{ contest.expenses }}</td>
-                        </tr>
-                    {%- endfor -%}
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <th style="text-align:right">Total:</th>
-                        <th class="currency"></th>
-                        <th class="currency"></th>
-                    </tr>
-                </tfoot>
-            </table>
-        </div>
-    </div>
-    {%- endif -%}
-
-    <div class="row bg-light text-dark py-3">
-        <div class="col-md-12 hover-link" id="third-party-committees">
-            <h2>Third Party Candidate Committees
-                <a class="icon d-none" href="#third-party-committees"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
-            </h2>
-            <table class="table caption-top dtify_exp" id="table_candidate_thirdparty">
-                <thead>
-                <tr>
-                    <th scope="col">Contest</th>
-                    <th scope="col">Funds</th>
-                    <th scope="col">Expenses</th>
-                </tr>
-                </thead>
-                <tbody>
-                    {%- for contest in page.candidate_ie -%}
-                        <tr>
-                            <td><a href="{{site.baseurl}}/elections/{{page.election}}/contests/{{contest.contest_link}}.html">
-                                {{ contest.contest_name }}
-                            </a></td>
-                            <td class="currency">{{ contest.funds }}</td>
-                            <td class="currency">{{ contest.expenses }}</td>
-                        </tr>
-                    {%- endfor -%}
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <th colspan="2" style="text-align:right">Total:</th>
-                        <th class="currency"></th>
-                    </tr>
-                </tfoot>
-            </table>
+        <div class="col-12 text-light">
+            Table of Contents
+            <ul>
+                {%- if page.candidate_pf %}<li><a href="#candidate-committees" class="link-light">Candidate Controlled Committees</a></li>{% endif -%}
+                {%- if page.candidate_ie %}<li><a href="#candidate-ie-committees" class="link-light">Third Party Candidate Committees</a></li>{% endif -%}
+                {%- if page.measures %}<li><a href="#ballot-measure-committees" class="link-light">Ballot Measures</a></li>{% endif -%}
+                <li><a href="#top-contributors" class="link-light">Top Contributors</a></li>
+            </ul>
         </div>
     </div>
 
-    <div class="row bg-light text-dark py-3">
-        <div class="col-md-12 hover-link" id="ballot-measures">
-            <h2>Ballot Measures
-                <a class="icon d-none" href="#ballot-measures"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
-            </h2>
-            <table class="table caption-top dtify_exp" id="table_ballotmeasure">
-                <thead>
-                <tr>
-                    <th scope="col">Contest</th>
-                    <th scope="col">Funds</th>
-                    <th scope="col">Expenses</th>
-                </tr>
-                </thead>
-                <tbody>
-                    {%- for contest in page.measures -%}
-                        <tr>
-                            <td><a href="{{site.baseurl}}/elections/{{page.election}}/measures/{{contest.contest_link}}.html">
-                                {{ contest.contest_name }}
-                            </a></td>
-                            <td class="currency">{{ contest.funds }}</td>
-                            <td class="currency">{{ contest.expenses }}</td>
-                        </tr>
-                    {%- endfor -%}
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <th colspan="2" style="text-align:right">Total:</th>
-                        <th class=" currency"></th>
-                    </tr>
-                </tfoot>
-            </table>
-        </div>
-    </div>
 
-    <div class="row bg-light text-dark py-3">
-        <div class="col-md-12">
-            {% include contributors-table.html title='Top Contributors Across Candidate Contests and Ballot Measures' subtitle='To All Primarily Formed Committees Within This Election' contributors=page.contributors  %}
-            <a href="{{site.baseurl}}/elections/{{page.election}}/contributors"><button class="btn btn-primary" type="button">View More</button></a>
+    <div class="row bg-primary pt-3 row-cols-2">
+        {%- if page.candidate_pf -%}
+        <div class="col-12 col-lg-6 py-2 hover-link">
+            <div class="col-table-6">
+                <h2 id="candidate-committees">Candidate Controlled Committees
+                    <i data-bs-toggle="offcanvas" data-bs-target="#candidate-committeesTT" class="fs-5 fa-regular fa-circle-info"></i>
+                    <a class="icon d-none" href="#candidate-committees"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
+                </h2>
+                <table class="table caption-top dtify_both" id="table_candidate">
+                    <thead>
+                    <tr>
+                        <th scope="col">Contest</th>
+                        <th scope="col">Funds</th>
+                        <th scope="col">Expenses</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {%- for contest in page.candidate_pf -%}
+                            <tr>
+                                <td><a href="{{site.baseurl}}/elections/{{page.election}}/contests/{{contest.contest_link}}.html">
+                                    {{ contest.contest_name }}
+                                </a></td>
+                                <td class="currency">{{ contest.funds }}</td>
+                                <td class="currency">{{ contest.expenses }}</td>
+                            </tr>
+                        {%- endfor -%}
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th style="text-align:right">Total:</th>
+                            <th class="currency"></th>
+                            <th class="currency"></th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        {%- endif -%}
+        {%- if page.candidate_ie -%}
+        <div class="col-12 col-lg-6 py-2 hover-link">
+            <div class="col-table-6">
+                <h2 id="candidate-ie-committees">Third Party Candidate Committees
+                    <i data-bs-toggle="offcanvas" data-bs-target="#candidate-ie-committeesTT" class="fs-5 fa-regular fa-circle-info"></i>
+                    <a class="icon d-none" href="#candidate-ie-committees"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
+                </h2>
+                <table class="table caption-top dtify_exp" id="table_candidate_thirdparty">
+                    <thead>
+                    <tr>
+                        <th scope="col">Contest</th>
+                        <th scope="col">Funds</th>
+                        <th scope="col">Expenses</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {%- for contest in page.candidate_ie -%}
+                            <tr>
+                                <td><a href="{{site.baseurl}}/elections/{{page.election}}/contests/{{contest.contest_link}}.html">
+                                    {{ contest.contest_name }}
+                                </a></td>
+                                <td class="currency">{{ contest.funds }}</td>
+                                <td class="currency">{{ contest.expenses }}</td>
+                            </tr>
+                        {%- endfor -%}
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="2" style="text-align:right">Total:</th>
+                            <th class="currency"></th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        {%- endif -%}
+
+        {%- if page.measures -%}
+        <div class="col-12 col-lg-6 py-2 hover-link">
+            <div class="col-table-6">
+                <h2 id="ballot-measure-committees">Ballot Measures
+                    <i data-bs-toggle="offcanvas" data-bs-target="#ballot-measure-committeesTT" class="fs-5 fa-regular fa-circle-info"></i>
+                    <a class="icon d-none" href="#ballot-measure-committees"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
+                </h2>
+                <table class="table caption-top dtify_exp" id="table_ballotmeasure">
+                    <thead>
+                    <tr>
+                        <th scope="col">Contest</th>
+                        <th scope="col">Funds</th>
+                        <th scope="col">Expenses</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {%- for contest in page.measures -%}
+                            <tr>
+                                <td><a href="{{site.baseurl}}/elections/{{page.election}}/measures/{{contest.contest_link}}.html">
+                                    {{ contest.contest_name }}
+                                </a></td>
+                                <td class="currency">{{ contest.funds }}</td>
+                                <td class="currency">{{ contest.expenses }}</td>
+                            </tr>
+                        {%- endfor -%}
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="2" style="text-align:right">Total:</th>
+                            <th class=" currency"></th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        {%- endif -%}
+        <div class="col-12 col-lg-6 py-2" >
+            <div class="col-table-6">
+                {% include contributors-table.html title='Top 5 Contributors Across Candidate Contests and Ballot Measures' subtitle='To All Primarily Formed Committees Within This Election' contributors=page.contributors  %}
+                <a href="{{site.baseurl}}/elections/{{page.election}}/contributors"><button class="btn btn-primary" type="button">View More</button></a>
+            </div>
         </div>
     </div>
 
