@@ -1,28 +1,29 @@
-<nav id="lang-nav" class="navbar navbar-expand-md bg-dark d-print-none" aria-label="Language Navbar">
-    <div class="container-fluid">
-        <div class="nav-language-links text-light">
-            <span><i class="fa-regular fa-home "></i>
-                <a href="#" class="text-light">English</a> |
-                <a href="#" class="text-light">Español</a> |
-                <a href="#" class="text-light">Filipino</a> |
-                <a href="#" class="text-light">中文</a>
-            </span>
-        </div>
-        <div class="collapse navbar-collapse">
-            <div class="ms-auto">
-                <a href="#" class="text-light">San Francisco Ethics Commission</a>
-            </div>
-        </div>
-    </div>
-</nav>
-
 <nav class="navbar navbar-expand-md bg-danger">
     <div class="container-fluid">
             <div class="mx-auto text-light">This site is under development - accurate figures are not represented.</div>
     </div>
 </nav>
 
-<nav id="main-nav" class="navbar navbar-expand-md bg-light text-dark d-print-none" aria-label="Main Site Navbar">
+<nav id="lang-nav" class="navbar navbar-expand-md bg-dark d-print-none" data-bs-theme="dark" aria-label="Language Navbar">
+    <div class="container-fluid">
+        <div class="nav-language-links">
+            <span><i class="fa-regular fa-home text-light"></i>
+                <a href="#" class="link-light">English</a> |
+                <a href="#" class="link-light">Español</a> |
+                <a href="#" class="link-light">Filipino</a> |
+                <a href="#" class="link-light">中文</a>
+            </span>
+        </div>
+        <div class="collapse navbar-collapse">
+            <div class="ms-auto">
+                <a href="#" class="link-light">San Francisco Ethics Commission</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<nav id="main-nav" class="navbar navbar-expand-md bg-dark d-print-none" data-bs-theme="dark" aria-label="Main Site Navbar">
     <div class="container-fluid d-flex justify-content-between align-items-center">
         <a class="navbar-brand" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
         <button class="ms-auto navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSiteCollapse" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle site navigation">
@@ -30,9 +31,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSiteCollapse">
             <ul class="navbar-nav">
-                <li class="nav-item"><a href="{{ '/about/' | relative_url }}" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="{{ '/resources/' | relative_url }}" class="nav-link">Resources</a></li>
-                <li class="nav-item"><a href="{{ '/elections/' | relative_url }}" class="nav-link">Elections</a></li>
+                <li class="nav-item"><a class="link-light nav-link" href="{{ '/about/' | relative_url }}">About</a></li>
+                <li class="nav-item"><a class="link-light nav-link" href="{{ '/resources/' | relative_url }}">Resources</a></li>
+                <li class="nav-item"><a class="link-light nav-link" href="{{ '/elections/' | relative_url }}">Elections</a></li>
             </ul>
         </div>
     </div>

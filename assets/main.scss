@@ -8,16 +8,16 @@ $font-family-serif: "Roboto Slab", Georgia, Cambria, "Times New Roman", Times, s
     text-align: right;
 }
 $primary: #004A80;
-$secondary: #005A56;
+// $secondary: #005A56;
 $dark: #212529;
 $red: #771a1a;
 /* load _sass/bootstrap.scss */
 @import "bootstrap";
 
 /* Put any custom CSS here */
-body {
-    background-color: mix(white, $primary, 90%);
-}
+// body {
+//     background-color: mix(white, $primary, 90%);
+// }
 h1, h2 {
     font-family: $font-family-serif;
 }
