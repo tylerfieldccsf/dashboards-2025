@@ -1,6 +1,10 @@
 ---
 layout: contributors
 election: '2025-09-16'
+breadcrumbs:
+- - Sep 16, 2025
+  - elections/2025-09-16/
+- - Contributors
 title: Contributors of more than $5,000.00 across committees
 contributors:
 - tx_firstname: ''
@@ -23,14 +27,23 @@ contributors:
     cmte_name: OUR NEIGHBORHOOD, OUR FUTURE SUPPORTING THE RECALL OF SUPERVISOR ENGARDIO
     total: 7000.0
 - tx_firstname: ''
-  tx_lastname: SAN FRANCISCO POLICE OFFICERS ASSOCIATION PAC
-  tx_entitycode: COM
-  tx_cmteid: '1315969'
-  total: 25000.0
+  tx_lastname: EXTRAMILE PROPERTY MANAGEMENT COMPANY, INC.
+  tx_entitycode: OTH
+  tx_cmteid: ''
+  total: 6000.0
   transactions:
   - cmte_fppcid: '1477355'
     cmte_name: STOP THE RECALL, STAND WITH JOEL ENGARDIO
-    total: 25000.0
+    total: 6000.0
+- tx_firstname: ''
+  tx_lastname: SAN FRANCISCO POLICE OFFICERS ASSOCIATION PAC
+  tx_entitycode: COM
+  tx_cmteid: '1315969'
+  total: 50000.0
+  transactions:
+  - cmte_fppcid: '1477355'
+    cmte_name: STOP THE RECALL, STAND WITH JOEL ENGARDIO
+    total: 50000.0
 - tx_firstname: ''
   tx_lastname: UNITEMIZED SCHEDULE A
   tx_entitycode: ''
@@ -47,11 +60,11 @@ contributors:
   tx_lastname: LARSEN
   tx_entitycode: IND
   tx_cmteid: ''
-  total: 100000.0
+  total: 200000.0
   transactions:
   - cmte_fppcid: '1477355'
     cmte_name: STOP THE RECALL, STAND WITH JOEL ENGARDIO
-    total: 100000.0
+    total: 200000.0
 - tx_firstname: FRANK JOSEPH
   tx_lastname: BUTLER
   tx_entitycode: IND
@@ -74,20 +87,20 @@ contributors:
   tx_lastname: STOPPELMAN
   tx_entitycode: IND
   tx_cmteid: ''
-  total: 150000.0
+  total: 175000.0
   transactions:
   - cmte_fppcid: '1477355'
     cmte_name: STOP THE RECALL, STAND WITH JOEL ENGARDIO
-    total: 150000.0
+    total: 175000.0
 - tx_firstname: JOHN
   tx_lastname: WOLTHUIS
   tx_entitycode: IND
   tx_cmteid: ''
-  total: 75000.0
+  total: 100000.0
   transactions:
   - cmte_fppcid: '1477355'
     cmte_name: STOP THE RECALL, STAND WITH JOEL ENGARDIO
-    total: 75000.0
+    total: 100000.0
 - tx_firstname: MARTHA
   tx_lastname: EHMANN CONTE
   tx_entitycode: IND
@@ -97,6 +110,15 @@ contributors:
   - cmte_fppcid: '1477256'
     cmte_name: OUR NEIGHBORHOOD, OUR FUTURE SUPPORTING THE RECALL OF SUPERVISOR ENGARDIO
     total: 5000.0
+- tx_firstname: NICHOLAS
+  tx_lastname: JOSEFOWITZ
+  tx_entitycode: IND
+  tx_cmteid: ''
+  total: 25000.0
+  transactions:
+  - cmte_fppcid: '1477355'
+    cmte_name: STOP THE RECALL, STAND WITH JOEL ENGARDIO
+    total: 25000.0
 - tx_firstname: RON
   tx_lastname: CONWAY
   tx_entitycode: IND

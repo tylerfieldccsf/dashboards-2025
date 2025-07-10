@@ -1,6 +1,10 @@
 ---
 layout: contributors
 election: '2024-11-05'
+breadcrumbs:
+- - Nov 05, 2024
+  - elections/2024-11-05/
+- - Contributors
 title: Contributors of more than $5,000.00 across committees
 contributors:
 - tx_firstname: ''
