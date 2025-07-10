@@ -9,15 +9,30 @@ electionnav: true
             <h1>{{page.title}}</h1>
         </div>
         <div class="col-12">
+            {{ page.content }}
+        </div>
+        <div class="col-12">
             <p>Candidate controlled commitees are shown first</p>
             <p>learn more about candidate controlled committees blah blah blah lorem ipsum</p>
-            
-            <div class="h2">Table of Contents</div>
-            <ul>
-                <li><a href="#candidate-committees" class="link-light">Candidate Controlled Committees</a></li>
-                {%- if page.ie_candidates %}<li><a href="#candidate-ie-committees" class="link-light">Third Party Committees</a></li>{% endif -%}
-                <li><a href="#top-contributors" class="link-light">Top 10 Contributors</a></li>
-            </ul>
+
+            <div class="accordion" id="accordionToc">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#tocOne" aria-expanded="false" aria-controls="tocOne">
+                            Table of Contents
+                        </button>
+                    </h2>
+                    <div id="tocOne" class="accordion-collapse collapse" data-bs-parent="#accordionToc">
+                        <div class="accordion-body">
+                            <ul class="list-group">
+                                <li class="list-group-item"><a href="#candidate-committees" class="">Candidate Controlled Committees</a></li>
+                                {%- if page.ie_candidates %}<li class="list-group-item"><a href="#candidate-ie-committees" class="">Third Party Committees</a></li>{% endif -%}
+                                {%- if page.contributors %}<li class="list-group-item"><a href="#top-contributors" class="">Top 10 Contributors</a></li>{% endif -%}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="row row-cols-2">
