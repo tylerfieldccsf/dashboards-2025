@@ -1,4 +1,4 @@
-<nav aria-label="breadcrumb" class="bg-primary py-2">
+<nav aria-label="breadcrumb" class="bg-primary-subtle py-2">
     {%- assign election = page.election -%}
     {%- if election == nil -%}
     {%- assign election = '2024-11-05'-%}
@@ -8,9 +8,9 @@
         <ol class="breadcrumb m-0">
             {% for crumb in page.breadcrumbs %}
                 {% if forloop.last %}
-                    <li class="breadcrumb-item active" aria-current="page">{{ crumb[0] | truncate: 30  }}</li>
+                    <li class="text-dark breadcrumb-item active" aria-current="page">{{ crumb[0] | truncate: 30  }}</li>
                 {% else %}
-                    <li class="breadcrumb-item"><a href="{{site.baseurl}}/{{crumb[1]}}/">{{crumb[0]}}</a></li>
+                    <li class="breadcrumb-item"><a class="link-dark" href="{{site.baseurl}}/{{crumb[1]}}">{{crumb[0]}}</a></li>
                 {% endif %}
             {% endfor %}
         </ol>

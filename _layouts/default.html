@@ -9,8 +9,10 @@
     
     <main class="page-content" aria-label="Content">
       <div class="container">
-        {%- if layout.pagenav -%}
-        <div class="page-nav-wrapper">{%- include page-nav.html -%}</div>
+        {%- if layout.electionnav -%}
+        <div class="election-nav-wrapper">
+          {%- include election-nav.html -%}
+        </div>
         {%- endif -%}
         <div class="content-wrapper">
           {{ content }}
