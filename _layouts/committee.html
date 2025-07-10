@@ -23,6 +23,8 @@ electionnav: true
                     <dd class="col-sm-8">{{page.filer_name}}</dd>
                     <dt class="col-sm-4">FPPC ID</dt>
                     <dd class="col-sm-8">{{page.filer_id}}</dd>
+                    <dt class="col-sm-4">Disclosure Statements</dt>
+                    <dd class="col-sm-8"><button data-bs-toggle="offcanvas" data-bs-target="#disclosure-statementsTT" type="button" class="btn btn-sm btn-light">View</button></dd>
                 </dl>
                 <div class="d-flex column-gap-3">
                     <div class="">
@@ -129,13 +131,18 @@ electionnav: true
             </div>
         </div>
     </div> <!-- end of bg-light row -->
+</div>
 
-    <!-- Disclosure Statements -->
-    <div class="row bg-light text-dark py-3">
-        <h4 id="disclosure-statements" class="hover-link">Disclosure Statements
-            <i data-bs-toggle="offcanvas" data-bs-target="#disclosure-statementsTT" class="fs-5 fa-regular fa-circle-info"></i>
-            <a class="icon d-none" href="#disclosure-statements"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
-        </h4>
+<!-- Disclosure Statements -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="disclosure-statementsTT" aria-labelledby="disclosure-statementsTTLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="disclosure-statementsTTLabel">Disclosure Statements</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at dolor a nisi accumsan egestas. Suspendisse facilisis risus a felis tincidunt, sit amet sollicitudin lectus porta. Integer porta faucibus est et gravida.
+        </div>
         <table id="filings_table" class="table caption-top dtify">
             <thead>
                 <tr>
@@ -166,9 +173,9 @@ electionnav: true
                 {% endfor %}
             </tbody>
         </table>
-    </div><!-- end Disclosure Statements -->
+    </div>
+</div><!-- end Disclosure Statements -->
 
-</div>
 <script>
     new DataTable('#contributors_table', {
         pageLength: 10,
