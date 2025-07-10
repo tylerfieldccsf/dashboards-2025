@@ -1,30 +1,31 @@
-<nav aria-label="breadcrumb" class="bg-primary-subtle py-2">
+<nav aria-label="Navbar for Election pages" class="py-2 text-bg-dark">
     {%- assign election = page.election -%}
     {%- if election == nil -%}
     {%- assign election = '2024-11-05'-%}
-    {%- endif-%}
+    {%- endif -%}
     {%- assign current_pages = site.pages | where: "election", election -%}
-    <div class="container d-flex justify-content-between align-items-center flex-wrap row-gap-3">
+    <div class="container-fluid d-flex justify-content-between align-items-center flex-wrap row-gap-3">
         <ol class="breadcrumb m-0">
             {% for crumb in page.breadcrumbs %}
                 {% if forloop.last %}
-                    <li class="text-dark breadcrumb-item active" aria-current="page">{{ crumb[0] | truncate: 30  }}</li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ crumb[0] | truncate: 30  }}</li>
                 {% else %}
-                    <li class="breadcrumb-item"><a class="link-dark" href="{{site.baseurl}}/{{crumb[1]}}">{{crumb[0]}}</a></li>
+                    <li class="breadcrumb-item"><a class="" href="{{site.baseurl}}/{{crumb[1]}}">{{crumb[0]}}</a></li>
                 {% endif %}
             {% endfor %}
         </ol>
-        <div class="">
+
+        <div class="mx-auto mx-lg-0">
             {%- assign contributors_page = current_pages | where: "layout", "contributors" | first -%}
-            <a href="{{ contributors_page.url | relative_url }}" class="btn btn-light" type="button">
+            <a href="{{ contributors_page.url | relative_url }}" class="btn btn-sm btn-light" type="button">
                 Contributors
             </a>
             <div class="btn-group">
-                <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#electedOffices"
+                <button class="btn btn-sm btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#electedOffices"
                     aria-controls="electedOffices">
                     Elected Offices
                 </button>
-                <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#ballotMeasures"
+                <button class="btn btn-sm btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#ballotMeasures"
                     aria-controls="ballotMeasures">
                     Ballot Measures
                 </button>
@@ -39,14 +40,13 @@
     </div>
     <div class="offcanvas-body">
         <div>
-            Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists,
-            etc.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at dolor a nisi accumsan egestas. Suspendisse facilisis risus a felis tincidunt, sit amet sollicitudin lectus porta. Integer porta faucibus est et gravida.
         </div>
         <div class="mt-3">
-            <ul>
+            <ul class="list-group">
                 {%- assign candidate_pages = current_pages | where: "layout", "contest_candidate" -%}
                 {%- for p in candidate_pages -%}
-                <li>
+                <li class="list-group-item">
                     <a href="{{ p.url | relative_url }}">{{ p.title | escape }} </a>
                 </li>
                 {%- endfor -%}
@@ -61,15 +61,14 @@
     </div>
     <div class="offcanvas-body">
         <div>
-            Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists,
-            etc.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at dolor a nisi accumsan egestas. Suspendisse facilisis risus a felis tincidunt, sit amet sollicitudin lectus porta. Integer porta faucibus est et gravida.
         </div>
         <div class="mt-3">
-            <ul>
+            <ul class="list-group">
                 {%- assign bm_pages = current_pages | where: "layout", "contest_bmc" -%}
                 {%- for p in bm_pages -%}
-                <li>
-                    <a href="{{ p.url | relative_url }}">{{ p.title | escape }} </a>
+                <li class="list-group-item">
+                    <a href="{{ p.url | relative_url }}">{{ p.title | escape }}</a>
                 </li>
                 {%- endfor -%}
             </ul>

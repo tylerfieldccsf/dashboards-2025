@@ -5,7 +5,7 @@
 </nav>
 
 <nav id="main-nav" class="navbar navbar-expand-md bg-body-tertiary d-print-none bg-dark"  data-bs-theme="dark" aria-label="Main Site Navbar">
-    <div class="container-fluid d-flex justify-content-between align-items-center">
+    <div class="container d-flex justify-content-between align-items-center">
         <a class="navbar-brand" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
         <button class="ms-auto navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSiteCollapse" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle site navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -24,7 +24,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link
-                    {%- if page.title == 'Elections' %} active" aria-current="page{% endif -%}
+                    {%- if page.title == 'Elections' or layout.electionnav %} active" aria-current="page{% endif -%}
                     " href="{{ '/elections/' | relative_url }}">Elections</a>
                 </li>
                 <li class="nav-item dropdown">
