@@ -44,18 +44,6 @@ contributors:
   - cmte_fppcid: '1477355'
     cmte_name: STOP THE RECALL, STAND WITH JOEL ENGARDIO
     total: 50000.0
-- tx_firstname: ''
-  tx_lastname: UNITEMIZED SCHEDULE A
-  tx_entitycode: ''
-  tx_cmteid: ''
-  total: 18836.989999999998
-  transactions:
-  - cmte_fppcid: '1477256'
-    cmte_name: OUR NEIGHBORHOOD, OUR FUTURE SUPPORTING THE RECALL OF SUPERVISOR ENGARDIO
-    total: 13397.99
-  - cmte_fppcid: '1477355'
-    cmte_name: STOP THE RECALL, STAND WITH JOEL ENGARDIO
-    total: 5439.0
 - tx_firstname: CHRIS
   tx_lastname: LARSEN
   tx_entitycode: IND
