@@ -4,7 +4,7 @@ election: '2024-11-05'
 candidate: true
 title: Board of Supervisors D11
 breadcrumbs:
-- - November 05, 2024
+- - Nov 05, 2024
   - elections/2024-11-05
 - - Board of Supervisors D11
   - elections/2024-11-05/contests/bos11

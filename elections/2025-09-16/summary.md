@@ -4,7 +4,7 @@ title: September 16, 2025 Election
 permalink: /elections/2025-09-16/
 election: '2025-09-16'
 breadcrumbs:
-- - September 16, 2025
+- - Sep 16, 2025
   - /elections/2025-09-16/
 measures:
 - contest_nid: '214331636'

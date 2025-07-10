@@ -4,7 +4,7 @@ election: '2024-11-05'
 candidate: false
 title: 'N: First Responder Student Loan and Training Reimbursement Fund'
 breadcrumbs:
-- - November 05, 2024
+- - Nov 05, 2024
   - elections/2024-11-05
 - - 'N: First Responder Student Loan and Training Reimbursement Fund'
   - elections/2024-11-05/measures/measuren

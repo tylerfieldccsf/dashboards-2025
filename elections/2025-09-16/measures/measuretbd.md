@@ -4,7 +4,7 @@ election: '2025-09-16'
 candidate: false
 title: 'TBD: Measure to Recall BoS D4 Joel Engardio'
 breadcrumbs:
-- - September 16, 2025
+- - Sep 16, 2025
   - elections/2025-09-16
 - - 'TBD: Measure to Recall BoS D4 Joel Engardio'
   - elections/2025-09-16/measures/measuretbd

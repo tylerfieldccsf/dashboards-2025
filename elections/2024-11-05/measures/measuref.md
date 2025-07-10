@@ -4,7 +4,7 @@ election: '2024-11-05'
 candidate: false
 title: 'F: Police Staffing and Deferred Retirement'
 breadcrumbs:
-- - November 05, 2024
+- - Nov 05, 2024
   - elections/2024-11-05
 - - 'F: Police Staffing and Deferred Retirement'
   - elections/2024-11-05/measures/measuref

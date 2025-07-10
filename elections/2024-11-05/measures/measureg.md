@@ -5,7 +5,7 @@ candidate: false
 title: 'G: Funding Rental Subsidies for Affordable Housing Developments Serving Low
   Income Seniors, Families, and Persons with Disabilities'
 breadcrumbs:
-- - November 05, 2024
+- - Nov 05, 2024
   - elections/2024-11-05
 - - 'G: Funding Rental Subsidies for Affordable Housing Developments Serving Low Income
     Seniors, Families, and Persons with Disabilities'

@@ -5,7 +5,7 @@ candidate: false
 title: 'B: Community Health and Medical Facilities, Street Safety, Public Spaces,
   and Shelter to Reduce Homelessness Bond'
 breadcrumbs:
-- - November 05, 2024
+- - Nov 05, 2024
   - elections/2024-11-05
 - - 'B: Community Health and Medical Facilities, Street Safety, Public Spaces, and
     Shelter to Reduce Homelessness Bond'

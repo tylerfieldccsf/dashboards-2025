@@ -4,7 +4,7 @@ election: '2024-11-05'
 candidate: false
 title: 'A: Schools Improvement and Safety Bond'
 breadcrumbs:
-- - November 05, 2024
+- - Nov 05, 2024
   - elections/2024-11-05
 - - 'A: Schools Improvement and Safety Bond'
   - elections/2024-11-05/measures/measurea
