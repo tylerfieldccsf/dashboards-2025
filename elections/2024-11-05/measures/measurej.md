@@ -4,7 +4,7 @@ election: '2024-11-05'
 candidate: false
 title: 'J: Funding Programs Serving Children, Youth, and Families'
 breadcrumbs:
-- - November 05, 2024
+- - Nov 05, 2024
   - elections/2024-11-05
 - - 'J: Funding Programs Serving Children, Youth, and Families'
   - elections/2024-11-05/measures/measurej

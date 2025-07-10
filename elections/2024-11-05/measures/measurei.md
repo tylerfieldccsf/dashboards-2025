@@ -4,7 +4,7 @@ election: '2024-11-05'
 candidate: false
 title: 'I: Retirement Benefits for Nurses and 911 Operators'
 breadcrumbs:
-- - November 05, 2024
+- - Nov 05, 2024
   - elections/2024-11-05
 - - 'I: Retirement Benefits for Nurses and 911 Operators'
   - elections/2024-11-05/measures/measurei

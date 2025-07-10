@@ -4,7 +4,7 @@ election: '2024-11-05'
 candidate: false
 title: 'D: City Commissions and Mayoral Authority'
 breadcrumbs:
-- - November 05, 2024
+- - Nov 05, 2024
   - elections/2024-11-05
 - - 'D: City Commissions and Mayoral Authority'
   - elections/2024-11-05/measures/measured

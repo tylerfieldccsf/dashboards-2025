@@ -5,7 +5,7 @@ candidate: false
 title: 'L: Additional Business Tax on Transportation Network Companies and Autonomous
   Vehicle Businesses to Fund Public Transportation'
 breadcrumbs:
-- - November 05, 2024
+- - Nov 05, 2024
   - elections/2024-11-05
 - - 'L: Additional Business Tax on Transportation Network Companies and Autonomous
     Vehicle Businesses to Fund Public Transportation'

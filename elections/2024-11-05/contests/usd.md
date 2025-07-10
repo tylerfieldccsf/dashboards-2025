@@ -4,7 +4,7 @@ election: '2024-11-05'
 candidate: true
 title: Board of Education
 breadcrumbs:
-- - November 05, 2024
+- - Nov 05, 2024
   - elections/2024-11-05
 - - Board of Education
   - elections/2024-11-05/contests/usd

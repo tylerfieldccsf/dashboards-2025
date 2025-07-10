@@ -5,7 +5,7 @@ candidate: false
 title: 'E: Creating a Task Force to Recommend Changing, Eliminating, or Combining
   City Commissions'
 breadcrumbs:
-- - November 05, 2024
+- - Nov 05, 2024
   - elections/2024-11-05
 - - 'E: Creating a Task Force to Recommend Changing, Eliminating, or Combining City
     Commissions'

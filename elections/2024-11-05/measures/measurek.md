@@ -5,7 +5,7 @@ candidate: false
 title: 'K: Permanently Closing the Upper Great Highway to Private Vehicles to Establish
   a Public Open Recreation Space'
 breadcrumbs:
-- - November 05, 2024
+- - Nov 05, 2024
   - elections/2024-11-05
 - - 'K: Permanently Closing the Upper Great Highway to Private Vehicles to Establish
     a Public Open Recreation Space'
