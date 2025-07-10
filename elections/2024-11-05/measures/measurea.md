@@ -40,7 +40,7 @@ contributors:
   - 15000.0
 - - Bhm Construction Llc(sermins Dosher)
   - 10000.0
-- - Flint Design Build, Llc, Dba Flint(ryan Tognetti)
+- - Flint Design Build, LLC, dba Flint(ryan Tognetti)
   - 10000.0
 
 ---
