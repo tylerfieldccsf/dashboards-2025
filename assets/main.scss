@@ -24,6 +24,23 @@ body {
 h1, h2 {
     font-family: $font-family-serif;
 }
+h6 {
+    font-style: italic;
+}
+@media (min-width: 1200px) {
+    h2 {
+        font-size: 1.75rem;
+    }
+    h3 {
+        font-size: 1.5rem; 
+    }
+    h4 {
+        font-size: 1.25rem;
+    }
+    h5 {
+        font-size: 1rem;
+    }
+}
 .bg-red {
     background-color: $red !important;
 }
@@ -80,18 +97,21 @@ table {
 // use these together with card
 .money-card {
     text-align: center;
-    .card-text {
-        font-size: 1.5rem;
-    }
-    .card-title {
-        font-size: 1rem;
-    }
+    // .card-text {
+    //     font-size: 1.5rem;
+    // }
+    // .card-title {
+    //     font-size: 1rem;
+    // }
 }
 .money-card-1 {
-    background-color: $secondary;
-    color: white;
+    //background-color: mix(white, $secondary, 50%);
 }
 .money-card-2 {
-    background-color: $red;
-    color: white;
+    //background-color: mix(white, $red, 50%);
+}
+.contributions-expenses {
+    flex-grow: 1;
+    min-width: 13rem;
+    max-width: 13rem;
 }
