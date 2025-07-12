@@ -1,9 +1,6 @@
 ---
 ---
 /* Override theme defaults */
-.mononumber {
-    font-family: monospace;
-}
 $font-family-sans-serif: "Roboto Flex", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-serif: "Roboto Slab", Georgia, Cambria, "Times New Roman", Times, serif !default;
 
@@ -11,16 +8,16 @@ $font-family-serif: "Roboto Slab", Georgia, Cambria, "Times New Roman", Times, s
     text-align: right;
 }
 $primary: #004A80;
-$secondary: #005A56;
+// $secondary: #005A56;
 $dark: #212529;
 $red: #771a1a;
 /* load _sass/bootstrap.scss */
 @import "bootstrap";
 
 /* Put any custom CSS here */
-body {
-    background-color: mix(white, $primary, 90%);
-}
+// body {
+//     background-color: mix(white, $primary, 90%);
+// }
 h1, h2 {
     font-family: $font-family-serif;
 }
@@ -91,7 +88,7 @@ table {
     @extend .border-light-subtle;
     @extend .rounded;
     @extend .p-3;
-    height: 100%;
+    // height: 100%;
 }
 
 // use these together with card
@@ -114,4 +111,9 @@ table {
     flex-grow: 1;
     min-width: 13rem;
     max-width: 13rem;
+}
+
+.hover-link:hover .icon,
+.hover-link:focus-within .icon {
+    display: inline-block !important;
 }

@@ -1,11 +1,10 @@
 ---
 layout: contest_bmc
 election: '2024-11-05'
-historic: false
 candidate: false
 title: 'H: Retirement Benefits for Firefighters'
 breadcrumbs:
-- - November 05, 2024
+- - Nov 05, 2024
   - elections/2024-11-05
 - - 'H: Retirement Benefits for Firefighters'
   - elections/2024-11-05/measures/measureh
@@ -23,6 +22,27 @@ committees:
     798
   funds: 2383530.46
   expenses: 2510846.52
+contributors:
+- - San Francisco Fire Fighters Local 798
+  - 1527350.0
+- - San Francisco Fire Fighters Local 798 P.a.c.
+  - 550000.0
+- - California Professional Firefighters Ballot Issues Committee
+  - 100000.0
+- - Nancy Pelosi for Congress
+  - 49200.0
+- - Eleni Kounalakis for Lieutenant Governor 2018
+  - 25000.0
+- - Marin Professional Firefighters Political Action Committee
+  - 10000.0
+- - United Firefighters of Los Angeles City Local 112 - Issues Committee
+  - 10000.0
+- - San Jose Firefighters, Iaff Local 230 Political Action Committee
+  - 5500.0
+- - San Mateo County Firefighters Local 2400 Political Activities Committee
+  - 5500.0
+- - Long Beach Firefighters PAC, Local 372
+  - 5000.0
 
 ---
 

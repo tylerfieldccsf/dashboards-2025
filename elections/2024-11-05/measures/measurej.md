@@ -1,11 +1,10 @@
 ---
 layout: contest_bmc
 election: '2024-11-05'
-historic: false
 candidate: false
 title: 'J: Funding Programs Serving Children, Youth, and Families'
 breadcrumbs:
-- - November 05, 2024
+- - Nov 05, 2024
   - elections/2024-11-05
 - - 'J: Funding Programs Serving Children, Youth, and Families'
   - elections/2024-11-05/measures/measurej
@@ -22,6 +21,13 @@ committees:
   committee_name: YES ON PROPOSITION J
   funds: 3000.0
   expenses: 212.75
+contributors:
+- - Philip Halperin
+  - 2500.0
+- - Myrna Melgar
+  - 500.0
+- - Unitemized Schedule C
+  - 0.0
 
 ---
 

@@ -1,11 +1,10 @@
 ---
 layout: contest_bmc
 election: '2024-11-05'
-historic: false
 candidate: false
 title: 'C: Inspector General'
 breadcrumbs:
-- - November 05, 2024
+- - Nov 05, 2024
   - elections/2024-11-05
 - - 'C: Inspector General'
   - elections/2024-11-05/measures/measurec

@@ -1,33 +1,28 @@
-<footer class="site-footer h-card container">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">
-            {%- if site.author -%}
-              {{ site.author | escape }}
-            {%- endif -%}
-            </li>
-            {%- if site.email -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {%- endif -%}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
-      </div>
-    </div>
-
-  </div>
-
+<footer class="bg-dark text-light py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-8">
+                    <div class="row align-items-center">
+                        <div class="col-md-2 d-none d-md-block">
+                            <img class="img-fluid rounded" style="height:6rem;"
+                                src="{{ '/assets/images/sf_cseal_2022.svg' | relative_url}}" alt="The Seal of the City of San Francisco">
+                        </div>
+                        <div class="col-12 col-md-10">
+                            <p>This service is provided by:</p>
+                            <p class="h4">City & County of San Francisco</p>
+                            <p class="h1">Ethics Commission</p>
+                            <a class="link-light link-underline-opacity-50 link-underline-opacity-100-hover" href="https://sfethics.org">sfethics.org</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mt-3 my-md-auto">
+                    <ul>
+                        <li><a class="link-light link-underline-opacity-50 link-underline-opacity-100-hover" href="#">Privacy Policy</a></li>
+                        <li><a class="link-light link-underline-opacity-50 link-underline-opacity-100-hover" href="#">Web Accessibility Statement</a></li>
+                        <li><a class="link-light link-underline-opacity-50 link-underline-opacity-100-hover" href="#">Records Requests</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
 </footer>

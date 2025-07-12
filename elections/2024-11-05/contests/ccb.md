@@ -1,11 +1,10 @@
 ---
 layout: contest_candidate
 election: '2024-11-05'
-historic: false
 candidate: true
 title: Community College Board
 breadcrumbs:
-- - November 05, 2024
+- - Nov 05, 2024
   - elections/2024-11-05
 - - Community College Board
   - elections/2024-11-05/contests/ccb
@@ -58,7 +57,61 @@ candidates:
   candidate_name: JULIO RAMOS
   funds: 57749.0
   expenses: 56691.0
-ie_candidates: []
+ie_candidates:
+- candidate_name: LUIS ZAMORA
+  committees:
+  - position: SUPPORT
+    filer_id: '1433436'
+    committee_name: Coalition to Grow San Francisco - Grow SF PAC
+    funds: ''
+    expenses: 14939.81
+  - position: SUPPORT
+    filer_id: '842018'
+    committee_name: Alice B. Toklas Lesbian and Gay Democratic Club PAC
+    funds: ''
+    expenses: 1375.65
+- candidate_name: ALIYA CHISTI
+  committees:
+  - position: SUPPORT
+    filer_id: '1433436'
+    committee_name: Coalition to Grow San Francisco - Grow SF PAC
+    funds: ''
+    expenses: 14939.81
+- candidate_name: RUTH FERGUSON
+  committees:
+  - position: SUPPORT
+    filer_id: '1433436'
+    committee_name: Coalition to Grow San Francisco - Grow SF PAC
+    funds: ''
+    expenses: 14939.81
+- candidate_name: HEATHER MCCARTY
+  committees:
+  - position: SUPPORT
+    filer_id: '1433436'
+    committee_name: Coalition to Grow San Francisco - Grow SF PAC
+    funds: ''
+    expenses: 14939.81
+contributors:
+- - Julio Ramos
+  - 14499.0
+- - Carrie Barnes
+  - 2000.0
+- - David Thornton
+  - 2000.0
+- - Heather Mccarty
+  - 1500.0
+- - Re-elect Scott Wiener for State Senate 2024
+  - 1500.0
+- - Chasel Lee
+  - 1200.0
+- - Muhammad Mahmood
+  - 1100.0
+- - Ramiro Castro
+  - 1000.0
+- - Darren Delaye
+  - 1000.0
+- - Stephen Dodson
+  - 1000.0
 
 ---
 

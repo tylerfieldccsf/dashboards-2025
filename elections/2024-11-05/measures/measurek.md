@@ -1,12 +1,11 @@
 ---
 layout: contest_bmc
 election: '2024-11-05'
-historic: false
 candidate: false
 title: 'K: Permanently Closing the Upper Great Highway to Private Vehicles to Establish
   a Public Open Recreation Space'
 breadcrumbs:
-- - November 05, 2024
+- - Nov 05, 2024
   - elections/2024-11-05
 - - 'K: Permanently Closing the Upper Great Highway to Private Vehicles to Establish
     a Public Open Recreation Space'
@@ -36,6 +35,27 @@ committees:
   committee_name: YES ON K, OCEAN BEACH PARK FOR ALL SPONSORED BY COMMUNITY NONPROFITS
   funds: 790873.0
   expenses: 705484.61
+contributors:
+- - Jeremy Stoppelman
+  - 350000.0
+- - Neighbors for a Better San Francisco Advocacy
+  - 89000.0
+- - Emmett Shear
+  - 75000.0
+- - Michael Boschetto
+  - 50000.0
+- - Anatoly Yakovenko
+  - 50000.0
+- - Benjamin Spero
+  - 49900.0
+- - Wojciech Zaremba
+  - 35000.0
+- - Steven Merrill
+  - 25000.0
+- - Diane B. Wilsey
+  - 25000.0
+- - Michel Krieger
+  - 20000.0
 
 ---
 

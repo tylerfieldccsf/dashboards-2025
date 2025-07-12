@@ -1,49 +1,62 @@
 ---
 layout: default
-pagenav: true
+electionnav: true
 ---
 
-<div class="container">
-    <div class="row bg-primary text-light py-3">
-        <h1>{{page.title}}</h1>
-        <p>{{page.about}}</p>
-        
-        <div class="row table-row">
-            <div class="col-md-12">
-                <div class="cc_cm col-table-12">
-                    <table class="table caption-top dtify">
-                        <thead>
+<div class="container bg-primary">
+    <div class="row py-3 text-light">
+        <div class="col-12">
+            <h1>{{page.title}}</h1>
+        </div>
+        <div class="col-12">
+            {{ page.content }}
+        </div>
+    </div>        
+    <div class="row row-cols-2">
+        <div class="col-12 col-lg-6 py-2">
+            <div class="col-table-6">
+                <h2 id="summary-table" class="hover-link">Active Committees
+                    <i data-bs-toggle="offcanvas" data-bs-target="#ballot-measure-committeesTT" class="fs-5 fa-regular fa-circle-info"></i>
+                    <a class="icon d-none" href="#summary-table"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
+                </h2>
+                <table class="table caption-top dtify">
+                    <thead>
+                        <tr>
+                        <th scope="col">Committee</th>
+                        <th scope="col">Position</th>
+                        <th scope="col">Funds</th>
+                        <th scope="col">Expenses</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {%- for committee in page.committees -%}
                             <tr>
-                            <th scope="col">Committee</th>
-                            <th scope="col">Position</th>
-                            <th scope="col">Funds</th>
-                            <th scope="col">Expenses</th>
+                                <td>
+                                    <a href="{{site.baseurl}}/committees/{{page.election}}/CA{{committee.filer_id}}">
+                                        {{ committee.committee_name }}
+                                    </a>
+                                </td> 
+                                <td>{{ committee.position }}</td>
+                                <td class="currency">{{ committee.funds }}</td>
+                                <td class="currency">{{ committee.expenses }}</td>
                             </tr>
-                        </thead>
-                        <tbody>
-                            {%- for committee in page.committees -%}
-                                <tr>
-                                    <td>
-                                        <a href="{{site.baseurl}}/committees/{{page.election}}/CA{{committee.filer_id}}">
-                                            {{ committee.committee_name }}
-                                        </a>
-                                    </td> 
-                                    <td>{{ committee.position }}</td>
-                                    <td class="mononumber currency">{{ committee.funds }}</td>
-                                    <td class="mononumber currency">{{ committee.expenses }}</td>
-                                </tr>
-                            {%- endfor -%}
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <th style="text-align:right" colspan="3">Total:</th>
-                                <th class="mononumber currency"></th>
-                            </tr>
-                        </tfoot>
-                    </table>
-                </div>
+                        {%- endfor -%}
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th style="text-align:right" colspan="3">Total:</th>
+                            <th class="currency"></th>
+                        </tr>
+                    </tfoot>
+                </table>
             </div>
         </div>
+        <div class="col-12 col-lg-6 py-2">
+            {%- if page.contributors -%}
+            {% include contributors-table.html title='Top 10 Contributors to This Measure' contributors=page.contributors div_class='col-table-6' %}
+            {%- endif -%}
+        </div>
+    </div>
     </div>
 </div>
 

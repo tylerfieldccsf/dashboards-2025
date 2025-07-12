@@ -1,50 +1,65 @@
 ---
 layout: default
-pagenav: true
+electionnav: true
 ---
-<div class="container">
-<h1>{{page.title}}</h1>
-
-<h2>Contributors in aggregate of more than $5,000</h2>
-<table class="table caption-top dtify table-striped">
-    <thead>
-      <tr>
-        <th scope="col">...</th>
-        <th scope="col">Name</th>
-        <th scope="col">Code</th>
-        <th scope="col">Total Contributons</th>
-        <th scope="col">Contribution Breakdown</th>
-      </tr>
-    </thead>
-    <tbody>
-        {% for contributor in page.contributors %}
-            <tr>
-                <td></td>
-                <td>{{ contributor.tx_firstname }} {{ contributor.tx_lastname }}</td>
-                <td>
-                    {%- if contributor.tx_cmteid != '' -%}<a href="{{site.baseurl}}/committees/{{page.election}}/CA{{contributor.tx_cmteid}}.html">{%- endif -%}
-                        {{ contributor.tx_entitycode }}
-                    {%- if contributor.tx_cmteid != '' -%}</a>{%- endif -%}
-                    </td>
-                <td class="mononumber currency">{{ contributor.total }}</td>
-                <td class="">
-                    <table class="table table-sm">
-                        <tbody>
-                            {% for cmte in contributor.transactions %}
+<div class="container  bg-primary">
+    <div class="row text-light py-3">
+        <div class="col-12">
+            <h1>{{page.title}}</h1>
+        </div>
+        <div class="col-12">
+            <p>Contributors are grouped by firstname and lastname</p>
+            <p>Only those contributors who have given more than $5000 across all committees within this election appear.</p>
+            <p>Click the arrow next to a contributors name to unfold the row and see all committees contributed to</p>
+            <!-- <p>If the Contributor is a Committee, click the link to visit the committee page</p> -->
+            {{content}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 py-2">
+            <div class="col-table-6">
+                <table class="table caption-top dtify table-striped">
+                    <thead>
+                    <tr>
+                        <th scope="col">...</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Code</th>
+                        <th scope="col">Total Contributons</th>
+                        <th scope="col">Contribution Breakdown</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for contributor in page.contributors %}
                             <tr>
-                                <td><a href="{{site.baseurl}}/committees/{{page.election}}/CA{{cmte.cmte_fppcid}}.html">{{cmte.cmte_name}}</a></td>
-                                <td class="mononumber currency table-text-right">{{cmte.total}}</td>
+                                <td></td>
+                                <td>{{ contributor.tx_firstname }} {{ contributor.tx_lastname }}</td>
+                                <td>
+                                    {%- if contributor.tx_cmteid != '' -%}<a href="{{site.baseurl}}/committees/{{page.election}}/CA{{contributor.tx_cmteid}}.html">{%- endif -%}
+                                        {{ contributor.tx_entitycode }}
+                                    {%- if contributor.tx_cmteid != '' -%}</a>{%- endif -%}
+                                    </td>
+                                <td class="currency">{{ contributor.total }}</td>
+                                <td class="">
+                                    <table class="table table-sm">
+                                        <tbody>
+                                            {% for cmte in contributor.transactions %}
+                                            <tr>
+                                                <td><a href="{{site.baseurl}}/committees/{{page.election}}/CA{{cmte.cmte_fppcid}}.html">{{cmte.cmte_name}}</a></td>
+                                                <td class="currency table-text-right">{{cmte.total}}</td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </td>
                             </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
-        {% endfor %}
-    </tbody>
-</table>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
-{{content}}
+
 
 <script>
     let currencyOptions = {
@@ -65,8 +80,8 @@ pagenav: true
     let table = new DataTable('table.dtify', {
         // columns: [ null, {type: 'num-fmt'}, {type: 'num-fmt'}],
         lengthMenu: [
-            [10, 25, 50, 100, -1],
-            [10, 25, 50, 100, "All"]
+            [10, 25, 50, 100],
+            [10, 25, 50, 100]
         ],
         // layout: layoutOptions,
         order: [[3, 'desc'], [2, 'asc'],[1, 'asc']],

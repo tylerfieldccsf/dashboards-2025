@@ -3,11 +3,8 @@ layout: election
 title: November 05, 2024 Election
 permalink: /elections/2024-11-05/
 election: '2024-11-05'
-historic: false
 breadcrumbs:
-- - Elections
-  - elections/
-- - November 05, 2024
+- - Nov 05, 2024
   - /elections/2024-11-05/
 candidate_pf:
 - committee_type: candidate

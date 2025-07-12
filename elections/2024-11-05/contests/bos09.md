@@ -1,11 +1,10 @@
 ---
 layout: contest_candidate
 election: '2024-11-05'
-historic: false
 candidate: true
 title: Board of Supervisors D09
 breadcrumbs:
-- - November 05, 2024
+- - Nov 05, 2024
   - elections/2024-11-05
 - - Board of Supervisors D09
   - elections/2024-11-05/contests/bos09
@@ -50,11 +49,51 @@ ie_candidates:
 - candidate_name: TREVOR CHANDLER
   committees:
   - position: SUPPORT
+    filer_id: '1433436'
+    committee_name: Coalition to Grow San Francisco - Grow SF PAC
+    funds: ''
+    expenses: 55031.3
+  - position: SUPPORT
     filer_id: '1469825'
     committee_name: FAMILIES FOR A VIBRANT SAN FRANCISCO SUPPORTING TREVOR CHANDLER
       FOR SUPERVISOR, SPONSORED BY EFFECTIVE GOVERNMENT
     funds: 59100.0
     expenses: 58731.3
+- candidate_name: JACKIE FIELDER
+  committees:
+  - position: SUPPORT
+    filer_id: '1471862'
+    committee_name: Building a Working SF Sponsored by Labor Organizations
+    funds: ''
+    expenses: 54306.2
+- candidate_name: ROBERTO HERNANDEZ
+  committees:
+  - position: SUPPORT
+    filer_id: '842018'
+    committee_name: Alice B. Toklas Lesbian and Gay Democratic Club PAC
+    funds: ''
+    expenses: 1983.24
+contributors:
+- - Chris Larsen
+  - 50000.0
+- - Albert G Swanson Revocable Trust, 2016
+  - 20000.0
+- - David Stiepleman
+  - 4000.0
+- - Asheesh Birla
+  - 3000.0
+- - Jeremy Stoppelman
+  - 2500.0
+- - David Benzler
+  - 2200.0
+- - Jennifer Donahue
+  - 2200.0
+- - Jonathan Lax
+  - 1500.0
+- - Art Agnos
+  - 1000.0
+- - Geoffrey Bauman
+  - 1000.0
 
 ---
 

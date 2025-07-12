@@ -1,12 +1,11 @@
 ---
 layout: contest_bmc
 election: '2024-11-05'
-historic: false
 candidate: false
 title: 'L: Additional Business Tax on Transportation Network Companies and Autonomous
   Vehicle Businesses to Fund Public Transportation'
 breadcrumbs:
-- - November 05, 2024
+- - Nov 05, 2024
   - elections/2024-11-05
 - - 'L: Additional Business Tax on Transportation Network Companies and Autonomous
     Vehicle Businesses to Fund Public Transportation'
@@ -30,6 +29,27 @@ committees:
   committee_name: YES ON L, FUND THE BUS
   funds: 421695.14
   expenses: 416984.86
+contributors:
+- - Uber Innovation Ballot Measure Committee, a Committee for Prop 1
+  - 818640.09
+- - Lyft, Inc.
+  - 101313.6
+- - Service Employees International Union Local 1021 Issues PAC
+  - 60000.0
+- - Uber Technologies, Inc.
+  - 47060.86
+- - Jessica Summer Jenkins
+  - 40000.0
+- - Laura Yakovenko
+  - 30000.0
+- - Cyrus Hall
+  - 29154.53
+- - Katherine Siegal
+  - 28788.93
+- - Emily Horsman
+  - 22074.64
+- - Ben Cochran
+  - 20062.78
 
 ---
 
