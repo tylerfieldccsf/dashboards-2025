@@ -6,9 +6,9 @@ electionnav: true
 <div class="container">
     <div class="row bg-primary text-light py-3">
         <div class="col-md-6">
-            <div class="info-name mx-3 my-3 d-flex flex-column" data="general information">
+            <div class="info-name mx-3 d-flex flex-column" data="general information">
                 <h1 class="page-heading">{{ page.candidate_name }}</h1>
-                <p>Candidate for {{page.breadcrumbs[1][0]}}</p>
+                <p class="fs-4">Candidate for {{page.breadcrumbs[1][0]}}</p>
                 {%- include candidate-about.html -%}
                 
             </div>
@@ -35,20 +35,20 @@ electionnav: true
                     <dt class="col-sm-4">Disclosure Statements</dt>
                     <dd class="col-sm-8"><button data-bs-toggle="offcanvas" data-bs-target="#disclosure-statementsTT" type="button" class="btn btn-sm btn-light">View</button></dd>
                 </dl>
-                <div class="d-flex column-gap-3">
-                    <div class="">
+                <div class="d-flex flex-wrap column-gap-3 row-gap-3">
+                    <div class="contributions-expenses">
                         <div class="card money-card money-card-1">
-                            <div class="card-body">
-                                <h3 class="card-title">Total Contributions</h3>
-                                <p class="card-text"><span class="currency">{{page.totals[0]}}</span></p>
+                            <div class="card-body">                           
+                                <p class="card-title"><i class="fa-regular fa-hand-holding-dollar"></i> Total Contributions</p>
+                                <p class="card-text fs-3 fw-semibold"><span class="currency">{{page.totals[0]}}</span></p>
                             </div>
                         </div>
                     </div>
-                    <div class="">
+                    <div class="contributions-expenses">
                         <div class="card money-card money-card-2">
-                            <div class="card-body">
-                                <h3 class="card-title">Total Expenses</h3>
-                                <p class="card-text"><span class="currency">{{page.totals[1]}}</span></p>
+                            <div class="card-body">                              
+                                <p class="card-title"><i class="fa-regular fa-money-check"></i> Total Expenses</p>
+                                <p class="card-text fs-3 fw-semibold"><span class="currency">{{page.totals[1]}}</span></p>
                             </div>
                         </div>
                     </div>
@@ -138,6 +138,7 @@ electionnav: true
     </div> <!-- end of bg-light row -->
 
     <div class="row bg-light text-dark py-3">
+        <h2>Contributions Overview</h2>
         {% for factoid in page.factoids %}
         <div class="col-md-3">
             {% include factoid.html title=factoid.title data=factoid.data about=factoid.about data_css='currency' index=forloop.index%}
@@ -156,8 +157,9 @@ electionnav: true
                 <div class="">
                     <div class="card money-card money-card-1">
                         <div class="card-body">
-                            <h5 class="card-title">Contributions</h5>
+                            <p class="card-title">Contributions</p>
                             <p class="card-text"><span class="currency">
+
                                     {%- if page.third_party[0][0] == '' -%}
                                     0
                                     {%- else -%}
@@ -170,8 +172,9 @@ electionnav: true
                 <div class="">
                     <div class="card money-card money-card-2">
                         <div class="card-body">
-                            <h5 class="card-title">Expenses</h5>
+                            <p class="card-title">Expenses</p>
                             <p class="card-text"><span class="currency">
+
                                     {%- if page.third_party[0][1] == '' -%}
                                     0
                                     {%- else -%}
@@ -189,7 +192,7 @@ electionnav: true
                 <div class="">
                     <div class="card money-card money-card-1">
                         <div class="card-body">
-                            <h5 class="card-title">Contributions</h5>
+                            <p class="card-title">Contributions</p>
                             <p class="card-text"><span class="currency">
                                     {%- if page.third_party[1][0] == '' -%}
                                     0
@@ -203,7 +206,7 @@ electionnav: true
                 <div class="">
                     <div class="card money-card money-card-2">
                         <div class="card-body">
-                            <h5 class="card-title">Expenses</h5>
+                            <p class="card-title">Expenses</p>
                             <p class="card-text"><span class="currency">
                                     {%- if page.third_party[1][1] == '' -%}
                                     0
