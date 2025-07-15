@@ -26,7 +26,7 @@ electionnav: true
                         <div class="accordion-body">
                             <ul class="list-group">
                                 <li class="list-group-item"><a href="#candidate-committees" class="">Candidate Controlled Committees</a></li>
-                                {%- if page.ie_candidates %}<li class="list-group-item"><a href="#candidate-ie-committees" class="">Third Party Committees</a></li>{% endif -%}
+                                {%- if page.ie_candidates %}<li class="list-group-item"><a href="#ie-activity" class="">Third Party Activity</a></li>{% endif -%}
                                 {%- if page.contributors %}<li class="list-group-item"><a href="#top-contributors" class="">Top 10 Contributors</a></li>{% endif -%}
                             </ul>
                         </div>
@@ -80,54 +80,158 @@ electionnav: true
     </div>
 
 
-    {% if page.ie_candidates %}
-    <div class="row bg-light text-dark py-3">
-        <div class="col-12">
-            <h2 id="candidate-ie-committees" class="hover-link">Third Party Committees
-                <i data-bs-toggle="offcanvas" data-bs-target="#candidate-ie-committeesTT" class="fs-5 fa-regular fa-circle-info"></i>
-                <a class="icon d-none" href="#candidate-ie-committees"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
-            </h2>
-        </div>
-        {% for candidate in page.ie_candidates %}
-            <div class="col-12 col-lg-6 py-2">
-                <div class="col-table-12">
-                    <h3>{{candidate.candidate_name}}</h3>
-                    <table class="table ie_committee caption-top">
-                        <thead>
-                            <tr>
-                                <th scope="col" data-priority="1">Committee</th>
-                                <th scope="col" data-priority="10101">Position</th>
-                                <th scope="col">Funds</th>
-                                <th scope="col" data-priority="2">Expenses</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for committee in candidate.committees %}
-
+    {%- if page.ie_candidates -%}
+    <div class="row row-cols-2" id="ie-activity">
+        <div class="col-12 col-lg-6 py-2">
+            <div class="col-table-6">
+                <h2 class="text-dark hover-link" id="ie-support">Third Party Support
+                    <i data-bs-toggle="offcanvas" data-bs-target="#ie-supportTT" class="fs-5 fa-regular fa-circle-info"></i>
+                    <a class="icon d-none" href="#ie-support"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
+                </h2>
+                <table class="table caption-top ie_committee">
+                    <thead>
+                        <tr>
+                            <th scope="col">Candidates</th>
+                            <th scope="col">Funds</th>
+                            <th scope="col">Expenses</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {%- for candidate in page.ie_candidates -%}
+                        {%- assign funds = 0 -%}
+                        {%- assign expenses = 0 -%}
+                        {%- for committee in candidate.committees -%}
+                            {%- if committee.position == 'SUPPORT' -%}
+                                {%- assign funds = funds | plus: committee.funds -%}
+                                {%- assign expenses = expenses | plus: committee.expenses -%}
+                            {%- endif -%}
+                        {%- endfor -%}
+                        {%- if funds > 0 or expenses > 0 -%}
                             <tr>
                                 <td>
-                                    <a href="{{site.baseurl}}/committees/{{page.election}}/CA{{committee.filer_id}}">
-                                        {{ committee.committee_name }}
+                                    <a href="{{site.baseurl}}/committees/{{page.election}}/CA{{candidate.filer_id}}.html">
+                                        {{ candidate.candidate_name }}
                                     </a>
                                 </td>
-                                <td>{{ committee.position }}</td>
-                                <td>{{ committee.funds }}</td>
-                                <td>{{ committee.expenses }}</td>
+                                <td>{{ funds }}</td>
+                                <td>{{ expenses }}</td>
                             </tr>
-                            {% endfor %}
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <th style="text-align:right" colspan="3">Total:</th>
-                                <th></th>
-                            </tr>
-                        </tfoot>
-                    </table>
-                </div>
+                        {%- endif -%}
+                        {%- endfor -%}
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th></th>
+                            <th style="text-align:right">Total:</th>
+                            <th></th>
+                        </tr>
+                    </tfoot>
+                </table>
             </div>
-        {% endfor %}
+        </div>
+
+        <div class="col-12 col-lg-6 py-2">
+           <div class="col-table-6">
+                <h2 class="text-dark hover-link" id="ie-oppose">Third Party Opposition
+                    <i data-bs-toggle="offcanvas" data-bs-target="#ie-opposeTT" class="fs-5 fa-regular fa-circle-info"></i>
+                    <a class="icon d-none" href="#ie-oppose"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
+                </h2>
+                <table class="table caption-top ie_committee">
+                    <thead>
+                        <tr>
+                            <th scope="col">Candidates</th>
+                            <th scope="col">Funds</th>
+                            <th scope="col">Expenses</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {%- for candidate in page.ie_candidates -%}
+                        {%- assign funds = 0 -%}
+                        {%- assign expenses = 0 -%}
+                        {%- for committee in candidate.committees -%}
+                            {%- if committee.position == 'OPPOSE' -%}
+                                {%- assign funds = funds | plus: committee.funds -%}
+                                {%- assign expenses = expenses | plus: committee.expenses -%}
+                            {%- endif -%}
+                        {%- endfor -%}
+                        {%- if funds > 0 or expenses > 0 -%}
+                            <tr>
+                                <td>
+                                    <a href="{{site.baseurl}}/committees/{{page.election}}/CA{{candidate.filer_id}}.html">
+                                        {{ candidate.candidate_name }}
+                                    </a>
+                                </td>
+                                <td>{{ funds }}</td>
+                                <td>{{ expenses }}</td>
+                            </tr>
+                        {%- endif -%}
+                        {%- endfor -%}
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th></th>
+                            <th style="text-align:right">Total:</th>
+                            <th></th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
     </div>
-    {% endif %}
+    
+    <div class="row">
+        <div class="col-12 py-2">
+            <div class="col-table-12">
+                <h2 class="text-dark hover-link" id="ie-committees">Independent Expenditure Committees
+                    <i data-bs-toggle="offcanvas" data-bs-target="#ie-committeesTT" class="fs-5 fa-regular fa-circle-info"></i>
+                    <a class="icon d-none" href="#ie-committees"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
+                </h2>
+                <table class="table caption-top all_ie_committees">
+                    <thead>
+                        <tr>
+                            <th scope="col">Committee</th>
+                            <th scope="col">Candidate</th>
+                            <th scope="col">Position</th>
+                            <th scope="col">Funds</th>
+                            <th scope="col">Expenses</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {%- for candidate in page.ie_candidates -%}
+                            {%- for committee in candidate.committees -%}
+                                <tr>
+                                    <td>
+                                        <a href="{{site.baseurl}}/committees/{{page.election}}/CA{{committee.filer_id}}.html">
+                                            {{- committee.committee_name -}}
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="{{site.baseurl}}/committees/{{page.election}}/CA{{candidate.filer_id}}.html">
+                                            {{ candidate.candidate_name }}
+                                        </a>
+                                    </td>
+                                    <td>{{ committee.position }}</td>
+                                    <td>{{ committee.funds }}</td>
+                                    <td>{{ committee.expenses }}</td>
+                                </tr>
+                            {%- endfor -%}
+                        {%- endfor -%}
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th style="text-align:right">Total:</th>
+                            <th></th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    {%- endif -%}
 </div>
 
 <script>
@@ -172,41 +276,65 @@ electionnav: true
         },
     });
 
-
-    var groupColumn = 1;
-    var table = $('table.ie_committee').DataTable({
-        columnDefs: [
-            // { visible: false, targets: groupColumn },
-        ],
-        // order: [[groupColumn, 'asc']],
+    new DataTable('table.ie_committee', {
         displayLength: -1,
         responsive: true,
         layout: layoutOptions,
         lengthChange: false,
+        columnDefs: [{ 
+                targets: [1, 2],
+                render: function (data, type, row, meta) {
+                    if (type === 'display') {
+                        return formatAsCurrency(data);
+                    }
+                    return data
+                }
+            },
+        ],
         footerCallback: function (row, data, start, end, display) {
             let api = this.api();
 
             // Total over all pages
             totalExp = api
-                .column(3)
+                .column(2)
                 .data()
                 .reduce(sumAsNum, 0);
 
             // Update footer
-            api.column(3).footer().innerHTML =
+            api.column(2).footer().innerHTML =
                 formatAsCurrency(totalExp);
         },
     });
 
-    // Order by the grouping
-    $('table.dtify tbody').on('click', 'tr.group', function () {
-        var currentOrder = table.order()[0];
-        if (currentOrder[0] === groupColumn && currentOrder[1] === 'asc') {
-            table.order([groupColumn, 'desc']).draw();
-        }
-        else {
-            table.order([groupColumn, 'asc']).draw();
-        }
+    new DataTable('table.all_ie_committees', {
+        displayLength: -1,
+        responsive: true,
+        layout: layoutOptions,
+        lengthChange: false,
+        columnDefs: [{ 
+                targets: [3,4],
+                render: function (data, type, row, meta) {
+                    if (type === 'display') {
+                        return formatAsCurrency(data);
+                    }
+                    return data
+                }
+            },
+        ],
+        footerCallback: function (row, data, start, end, display) {
+            let api = this.api();
+
+            // Total over all pages
+            totalExp = api
+                .column(4)
+                .data()
+                .reduce(sumAsNum, 0);
+
+            // Update footer
+            api.column(4).footer().innerHTML =
+                formatAsCurrency(totalExp);
+        },
     });
+
 
 </script>
