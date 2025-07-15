@@ -2,6 +2,25 @@
 layout: default
 electionnav: true
 ---
+{%- assign opposition = false -%}
+{%- assign supporters = false -%}
+{%- assign support_funds = 0 -%}
+{%- assign support_expenses = 0 -%}
+{%- assign oppose_funds = 0 -%}
+{%- assign oppose_expenses = 0 -%}
+
+{%- for committee in page.committees -%}
+    {%- if committee.position == 'SUPPORT' -%}
+        {%- assign supporters = true -%}
+        {%- assign support_funds = support_funds | plus: committee.funds -%}
+        {%- assign support_expenses = support_expenses | plus: committee.expenses -%}
+    {%- endif -%}
+    {%- if committee.position == 'OPPOSE' -%}
+        {%- assign opposition = true -%}
+        {%- assign oppose_funds = oppose_funds | plus: committee.funds -%}
+        {%- assign oppose_expenses = oppose_expenses | plus: committee.expenses -%}
+    {%- endif -%}
+{%- endfor -%}
 
 <div class="container-md bg-primary">
     <div class="row py-3 text-light">
@@ -13,19 +32,85 @@ electionnav: true
         </div>
     </div>        
     <div class="row row-cols-2">
+        <div class="col-12 col-lg-6 py-2 ">
+            <div class="col-table-12">
+                <h2 id="summary-totals" class="hover-link">Summary
+                    <a class="icon d-none link-dark" href="#summary-totals"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
+                </h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Total Supportive Activity</h3>
+                        <div class="d-flex column-gap-3">
+                            <div class="">
+                                <div class="card money-card money-card-1">
+                                    <div class="card-body">
+                                        <p class="card-title">Funds</p>
+                                        <p class="card-text">
+                                            <span class="currency">{{ support_funds }}</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="card money-card money-card-2">
+                                    <div class="card-body">
+                                        <p class="card-title">Expenses</p>
+                                        <p class="card-text">
+                                            <span class="currency">{{ support_expenses }}</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Total Opposing Activity</h3>
+                        <div class="d-flex column-gap-3">
+                            <div class="">
+                                <div class="card money-card money-card-1">
+                                    <div class="card-body">
+                                        <p class="card-title">Funds</p>
+                                        <p class="card-text">
+                                            <span class="currency">{{ oppose_funds }}</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="card money-card money-card-2">
+                                    <div class="card-body">
+                                        <p class="card-title">Expenses</p>
+                                        <p class="card-text">
+                                            <span class="currency">{{ oppose_expenses }}</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="col-12 col-lg-6 py-2">
-            <div class="col-table-6">
-                <h2 id="summary-table" class="hover-link">Active Committees
+            {%- if page.contributors -%}
+            {% include contributors-table.html title='Top 10 Contributors to This Measure' contributors=page.contributors div_class='col-table-6' %}
+            {%- endif -%}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="col-table-12">
+                <h2 id="allcommittees-table" class="hover-link">Active Committees
                     <i data-bs-toggle="offcanvas" data-bs-target="#ballot-measure-committeesTT" class="fs-5 fa-regular fa-circle-info"></i>
-                    <a class="icon d-none" href="#summary-table"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
+                    <a class="icon d-none" href="#allcommittees-table"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
                 </h2>
                 <table class="table caption-top dtify">
                     <thead>
                         <tr>
-                        <th scope="col">Committee</th>
-                        <th scope="col">Position</th>
-                        <th scope="col">Funds</th>
-                        <th scope="col">Expenses</th>
+                            <th scope="col">Committee</th>
+                            <th scope="col">Position</th>
+                            <th scope="col">Funds</th>
+                            <th scope="col">Expenses</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -51,20 +136,25 @@ electionnav: true
                 </table>
             </div>
         </div>
-        <div class="col-12 col-lg-6 py-2">
-            {%- if page.contributors -%}
-            {% include contributors-table.html title='Top 10 Contributors to This Measure' contributors=page.contributors div_class='col-table-6' %}
-            {%- endif -%}
-        </div>
-    </div>
     </div>
 </div>
 
+
 <script>
-    var groupColumn = 1;
-    var table = $('table.dtify').DataTable({
-        columnDefs: [{ visible: false, targets: groupColumn }],
-        order: [[groupColumn, 'asc']],
+
+    new DataTable('table.dtify', {
+        columnDefs: [
+            { 
+                targets: [2,3],
+                render: function (data, type, row, meta) {
+                    if (type === 'display') {
+                        return formatAsCurrency(data);
+                    }
+                    return data
+                }
+            }
+        ],
+        order: [[1, 'asc']],
         lengthChange: false,
         displayLength: -1,
         layout: {
@@ -73,27 +163,7 @@ electionnav: true
             bottomStart: null,
             bottomEnd: null,
         },
-        drawCallback: function (settings) {
-            var api = this.api();
-            var rows = api.rows({ page: 'current' }).nodes();
-            var last = null;
-    
-            api.column(groupColumn, { page: 'current' })
-                .data()
-                .each(function (group, i) {
-                    if (last !== group) {
-                        $(rows)
-                            .eq(i)
-                            .before(
-                                '<tr class="group"><td colspan="4">' +
-                                    group +
-                                    '</td></tr>'
-                            );
-    
-                        last = group;
-                    }
-                });
-        },
+
         footerCallback: function (row, data, start, end, display) {
             let api = this.api();
 
@@ -107,17 +177,6 @@ electionnav: true
             api.column(3).footer().innerHTML =
                 formatAsCurrency(totalExp);
         },
-    });
-    
-    // Order by the grouping
-    $('table.dtify tbody').on('click', 'tr.group', function () {
-        var currentOrder = table.order()[0];
-        if (currentOrder[0] === groupColumn && currentOrder[1] === 'asc') {
-            table.order([groupColumn, 'desc']).draw();
-        }
-        else {
-            table.order([groupColumn, 'asc']).draw();
-        }
     });
 
 </script>
