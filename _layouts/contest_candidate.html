@@ -58,16 +58,16 @@ electionnav: true
                                     {{ candidate.candidate_name }}
                                 </a>
                             </td>
-                            <td class="currency">{{ candidate.funds }}</td>
-                            <td class="currency">{{ candidate.expenses }}</td>
+                            <td>{{ candidate.funds }}</td>
+                            <td>{{ candidate.expenses }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>
                     <tfoot>
                         <tr>
                             <th style="text-align:right">Total:</th>
-                            <th class="currency"></th>
-                            <th class="currency"></th>
+                            <th></th>
+                            <th></th>
                         </tr>
                     </tfoot>
                 </table>
@@ -111,15 +111,15 @@ electionnav: true
                                     </a>
                                 </td>
                                 <td>{{ committee.position }}</td>
-                                <td class="currency">{{ committee.funds }}</td>
-                                <td class="currency">{{ committee.expenses }}</td>
+                                <td>{{ committee.funds }}</td>
+                                <td>{{ committee.expenses }}</td>
                             </tr>
                             {% endfor %}
                         </tbody>
                         <tfoot>
                             <tr>
                                 <th style="text-align:right" colspan="3">Total:</th>
-                                <th class="currency"></th>
+                                <th></th>
                             </tr>
                         </tfoot>
                     </table>
@@ -131,11 +131,6 @@ electionnav: true
 </div>
 
 <script>
-    let currencyOptions = {
-        style: 'currency',
-        currency: 'USD',
-        maximumFractionDigits: 0
-    }
     let layoutOptions = {
         topStart: null,
         topEnd: null,
@@ -146,34 +141,34 @@ electionnav: true
         lengthChange: false,
         displayLength: -1,
         layout: layoutOptions,
-        columns: [null, { type: 'num-fmt' }, { type: 'num-fmt' }],
+        columnDefs: [{ 
+                targets: [1, 2],
+                render: function (data, type, row, meta) {
+                    if (type === 'display') {
+                        return formatAsCurrency(data);
+                    }
+                    return data
+                }
+            },
+        ],
         footerCallback: function (row, data, start, end, display) {
             let api = this.api();
-
-            // Remove the formatting to get integer data for summation
-            let intVal = function (i) {
-                return typeof i === 'string'
-                    ? i.replace(/[\$,]/g, '') * 1
-                    : typeof i === 'number'
-                        ? i
-                        : 0;
-            };
 
             // Total over all pages
             totalExp = api
                 .column(2)
                 .data()
-                .reduce((a, b) => intVal(a) + intVal(b), 0);
+                .reduce(sumAsNum, 0);
             totalCon = api
                 .column(1)
                 .data()
-                .reduce((a, b) => intVal(a) + intVal(b), 0);
+                .reduce(sumAsNum, 0);
 
             // Update footer
             api.column(2).footer().innerHTML =
-                totalExp.toLocaleString('en-us', currencyOptions);
+                formatAsCurrency(totalExp);
             api.column(1).footer().innerHTML =
-                totalCon.toLocaleString('en-us', currencyOptions);
+                formatAsCurrency(totalCon);
         },
     });
 
@@ -191,74 +186,16 @@ electionnav: true
         footerCallback: function (row, data, start, end, display) {
             let api = this.api();
 
-            // Remove the formatting to get integer data for summation
-            let intVal = function (i) {
-                return typeof i === 'string'
-                    ? i.replace(/[\$,]/g, '') * 1
-                    : typeof i === 'number'
-                        ? i
-                        : 0;
-            };
-
             // Total over all pages
             totalExp = api
                 .column(3)
                 .data()
-                .reduce((a, b) => intVal(a) + intVal(b), 0);
+                .reduce(sumAsNum, 0);
 
             // Update footer
             api.column(3).footer().innerHTML =
-                totalExp
-            // totalExp.toLocaleString('en-us', currencyOptions);
+                formatAsCurrency(totalExp);
         },
-        // columnDefs: [{ visible: false, targets: groupColumn }],
-        // order: [[groupColumn, 'asc']],
-        // displayLength: -1,
-        // layout: layoutOptions,
-        // lengthChange: false,
-        // drawCallback: function (settings) {
-        //     var api = this.api();
-        //     var rows = api.rows({ page: 'current' }).nodes();
-        //     var last = null;
-
-        //     api.column(groupColumn, { page: 'current' })
-        //         .data()
-        //         .each(function (group, i) {
-        //             if (last !== group) {
-        //                 $(rows)
-        //                     .eq(i)
-        //                     .before(
-        //                         '<tr class="group"><td colspan="4">' +
-        //                             group +
-        //                             '</td></tr>'
-        //                     );
-
-        //                 last = group;
-        //             }
-        //         });
-        // },
-        // footerCallback: function (row, data, start, end, display) {
-        //     let api = this.api();
-
-        //     // Remove the formatting to get integer data for summation
-        //     let intVal = function (i) {
-        //         return typeof i === 'string'
-        //             ? i.replace(/[\$,]/g, '') * 1
-        //             : typeof i === 'number'
-        //             ? i
-        //             : 0;
-        //     };
-
-        //     // Total over all pages
-        //     totalExp = api
-        //         .column(3)
-        //         .data()
-        //         .reduce((a, b) => intVal(a) + intVal(b), 0);
-
-        //     // Update footer
-        //     api.column(3).footer().innerHTML =
-        //         totalExp.toLocaleString('en-us', currencyOptions);
-        // },
     });
 
     // Order by the grouping

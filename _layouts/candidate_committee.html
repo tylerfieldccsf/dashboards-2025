@@ -104,7 +104,7 @@ electionnav: true
                                     {{ contributor[1] }}
                                     {%- if contributor[2] != "" -%}</a>{%- endif -%}
                             </td>
-                            <td class="currency">{{ contributor[3] }}</td>
+                            <td>{{ contributor[3] }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>
@@ -128,7 +128,7 @@ electionnav: true
                         {% for exp in page.expenditures %}
                         <tr>
                             <td>{{ exp[0] }}</td>
-                            <td class="currency">{{ exp[1] }}</td>
+                            <td>{{ exp[1] }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>
@@ -245,8 +245,8 @@ electionnav: true
                             </a>
                         </td>
                         <td>{{ committee[2] }}</td>
-                        <td class="currency">{{ committee[3] }}</td>
-                        <td class="currency">{{ committee[4] }}</td>
+                        <td>{{ committee[3] }}</td>
+                        <td>{{ committee[4] }}</td>
                     </tr>
                     {% endfor %}
                 </tbody>
@@ -297,26 +297,44 @@ electionnav: true
             </tbody>
         </table>
     </div>
-</div>
+</div><!-- end Disclosure Statements -->
 
 <script>
     new DataTable('#contributors_table', {
         pageLength: 10,
         lengthChange: false,
         order: [[2, 'desc']],
-        columnDefs: [{ width: '35%', targets: [0, 1] }],
-        pagingType: 'simple_numbers'
-    }).on('draw', () => {
-        formatAllCurrencyElements('contributors_table');
+        columnDefs: [
+            { width: '35%', targets: [0, 1] },
+            {
+                targets: [2],
+                render: function (data, type, row, meta) {
+                    if (type === 'display') {
+                        return formatAsCurrency(data);
+                    }
+                    return data
+                }
+            }
+        ],
+        pagingType: 'simple_numbers',
+        
     });
     new DataTable('#expenditures_table', {
         pageLength: 10,
         lengthChange: false,
         order: [[2, 'desc']],
-        // columnDefs: [{ width: '35%', targets: [0, 1] }], 
-        pagingType: 'simple_numbers'
-    }).on('draw', () => {
-        formatAllCurrencyElements('expenditures_table');
+        pagingType: 'simple_numbers',
+        columnDefs: [
+            {
+                targets: [1],
+                render: function (data, type, row, meta) {
+                    if (type === 'display') {
+                        return formatAsCurrency(data);
+                    }
+                    return data
+                }
+            }
+        ],
     });
     new DataTable('#filings_table', {
         pageLength: 5,
@@ -333,8 +351,17 @@ electionnav: true
             bottomEnd: null,
         },
         lengthChange: false,
-    }).on('draw', () => {
-        formatAllCurrencyElements('expenditures_table');
+        columnDefs: [
+            {
+                targets: [2, 3],
+                render: function (data, type, row, meta) {
+                    if (type === 'display') {
+                        return formatAsCurrency(data);
+                    }
+                    return data
+                }
+            },
+        ],
     });
 
 </script>

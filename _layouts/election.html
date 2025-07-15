@@ -57,16 +57,16 @@ electionnav: true
                                 <td><a href="{{site.baseurl}}/elections/{{page.election}}/contests/{{contest.contest_link}}.html">
                                     {{ contest.contest_name }}
                                 </a></td>
-                                <td class="currency">{{ contest.funds }}</td>
-                                <td class="currency">{{ contest.expenses }}</td>
+                                <td>{{ contest.funds }}</td>
+                                <td>{{ contest.expenses }}</td>
                             </tr>
                         {%- endfor -%}
                     </tbody>
                     <tfoot>
                         <tr>
                             <th style="text-align:right">Total:</th>
-                            <th class="currency"></th>
-                            <th class="currency"></th>
+                            <th></th>
+                            <th></th>
                         </tr>
                     </tfoot>
                 </table>
@@ -94,15 +94,15 @@ electionnav: true
                                 <td><a href="{{site.baseurl}}/elections/{{page.election}}/contests/{{contest.contest_link}}.html">
                                     {{ contest.contest_name }}
                                 </a></td>
-                                <td class="currency">{{ contest.funds }}</td>
-                                <td class="currency">{{ contest.expenses }}</td>
+                                <td>{{ contest.funds }}</td>
+                                <td>{{ contest.expenses }}</td>
                             </tr>
                         {%- endfor -%}
                     </tbody>
                     <tfoot>
                         <tr>
                             <th colspan="2" style="text-align:right">Total:</th>
-                            <th class="currency"></th>
+                            <th></th>
                         </tr>
                     </tfoot>
                 </table>
@@ -131,15 +131,15 @@ electionnav: true
                                 <td><a href="{{site.baseurl}}/elections/{{page.election}}/measures/{{contest.contest_link}}.html">
                                     {{ contest.contest_name }}
                                 </a></td>
-                                <td class="currency">{{ contest.funds }}</td>
-                                <td class="currency">{{ contest.expenses }}</td>
+                                <td>{{ contest.funds }}</td>
+                                <td>{{ contest.expenses }}</td>
                             </tr>
                         {%- endfor -%}
                     </tbody>
                     <tfoot>
                         <tr>
                             <th colspan="2" style="text-align:right">Total:</th>
-                            <th class=" currency"></th>
+                            <th></th>
                         </tr>
                     </tfoot>
                 </table>
@@ -159,11 +159,6 @@ electionnav: true
     {{content}}
 </div>
 <script>
-    let currencyOptions = {
-        style: 'currency', 
-        currency: 'USD', 
-        maximumFractionDigits: 0
-    }
     let layoutOptions = {
             topStart: null,
             topEnd: null,
@@ -171,64 +166,67 @@ electionnav: true
             bottomEnd: null,
         }
     new DataTable('table.dtify_both', {
-        columns: [ null, {type: 'num-fmt'}, {type: 'num-fmt'}],
+        columnDefs: [ 
+            {
+                targets: [1, 2],
+                render: function (data, type, row, meta) {
+                    if (type === 'display') {
+                        return formatAsCurrency(data);
+                    }
+                    return data
+                }
+            }
+        ],
         displayLength: -1,
         layout: layoutOptions,
         footerCallback: function (row, data, start, end, display) {
             let api = this.api();
-    
-            // Remove the formatting to get integer data for summation
-            let intVal = function (i) {
-                return typeof i === 'string'
-                    ? i.replace(/[\$,]/g, '') * 1
-                    : typeof i === 'number'
-                    ? i
-                    : 0;
-            };
-    
+
             // Total over all pages
             totalExp = api
                 .column(2)
                 .data()
-                .reduce((a, b) => intVal(a) + intVal(b), 0);
+                .reduce(sumAsNum, 0);
             totalCon = api
                 .column(1)
                 .data()
-                .reduce((a, b) => intVal(a) + intVal(b), 0);
-            
+                .reduce(sumAsNum, 0);
+
             // Update footer
             api.column(2).footer().innerHTML =
-                totalExp.toLocaleString('en-us', currencyOptions);
+                formatAsCurrency(totalExp);
             api.column(1).footer().innerHTML =
-                totalCon.toLocaleString('en-us', currencyOptions);
+                formatAsCurrency(totalCon);
+
         }
     });
 
     new DataTable('table.dtify_exp', {
-        columns: [ null, {type: 'num-fmt'}, {type: 'num-fmt'}],
+        columnDefs: [ 
+            {
+                targets: [1, 2],
+                render: function (data, type, row, meta) {
+                    if (type === 'display') {
+                        return formatAsCurrency(data);
+                    }
+                    return data
+                }
+            }
+        ],
         displayLength: -1,
         layout: layoutOptions,
         footerCallback: function (row, data, start, end, display) {
             let api = this.api();
-    
-            // Remove the formatting to get integer data for summation
-            let intVal = function (i) {
-                return typeof i === 'string'
-                    ? i.replace(/[\$,]/g, '') * 1
-                    : typeof i === 'number'
-                    ? i
-                    : 0;
-            };
 
             // Total over all pages
             totalExp = api
                 .column(2)
                 .data()
-                .reduce((a, b) => intVal(a) + intVal(b), 0);
+                .reduce(sumAsNum, 0);
 
             // Update footer
             api.column(2).footer().innerHTML =
-                totalExp.toLocaleString('en-us', currencyOptions);
+                formatAsCurrency(totalExp);
         }
     });
 </script>

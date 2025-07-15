@@ -1,29 +1,82 @@
-function formatSmartNumber(value) {
-    const str = value.toString().trim();
-    // Skip if already formatted with K, M, or B and doesn't look like a raw number
-    if (/^[\s\$€£¥-]*\d+(\.\d+)?[KMB]\s*$/.test(str)) {
-      return str.replace('$','');
+function abbrNum(number, decPlaces) {
+    // 2 decimal places => 100, 3 => 1000, etc
+    decPlaces = Math.pow(10, decPlaces);
+
+    // Enumerate number abbreviations
+    var abbrev = ["K", "M", "B", "T"];
+
+    // Go through the array backwards, so we do the largest first
+    for (var i = abbrev.length - 1; i >= 0; i--) {
+
+        // Convert array index to "1000", "1000000", etc
+        var size = Math.pow(10, (i + 1) * 3);
+
+        // If the number is bigger or equal do the abbreviation
+        if (size <= number) {
+            // Here, we multiply by decPlaces, round, and then divide by decPlaces.
+            // This gives us nice rounding to a particular decimal place.
+            number = Math.round(number * decPlaces / size) / decPlaces;
+
+            // Handle special case where we round up to the next abbreviation
+            if ((number == 1000) && (i < abbrev.length - 1)) {
+                number = 1;
+                i++;
+            }
+
+            // Add the letter for the abbreviation
+            number += abbrev[i];
+
+            // We are done... stop
+            break;
+        }
     }
-    const num = parseFloat(str.replace(/[^\d.-]/g, ''));
-    if (isNaN(num)) return value;
 
-    let formatted;
+    return number;
+}
 
-    if (num >= 1_000_000_000) {
-      formatted = (num / 1_000_000_000).toFixed(2) + 'B';
-    } else if (num >= 1_000_000) {
-      formatted = (num / 1_000_000).toFixed(2) + 'M';
-    } else if (num >= 1_000) {
-      formatted = (num / 1_000).toFixed(2) + 'K';
+function getRounding(num) {
+    if (num < 1000) {
+        return 0;
+    } else if (num <= 10000) {
+        return 1;
+    } else if (num <= 100000) {
+        return 0;
+    } else if (num <= 1000000) {
+        return 0;
     } else {
-      return Math.round(num).toString();
+        return 1;
+    }
+}
+
+// Array reducing function that converts strings to numbers
+function sumAsNum(a, b) {
+    // Remove the formatting to get number data for summation
+    let numVal = function (i) {
+        return typeof i === 'string'
+            ? i.replace(/[\$,]/g, '') * 1
+            : typeof i === 'number'
+            ? i
+            : 0;
+    };
+    return numVal(a) + numVal(b)
+}
+
+
+function formatAsCurrency(val) {
+    if (val == "") {
+        return ""
+    }
+    if (parseInt(val) == 0) {
+        return ""
+    }
+    if (typeof val === 'string' && val.startsWith('$')) {
+        return val
     }
 
-    // Remove .00 or .X0 (e.g. 1.10K → 1.1K, 2.00M → 2M)
-    return formatted
-      .replace(/\.00([KMB])$/, '$1')
-      .replace(/\.([1-9])0([KMB])$/, '.$1$2');
-  }
+    val = parseFloat(val)
+    let round = getRounding(val)
+    return "$"+abbrNum(val, round)
+}
 
 function formatAllCurrencyElements(containerId) {
   const container = containerId
@@ -34,12 +87,8 @@ function formatAllCurrencyElements(containerId) {
 
   container.querySelectorAll('.currency').forEach(el => {
     const original = el.textContent;
-    const formatted = formatSmartNumber(original);
-    if(formatted=='') {
-      el.textContent = formatted;
-    } else {
-      el.textContent = '$' + formatted;
-    }
+    const formatted = formatAsCurrency(original);
+    el.textContent = formatted
   });
 }
 
