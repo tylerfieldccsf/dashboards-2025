@@ -99,7 +99,7 @@ electionnav: true
                                     {{ contributor[1] }}
                                     {%- if contributor[2] != "" -%}</a>{%- endif -%}
                             </td>
-                            <td class="currency">{{ contributor[3] }}</td>
+                            <td>{{ contributor[3] }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>
@@ -123,7 +123,7 @@ electionnav: true
                         {% for exp in page.expenditures %}
                         <tr>
                             <td>{{ exp[0] }}</td>
-                            <td class="currency">{{ exp[1] }}</td>
+                            <td >{{ exp[1] }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>
@@ -180,16 +180,34 @@ electionnav: true
     new DataTable('#contributors_table', {
         pageLength: 10,
         lengthChange: false,
-        order: [[2, 'desc']]
-    }).on('draw', () => {
-        formatAllCurrencyElements('contributors_table');
+        order: [[2, 'desc']],
+        columnDefs: [
+            {
+                targets: [2],
+                render: function (data, type, row, meta) {
+                    if (type === 'display') {
+                        return formatAsCurrency(data);
+                    }
+                    return data
+                }
+            }
+        ],
     });
     new DataTable('#expenditures_table', {
         pageLength: 10,
         lengthChange: false,
-        order: [[2, 'desc']]
-    }).on('draw', () => {
-        formatAllCurrencyElements('expenditures_table');
+        order: [[2, 'desc']],
+        columnDefs: [
+            {
+                targets: [1],
+                render: function (data, type, row, meta) {
+                    if (type === 'display') {
+                        return formatAsCurrency(data);
+                    }
+                    return data
+                }
+            }
+        ],
     });
     new DataTable('table.dtify', {
         pageLength: 10,

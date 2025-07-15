@@ -38,7 +38,7 @@ electionnav: true
                                         {{ contributor.tx_entitycode }}
                                     {%- if contributor.tx_cmteid != '' -%}</a>{%- endif -%}
                                     </td>
-                                <td class="currency">{{ contributor.total }}</td>
+                                <td class="">{{ contributor.total }}</td>
                                 <td class="">
                                     <table class="table table-sm">
                                         <tbody>
@@ -62,11 +62,6 @@ electionnav: true
 
 
 <script>
-    let currencyOptions = {
-        style: 'currency', 
-        currency: 'USD', 
-        maximumFractionDigits: 0
-    }
     let layoutOptions = {
             topStart: null,
             // topEnd: null,
@@ -78,7 +73,6 @@ electionnav: true
     }
 
     let table = new DataTable('table.dtify', {
-        // columns: [ null, {type: 'num-fmt'}, {type: 'num-fmt'}],
         lengthMenu: [
             [10, 25, 50, 100],
             [10, 25, 50, 100]
@@ -87,12 +81,23 @@ electionnav: true
         order: [[3, 'desc'], [2, 'asc'],[1, 'asc']],
         columnDefs: [
             {
+                targets: [0],
                 class: 'dt-control',
                 orderable: false,
-                targets: [0]
             },
-            { visible: false, targets: [4] },
-            {type: 'num-fmt', targets: [3]},
+            { 
+                targets: [4],
+                visible: false,  
+            },
+            { 
+                targets: [3],
+                render: function (data, type, row, meta) {
+                    if (type === 'display') {
+                        return formatAsCurrency(data);
+                    }
+                    return data
+                }
+            },
         ]
     });
 
@@ -111,8 +116,6 @@ electionnav: true
             row.child(format(row.data())).show();
         }
         formatAllCurrencyElements()
-    }).on('draw', () => {
-        formatAllCurrencyElements();
     })
 
  
