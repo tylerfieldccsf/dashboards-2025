@@ -35,76 +35,37 @@ electionnav: true
         <div class="col-12 col-lg-6 py-2 ">
             <div class="col-table-12">
                 <h2 id="summary-totals" class="hover-link">Summary
+                    <i data-bs-toggle="offcanvas" data-bs-target="#summary-totalsTT" class="fs-5 fa-regular fa-circle-info"></i>
                     <a class="icon d-none link-dark" href="#summary-totals"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
                 </h2>
-                <div class="row">
-                    <div class="col-md-6">
-                        <h3>Total Supportive Activity</h3>
-                        <div class="d-flex column-gap-3">
-                            <div class="">
-                                <div class="card money-card money-card-1">
-                                    <div class="card-body">
-                                        <p class="card-title">Funds</p>
-                                        <p class="card-text">
-                                            {%- if support_funds>0 -%}
-                                                <span class="currency">{{ support_funds }}</span>
-                                            {%- else -%}
-                                                <span>None Reported</span>
-                                            {%- endif -%}
+                <div class="">
+                    {%- assign tsf = 'None' -%}
+                    {%- if support_funds>0 %}{% assign tsf = support_funds %}{% endif -%}
+                    {%- assign tse = 'None' -%}
+                    {%- if support_expenses>0 %}{% assign tse = support_expenses %}{% endif -%}
 
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="">
-                                <div class="card money-card money-card-2">
-                                    <div class="card-body">
-                                        <p class="card-title">Expenses</p>
-                                        <p class="card-text">
-                                            {%- if support_expenses>0 -%}
-                                                <span class="currency">{{ support_expenses }}</span>
-                                            {%- else -%}
-                                                <span>None Reported</span>
-                                            {%- endif -%}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <h3>Total Opposing Activity</h3>
-                        <div class="d-flex column-gap-3">
-                            <div class="">
-                                <div class="card money-card money-card-1">
-                                    <div class="card-body">
-                                        <p class="card-title">Funds</p>
-                                        <p class="card-text">
-                                            {%- if oppose_funds>0 -%}
-                                                <span class="currency">{{ oppose_funds }}</span>
-                                            {%- else -%}
-                                                <span>None Reported</span>
-                                            {%- endif -%}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="">
-                                <div class="card money-card money-card-2">
-                                    <div class="card-body">
-                                        <p class="card-title">Expenses</p>
-                                        <p class="card-text">
-                                            {%- if oppose_expenses>0 -%}
-                                                <span class="currency">{{ oppose_expenses }}</span>
-                                            {%- else -%}
-                                                <span>None Reported</span>
-                                            {%- endif -%}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {%- include con-exp.html 
+                        wrap_css='row my-3'
+                        title='Totals Supporting this Measure'
+                        first_title='Funds'
+                        first_text=tsf
+                        second_title='Expenses'
+                        second_text=tse
+                    -%}
+
+                    {%- assign tof = 'None' -%}
+                    {%- if oppose_funds>0 %}{% assign tof = oppose_funds %}{% endif -%}
+                    {%- assign toe = 'None' -%}
+                    {%- if oppose_expenses>0 %}{% assign toe = oppose_expenses %}{% endif -%}
+
+                    {%- include con-exp.html 
+                        wrap_css='row my-3'
+                        title='Totals Opposing this Measure'
+                        first_title='Funds'
+                        first_text=tof
+                        second_title='Expenses'
+                        second_text=toe
+                    -%}
                 </div>
             </div>
         </div>

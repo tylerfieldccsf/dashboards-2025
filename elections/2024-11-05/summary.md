@@ -104,7 +104,7 @@ candidate_ie:
 - contest_nid: '208059436'
   contest_name: Board of Supervisors D11
   contest_link: bos11
-  funds: 0.0
+  funds: 
   expenses: 982214.87
 - contest_nid: '208114612'
   contest_name: District Attorney
@@ -119,37 +119,37 @@ candidate_ie:
 - contest_nid: '208194293'
   contest_name: Board of Supervisors D07
   contest_link: bos07
-  funds: 0.0
+  funds: 
   expenses: 114011.52
 - contest_nid: '208440297'
   contest_name: Sheriff
   contest_link: shf
-  funds: 0.0
+  funds: 
   expenses: 14939.79
 - contest_nid: '208523109'
   contest_name: Board of Supervisors D03
   contest_link: bos03
-  funds: 0.0
+  funds: 
   expenses: 357393.31
 - contest_nid: '208761641'
   contest_name: Community College Board
   contest_link: ccb
-  funds: 0.0
+  funds: 
   expenses: 61134.89
 - contest_nid: '208825430'
   contest_name: Treasurer
   contest_link: ttx
-  funds: 0.0
+  funds: 
   expenses: 14939.79
 - contest_nid: '209647056'
   contest_name: City Attorney
   contest_link: cat
-  funds: 0.0
+  funds: 
   expenses: 14939.79
 - contest_nid: '211451798'
   contest_name: Board of Education
   contest_link: usd
-  funds: 0.0
+  funds: 
   expenses: 146890.12
 measures:
 - contest_nid: '208835441'

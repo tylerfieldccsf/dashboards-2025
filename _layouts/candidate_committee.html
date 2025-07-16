@@ -15,8 +15,9 @@ electionnav: true
         </div>
         <div class="col-md-6">
             <div class="info-summary mx-3">
-                <h2 id="summary" class="hover-link">Fundraising & Spending Summary
-                    <a class="icon d-none link-light" href="#summary"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
+                <h2 id="summary-totals" class="hover-link">Fundraising & Spending Summary
+                    <i data-bs-toggle="offcanvas" data-bs-target="#summary-totalsTT" class="fs-5 fa-regular fa-circle-info"></i>
+                    <a class="icon d-none link-light" href="#summary-totals"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
                 </h2>
                 <dl class="row">
                     <dt class="col-sm-4">Committee Name</dt>
@@ -35,24 +36,16 @@ electionnav: true
                     <dt class="col-sm-4">Disclosure Statements</dt>
                     <dd class="col-sm-8"><button data-bs-toggle="offcanvas" data-bs-target="#disclosure-statementsTT" type="button" class="btn btn-sm btn-light">View</button></dd>
                 </dl>
-                <div class="d-flex flex-wrap column-gap-3 row-gap-3">
-                    <div class="contributions-expenses">
-                        <div class="card money-card money-card-1">
-                            <div class="card-body">                           
-                                <p class="card-title"><i class="fa-regular fa-hand-holding-dollar"></i> Total Contributions</p>
-                                <p class="card-text fs-3 fw-semibold"><span class="currency">{{page.totals[0]}}</span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contributions-expenses">
-                        <div class="card money-card money-card-2">
-                            <div class="card-body">                              
-                                <p class="card-title"><i class="fa-regular fa-money-check"></i> Total Expenses</p>
-                                <p class="card-text fs-3 fw-semibold"><span class="currency">{{page.totals[1]}}</span></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {%- capture v1 %}{{page.totals[0]}}{% endcapture -%}
+                {%- capture v2 %}{{page.totals[1]}}{% endcapture -%}
+                {%- include con-exp.html
+                    wrap_css='row'
+                    first_title='Total Contributions'
+                    first_text=v1
+                    second_title='Total Expenses'
+                    second_text=v2
+                -%}
+
                 <div data="Committee information">
                     <div>
                         {%- if page.jurisdiction == "sf" -%}
@@ -151,72 +144,33 @@ electionnav: true
         <h2 id="third-party-totals" class="hover-link">Third Party Funds Supporting & Opposing {{page.candidate_name}}
             <a class="icon d-none link-light" href="#third-party-totals"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
         </h2>
-        <div class="col-md-6">
-            <h3>Total Supportive Activity</h3>
-            <div class="d-flex column-gap-3">
-                <div class="">
-                    <div class="card money-card money-card-1">
-                        <div class="card-body">
-                            <p class="card-title">Contributions</p>
-                            <p class="card-text">
-                                {%- if page.third_party[0][0] == '' -%}
-                                    <span>None Reported</span>
-                                {%- else -%}
-                                    <span class="currency">{{page.third_party[0][0]}}</span>
-                                {%- endif -%}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="">
-                    <div class="card money-card money-card-2">
-                        <div class="card-body">
-                            <p class="card-title">Expenses</p>
-                            <p class="card-text">
-                                {%- if page.third_party[0][1] == '' -%}
-                                    <span>None Reported</span>
-                                {%- else -%}
-                                    <span class="currency">{{page.third_party[0][1]}}</span>
-                                {%- endif -%}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <h3>Total Opposing Activity</h3>
-            <div class="d-flex column-gap-3">
-                <div class="">
-                    <div class="card money-card money-card-1">
-                        <div class="card-body">
-                            <p class="card-title">Contributions</p>
-                            <p class="card-text">
-                                {%- if page.third_party[1][0] == '' -%}
-                                    <span>None Reported</span>
-                                {%- else -%}
-                                    <span class="currency">{{page.third_party[1][0]}}</span>
-                                {%- endif -%}
-                                </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="">
-                    <div class="card money-card money-card-2">
-                        <div class="card-body">
-                            <p class="card-title">Expenses</p>
-                            <p class="card-text">
-                                {%- if page.third_party[1][1] == '' -%}
-                                    <span>None Reported</span>
-                                {%- else -%}
-                                    <span class="currency">{{page.third_party[1][1]}}</span>
-                                {%- endif -%}
-                                </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {%- assign tsf = 'None' -%}
+        {%- unless page.third_party[0][0]=='' %}{% assign tsf = page.third_party[0][0] %}{% endunless -%}
+        {%- assign tse = 'None' -%}
+        {%- unless page.third_party[0][1]=='' %}{% assign tse = page.third_party[0][1] %}{% endunless -%}
+
+        {%- include con-exp.html 
+            wrap_css='col-md-6'
+            title='Total Supportive Activity'
+            first_title='Contributions'
+            first_text=tsf
+            second_title='Expenses'
+            second_text=tse
+        -%}
+
+        {%- assign tof = 'None' -%}
+        {%- unless page.third_party[1][0]=='' %}{% assign tof = page.third_party[1][0] %}{% endunless -%}
+        {%- assign toe = 'None' -%}
+        {%- unless page.third_party[1][1]=='' %}{% assign toe = page.third_party[1][1] %}{% endunless -%}
+
+        {%- include con-exp.html 
+            wrap_css='col-md-6'
+            title='Total Opposing Activity'
+            first_title='Contributions'
+            first_text=tof
+            second_title='Expenses'
+            second_text=toe
+        -%}
     </div><!-- end of Third Party Funds row -->
 
     <!--Third Party Committees-->
