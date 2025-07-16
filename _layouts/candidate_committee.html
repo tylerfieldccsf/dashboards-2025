@@ -158,14 +158,13 @@ electionnav: true
                     <div class="card money-card money-card-1">
                         <div class="card-body">
                             <p class="card-title">Contributions</p>
-                            <p class="card-text"><span class="currency">
-
-                                    {%- if page.third_party[0][0] == '' -%}
-                                    0
-                                    {%- else -%}
-                                    {{page.third_party[0][0]}}
-                                    {%- endif -%}
-                                </span></p>
+                            <p class="card-text">
+                                {%- if page.third_party[0][0] == '' -%}
+                                    <span>None Reported</span>
+                                {%- else -%}
+                                    <span class="currency">{{page.third_party[0][0]}}</span>
+                                {%- endif -%}
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -173,14 +172,13 @@ electionnav: true
                     <div class="card money-card money-card-2">
                         <div class="card-body">
                             <p class="card-title">Expenses</p>
-                            <p class="card-text"><span class="currency">
-
-                                    {%- if page.third_party[0][1] == '' -%}
-                                    0
-                                    {%- else -%}
-                                    {{page.third_party[0][1]}}
-                                    {%- endif -%}
-                                </span></p>
+                            <p class="card-text">
+                                {%- if page.third_party[0][1] == '' -%}
+                                    <span>None Reported</span>
+                                {%- else -%}
+                                    <span class="currency">{{page.third_party[0][1]}}</span>
+                                {%- endif -%}
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -193,13 +191,13 @@ electionnav: true
                     <div class="card money-card money-card-1">
                         <div class="card-body">
                             <p class="card-title">Contributions</p>
-                            <p class="card-text"><span class="currency">
-                                    {%- if page.third_party[1][0] == '' -%}
-                                    0
-                                    {%- else -%}
-                                    {{page.third_party[1][0]}}
-                                    {%- endif -%}
-                                </span></p>
+                            <p class="card-text">
+                                {%- if page.third_party[1][0] == '' -%}
+                                    <span>None Reported</span>
+                                {%- else -%}
+                                    <span class="currency">{{page.third_party[1][0]}}</span>
+                                {%- endif -%}
+                                </p>
                         </div>
                     </div>
                 </div>
@@ -207,13 +205,13 @@ electionnav: true
                     <div class="card money-card money-card-2">
                         <div class="card-body">
                             <p class="card-title">Expenses</p>
-                            <p class="card-text"><span class="currency">
-                                    {%- if page.third_party[1][1] == '' -%}
-                                    0
-                                    {%- else -%}
-                                    {{page.third_party[1][1]}}
-                                    {%- endif -%}
-                                </span></p>
+                            <p class="card-text">
+                                {%- if page.third_party[1][1] == '' -%}
+                                    <span>None Reported</span>
+                                {%- else -%}
+                                    <span class="currency">{{page.third_party[1][1]}}</span>
+                                {%- endif -%}
+                                </p>
                         </div>
                     </div>
                 </div>
@@ -223,34 +221,40 @@ electionnav: true
 
     <!--Third Party Committees-->
     <div class="row bg-primary mb-3 py-3">
-        <div class="col-table-12">
-            <h3 id="third-party-committees" class="hover-link">Third Party Committees
-                <a class="icon d-none" href="#third-party-committees"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
-            </h3>
-            <table id="third_party_table" class="table caption-top ie_committee">
-                <thead>
-                    <tr>
-                        <th scope="col" data-priority="1">Committee</th>
-                        <th scope="col" data-priority="10101">Position</th>
-                        <th scope="col">Funds</th>
-                        <th scope="col" data-priority="2">Expenses</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for committee in page.third_party[3] %}
-                    <tr>
-                        <td>
-                            <a href="{{site.baseurl}}/committees/{{page.election}}/CA{{committee[1]}}">
-                                {{ committee[0] }}
-                            </a>
-                        </td>
-                        <td>{{ committee[2] }}</td>
-                        <td>{{ committee[3] }}</td>
-                        <td>{{ committee[4] }}</td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+        <div class="col-12">
+            <div class="col-table-12">
+                <h3 id="third-party-committees" class="hover-link">Third Party Committees
+                    <a class="icon d-none" href="#third-party-committees"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
+                </h3>
+                {% if page.third_party[3] == empty %}
+                <div>No third party comittee activity reported</div>
+                {% else %}
+                <table id="third_party_table" class="table caption-top ie_committee">
+                    <thead>
+                        <tr>
+                            <th scope="col" data-priority="1">Committee</th>
+                            <th scope="col" data-priority="10101">Position</th>
+                            <th scope="col">Funds</th>
+                            <th scope="col" data-priority="2">Expenses</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for committee in page.third_party[3] %}
+                        <tr>
+                            <td>
+                                <a href="{{site.baseurl}}/committees/{{page.election}}/CA{{committee[1]}}">
+                                    {{ committee[0] }}
+                                </a>
+                            </td>
+                            <td>{{ committee[2] }}</td>
+                            <td>{{ committee[3] }}</td>
+                            <td>{{ committee[4] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% endif %}
+            </div>
         </div>
     </div><!--end of Third Party Committees row-->
 

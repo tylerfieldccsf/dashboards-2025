@@ -2,6 +2,19 @@
 layout: default
 electionnav: true
 ---
+{%- assign ie_supporters = false -%}
+{%- assign ie_opposition = false -%}
+
+{%- for candidate in page.ie_candidates -%}
+    {%- for committee in candidate.committees -%}
+        {%- if committee.position == 'SUPPORT' -%}
+            {%- assign ie_supporters = true -%}
+        {%- endif -%}
+        {%- if committee.position == 'OPPOSE' -%}
+            {%- assign ie_opposition = true -%}
+        {%- endif -%}
+    {%- endfor -%}
+{%- endfor -%}
 
 <div class="container-md bg-primary">
     <div class="row text-light py-3">
@@ -88,6 +101,7 @@ electionnav: true
                     <i data-bs-toggle="offcanvas" data-bs-target="#ie-supportTT" class="fs-5 fa-regular fa-circle-info"></i>
                     <a class="icon d-none" href="#ie-support"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
                 </h2>
+                {%- if ie_supporters -%}
                 <table class="table caption-top ie_committee">
                     <thead>
                         <tr>
@@ -98,25 +112,25 @@ electionnav: true
                     </thead>
                     <tbody>
                         {%- for candidate in page.ie_candidates -%}
-                        {%- assign funds = 0 -%}
-                        {%- assign expenses = 0 -%}
-                        {%- for committee in candidate.committees -%}
-                            {%- if committee.position == 'SUPPORT' -%}
-                                {%- assign funds = funds | plus: committee.funds -%}
-                                {%- assign expenses = expenses | plus: committee.expenses -%}
+                            {%- assign funds = 0 -%}
+                            {%- assign expenses = 0 -%}
+                            {%- for committee in candidate.committees -%}
+                                {%- if committee.position == 'SUPPORT' -%}
+                                    {%- assign funds = funds | plus: committee.funds -%}
+                                    {%- assign expenses = expenses | plus: committee.expenses -%}
+                                {%- endif -%}
+                            {%- endfor -%}
+                            {%- if funds > 0 or expenses > 0 -%}
+                                <tr>
+                                    <td>
+                                        <a href="{{site.baseurl}}/committees/{{page.election}}/CA{{candidate.filer_id}}.html">
+                                            {{ candidate.candidate_name }}
+                                        </a>
+                                    </td>
+                                    <td>{{ funds }}</td>
+                                    <td>{{ expenses }}</td>
+                                </tr>
                             {%- endif -%}
-                        {%- endfor -%}
-                        {%- if funds > 0 or expenses > 0 -%}
-                            <tr>
-                                <td>
-                                    <a href="{{site.baseurl}}/committees/{{page.election}}/CA{{candidate.filer_id}}.html">
-                                        {{ candidate.candidate_name }}
-                                    </a>
-                                </td>
-                                <td>{{ funds }}</td>
-                                <td>{{ expenses }}</td>
-                            </tr>
-                        {%- endif -%}
                         {%- endfor -%}
                     </tbody>
                     <tfoot>
@@ -127,6 +141,9 @@ electionnav: true
                         </tr>
                     </tfoot>
                 </table>
+                {%- else -%}
+                <p>No third party supportive activity has been reported.</p>
+                {%- endif -%}
             </div>
         </div>
 
@@ -136,6 +153,7 @@ electionnav: true
                     <i data-bs-toggle="offcanvas" data-bs-target="#ie-opposeTT" class="fs-5 fa-regular fa-circle-info"></i>
                     <a class="icon d-none" href="#ie-oppose"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
                 </h2>
+                {%- if ie_opposition -%}
                 <table class="table caption-top ie_committee">
                     <thead>
                         <tr>
@@ -175,6 +193,9 @@ electionnav: true
                         </tr>
                     </tfoot>
                 </table>
+                {%- else -%}
+                <p>No third party opposition activity has been reported.</p>
+                {%- endif -%}
             </div>
         </div>
     </div>
