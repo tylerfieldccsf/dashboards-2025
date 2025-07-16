@@ -29,6 +29,7 @@ candidates:
   expenses: 385160.83
 ie_candidates:
 - candidate_name: MYRNA MELGAR
+  filer_id: '1461513'
   committees:
   - position: SUPPORT
     filer_id: '842018'
@@ -42,6 +43,7 @@ ie_candidates:
     funds: ''
     expenses: 1809.93
 - candidate_name: MATTHEW BOSCHETTO
+  filer_id: '1461776'
   committees:
   - position: SUPPORT
     filer_id: '1433436'

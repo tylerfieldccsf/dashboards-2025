@@ -35,6 +35,7 @@ candidates:
   expenses: 4336.0
 ie_candidates:
 - candidate_name: MARJAN PHILHOUR
+  filer_id: '1463752'
   committees:
   - position: OPPOSE
     filer_id: '1469854'
@@ -63,6 +64,7 @@ ie_candidates:
     funds: ''
     expenses: 1000.0
 - candidate_name: CONNIE CHAN
+  filer_id: '1458987'
   committees:
   - position: OPPOSE
     filer_id: '1456620'

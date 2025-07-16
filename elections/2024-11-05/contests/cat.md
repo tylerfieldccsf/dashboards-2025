@@ -17,6 +17,7 @@ candidates:
   expenses: 113618.41
 ie_candidates:
 - candidate_name: DAVID CHIU
+  filer_id: '1466331'
   committees:
   - position: SUPPORT
     filer_id: '1433436'

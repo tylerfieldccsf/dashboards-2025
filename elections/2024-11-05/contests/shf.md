@@ -23,6 +23,7 @@ candidates:
   expenses: 13645.0
 ie_candidates:
 - candidate_name: PAUL MIYAMOTO
+  filer_id: '1462151'
   committees:
   - position: SUPPORT
     filer_id: '1433436'

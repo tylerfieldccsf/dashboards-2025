@@ -77,6 +77,7 @@ candidates:
   expenses: 2574480.15
 ie_candidates:
 - candidate_name: LONDON BREED
+  filer_id: '1441599'
   committees:
   - position: OPPOSE
     filer_id: '1474672'
@@ -111,6 +112,7 @@ ie_candidates:
     funds: ''
     expenses: 5809.25
 - candidate_name: DANIEL LURIE AND MARK FARRELL
+  filer_id: ''
   committees:
   - position: OPPOSE
     filer_id: '1476533'
@@ -118,6 +120,7 @@ ie_candidates:
     funds: 250847.2
     expenses: 250013.82
 - candidate_name: DANIEL LURIE
+  filer_id: '1463099'
   committees:
   - position: SUPPORT
     filer_id: '991828'
@@ -135,6 +138,7 @@ ie_candidates:
     funds: 6726796.21
     expenses: 6622051.47
 - candidate_name: AARON PESKIN
+  filer_id: '1468468'
   committees:
   - position: OPPOSE
     filer_id: unknown
@@ -175,6 +179,7 @@ ie_candidates:
     funds: 840700.0
     expenses: 824551.91
 - candidate_name: AHSHA SAFAI
+  filer_id: '1460439'
   committees:
   - position: SUPPORT
     filer_id: '991828'
@@ -182,6 +187,7 @@ ie_candidates:
     funds: ''
     expenses: 2500.0
 - candidate_name: MARK FARRELL
+  filer_id: '1466726'
   committees:
   - position: OPPOSE
     filer_id: '1473487'

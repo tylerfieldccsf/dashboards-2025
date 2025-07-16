@@ -55,6 +55,18 @@ electionnav: true
                         <p data="Dates of filings covered">
                             <em>Data for this committee covers between {{page.dates[0]}} to {{page.dates[1]}}.</em>
                         </p>
+                        {% if page.committee_type == 'candidate ie' %}
+                            {% if page.position == 'SUPPORT' %}
+                                {% assign pos_string = 'in support of' %}
+                            {%- elsif page.position == 'OPPOSE' -%}
+                                {% assign pos_string = 'to oppose' %}
+                            {%- else -%}
+                                {% assign pos_string = 'regarding' %}
+                            {%- endif -%}
+                            <p>
+                                This is a primarily formed committee organized {{pos_string}} {{page.candidate_name}}.
+                            </p>
+                        {%- endif -%}
                     </div>
                 </div>
             </div>

@@ -10,7 +10,7 @@ measures:
 - contest_nid: '214331636'
   contest_name: 'TBD: Measure to Recall BoS D4 Joel Engardio'
   contest_link: measuretbd
-  funds: 829884.5
+  funds: 836884.5
   expenses: 561756.46
 contributors:
 - - Chris Larsen
@@ -21,7 +21,7 @@ contributors:
   - 100000.0
 - - San Francisco Police Officers Association PAC
   - 50000.0
-- - Nicholas Josefowitz
+- - Ron Conway
   - 25000.0
 
 ---
