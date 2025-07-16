@@ -69,7 +69,7 @@ function formatAsCurrency(val) {
     if (parseInt(val) == 0) {
         return ""
     }
-    if (typeof val === 'string' && val.startsWith('$')) {
+    if (isNaN(val)) {
         return val
     }
 
