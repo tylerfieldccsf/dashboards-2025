@@ -56,9 +56,9 @@ url: "https://tylerfieldccsf.github.io" # the base hostname & protocol for your 
 #   - vendor/ruby/
 
 
-collections:
-  committees:
-    output: true
+# collections:
+#   committees:
+#     output: true
 
 defaults:
   - scope:

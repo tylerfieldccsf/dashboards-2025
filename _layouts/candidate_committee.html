@@ -92,7 +92,7 @@ electionnav: true
                             <td>{{ contributor[0] }}</td>
                             <td>
                                 {%- if contributor[2] != "" -%}<a
-                                    href="{{site.baseurl}}/committees/{{page.election}}/CA{{contributor[2]}}.html">{%-
+                                    href="{{site.baseurl}}/elections/{{page.election}}/committees/CA{{contributor[2]}}.html">{%-
                                     endif -%}
                                     {{ contributor[1] }}
                                     {%- if contributor[2] != "" -%}</a>{%- endif -%}
@@ -196,7 +196,7 @@ electionnav: true
                         {% for committee in page.third_party[3] %}
                         <tr>
                             <td>
-                                <a href="{{site.baseurl}}/committees/{{page.election}}/CA{{committee[1]}}">
+                                <a href="{{site.baseurl}}/elections/{{page.election}}/committees/CA{{committee[1]}}">
                                     {{ committee[0] }}
                                 </a>
                             </td>
