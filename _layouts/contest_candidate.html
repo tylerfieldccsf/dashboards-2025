@@ -67,7 +67,7 @@ electionnav: true
                         {% for candidate in page.candidates %}
                         <tr>
                             <td>
-                                <a href="{{site.baseurl}}/committees/{{page.election}}/CA{{candidate.filer_id}}.html">
+                                <a href="{{site.baseurl}}/elections/{{page.election}}/committees/CA{{candidate.filer_id}}.html">
                                     {{ candidate.candidate_name }}
                                 </a>
                             </td>
@@ -123,7 +123,7 @@ electionnav: true
                             {%- if funds > 0 or expenses > 0 -%}
                                 <tr>
                                     <td>
-                                        <a href="{{site.baseurl}}/committees/{{page.election}}/CA{{candidate.filer_id}}.html">
+                                        <a href="{{site.baseurl}}/elections/{{page.election}}/committees/CA{{candidate.filer_id}}.html">
                                             {{ candidate.candidate_name }}
                                         </a>
                                     </td>
@@ -175,7 +175,7 @@ electionnav: true
                         {%- if funds > 0 or expenses > 0 -%}
                             <tr>
                                 <td>
-                                    <a href="{{site.baseurl}}/committees/{{page.election}}/CA{{candidate.filer_id}}.html">
+                                    <a href="{{site.baseurl}}/elections/{{page.election}}/committees/CA{{candidate.filer_id}}.html">
                                         {{ candidate.candidate_name }}
                                     </a>
                                 </td>
@@ -222,12 +222,12 @@ electionnav: true
                             {%- for committee in candidate.committees -%}
                                 <tr>
                                     <td>
-                                        <a href="{{site.baseurl}}/committees/{{page.election}}/CA{{committee.filer_id}}.html">
+                                        <a href="{{site.baseurl}}/elections/{{page.election}}/committees/CA{{committee.filer_id}}.html">
                                             {{- committee.committee_name -}}
                                         </a>
                                     </td>
                                     <td>
-                                        <a href="{{site.baseurl}}/committees/{{page.election}}/CA{{candidate.filer_id}}.html">
+                                        <a href="{{site.baseurl}}/elections/{{page.election}}/committees/CA{{candidate.filer_id}}.html">
                                             {{ candidate.candidate_name }}
                                         </a>
                                     </td>
