@@ -46,7 +46,12 @@ electionnav: true
                                     <div class="card-body">
                                         <p class="card-title">Funds</p>
                                         <p class="card-text">
-                                            <span class="currency">{{ support_funds }}</span>
+                                            {%- if support_funds>0 -%}
+                                                <span class="currency">{{ support_funds }}</span>
+                                            {%- else -%}
+                                                <span>None Reported</span>
+                                            {%- endif -%}
+
                                         </p>
                                     </div>
                                 </div>
@@ -56,7 +61,11 @@ electionnav: true
                                     <div class="card-body">
                                         <p class="card-title">Expenses</p>
                                         <p class="card-text">
-                                            <span class="currency">{{ support_expenses }}</span>
+                                            {%- if support_expenses>0 -%}
+                                                <span class="currency">{{ support_expenses }}</span>
+                                            {%- else -%}
+                                                <span>None Reported</span>
+                                            {%- endif -%}
                                         </p>
                                     </div>
                                 </div>
@@ -71,7 +80,11 @@ electionnav: true
                                     <div class="card-body">
                                         <p class="card-title">Funds</p>
                                         <p class="card-text">
-                                            <span class="currency">{{ oppose_funds }}</span>
+                                            {%- if oppose_funds>0 -%}
+                                                <span class="currency">{{ oppose_funds }}</span>
+                                            {%- else -%}
+                                                <span>None Reported</span>
+                                            {%- endif -%}
                                         </p>
                                     </div>
                                 </div>
@@ -81,7 +94,11 @@ electionnav: true
                                     <div class="card-body">
                                         <p class="card-title">Expenses</p>
                                         <p class="card-text">
-                                            <span class="currency">{{ oppose_expenses }}</span>
+                                            {%- if oppose_expenses>0 -%}
+                                                <span class="currency">{{ oppose_expenses }}</span>
+                                            {%- else -%}
+                                                <span>None Reported</span>
+                                            {%- endif -%}
                                         </p>
                                     </div>
                                 </div>
