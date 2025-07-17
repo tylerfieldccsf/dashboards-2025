@@ -5,13 +5,15 @@
       <a class="icon d-none" href="#fact-{{include.index}}"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
     </h5>
     {%- else -%}
-    <h5 class="card-title hover-link">{{include.title}}</h5>
+    <h5 class="card-title">{{include.title}}</h5>
     {%- endif -%}    
 
     {%- if include.info -%}
-    <h6 class="card-subtitle mb-2 text-muted">{{include.info}}</h6>
+    <div class="card-subtitle mb-2 text-muted">
+      <p class="{{include.info_css}}">{{include.info}}</p>
+    </div>
     {%- endif -%}    
-    <div class="card-text">
+    <div class="card-text factoid-text fw-semibold">
         <p class="{{include.data_css}}">{{include.data}}</p>
     </div>
     {%- if include.link -%}
