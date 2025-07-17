@@ -47,6 +47,7 @@ candidates:
   expenses: 96399.12
 ie_candidates:
 - candidate_name: DANNY SAUTER
+  filer_id: '1463746'
   committees:
   - position: OPPOSE
     filer_id: '991525'
@@ -65,6 +66,7 @@ ie_candidates:
     funds: ''
     expenses: 161877.27
 - candidate_name: SHARON LAI
+  filer_id: '1463350'
   committees:
   - position: SUPPORT
     filer_id: '1448304'
@@ -83,6 +85,7 @@ ie_candidates:
     funds: ''
     expenses: 25000.0
 - candidate_name: MOE JAMIL
+  filer_id: '1462803'
   committees:
   - position: OPPOSE
     filer_id: '1460412'

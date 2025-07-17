@@ -59,6 +59,7 @@ candidates:
   expenses: 56691.0
 ie_candidates:
 - candidate_name: LUIS ZAMORA
+  filer_id: '1468029'
   committees:
   - position: SUPPORT
     filer_id: '1433436'
@@ -71,6 +72,7 @@ ie_candidates:
     funds: ''
     expenses: 1375.65
 - candidate_name: ALIYA CHISTI
+  filer_id: '1468588'
   committees:
   - position: SUPPORT
     filer_id: '1433436'
@@ -78,6 +80,7 @@ ie_candidates:
     funds: ''
     expenses: 14939.81
 - candidate_name: RUTH FERGUSON
+  filer_id: '1469328'
   committees:
   - position: SUPPORT
     filer_id: '1433436'
@@ -85,6 +88,7 @@ ie_candidates:
     funds: ''
     expenses: 14939.81
 - candidate_name: HEATHER MCCARTY
+  filer_id: '1469127'
   committees:
   - position: SUPPORT
     filer_id: '1433436'

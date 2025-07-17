@@ -77,6 +77,7 @@ candidates:
   expenses: 72005.0
 ie_candidates:
 - candidate_name: MATT ALEXANDER
+  filer_id: '1468565'
   committees:
   - position: SUPPORT
     filer_id: '1311218'
@@ -84,6 +85,7 @@ ie_candidates:
     funds: ''
     expenses: 15618.45
 - candidate_name: PARAG GUPTA
+  filer_id: '1469320'
   committees:
   - position: SUPPORT
     filer_id: '1311218'
@@ -101,6 +103,7 @@ ie_candidates:
     funds: ''
     expenses: 3269.62
 - candidate_name: JOHN JERSIN
+  filer_id: '1468546'
   committees:
   - position: SUPPORT
     filer_id: '1311218'
@@ -113,6 +116,7 @@ ie_candidates:
     funds: ''
     expenses: 14939.81
 - candidate_name: JAIME HULING
+  filer_id: '1468481'
   committees:
   - position: SUPPORT
     filer_id: '1311218'
@@ -130,6 +134,7 @@ ie_candidates:
     funds: ''
     expenses: 3269.62
 - candidate_name: SUPRYIA RAY
+  filer_id: '1469269'
   committees:
   - position: SUPPORT
     filer_id: '1433436'

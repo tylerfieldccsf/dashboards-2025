@@ -53,8 +53,33 @@ electionnav: true
                         </div>
                         {%- endif -%}
                         <p data="Dates of filings covered">
-                            <em>Data for this committee covers between {{page.dates[0]}} to {{page.dates[1]}}.</em>
+                            <em>Data on this page is from filings between {{page.dates[0]}} and {{page.dates[1]}}.</em>
                         </p>
+                        {% if page.committee_type == 'candidate ie' %}
+                            {% if page.position == 'SUPPORT' %}
+                                {% assign pos_string = 'in support of' %}
+                            {%- elsif page.position == 'OPPOSE' -%}
+                                {% assign pos_string = 'to oppose' %}
+                            {%- else -%}
+                                {% assign pos_string = 'regarding' %}
+                            {%- endif -%}
+                            <p>
+                                This is a primarily formed committee organized {{pos_string}} {{page.candidate_name}}.
+                            </p>
+                        {%- endif -%}
+
+                        {% if page.committee_type == 'ballot measure' %}
+                            {% if page.position == 'SUPPORT' %}
+                                {% assign pos_string = 'to support' %}
+                            {%- elsif page.position == 'OPPOSE' -%}
+                                {% assign pos_string = 'to oppose' %}
+                            {%- else -%}
+                                {% assign pos_string = 'regarding' %}
+                            {%- endif -%}
+                            <p>
+                                This is a primarily formed committee organized {{pos_string}} Measure {{page.ballot_measure_letter}}: {{page.ballot_measure_name}}.
+                            </p>
+                        {%- endif -%}
                     </div>
                 </div>
             </div>

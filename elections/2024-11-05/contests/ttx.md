@@ -17,6 +17,7 @@ candidates:
   expenses: 17646.31
 ie_candidates:
 - candidate_name: JOSE CISNEROS
+  filer_id: '1464921'
   committees:
   - position: SUPPORT
     filer_id: '1433436'

@@ -53,6 +53,7 @@ candidates:
   expenses: 1763.97
 ie_candidates:
 - candidate_name: ERNEST JONES
+  filer_id: '1460749'
   committees:
   - position: OPPOSE
     filer_id: '1315969'
@@ -71,6 +72,7 @@ ie_candidates:
     funds: ''
     expenses: 1778.05
 - candidate_name: MICHAEL LAI
+  filer_id: '1468472'
   committees:
   - position: OPPOSE
     filer_id: '1469854'
@@ -98,6 +100,7 @@ ie_candidates:
     funds: ''
     expenses: 162152.34
 - candidate_name: CHYANNE CHEN
+  filer_id: '1466924'
   committees:
   - position: OPPOSE
     filer_id: '1315969'

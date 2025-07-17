@@ -61,6 +61,29 @@ function sumAsNum(a, b) {
     return numVal(a) + numVal(b)
 }
 
+function formatAsPercentage(val) {
+    if (val == "") {
+        return ""
+    }
+    if (isNaN(val)) {
+        return val
+    }
+
+    return `${val} %`
+}
+function formatAllPercentageElements(containerId) {
+  const container = containerId
+    ? document.getElementById(containerId)
+    : document;
+
+  if (!container) return;
+
+  container.querySelectorAll('.percentage').forEach(el => {
+    const original = el.textContent;
+    const formatted = formatAsPercentage(original);
+    el.textContent = formatted
+  });
+}
 
 function formatAsCurrency(val) {
     if (val == "") {
@@ -95,4 +118,7 @@ function formatAllCurrencyElements(containerId) {
 window.addEventListener('DOMContentLoaded', () => {
   // Format ALL `.currency` elements 
   formatAllCurrencyElements();
+  
+  // Format ALL `.percentage` elements 
+  formatAllPercentageElements()
 });

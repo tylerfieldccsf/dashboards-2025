@@ -47,6 +47,7 @@ candidates:
   expenses: 117101.0
 ie_candidates:
 - candidate_name: TREVOR CHANDLER
+  filer_id: '1459563'
   committees:
   - position: SUPPORT
     filer_id: '1433436'
@@ -60,6 +61,7 @@ ie_candidates:
     funds: 59100.0
     expenses: 58731.3
 - candidate_name: JACKIE FIELDER
+  filer_id: '1460473'
   committees:
   - position: SUPPORT
     filer_id: '1471862'
@@ -67,6 +69,7 @@ ie_candidates:
     funds: ''
     expenses: 54306.2
 - candidate_name: ROBERTO HERNANDEZ
+  filer_id: '1463378'
   committees:
   - position: SUPPORT
     filer_id: '842018'

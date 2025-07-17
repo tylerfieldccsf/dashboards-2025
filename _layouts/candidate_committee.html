@@ -61,9 +61,8 @@ electionnav: true
                             Secretary of State's office.
                         </div>
                         {%- endif -%}
-                        <p data="Dates of filings covered"><em>Data for this committee covers between {{page.dates[0]}}
-                                to
-                                {{page.dates[1]}}.</em>
+                        <p data="Dates of filings covered">
+                            <em>Data on this page is from electronic filings by this committee made between {{page.dates[0]}} and {{page.dates[1]}}.</em>
                         </p>
                     </div>
                 </div>
@@ -134,7 +133,15 @@ electionnav: true
         <h2>Contributions Overview</h2>
         {% for factoid in page.factoids %}
         <div class="col-md-3">
-            {% include factoid.html title=factoid.title data=factoid.data about=factoid.about data_css='currency' index=forloop.index%}
+            {%- include factoid.html 
+                index=forloop.index 
+                title=factoid.title 
+                about=factoid.about 
+                data=factoid.data 
+                data_css=factoid.data_classes 
+                info=factoid.info 
+                info_css=factoid.info_classes 
+            -%}
         </div>
         {% endfor %}
     </div> <!-- end of bg-light row -->

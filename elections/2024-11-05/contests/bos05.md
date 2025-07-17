@@ -35,6 +35,7 @@ candidates:
   expenses: 267715.05
 ie_candidates:
 - candidate_name: DEAN PRESTON
+  filer_id: '1462498'
   committees:
   - position: OPPOSE
     filer_id: '1456335'
@@ -48,6 +49,7 @@ ie_candidates:
     funds: ''
     expenses: 10306.2
 - candidate_name: BILAL MAHMOOD
+  filer_id: '1466322'
   committees:
   - position: OPPOSE
     filer_id: '1469854'
@@ -66,6 +68,7 @@ ie_candidates:
     funds: ''
     expenses: 14939.79
 - candidate_name: SCOTT JACOBS
+  filer_id: '1469692'
   committees:
   - position: SUPPORT
     filer_id: '1472583'
