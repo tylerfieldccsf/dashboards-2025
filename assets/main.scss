@@ -1,14 +1,15 @@
 ---
 ---
 /* Override theme defaults */
-$font-family-sans-serif: "Roboto Flex", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-serif: "Roboto Slab", Georgia, Cambria, "Times New Roman", Times, serif !default;
-
 .table-text-right {
     text-align: right;
 }
+
+$font-family-sans-serif: "Roboto Flex", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-serif: "Roboto Slab", Georgia, Cambria, "Times New Roman", Times, serif !default;
+
 $primary: #004A80;
-// $secondary: #005A56;
+$secondary: #005A56;
 $dark: #212529;
 $red: #771a1a;
 /* load _sass/bootstrap.scss */
@@ -37,6 +38,37 @@ h6 {
     h5 {
         font-size: 1rem;
     }
+    .cm-contributors.col-table-6 .dt-container, .cm-expenditures.col-table-6 .dt-container {
+        //targets the dt table search box
+        margin-top: -2.5rem;
+    }
+
+}
+@media (max-width: 1199px) {
+    .cm-contributors.col-table-6 .dt-container > div:nth-child(1) > div:nth-child(1),
+    .cm-expenditures.col-table-6 .dt-container > div:nth-child(1) > div:nth-child(1) {
+        //left aligns the search box
+        display: none !important;
+    }
+    .cm-contributors.col-table-6 .dt-container > div:nth-child(1) > div:nth-child(2),
+    .cm-expenditures.col-table-6 .dt-container > div:nth-child(1) > div:nth-child(2) {
+        //left aligns the search box
+        margin: 0 !important;
+        .dt-search {
+            text-align: left;
+        }
+    }
+}
+@media (min-width: 768px) {
+   .light-border-se {
+        border-left: 1px solid $light-border-subtle;
+        border-right: 1px solid $light-border-subtle;
+   }
+}
+.cm-contributors h2, .cm-expenditures h2 {
+    position: relative;
+    z-index: 2;
+    display: inline;
 }
 .bg-red {
     background-color: $red !important;
@@ -101,16 +133,17 @@ table {
     //     font-size: 1rem;
     // }
 }
-.money-card-1 {
-    //background-color: mix(white, $secondary, 50%);
-}
-.money-card-2 {
-    //background-color: mix(white, $red, 50%);
-}
+// .money-card-1 {
+//     background-color: mix(white, $secondary, 50%);
+// }
+// .money-card-2 {
+//     background-color: mix(white, $red, 50%);
+// }
 .contributions-expenses {
-    flex-grow: 1;
-    min-width: 13rem;
-    max-width: 13rem;
+    flex: 1 0 0;
+    // flex-grow: 1;
+    // min-width: 13rem;
+    // max-width: 13rem;
 }
 .factoid-text {
     text-align: center;
@@ -119,4 +152,23 @@ table {
 .hover-link:hover .icon,
 .hover-link:focus-within .icon {
     display: inline-block !important;
+}
+.eth-shadow {
+    position: relative;
+    z-index: 2;
+    box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.3);
+}
+.eth-border-top {
+    border-top: 7px solid #771a1a;
+}
+.eth-border-bottom {
+    border-bottom: 7px solid #771a1a;
+}
+thead th:first-child, tfoot th:first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+thead th:last-child, tfoot th:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
