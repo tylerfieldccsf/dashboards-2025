@@ -54,7 +54,7 @@ electionnav: true
                     {%- if support_expenses>0 %}{% assign tse = support_expenses %}{% endif -%}
 
                     {% if supporters == true %}
-                        {%- include con-exp.html 
+                        {%- include cards-two.html 
                             wrap_css='row my-3'
                             title='Totals Supporting this Measure'
                             first_title='Funds'
@@ -70,7 +70,7 @@ electionnav: true
                     {%- if oppose_expenses>0 %}{% assign toe = oppose_expenses %}{% endif -%}
 
                     {% if supporters == true %}
-                        {%- include con-exp.html 
+                        {%- include cards-two.html 
                             wrap_css='row my-3'
                             title='Totals Opposing this Measure'
                             first_title='Funds'
@@ -86,7 +86,7 @@ electionnav: true
                     {%- if multi_expenses>0 %}{% assign tme = multi_expenses %}{% endif -%}
 
                     {% if multiposition == true %}
-                        {%- include con-exp.html 
+                        {%- include cards-two.html 
                             wrap_css='row my-3'
                             title='Totals Supporting/Opposing these Measures'
                             first_title='Funds'
