@@ -1,0 +1,47 @@
+<div class="offcanvas offcanvas-start" tabindex="-1" id="disclosure-statementsTT" aria-labelledby="disclosure-statementsTTLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="disclosure-statementsTTLabel">Disclosure Statements</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div>
+            <p>Only the "Latest" versions of filings are used to compute the values on this site. To see original filings, please visit the Ethics Commission's website</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at dolor a nisi accumsan egestas. Suspendisse facilisis risus a felis tincidunt, sit amet sollicitudin lectus porta. Integer porta faucibus est et gravida.</p>
+        </div>
+        <table id="filings_table" class="table caption-top dtify">
+            <thead>
+                <tr>
+                    <th scope="col">Filing Date</th>
+                    <th scope="col">Form</th>
+                    <th scope="col">Filing Period</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for filing in include.filings %}
+                <tr>
+                    <td>{{ filing.filing_datetime }}</td>
+                    <td>
+                        <a href="https://netfile.com/Connect2/api/public/image/{{ filing.filing_id }}">
+                            {%- if filing.form_name=='FPPC497' -%}
+                            FPPC Form 497 - 24-hour Contribution Report
+                            {%- elsif filing.form_name=='FPPC460' -%}
+                            FPPC Form 460 - Committee Campaign Statement
+                            {%- elsif filing.form_name=='FPPC496' -%}
+                            FPPC Form 496 - 24-hour Independent Expenditure Report
+                            {%- else -%}
+                            {{filing.form_name}}
+                            {%- endif %}
+                            ({{filing.filing_activity_type}})
+                        </a>
+                    </td>
+                    <td>
+                        {%- if filing.form_name=='FPPC460' -%}
+                            <span class="text-nowrap">{{ filing.filing_startdate }}</span> - <span class="text-nowrap">{{ filing.filing_enddate }}</span>
+                        {%- endif -%}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
