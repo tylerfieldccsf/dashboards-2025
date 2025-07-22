@@ -29,8 +29,6 @@ electionnav: true
                         {%- if page.pubfi.participant == 'True' -%}
                         <dt class="col-sm-4">Publicly Financed</dt>
                         <dd class="col-sm-8">Yes</dd>
-                        <dt class="col-sm-4">Public Funds Received</dt>
-                        <dd class="col-sm-8 currency">{{page.pubfi.total}}</dd>
                         {%- else -%}
                         <dt class="col-sm-4">Publicly Financed</dt>
                         <dd class="col-sm-8">No</dd>
@@ -40,14 +38,25 @@ electionnav: true
                     </dl>
                     {%- capture v1 %}{{page.totals[0]}}{% endcapture -%}
                     {%- capture v2 %}{{page.totals[1]}}{% endcapture -%}
-                    {%- include con-exp.html
-                        wrap_css='row'
-                        first_title='Total Contributions'
-                        first_text=v1
-                        second_title='Total Expenses'
-                        second_text=v2
-                    -%}
-        
+                    {%- if page.pubfi.participant == 'True' -%}
+                        {%- include cards-three.html
+                            first_title='Total Contributions'
+                            first_text=v1
+                            second_title='Total Expenses'
+                            second_text=v2
+                            third_title='Public Funds Received'
+                            third_text=page.pubfi.total
+                        -%}
+                    {%- else -%}
+                        {%- include cards-two.html
+                            wrap_css=d-flex
+                            first_title='Total Contributions'
+                            first_text=v1
+                            second_title='Total Expenses'
+                            second_text=v2
+                        -%}
+                    {%- endif -%}
+
                     <div data="Committee information">
                         <div>
                             {%- if page.jurisdiction == "sf" -%}
@@ -159,33 +168,32 @@ electionnav: true
         <h2 id="third-party-totals" class="hover-link mb-0">Third Party Funds Supporting & Opposing {{page.candidate_name}}
             <a class="icon d-none link-light" href="#third-party-totals"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
         </h2>
-        {%- assign tsf = 'None' -%}
-        {%- unless page.third_party[0][0]=='' %}{% assign tsf = page.third_party[0][0] %}{% endunless -%}
-        {%- assign tse = 'None' -%}
-        {%- unless page.third_party[0][1]=='' %}{% assign tse = page.third_party[0][1] %}{% endunless -%}
-
-        {%- include con-exp.html 
-            wrap_css='col-md-6'
-            title='Total Supportive Activity'
-            first_title='Contributions'
-            first_text=tsf
-            second_title='Expenses'
-            second_text=tse
-        -%}
-
-        {%- assign tof = 'None' -%}
-        {%- unless page.third_party[1][0]=='' %}{% assign tof = page.third_party[1][0] %}{% endunless -%}
-        {%- assign toe = 'None' -%}
-        {%- unless page.third_party[1][1]=='' %}{% assign toe = page.third_party[1][1] %}{% endunless -%}
-
-        {%- include con-exp.html 
-            wrap_css='col-md-6'
-            title='Total Opposing Activity'
-            first_title='Contributions'
-            first_text=tof
-            second_title='Expenses'
-            second_text=toe
-        -%}
+        <div class="col-12 col-md-6">
+            {%- assign tsf = 'None' -%}
+            {%- unless page.third_party[0][0]=='' %}{% assign tsf = page.third_party[0][0] %}{% endunless -%}
+            {%- assign tse = 'None' -%}
+            {%- unless page.third_party[0][1]=='' %}{% assign tse = page.third_party[0][1] %}{% endunless -%}
+            {%- include cards-two.html
+                title='Total Supportive Activity'
+                first_title='Contributions'
+                first_text=tsf
+                second_title='Expenses'
+                second_text=tse
+            -%}
+        </div>
+        <div class="col-12 col-md-6">
+            {%- assign tof = 'None' -%}
+            {%- unless page.third_party[1][0]=='' %}{% assign tof = page.third_party[1][0] %}{% endunless -%}
+            {%- assign toe = 'None' -%}
+            {%- unless page.third_party[1][1]=='' %}{% assign toe = page.third_party[1][1] %}{% endunless -%}
+                {%- include cards-two.html
+                title='Total Opposing Activity'
+                first_title='Contributions'
+                first_text=tof
+                second_title='Expenses'
+                second_text=toe
+            -%}
+        </div>
     </div><!-- end of Third Party Funds row -->
 
     <!--Third Party Committees-->

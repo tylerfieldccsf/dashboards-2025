@@ -1,0 +1,13 @@
+<div class="contributions-expenses {{include.card_col}}">
+    <div class="card money-card {{include.card_class}}">
+        <div class="card-body">
+            <p class="card-title">
+                {%- if include.card_faicon %}<i class="fa-regular {{include.card_faicon}}"></i> {% endif -%}
+                {{include.title}}
+            </p>
+            <p class="card-text fs-3 fw-semibold">
+                <span class="currency">{{ include.text }}</span>
+            </p>
+        </div>
+    </div>
+</div>
