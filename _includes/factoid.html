@@ -1,11 +1,11 @@
 <div class="card {{include.css}}">
   <div class="card-body">
     {%- if include.index -%}
-    <h5 class="card-title hover-link" id="fact-{{include.index}}">{{include.title}}
+    <h3 class="card-title hover-link fs-5" id="fact-{{include.index}}">{{include.title}}
       <a class="icon d-none" href="#fact-{{include.index}}"><i class="fa-regular fa-link" aria-hidden="true"></i></a>
-    </h5>
+    </h3>
     {%- else -%}
-    <h5 class="card-title">{{include.title}}</h5>
+    <h3 class="card-title fs-5">{{include.title}}</h3>
     {%- endif -%}    
 
     {%- if include.info -%}
