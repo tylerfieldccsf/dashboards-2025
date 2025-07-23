@@ -4,7 +4,7 @@ filer_nid: '204547209'
 filer_id: unknown
 filer_name: Benjamin Spero
 jurisdiction: ''
-committee_type: inferred
+committee_type: general
 election: '2024-11-05'
 dates:
 - '2024-09-06'
@@ -26,6 +26,10 @@ filings:
   filing_enddate: ''
   filing_activity_type: Amendment
 factoids: ''
+F497P2:
+- name: YES ON K, OCEAN BEACH FOR ALL SPONSORED BY COMMUNITY NONPROFITS
+  total: 49900.0
+  tx_cmteid: '1471154'
 
 ---
 

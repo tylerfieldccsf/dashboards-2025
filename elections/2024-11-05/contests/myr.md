@@ -33,12 +33,6 @@ candidates:
   candidate_name: DANIEL LURIE
   funds: 10478236.68
   expenses: 10306854.33
-- filer_nid: '209435209'
-  filer_id: '1466243'
-  committee_name: DAVID CLEMENTS FOR MAYOR 2024
-  candidate_name: DAVID CLEMENTS
-  funds: 0.0
-  expenses: 0.0
 - filer_nid: '210645093'
   filer_id: '1467170'
   committee_name: ELECT HONEST CHARLEY BODKIN FOR MAYOR 2024
