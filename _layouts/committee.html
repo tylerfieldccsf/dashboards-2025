@@ -2,9 +2,13 @@
 layout: default
 electionnav: true
 ---
-
+{% if page.committee_type == 'general' %}
+    {% assign bgclass = 'quaternary' %}
+{%- else -%}
+    {% assign bgclass = 'primary' %}
+{%- endif -%}
 <div class="container-md light-border-se">
-    <div class="row bg-primary text-light">
+    <div class="row bg-{{bgclass}} text-light">
         <div class="col-12">
             <h1 class="page-heading text-center d-flex flex-column my-3">
                 {% if page.filer_name.size > 30 %}
@@ -13,11 +17,11 @@ electionnav: true
                     <span>{{ page.filer_name }}</span>
                 {% endif %}
             </h1>
-            <div class="bg-gradient-line-primary"></div>
+            <div class="bg-gradient-line-{{bgclass}}"></div>
         </div>
     </div>
     <!-- Summary Info -->
-    <div class="row bg-primary text-light py-3 eth-shadow eth-border-bottom" data="general information">
+    <div class="row bg-{{bgclass}} text-light py-3 eth-shadow eth-border-bottom" data="general information">
         <div class="col-md-6">
             <div class="info-summary mx-3">
                 <h2 id="summary-totals" class="hover-link">Fundraising & Spending Summary
@@ -26,30 +30,36 @@ electionnav: true
                 </h2>
                 <div>
                     {% if page.committee_type == 'candidate ie' %}
-                            {% if page.position == 'SUPPORT' %}
-                                {% assign pos_string = 'in support of' %}
-                            {%- elsif page.position == 'OPPOSE' -%}
-                                {% assign pos_string = 'to oppose' %}
-                            {%- else -%}
-                                {% assign pos_string = 'regarding' %}
-                            {%- endif -%}
-                            <p>
-                                This is an independent expenditure committee organized {{pos_string}} {{page.candidate_name}}.
-                            </p>
+                        {% if page.position == 'SUPPORT' %}
+                            {% assign pos_string = 'in support of' %}
+                        {%- elsif page.position == 'OPPOSE' -%}
+                            {% assign pos_string = 'to oppose' %}
+                        {%- else -%}
+                            {% assign pos_string = 'regarding' %}
                         {%- endif -%}
+                        <p>
+                            This is an independent expenditure committee organized {{pos_string}} {{page.candidate_name}}.
+                        </p>
+                    {%- endif -%}
 
-                        {% if page.committee_type == 'ballot measure' %}
-                            {% if page.position == 'SUPPORT' %}
-                                {% assign pos_string = 'to support' %}
-                            {%- elsif page.position == 'OPPOSE' -%}
-                                {% assign pos_string = 'to oppose' %}
-                            {%- else -%}
-                                {% assign pos_string = 'regarding' %}
-                            {%- endif -%}
-                            <p>
-                                This is a primarily formed committee organized {{pos_string}} Measure {{page.ballot_measure_letter}}: {{page.ballot_measure_name}}.
-                            </p>
+                    {% if page.committee_type == 'ballot measure' %}
+                        {% if page.position == 'SUPPORT' %}
+                            {% assign pos_string = 'to support' %}
+                        {%- elsif page.position == 'OPPOSE' -%}
+                            {% assign pos_string = 'to oppose' %}
+                        {%- else -%}
+                            {% assign pos_string = 'regarding' %}
                         {%- endif -%}
+                        <p>
+                            This is a primarily formed committee organized {{pos_string}} Measure {{page.ballot_measure_letter}}: {{page.ballot_measure_name}}.
+                        </p>
+                    {%- endif -%}
+
+                    {% if page.committee_type == 'general' %}
+                        <p>
+                            This is a general purpose committee, not organized to support or oppose any specific candidate or ballot measure.
+                        </p>
+                    {%- endif -%}
                 </div>
                 <dl class="row">
                     <dt class="col-sm-4">Committee Name</dt>
@@ -96,7 +106,7 @@ electionnav: true
     </div><!-- end Summary Info -->
 
     <!-- Contributors and Expenses -->
-    <div class="row bg-light text-dark py-3 row-gap-3">
+    <div class="row bg-{{bgclass}}-subtle text-dark py-3 row-gap-3">
         <div class="col-md-6">
             <div class="cm-contributors col-table-6">
                 <h2 id="contributors" class="hover-link">Contributors
@@ -153,7 +163,103 @@ electionnav: true
                 </table>
             </div>
         </div>
-    </div><!-- end Contributors and Expenses -->
+    </div><!-- end Contributors and Expenses  -->
+
+    <!-- IEs -->
+    <div class="row bg-{{bgclass}}-subtle text-dark py-3 row-gap-3">
+        {% if page.ie_measures -%}
+        <div class="col-md-6">
+            <div class=" col-table-6">
+                <h2 id="ie-measures" class="hover-link">Independent Expenditures Regarding Ballot Measures
+                    <i data-bs-toggle="offcanvas" data-bs-target="#ie-measuresTT" class="fs-5 fa-regular fa-circle-info"></i>
+                    <a class="icon d-none" href="#ie-measures"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
+                </h2>
+                <table class="table caption-top dtify" id="ie-measures_table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Measure</th>
+                            <th scope="col">Position</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for ie in page.ie_measures %}
+                        <tr>
+                            <td>{{ ie.contest }}</td>
+                            <td>{{ ie.position }}</td>
+                            <td class="currency">{{ ie.total }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {%- endif %}
+
+        {%- if page.ie_candidates -%}
+        <div class="col-md-6">
+            <div class=" col-table-6">
+                <h2 id="ie-candidates" class="hover-link">Independent Expenditures Regarding Candidates
+                    <i data-bs-toggle="offcanvas" data-bs-target="#ie-candidatesTT" class="fs-5 fa-regular fa-circle-info"></i>
+                    <a class="icon d-none" href="#ie-candidates"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
+                </h2>
+                <table class="table caption-top dtify" id="ie-candidates_table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Contest</th>
+                            <th scope="col">Candidate</th>
+                            <th scope="col">Position</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for ie in page.ie_candidates %}
+                        <tr>
+                            <td>{{ ie.contest }}</td>
+                            <td>{{ ie.candidate_name }}</td>
+                            <td>{{ ie.position }}</td>
+                            <td class="currency">{{ ie.total }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {%- endif %}
+        
+        {%- if page.F497P2 -%}
+        <div class="col-md-6">
+            <div class=" col-table-6">
+                <h2 id="f497p2" class="hover-link">Late Period Contributions Made
+                    <i data-bs-toggle="offcanvas" data-bs-target="#f497p2TT" class="fs-5 fa-regular fa-circle-info"></i>
+                    <a class="icon d-none" href="#f497p2"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
+                </h2>
+                <table class="table caption-top" id="f497p2_table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for x in page.F497P2 %}
+                        <tr>
+                            <td>
+                                {%- if x.tx_cmteid -%}
+                                    <a href="{{site.baseurl}}/elections/{{page.election}}/committees/CA{{x.tx_cmteid}}.html">{{ x.name }}</a>
+                                {%- else -%}
+                                    {{ x.name }}
+                                {%- endif -%}
+                            </td>
+                            <td class="currency">{{ x.total }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {%- endif %}
+    </div>
 </div>
 
 {%- include disclosure-statements.html
@@ -196,5 +302,16 @@ electionnav: true
     new DataTable('table.dtify', {
         pageLength: 10,
         lengthChange: false,
+        columnDefs: [
+            {
+                targets: [-1],
+                render: function (data, type, row, meta) {
+                    if (type === 'display') {
+                        return formatAsCurrency(data);
+                    }
+                    return data
+                }
+            }
+        ],
     });
 </script>
