@@ -24,6 +24,33 @@ electionnav: true
                     <i data-bs-toggle="offcanvas" data-bs-target="#summary-totalsTT" class="fs-5 fa-regular fa-circle-info"></i>
                     <a class="icon d-none link-light" href="#summary-totals"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
                 </h2>
+                <div>
+                    {% if page.committee_type == 'candidate ie' %}
+                            {% if page.position == 'SUPPORT' %}
+                                {% assign pos_string = 'in support of' %}
+                            {%- elsif page.position == 'OPPOSE' -%}
+                                {% assign pos_string = 'to oppose' %}
+                            {%- else -%}
+                                {% assign pos_string = 'regarding' %}
+                            {%- endif -%}
+                            <p>
+                                This is an independent expenditure committee organized {{pos_string}} {{page.candidate_name}}.
+                            </p>
+                        {%- endif -%}
+
+                        {% if page.committee_type == 'ballot measure' %}
+                            {% if page.position == 'SUPPORT' %}
+                                {% assign pos_string = 'to support' %}
+                            {%- elsif page.position == 'OPPOSE' -%}
+                                {% assign pos_string = 'to oppose' %}
+                            {%- else -%}
+                                {% assign pos_string = 'regarding' %}
+                            {%- endif -%}
+                            <p>
+                                This is a primarily formed committee organized {{pos_string}} Measure {{page.ballot_measure_letter}}: {{page.ballot_measure_name}}.
+                            </p>
+                        {%- endif -%}
+                </div>
                 <dl class="row">
                     <dt class="col-sm-4">Committee Name</dt>
                     <dd class="col-sm-8">{{page.filer_name}}</dd>
@@ -34,8 +61,7 @@ electionnav: true
                 </dl>
                 {%- capture v1 %}{{page.totals[0]}}{% endcapture -%}
                 {%- capture v2 %}{{page.totals[1]}}{% endcapture -%}
-                {%- include con-exp.html
-                    wrap_css='row'
+                {%- include cards-two.html
                     first_title='Total Contributions'
                     first_text=v1
                     second_title='Total Expenses'
@@ -58,31 +84,6 @@ electionnav: true
                         <p data="Dates of filings covered">
                             <em>Data on this page is from filings between <span class="text-nowrap">{{page.dates[0]}}</span> and <span class="text-nowrap">{{page.dates[1]}}</span>.</em>
                         </p>
-                        {% if page.committee_type == 'candidate ie' %}
-                            {% if page.position == 'SUPPORT' %}
-                                {% assign pos_string = 'in support of' %}
-                            {%- elsif page.position == 'OPPOSE' -%}
-                                {% assign pos_string = 'to oppose' %}
-                            {%- else -%}
-                                {% assign pos_string = 'regarding' %}
-                            {%- endif -%}
-                            <p>
-                                This is a primarily formed committee organized {{pos_string}} {{page.candidate_name}}.
-                            </p>
-                        {%- endif -%}
-
-                        {% if page.committee_type == 'ballot measure' %}
-                            {% if page.position == 'SUPPORT' %}
-                                {% assign pos_string = 'to support' %}
-                            {%- elsif page.position == 'OPPOSE' -%}
-                                {% assign pos_string = 'to oppose' %}
-                            {%- else -%}
-                                {% assign pos_string = 'regarding' %}
-                            {%- endif -%}
-                            <p>
-                                This is a primarily formed committee organized {{pos_string}} Measure {{page.ballot_measure_letter}}: {{page.ballot_measure_name}}.
-                            </p>
-                        {%- endif -%}
                     </div>
                 </div>
             </div>
@@ -155,54 +156,9 @@ electionnav: true
     </div><!-- end Contributors and Expenses -->
 </div>
 
-<!-- Disclosure Statements -->
-<div class="offcanvas offcanvas-start" tabindex="-1" id="disclosure-statementsTT" aria-labelledby="disclosure-statementsTTLabel">
-    <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="disclosure-statementsTTLabel">Disclosure Statements</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-        <div>
-            <p>Only the "Latest" versions of filings are used to compute the values on this site. To see original filings, please visit the Ethics Commission's website</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at dolor a nisi accumsan egestas. Suspendisse facilisis risus a felis tincidunt, sit amet sollicitudin lectus porta. Integer porta faucibus est et gravida.</p>
-        </div>
-        <table id="filings_table" class="table caption-top dtify">
-            <thead>
-                <tr>
-                    <th scope="col">Filing Date</th>
-                    <th scope="col">Form</th>
-                    <th scope="col">Filing Period</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for filing in page.filings %}
-                <tr>
-                    <td>{{ filing.filing_datetime }}</td>
-                    <td>
-                        <a href="https://netfile.com/Connect2/api/public/image/{{ filing.filing_id }}">
-                            {%- if filing.form_name=='FPPC497' -%}
-                            FPPC Form 497 - 24-hour Contribution Report
-                            {%- elsif filing.form_name=='FPPC460' -%}
-                            FPPC Form 460 - Committee Campaign Statement
-                            {%- elsif filing.form_name=='FPPC496' -%}
-                            FPPC Form 496 - 24-hour Independent Expenditure Report
-                            {%- else -%}
-                            {{filing.form_name}}
-                            {%- endif %}
-                            ({{filing.filing_activity_type}})
-                        </a>
-                    </td>
-                    <td>
-                        {%- if filing.form_name=='FPPC460' -%}
-                            <span class="text-nowrap">{{ filing.filing_startdate }}</span> - <span class="text-nowrap">{{ filing.filing_enddate }}</span>
-                        {%- endif -%}
-                    </td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-</div><!-- end Disclosure Statements -->
+{%- include disclosure-statements.html
+    filings=page.filings
+-%}
 
 <script>
     new DataTable('#contributors_table', {
