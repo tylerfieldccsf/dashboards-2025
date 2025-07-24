@@ -234,7 +234,7 @@ electionnav: true
                     <i data-bs-toggle="offcanvas" data-bs-target="#f497p2TT" class="fs-5 fa-regular fa-circle-info"></i>
                     <a class="icon d-none" href="#f497p2"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
                 </h2>
-                <table class="table caption-top" id="f497p2_table">
+                <table class="table caption-top dtify" id="f497p2_table">
                     <thead>
                         <tr>
                             <th scope="col">Name</th>
@@ -259,7 +259,42 @@ electionnav: true
             </div>
         </div>
         {%- endif %}
-    </div>
+
+        {%- if page.ies -%}
+        <div class="col-md-6">
+            <div class=" col-table-6">
+                <h2 id="schedule-d" class="hover-link">Expenditures Supporting/Opposing Other Candidates, Measures and Committees
+                    <i data-bs-toggle="offcanvas" data-bs-target="#schedule-dTT" class="fs-5 fa-regular fa-circle-info"></i>
+                    <a class="icon d-none" href="#schedule-d"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
+                </h2>
+                <table class="table caption-top dtify" id="schedule-d_table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Position</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for x in page.ies %}
+                        <tr>
+                            <td>
+                                {%- if x.tx_cmteid -%}
+                                    <a href="{{site.baseurl}}/elections/{{page.election}}/committees/CA{{x.tx_cmteid}}.html">{{ x.name }}</a>
+                                {%- else -%}
+                                    {{ x.name }}
+                                {%- endif -%}
+                            </td>
+                            <td>{{ x.position }}</td>
+                            <td class="currency">{{ x.total }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {%- endif %}
+    </div><!-- end IEs -->
 </div>
 
 {%- include disclosure-statements.html
