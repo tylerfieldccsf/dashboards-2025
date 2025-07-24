@@ -164,6 +164,24 @@ electionnav: true
             </div>
         </div>
     </div><!-- end Contributors and Expenses  -->
+    
+    <!-- Factoids -->
+    <div class="row bg-{{bgclass}}-subtle text-dark py-3 row-gap-3">
+        <h2 class="mb-0">Contributions Overview</h2>
+        {% for factoid in page.factoids %}
+        <div class="col-md-3">
+            {%- include factoid.html 
+                index=forloop.index 
+                title=factoid.title 
+                about=factoid.about 
+                data=factoid.data 
+                data_css=factoid.data_classes 
+                info=factoid.info 
+                info_css=factoid.info_classes 
+            -%}
+        </div>
+        {% endfor %}
+    </div> <!-- end of Factoids row -->
 
     <!-- IEs -->
     <div class="row bg-{{bgclass}}-subtle text-dark py-3 row-gap-3">
@@ -234,10 +252,11 @@ electionnav: true
                     <i data-bs-toggle="offcanvas" data-bs-target="#f497p2TT" class="fs-5 fa-regular fa-circle-info"></i>
                     <a class="icon d-none" href="#f497p2"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
                 </h2>
-                <table class="table caption-top dtify" id="f497p2_table">
+                <table class="table caption-top dt_f497p2" id="f497p2_table">
                     <thead>
                         <tr>
                             <th scope="col">Name</th>
+                            <!-- <th scope="col">Position</th> -->
                             <th scope="col">Total</th>
                         </tr>
                     </thead>
@@ -251,6 +270,7 @@ electionnav: true
                                     {{ x.name }}
                                 {%- endif -%}
                             </td>
+                            <!-- <td>{{ ie.position }}</td> -->
                             <td class="currency">{{ x.total }}</td>
                         </tr>
                         {% endfor %}
@@ -334,7 +354,30 @@ electionnav: true
             }
         ],
     });
+
+    new DataTable('#filings_table', {
+        pageLength: 5,
+        lengthChange: false,
+        searching: false
+    });
+    
     new DataTable('table.dtify', {
+        pageLength: 10,
+        lengthChange: false,
+        order: [[2, 'desc']],
+        columnDefs: [
+            {
+                targets: [-1],
+                render: function (data, type, row, meta) {
+                    if (type === 'display') {
+                        return formatAsCurrency(data);
+                    }
+                    return data
+                }
+            }
+        ],
+    });
+    new DataTable('table.dt_f497p2', {
         pageLength: 10,
         lengthChange: false,
         columnDefs: [
