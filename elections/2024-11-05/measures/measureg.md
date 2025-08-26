@@ -17,6 +17,15 @@ committees:
   committee_name: Coalition to Grow San Francisco - Grow SF PAC
   funds: ''
   expenses: 14939.79
+  ies: 14939.79
+- position: OPPOSE
+  filer_nid: '205575753'
+  filer_id: '1456335'
+  committee_name: COALITION TO GROW SAN FRANCISCO - GROW SF PAC OPPOSING PRESTON FOR
+    SUPERVISOR 2024
+  funds: ''
+  expenses: 1269.47
+  ies: 1269.47
 - position: SUPPORT
   filer_nid: '161155640'
   filer_id: '1388285'
@@ -24,12 +33,15 @@ committees:
     Development Corp. and its affiliated entity Yerba Buena Neighborhood Consortium
   funds: ''
   expenses: 2500.0
+  ies: 2500.0
 - position: SUPPORT
   filer_nid: '211945518'
   filer_id: '1473454'
   committee_name: YES ON G, THE AFFORDABLE HOUSING OPPORTUNITY FUND
   funds: 256728.93
   expenses: 239116.78
+  ies: ''
+multi_committees: []
 contributors:
 - - Chinatown Community Development Center
   - 56592.93

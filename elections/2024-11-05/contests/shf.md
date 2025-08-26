@@ -13,8 +13,8 @@ candidates:
   filer_id: '1462151'
   committee_name: MIYAMOTO FOR SHERIFF 2024
   candidate_name: PAUL MIYAMOTO
-  funds: 105398.21
-  expenses: 86046.82
+  funds: 103978.21
+  expenses: 101544.92
 - filer_nid: '211629442'
   filer_id: '1470059'
   committee_name: MICHAEL JUAN FOR SHERIFF 2024
@@ -26,10 +26,11 @@ ie_candidates:
   filer_id: '1462151'
   committees:
   - position: SUPPORT
-    filer_id: '1433436'
-    committee_name: Coalition to Grow San Francisco - Grow SF PAC
+    filer_id: '1456335'
+    committee_name: COALITION TO GROW SAN FRANCISCO - GROW SF PAC OPPOSING PRESTON
+      FOR SUPERVISOR 2024
     funds: ''
-    expenses: 14939.79
+    expenses: 860.78
 contributors:
 - - Scott Bergstresser
   - 750.0

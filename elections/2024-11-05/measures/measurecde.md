@@ -14,8 +14,10 @@ committees:
   filer_id: '1472007'
   committee_name: REAL REFORM, YES ON C, NO ON D, YES ON E, A COALITION OF SMALL BUSINESSES,
     NEIGHBORS AND AARON PESKIN
-  funds: 116881.86
-  expenses: 83199.72
+  funds: 136381.86
+  expenses: 93875.73
+  ies: ''
+multi_committees: []
 contributors:
 - - Service Employees International Union Local 1021 Candidate PAC
   - 25000.0
@@ -23,21 +25,21 @@ contributors:
     Organizations
   - 15000.0
 - - Aaron Peskin
-  - 11250.0
+  - 12750.0
 - - Greenberg Traurig, Llp
   - 7500.0
 - - Scott Michael Feeney
   - 6000.0
+- - Teamsters Local Union 350 PAC
+  - 5500.0
 - - Joseph H Carouba
+  - 5000.0
+- - New Deal Advisors(chris Gruwell)
   - 5000.0
 - - Park Sfo, Llc(robert Simms)
   - 5000.0
 - - Steven L Swig
   - 5000.0
-- - Richard L. Swig Jr.
-  - 5000.0
-- - Coalition on Homelessness
-  - 4800.0
 
 ---
 

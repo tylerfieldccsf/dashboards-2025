@@ -13,14 +13,14 @@ candidates:
   filer_id: '1459563'
   committee_name: TREVOR CHANDLER FOR SUPERVISOR 2024
   candidate_name: TREVOR CHANDLER
-  funds: 426200.62
-  expenses: 388194.88
+  funds: 425700.62
+  expenses: 392944.28
 - filer_nid: '208038450'
   filer_id: '1460473'
   committee_name: JACKIE FIELDER FOR SUPERVISOR 2024
   candidate_name: JACKIE FIELDER
-  funds: 474607.01
-  expenses: 467339.56
+  funds: 484124.96
+  expenses: 472623.24
 - filer_nid: '208201996'
   filer_id: '1462017'
   committee_name: JULIAN BERMUDEZ FOR DISTRICT 9 SUPERVISOR 2024
@@ -32,13 +32,13 @@ candidates:
   committee_name: ROBERTO HERNANDEZ FOR SUPERVISOR 2024
   candidate_name: ROBERTO HERNANDEZ
   funds: 390532.9
-  expenses: 369327.47
+  expenses: 393671.12
 - filer_nid: '208650195'
   filer_id: '1465078'
   committee_name: JAIME GUTIERREZ FOR SUPERVISOR 2024
   candidate_name: JAIME GUTIERREZ
   funds: 40898.38
-  expenses: 15975.69
+  expenses: 16672.55
 - filer_nid: '208763299'
   filer_id: '1463986'
   committee_name: STEPHEN TORRES FOR SUPERVISOR 2024
@@ -50,32 +50,29 @@ ie_candidates:
   filer_id: '1459563'
   committees:
   - position: SUPPORT
-    filer_id: '1433436'
-    committee_name: Coalition to Grow San Francisco - Grow SF PAC
-    funds: ''
-    expenses: 55031.3
-  - position: SUPPORT
     filer_id: '1469825'
     committee_name: FAMILIES FOR A VIBRANT SAN FRANCISCO SUPPORTING TREVOR CHANDLER
       FOR SUPERVISOR, SPONSORED BY EFFECTIVE GOVERNMENT
-    funds: 59100.0
-    expenses: 58731.3
+    funds: 59911.0
+    expenses: 2750.0
 - candidate_name: JACKIE FIELDER
   filer_id: '1460473'
   committees:
-  - position: SUPPORT
-    filer_id: '1471862'
-    committee_name: Building a Working SF Sponsored by Labor Organizations
-    funds: ''
-    expenses: 54306.2
+  - position: OPPOSE
+    filer_id: '1469825'
+    committee_name: FAMILIES FOR A VIBRANT SAN FRANCISCO SUPPORTING TREVOR CHANDLER
+      FOR SUPERVISOR, SPONSORED BY EFFECTIVE GOVERNMENT
+    funds: 0.0
+    expenses: 38500.0
 - candidate_name: ROBERTO HERNANDEZ
   filer_id: '1463378'
   committees:
   - position: SUPPORT
-    filer_id: '842018'
-    committee_name: Alice B. Toklas Lesbian and Gay Democratic Club PAC
-    funds: ''
-    expenses: 1983.24
+    filer_id: '1469825'
+    committee_name: FAMILIES FOR A VIBRANT SAN FRANCISCO SUPPORTING TREVOR CHANDLER
+      FOR SUPERVISOR, SPONSORED BY EFFECTIVE GOVERNMENT
+    funds: 0.0
+    expenses: 2750.0
 contributors:
 - - Chris Larsen
   - 50000.0

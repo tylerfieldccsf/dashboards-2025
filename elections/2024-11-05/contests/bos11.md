@@ -14,37 +14,37 @@ candidates:
   committee_name: ERNEST 'EJ' JONES FOR SUPERVISOR 2024
   candidate_name: ERNEST JONES
   funds: 378477.31
-  expenses: 366615.91
+  expenses: 378748.56
 - filer_nid: '208230208'
   filer_id: '1461970'
   committee_name: ROGER MARENCO FOR DISTRICT 11 SUPERVISOR 2024
   candidate_name: ROGER MARENCO
   funds: 0.0
   expenses: 0.0
-- filer_nid: '211450299'
-  filer_id: '1468472'
-  committee_name: MICHAEL LAI FOR SUPERVISOR 2024
-  candidate_name: MICHAEL LAI
-  funds: 510310.69
-  expenses: 523746.17
 - filer_nid: '209864633'
   filer_id: '1466510'
   committee_name: ADLAH CHISTI FOR SUPERVISOR 2024
   candidate_name: ADLAH CHISTI
-  funds: 108666.0
-  expenses: 106020.07
+  funds: 109066.0
+  expenses: 109315.73
 - filer_nid: '210823617'
   filer_id: '1466924'
   committee_name: CHYANNE CHEN FOR SUPERVISOR 2024
   candidate_name: CHYANNE CHEN
   funds: 399260.73
-  expenses: 353238.62
+  expenses: 368489.75
+- filer_nid: '211450299'
+  filer_id: '1468472'
+  committee_name: MICHAEL LAI FOR SUPERVISOR 2024
+  candidate_name: MICHAEL LAI
+  funds: 510310.69
+  expenses: 527327.41
 - filer_nid: '211515006'
   filer_id: '1469206'
   committee_name: OSCAR FLORES FOR SUPERVISOR 2024
   candidate_name: OSCAR FLORES
   funds: 3995.0
-  expenses: 3060.09
+  expenses: 3110.09
 - filer_nid: '211518726'
   filer_id: '1472252'
   committee_name: MORALES FOR SUPERVISOR 2024
@@ -55,90 +55,21 @@ ie_candidates:
 - candidate_name: ERNEST JONES
   filer_id: '1460749'
   committees:
-  - position: OPPOSE
-    filer_id: '1315969'
-    committee_name: San Francisco Police Officers Association PAC
-    funds: ''
-    expenses: 1148.75
   - position: SUPPORT
-    filer_id: '1448304'
-    committee_name: Tenants and Families United PAC sponsored by Center for Empowered
-      Politics
+    filer_id: '1474947'
+    committee_name: SAN FRANCISCO WORKING FAMILIES VOTER GUIDE SUPPORTING AARON PESKIN
+      FOR MAYOR, SPONSORED BY HEALTHCARE, HOSPITALITY, AND SERVICE WORKERS UNIONS
     funds: ''
-    expenses: 19942.55
-  - position: SUPPORT
-    filer_id: '1438874'
-    committee_name: California Working Families Party
-    funds: ''
-    expenses: 1778.05
-- candidate_name: MICHAEL LAI
-  filer_id: '1468472'
-  committees:
-  - position: OPPOSE
-    filer_id: '1469854'
-    committee_name: Fix our City SF, Sponsored by Labor Organizations
-    funds: ''
-    expenses: 220402.38
-  - position: OPPOSE
-    filer_id: '1471862'
-    committee_name: Building a Working SF Sponsored by Labor Organizations
-    funds: ''
-    expenses: 13455.49
-  - position: SUPPORT
-    filer_id: '1315969'
-    committee_name: San Francisco Police Officers Association PAC
-    funds: ''
-    expenses: 6892.51
-  - position: SUPPORT
-    filer_id: '1433436'
-    committee_name: Coalition to Grow San Francisco - Grow SF PAC
-    funds: ''
-    expenses: 110717.6
-  - position: SUPPORT
-    filer_id: '1460412'
-    committee_name: Families for a Vibrant SF Sponsored by Abundance Network
-    funds: ''
-    expenses: 162152.34
+    expenses: 6201.24
 - candidate_name: CHYANNE CHEN
   filer_id: '1466924'
   committees:
-  - position: OPPOSE
-    filer_id: '1315969'
-    committee_name: San Francisco Police Officers Association PAC
-    funds: ''
-    expenses: 1148.75
   - position: SUPPORT
-    filer_id: '1448304'
-    committee_name: Tenants and Families United PAC sponsored by Center for Empowered
-      Politics
+    filer_id: '1474947'
+    committee_name: SAN FRANCISCO WORKING FAMILIES VOTER GUIDE SUPPORTING AARON PESKIN
+      FOR MAYOR, SPONSORED BY HEALTHCARE, HOSPITALITY, AND SERVICE WORKERS UNIONS
     funds: ''
-    expenses: 38275.57
-  - position: SUPPORT
-    filer_id: '1438874'
-    committee_name: California Working Families Party
-    funds: ''
-    expenses: 1778.05
-  - position: SUPPORT
-    filer_id: '1469854'
-    committee_name: Fix our City SF, Sponsored by Labor Organizations
-    funds: ''
-    expenses: 60000.0
-  - position: SUPPORT
-    filer_id: '1471862'
-    committee_name: Building a Working SF Sponsored by Labor Organizations
-    funds: ''
-    expenses: 296872.19
-  - position: SUPPORT
-    filer_id: '1448304'
-    committee_name: Tenants and Families United sponsored by Center for Empowered
-      Politics
-    funds: ''
-    expenses: 2559.18
-  - position: SUPPORT
-    filer_id: '1469330'
-    committee_name: Asian Americans for Representation
-    funds: ''
-    expenses: 45091.46
+    expenses: 6201.24
 contributors:
 - - Sophie Bosmeny
   - 1000.0

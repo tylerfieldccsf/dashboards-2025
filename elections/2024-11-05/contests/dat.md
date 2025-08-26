@@ -13,29 +13,30 @@ candidates:
   filer_id: '1460998'
   committee_name: BROOKE JENKINS FOR DISTRICT ATTORNEY 2024
   candidate_name: BROOKE JENKINS
-  funds: 434449.23
-  expenses: 492400.71
+  funds: 434634.23
+  expenses: 520319.97
 - filer_nid: '209859878'
   filer_id: '1466416'
   committee_name: RYAN KHOJASTEH FOR SF DISTRICT ATTORNEY 2024
   candidate_name: RYAN KHOJASTEH
   funds: 120623.85
-  expenses: 121389.2
+  expenses: 121461.67
 ie_candidates:
 - candidate_name: BROOKE JENKINS
   filer_id: '1460998'
   committees:
   - position: SUPPORT
-    filer_id: '1433436'
-    committee_name: Coalition to Grow San Francisco - Grow SF PAC
-    funds: ''
-    expenses: 14939.79
+    filer_id: '1456335'
+    committee_name: COALITION TO GROW SAN FRANCISCO - GROW SF PAC OPPOSING PRESTON
+      FOR SUPERVISOR 2024
+    funds: 0.0
+    expenses: 860.78
   - position: SUPPORT
     filer_id: '1475317'
     committee_name: SAN FRANCISCANS IN SUPPORT OF BROOKE JENKINS FOR DISTRICT ATTORNEY
       2024
     funds: 120000.0
-    expenses: 120000.0
+    expenses: 97382.82
 contributors:
 - - Ronald Conway
   - 100500.0

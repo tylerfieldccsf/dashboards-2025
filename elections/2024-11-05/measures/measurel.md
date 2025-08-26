@@ -17,18 +17,45 @@ committees:
   committee_name: Coalition to Grow San Francisco - Grow SF PAC
   funds: ''
   expenses: 19439.78
+  ies: 19439.78
+- position: OPPOSE
+  filer_nid: '205575753'
+  filer_id: '1456335'
+  committee_name: COALITION TO GROW SAN FRANCISCO - GROW SF PAC OPPOSING PRESTON FOR
+    SUPERVISOR 2024
+  funds: ''
+  expenses: 1269.47
+  ies: 1269.47
 - position: OPPOSE
   filer_nid: '211941574'
   filer_id: '1473061'
   committee_name: SF FOR MUNI ACCOUNTABILITY AND RELIABLE SERVICE - NO ON PROP L
   funds: 971014.55
   expenses: 669142.55
+  ies: ''
+- position: SUPPORT
+  filer_nid: '209932989'
+  filer_id: '1466523'
+  committee_name: THRIVING COMMUNITIES FOR ALL SAN FRANCISCO SUPPORTING PROP E, SPONSORED
+    BY CENTER FOR EMPOWERED POLITICS
+  funds: ''
+  expenses: 400.59
+  ies: 400.59
 - position: SUPPORT
   filer_nid: '211486142'
   filer_id: '1468797'
   committee_name: YES ON L, FUND THE BUS
   funds: 421695.14
   expenses: 416984.86
+  ies: ''
+- position: SUPPORT
+  filer_nid: '211776936'
+  filer_id: '1471154'
+  committee_name: YES ON K, OCEAN BEACH PARK FOR ALL SPONSORED BY COMMUNITY NONPROFITS
+  funds: ''
+  expenses: 14000.0
+  ies: 14000.0
+multi_committees: []
 contributors:
 - - Uber Innovation Ballot Measure Committee, a Committee for Prop 1
   - 818640.09

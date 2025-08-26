@@ -13,21 +13,24 @@ candidates:
   filer_id: '1466331'
   committee_name: DAVID CHIU FOR CITY ATTORNEY 2024
   candidate_name: DAVID CHIU
-  funds: 219112.84
-  expenses: 113618.41
+  funds: 387261.31
+  expenses: 140952.81
 ie_candidates:
 - candidate_name: DAVID CHIU
   filer_id: '1466331'
   committees:
   - position: SUPPORT
-    filer_id: '1433436'
-    committee_name: Coalition to Grow San Francisco - Grow SF PAC
+    filer_id: '1456335'
+    committee_name: COALITION TO GROW SAN FRANCISCO - GROW SF PAC OPPOSING PRESTON
+      FOR SUPERVISOR 2024
     funds: ''
-    expenses: 14939.79
+    expenses: 439.74
 contributors:
 - - Clement Kong
   - 1000.0
 - - Betty Louie
+  - 1000.0
+- - Kari Rocca
   - 1000.0
 - - Laurie Mims
   - 740.0
@@ -37,13 +40,11 @@ contributors:
   - 650.0
 - - Stanley Landfair
   - 503.45
+- - Pankaj Agarwal
+  - 500.0
 - - Simona Agnolucci
   - 500.0
 - - Ravin Agrawal
-  - 500.0
-- - Vikrum Aiyer
-  - 500.0
-- - Mary Alexander
   - 500.0
 
 ---

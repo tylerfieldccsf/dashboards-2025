@@ -13,20 +13,20 @@ candidates:
   filer_id: '1462498'
   committee_name: DEAN PRESTON FOR SUPERVISOR 2024
   candidate_name: DEAN PRESTON
-  funds: 603061.73
-  expenses: 612986.45
+  funds: 603084.9
+  expenses: 613674.79
+- filer_nid: '209865652'
+  filer_id: '1466322'
+  committee_name: BILAL MAHMOOD FOR SUPERVISOR 2024
+  candidate_name: BILAL MAHMOOD
+  funds: 516599.0
+  expenses: 517446.61
 - filer_nid: '210976038'
   filer_id: '1467898'
   committee_name: LOOIJEN FOR D5 SUPERVISOR 2024
   candidate_name: AUTUMN LOOIJEN
   funds: 156172.0
-  expenses: 85493.1
-- filer_nid: '209865652'
-  filer_id: '1466322'
-  committee_name: BILAL MAHMOOD FOR SUPERVISOR 2024
-  candidate_name: BILAL MAHMOOD
-  funds: 509049.0
-  expenses: 499807.58
+  expenses: 88761.61
 - filer_nid: '211628169'
   filer_id: '1469692'
   committee_name: SCOTTY JACOBS FOR SUPERVISOR 2024
@@ -42,31 +42,16 @@ ie_candidates:
     committee_name: COALITION TO GROW SAN FRANCISCO - GROW SF PAC OPPOSING PRESTON
       FOR SUPERVISOR 2024
     funds: 297346.91
-    expenses: 307508.81
-  - position: SUPPORT
-    filer_id: '1471862'
-    committee_name: Building a Working SF Sponsored by Labor Organizations
-    funds: ''
-    expenses: 10306.2
+    expenses: 102426.57
 - candidate_name: BILAL MAHMOOD
   filer_id: '1466322'
   committees:
-  - position: OPPOSE
-    filer_id: '1469854'
-    committee_name: Fix our City SF, Sponsored by Labor Organizations
-    funds: ''
-    expenses: 134178.1
-  - position: OPPOSE
-    filer_id: '991525'
-    committee_name: San Francisco Labor Council Labor & Neighbor Independent Expenditure
-      Political Action Committee
-    funds: ''
-    expenses: 65878.55
   - position: SUPPORT
-    filer_id: '1433436'
-    committee_name: Coalition to Grow San Francisco - Grow SF PAC
-    funds: ''
-    expenses: 14939.79
+    filer_id: '1456335'
+    committee_name: COALITION TO GROW SAN FRANCISCO - GROW SF PAC OPPOSING PRESTON
+      FOR SUPERVISOR 2024
+    funds: 0.0
+    expenses: 128967.67
 - candidate_name: SCOTT JACOBS
   filer_id: '1469692'
   committees:
@@ -74,7 +59,7 @@ ie_candidates:
     filer_id: '1472583'
     committee_name: FRIENDS OF SCOTTY JACOBS FOR SUPERVISOR 2024
     funds: 7150.0
-    expenses: 7150.0
+    expenses: 1540.0
 contributors:
 - - Chris Larsen
   - 50500.0

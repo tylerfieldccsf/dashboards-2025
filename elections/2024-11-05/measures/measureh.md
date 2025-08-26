@@ -15,16 +15,27 @@ committees:
   committee_name: Coalition to Grow San Francisco - Grow SF PAC
   funds: ''
   expenses: 14939.79
+  ies: 14939.79
+- position: SUPPORT
+  filer_nid: '205575753'
+  filer_id: '1456335'
+  committee_name: COALITION TO GROW SAN FRANCISCO - GROW SF PAC OPPOSING PRESTON FOR
+    SUPERVISOR 2024
+  funds: ''
+  expenses: 1269.47
+  ies: 1269.47
 - position: SUPPORT
   filer_nid: '211998686'
   filer_id: '1462942'
   committee_name: YES ON H FOR FIREFIGHTERS HEALTH & SAFETY, SF FIRE FIGHTERS LOCAL
     798
-  funds: 2383530.46
-  expenses: 2510846.52
+  funds: 2527703.53
+  expenses: 2630009.82
+  ies: ''
+multi_committees: []
 contributors:
 - - San Francisco Fire Fighters Local 798
-  - 1527350.0
+  - 1613350.0
 - - San Francisco Fire Fighters Local 798 P.a.c.
   - 550000.0
 - - California Professional Firefighters Ballot Issues Committee

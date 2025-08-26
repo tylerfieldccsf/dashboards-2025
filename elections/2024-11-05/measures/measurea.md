@@ -15,12 +15,31 @@ committees:
   committee_name: Coalition to Grow San Francisco - Grow SF PAC
   funds: ''
   expenses: 14939.79
+  ies: 14939.79
+- position: SUPPORT
+  filer_nid: '205575753'
+  filer_id: '1456335'
+  committee_name: COALITION TO GROW SAN FRANCISCO - GROW SF PAC OPPOSING PRESTON FOR
+    SUPERVISOR 2024
+  funds: ''
+  expenses: 1269.47
+  ies: 1269.47
+- position: SUPPORT
+  filer_nid: '209932989'
+  filer_id: '1466523'
+  committee_name: THRIVING COMMUNITIES FOR ALL SAN FRANCISCO SUPPORTING PROP E, SPONSORED
+    BY CENTER FOR EMPOWERED POLITICS
+  funds: ''
+  expenses: 386.99
+  ies: 386.99
 - position: SUPPORT
   filer_nid: '211459513'
   filer_id: '1468626'
   committee_name: GREAT SCHOOLS FOR ALL SF KIDS - YES ON PROP A
   funds: 400000.0
   expenses: 396500.0
+  ies: ''
+multi_committees: []
 contributors:
 - - Philip Halperin
   - 100000.0
