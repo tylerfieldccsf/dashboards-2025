@@ -32,20 +32,20 @@ electionnav: true
                         {% for contributor in page.contributors %}
                             <tr>
                                 <td></td>
-                                <td>{{ contributor.tx_firstname }} {{ contributor.tx_lastname }}</td>
+                                <td>{{ contributor.tx_firstname }} {{ contributor.tx_lastname | truncate: 65 }}</td>
                                 <td>
                                     {%- if contributor.tx_cmteid != '' -%}<a href="{{site.baseurl}}/elections/{{page.election}}/committees/CA{{contributor.tx_cmteid}}.html">{%- endif -%}
                                         {{ contributor.tx_entitycode }}
                                     {%- if contributor.tx_cmteid != '' -%}</a>{%- endif -%}
                                     </td>
-                                <td class="">{{ contributor.total }}</td>
+                                <td class="">{{ contributor.tx_amount }}</td>
                                 <td class="">
                                     <table class="table table-sm">
                                         <tbody>
                                             {% for cmte in contributor.transactions %}
                                             <tr>
-                                                <td><a href="{{site.baseurl}}/elections/{{page.election}}/committees/CA{{cmte.cmte_fppcid}}.html">{{cmte.cmte_name}}</a></td>
-                                                <td class="currency table-text-right">{{cmte.total}}</td>
+                                                <td><a href="{{site.baseurl}}/elections/{{page.election}}/committees/CA{{cmte.cmte_fppcid}}.html">{{cmte.cmte_name | truncate: 65 }}</a></td>
+                                                <td class="currency table-text-right">{{cmte.tx_amount}}</td>
                                             </tr>
                                             {% endfor %}
                                         </tbody>

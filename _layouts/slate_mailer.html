@@ -2,11 +2,7 @@
 layout: default
 electionnav: true
 ---
-{% if page.committee_type == 'general' %}
-    {% assign bgclass = 'quaternary' %}
-{%- else -%}
-    {% assign bgclass = 'primary' %}
-{%- endif -%}
+{% assign bgclass = 'quinary' %}
 <div class="container-md light-border-se">
     <div class="row bg-{{bgclass}} text-light">
         <div class="col-12">
@@ -28,63 +24,16 @@ electionnav: true
                     <i data-bs-toggle="offcanvas" data-bs-target="#summary-totalsTT" class="fs-5 fa-regular fa-circle-info"></i>
                     <a class="icon d-none link-light" href="#summary-totals"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
                 </h2>
-                <div>
-                    {% if page.committee_type == 'candidate ie' %}
-                        {% if page.position == 'SUPPORT' %}
-                            {% assign pos_string = 'in support of' %}
-                        {%- elsif page.position == 'OPPOSE' -%}
-                            {% assign pos_string = 'to oppose' %}
-                        {%- else -%}
-                            {% assign pos_string = 'regarding' %}
-                        {%- endif -%}
-                        <p>
-                            This is an independent expenditure committee organized {{pos_string}} {{page.candidate_name}}.
-                        </p>
-                    {%- endif -%}
-
-                    {% if page.committee_type == 'ballot measure' %}
-                        {% if page.position == 'SUPPORT' %}
-                            {% assign pos_string = 'to support' %}
-                        {%- elsif page.position == 'OPPOSE' -%}
-                            {% assign pos_string = 'to oppose' %}
-                        {%- else -%}
-                            {% assign pos_string = 'regarding' %}
-                        {%- endif -%}
-                        <p>
-                            This is a primarily formed committee organized {{pos_string}} Measure {{page.ballot_measure_letter}}: {{page.ballot_measure_name}}.
-                        </p>
-                    {%- endif -%}
-                </div>
                 <dl class="row">
-                    <dt class="col-sm-4">Committee Name</dt>
+                    <dt class="col-sm-4">Name</dt>
                     <dd class="col-sm-8">{{page.filer_name}}</dd>
                     <dt class="col-sm-4">FPPC ID</dt>
                     <dd class="col-sm-8">{{page.filer_id}}</dd>
                     <dt class="col-sm-4">Disclosure Statements</dt>
                     <dd class="col-sm-8"><button data-bs-toggle="offcanvas" data-bs-target="#disclosure-statementsTT" type="button" class="btn btn-sm btn-light">View</button></dd>
                 </dl>
-                {%- capture v1 %}{{page.totals[0]}}{% endcapture -%}
-                {%- capture v2 %}{{page.totals[1]}}{% endcapture -%}
-                {%- include cards-two.html
-                    first_title='Total Contributions'
-                    first_text=v1
-                    second_title='Total Expenses'
-                    second_text=v2
-                -%}
                 <div data="Committee information" class="mt-3">
                     <div>
-                        {%- if page.jurisdiction == "sf" -%}
-                        <p>
-                            This is a San Francisco Filer
-                        </p>
-                        {%- elsif page.jurisdiction == "ca" -%}
-                        <div class="alert alert-info" role="alert">
-                            This committee files with the <a href="https://cal-access.sos.ca.gov/Campaign/Committees/Detail.aspx?id={{page.filer_id}}">California
-                            Secretary of State</a>. Data on this page is derived from
-                            electronic filings with the San Francisco Ethics Commission and a nightly download of data
-                            from the Secretary of State's office.
-                        </div>
-                        {%- endif -%}
                         <p data="Dates of filings covered">
                             <em>Data on this page is from filings between <span class="text-nowrap">{{page.dates[0]}}</span> and <span class="text-nowrap">{{page.dates[1]}}</span>.</em>
                         </p>
@@ -95,95 +44,14 @@ electionnav: true
         <div class="col-md-6">
             <div class="info-about mx-3 d-flex flex-column" data="about this page">
                 <h2>About this page</h2>
-                {% if page.committee_type == 'general' %}
-                    <p>
-                        This is a general purpose committee, not organized to support or oppose any specific candidate or ballot measure.
-                    </p>
-                {%- endif -%}
+                <p>This is a "Slate Mailer Organization", an organization that receives payments for the purpose of producing slate mailers to support or oppose candidates and ballot measures.</p>
+                <p>Slate Mailers are only required to file certain statements with the San Francisco Ethics Commission.  More filings by this organization may be available by visiting the San Francisco Department of Elections.</p>
+                <p>More information about this committee can be found by searching the California Secretary of State's <a href="https://cal-access.sos.ca.gov/Misc/filerSearch.aspx?SEARCH={{page.filer_id}}" class="link-light">Cal-Access website</a>.</p>
             </div>
         </div>
     </div><!-- end Summary Info -->
 
-    <!-- Contributors and Expenses -->
-    <div class="row bg-{{bgclass}}-subtle text-dark py-3 row-gap-3">
-        <div class="col-md-6">
-            <div class="cm-contributors col-table-6">
-                <h2 id="contributors" class="hover-link">Contributors
-                    <i data-bs-toggle="offcanvas" data-bs-target="#contributorsTT" class="fs-5 fa-regular fa-circle-info"></i>
-                    <a class="icon d-none" href="#contributors"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
-                </h2>
-                <table class="table caption-top" id="contributors_table">
-                    <thead>
-                        <tr>
-                            <th scope="col">First Name</th>
-                            <th scope="col">Last Name</th>
-                            <th scope="col">Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for contributor in page.contributors %}
-                        <tr>
-                            <td>{{ contributor[0] }}</td>
-                            <td>
-                                {%- if contributor[2] != "" -%}<a
-                                    href="{{site.baseurl}}/elections/{{page.election}}/committees/CA{{contributor[2]}}.html">{%-
-                                    endif -%}
-                                    {{ contributor[1] }}
-                                    {%- if contributor[2] != "" -%}</a>{%- endif -%}
-                            </td>
-                            <td>{{ contributor[3] }}</td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="cm-expenditures col-table-6">
-                <h2 id="expenditures" class="hover-link">Expenditures
-                    <i data-bs-toggle="offcanvas" data-bs-target="#expendituresTT" class="fs-5 fa-regular fa-circle-info"></i>
-                    <a class="icon d-none" href="#expenditures"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
-                </h2>
-                <table class="table caption-top" id="expenditures_table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Category</th>
-                            <th scope="col">Total Expenditures</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for exp in page.expenditures %}
-                        <tr>
-                            <td>{{ exp[0] }}</td>
-                            <td >{{ exp[1] }}</td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div><!-- end Contributors and Expenses  -->
     
-    {%- if page.factoids -%}
-    <!-- Factoids -->
-    <div class="row bg-{{bgclass}}-subtle text-dark py-3 row-gap-3">
-        <h2 class="mb-0">Contributions Overview</h2>
-        {% for factoid in page.factoids %}
-        <div class="col-md-3">
-            {%- include factoid.html 
-                index=forloop.index 
-                title=factoid.title 
-                about=factoid.about 
-                data=factoid.data 
-                data_css=factoid.data_classes 
-                info=factoid.info 
-                info_css=factoid.info_classes 
-            -%}
-        </div>
-        {% endfor %}
-    </div> <!-- end of Factoids row -->
-    {%- endif -%}
-
     <!-- IEs -->
     <div class="row bg-{{bgclass}}-subtle text-dark py-3 row-gap-3">
         {% if page.ie_measures -%}
@@ -323,23 +191,7 @@ electionnav: true
 -%}
 
 <script>
-    new DataTable('#contributors_table', {
-        pageLength: 10,
-        lengthChange: false,
-        order: [[2, 'desc']],
-        columnDefs: [
-            {
-                targets: [2],
-                render: function (data, type, row, meta) {
-                    if (type === 'display') {
-                        return formatAsCurrency(data);
-                    }
-                    return data
-                }
-            }
-        ],
-    });
-    new DataTable('#expenditures_table', {
+    new DataTable('#contributions-made_table', {
         pageLength: 10,
         lengthChange: false,
         order: [[2, 'desc']],

@@ -117,7 +117,7 @@ electionnav: true
                             <th scope="col">Committee</th>
                             <th scope="col">Position</th>
                             <th scope="col">Funds</th>
-                            <th scope="col">Expenses</th>
+                            <th scope="col">Spending</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -144,6 +144,48 @@ electionnav: true
             </div>
         </div>
     </div>
+    {%- if page.multi_committees -%}
+    <div class="row">
+        <div class="col-12">
+            <div class="col-table-12">
+                <h2 id="multicommittees-table" class="hover-link">Committees Active in Multiple Measures
+                    <i data-bs-toggle="offcanvas" data-bs-target="#ballot-measure-multicommitteesTT" class="fs-5 fa-regular fa-circle-info"></i>
+                    <a class="icon d-none" href="#multicommittees-table"><i class="fs-5 fa-regular fa-link" aria-hidden="true"></i></a>
+                </h2>
+                <table class="table caption-top dtify">
+                    <thead>
+                        <tr>
+                            <th scope="col">Committee</th>
+                            <th scope="col">Position</th>
+                            <th scope="col">Funds</th>
+                            <th scope="col">Spending</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {%- for committee in page.multi_committees -%}
+                            <tr>
+                                <td>
+                                    <a href="{{site.baseurl}}/elections/{{page.election}}/committees/CA{{committee.filer_id}}">
+                                        {{ committee.committee_name }}
+                                    </a>
+                                </td> 
+                                <td>{{ committee.position }}</td>
+                                <td>{{ committee.funds }}</td>
+                                <td>{{ committee.expenses }}</td>
+                            </tr>
+                        {%- endfor -%}
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th style="text-align:right" colspan="3">Total:</th>
+                            <th></th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+    {%- endif -%}
 </div>
 
 
